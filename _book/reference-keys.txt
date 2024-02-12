@@ -1,4 +1,3 @@
 def:unnamed-chunk-1
-def:unnamed-chunk-2
 topological-spaces.
 continiuous-functons.
