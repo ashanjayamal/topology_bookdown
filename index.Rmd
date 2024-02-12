@@ -1,0 +1,30 @@
+---
+title: "Topology"
+author: "Ashan Jayamal"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib, packages.bib]
+# url: your book url like https://bookdown.org/yihui/bookdown
+# cover-image: path to the social sharing image like images/cover.jpg
+description: |
+  This my attempt to do the topolgy.
+link-citations: yes
+github-repo: https://github.com/ashanjayamal/topology_bookdown.git
+---
+
+
+
+# Topological Spaces.
+
+```{definition}
+A topology on a set $X$ is a collection $\mathcal{T}$ of subsets of $X$ such that
+
+(T1) $\phi$ and $X$ are in $\mathcal{T}$;
+
+(T2) Any union of subsets in $\mathcal{T}$ is in $\mathcal{T}$;
+
+(T3) The finite intersection of subsets in $\mathcal{T}$ is in $\mathcal{T}$.
+
+```
+
