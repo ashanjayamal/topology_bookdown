@@ -15,9 +15,9 @@ github-repo: https://github.com/ashanjayamal/topology_bookdown.git
 
 
 
-# Topological Spaces.
-
-```{definition}
+# Topological Spaces
+## Topological Spaces
+```{definition,label="Top"}
 A topology on a set $X$ is a collection $\mathcal{T}$ of subsets of $X$ such that
 
 (T1) $\phi$ and $X$ are in $\mathcal{T}$;
@@ -27,5 +27,40 @@ A topology on a set $X$ is a collection $\mathcal{T}$ of subsets of $X$ such tha
 (T3) The finite intersection of subsets in $\mathcal{T}$ is in $\mathcal{T}$.
 
 ```
-This is the first chapter hths
 
+A set $X$ with a topology $\mathcal{T}$ is called a topological space. Denoted by $(X,\mathcal{T})$. An element of $\mathcal{T}$ is called an open set.
+
+```{example}
+Let $X$ be a three-element set, $X = \{a, b, c\}$ and $\tau=\{X, \emptyset,\{a, b\}, \{b\}, \{b, c\}\}$. We can check T1,T2 and T3 conditions.
+```
+```{example}
+Let $X$ be a three-element set, $X = \{a, b, c\}$ as pervoius. There are many possible topologies on $X$, some of which are indicated schematically in figure \@ref(fig:gi). Furthur, we can see that even a three-element set has many different topologies.
+```
+
+```{r echo=FALSE,fig.cap='$~$',label='gi'}
+  knitr::include_graphics("figure 01.png") 
+```
+
+```{remark}
+ Not every collection of subsets of $X$ is a topology on $X$. Observe that Neither of the collections indicated in figure \@ref(fig:fig2) is a topology. 
+ 
+First let's consider the left hand coner of figure  \@ref(fig:fig2). $\{a\}$ and $\{b\}$ in the collection, but $\{a\}\cup \{b\}$ is not in the collection.
+
+Now consider the right hand coner figure. $\{a,b\}$ and $\{b,c\}$ in collection, but $\{a,b\}\cap\{b,c\}=\{b\}$ is not in the collection.
+```
+
+
+```{r echo=FALSE,fig.cap='$~$',label='fig2'}
+  knitr::include_graphics("figure 02.png") 
+```
+
+```{example}
+If $X$ is any set, the collection of all subsets of $X$ (Power set) is a topology on $X$. This trivail statified T1 T2 and T3 conditions. Furthur,This is called the _discrete topology_. 
+```
+```{example}
+The collection consisting of $X$ and $\emptyset$ only is also a topologyon $X$. we shall call it the _indiscrete topology_, or the trivial topology.
+```
+
+```{example}
+a
+```

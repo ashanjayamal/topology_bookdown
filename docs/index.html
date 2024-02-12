@@ -76,7 +76,10 @@
 <li><a href="./">Topology</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Topological Spaces.</a></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Topological Spaces</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#topological-spaces-1"><i class="fa fa-check"></i><b>1.1</b> Topological Spaces</a></li>
+</ul></li>
 <li class="chapter" data-level="2" data-path="continiuous-functons..html"><a href="continiuous-functons..html"><i class="fa fa-check"></i><b>2</b> Continiuous functons.</a></li>
 <li class="divider"></li>
 <li><a href="https://ashanjayamal.github.io/academicpages/" target="blank">Property of Ashan</a></li>
@@ -103,16 +106,51 @@
 <p class="author"><em>Ashan Jayamal</em></p>
 <p class="date"><em>2024-02-13</em></p>
 </div>
-<div id="topological-spaces." class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">Chapter 1</span> Topological Spaces.<a href="index.html#topological-spaces." class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="topological-spaces" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">Chapter 1</span> Topological Spaces<a href="index.html#topological-spaces" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="topological-spaces-1" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> Topological Spaces<a href="index.html#topological-spaces-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div class="definition">
-<p><span id="def:unnamed-chunk-1" class="definition"><strong>Definition 1.1  </strong></span>A topology on a set <span class="math inline">\(X\)</span> is a collection <span class="math inline">\(\mathcal{T}\)</span> of subsets of <span class="math inline">\(X\)</span> such that</p>
+<p><span id="def:Top" class="definition"><strong>Definition 1.1  </strong></span>A topology on a set <span class="math inline">\(X\)</span> is a collection <span class="math inline">\(\mathcal{T}\)</span> of subsets of <span class="math inline">\(X\)</span> such that</p>
 <p>(T1) <span class="math inline">\(\phi\)</span> and <span class="math inline">\(X\)</span> are in <span class="math inline">\(\mathcal{T}\)</span>;</p>
 <p>(T2) Any union of subsets in <span class="math inline">\(\mathcal{T}\)</span> is in <span class="math inline">\(\mathcal{T}\)</span>;</p>
 <p>(T3) The finite intersection of subsets in <span class="math inline">\(\mathcal{T}\)</span> is in <span class="math inline">\(\mathcal{T}\)</span>.</p>
 </div>
-<p>This is the first chapter hths</p>
+<p>A set <span class="math inline">\(X\)</span> with a topology <span class="math inline">\(\mathcal{T}\)</span> is called a topological space. Denoted by <span class="math inline">\((X,\mathcal{T})\)</span>. An element of <span class="math inline">\(\mathcal{T}\)</span> is called an open set.</p>
+<div class="example">
+<p><span id="exm:unnamed-chunk-1" class="example"><strong>Example 1.1  </strong></span>Let <span class="math inline">\(X\)</span> be a three-element set, <span class="math inline">\(X = \{a, b, c\}\)</span> and <span class="math inline">\(\tau=\{X, \emptyset,\{a, b\}, \{b\}, \{b, c\}\}\)</span>. We can check T1,T2 and T3 conditions.</p>
+</div>
+<div class="example">
+<p><span id="exm:unnamed-chunk-2" class="example"><strong>Example 1.2  </strong></span>Let <span class="math inline">\(X\)</span> be a three-element set, <span class="math inline">\(X = \{a, b, c\}\)</span> as pervoius. There are many possible topologies on <span class="math inline">\(X\)</span>, some of which are indicated schematically in figure <a href="index.html#fig:gi">1.1</a>. Furthur, we can see that even a three-element set has many different topologies.</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:gi"></span>
+<img src="figure%2001.png" alt="$~$"  />
+<p class="caption">
+Figure 1.1: <span class="math inline">\(~\)</span>
+</p>
+</div>
+<div class="remark">
+<p><span id="unlabeled-div-1" class="remark"><em>Remark</em>. </span>Not every collection of subsets of <span class="math inline">\(X\)</span> is a topology on <span class="math inline">\(X\)</span>. Observe that Neither of the collections indicated in figure <a href="index.html#fig:fig2">1.2</a> is a topology.</p>
+<p>First let’s consider the left hand coner of figure <a href="index.html#fig:fig2">1.2</a>. <span class="math inline">\(\{a\}\)</span> and <span class="math inline">\(\{b\}\)</span> in the collection, but <span class="math inline">\(\{a\}\cup \{b\}\)</span> is not in the collection.</p>
+<p>Now consider the right hand coner figure. <span class="math inline">\(\{a,b\}\)</span> and <span class="math inline">\(\{b,c\}\)</span> in collection, but <span class="math inline">\(\{a,b\}\cap\{b,c\}=\{b\}\)</span> is not in the collection.</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:fig2"></span>
+<img src="figure%2002.png" alt="$~$"  />
+<p class="caption">
+Figure 1.2: <span class="math inline">\(~\)</span>
+</p>
+</div>
+<div class="example">
+<p><span id="exm:unnamed-chunk-4" class="example"><strong>Example 1.3  </strong></span>If <span class="math inline">\(X\)</span> is any set, the collection of all subsets of <span class="math inline">\(X\)</span> (Power set) is a topology on <span class="math inline">\(X\)</span>. This trivail statified T1 T2 and T3 conditions. Furthur,This is called the <em>discrete topology</em>.</p>
+</div>
+<div class="example">
+<p><span id="exm:unnamed-chunk-5" class="example"><strong>Example 1.4  </strong></span>The collection consisting of <span class="math inline">\(X\)</span> and <span class="math inline">\(\emptyset\)</span> only is also a topologyon <span class="math inline">\(X\)</span>. we shall call it the <em>indiscrete topology</em>, or the trivial topology.</p>
+</div>
+<div class="example">
+<p><span id="exm:unnamed-chunk-6" class="example"><strong>Example 1.5  </strong></span>a</p>
+</div>
 
+</div>
 </div>
             </section>
 
