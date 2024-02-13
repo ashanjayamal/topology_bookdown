@@ -31,7 +31,7 @@
   
   
 
-<link rel="next" href="continiuous-functons..html"/>
+<link rel="next" href="chapter-2-name.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -76,11 +76,13 @@
 <li><a href="./">Topology</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Topological Spaces</a>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Topology</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#topological-spaces-1"><i class="fa fa-check"></i><b>1.1</b> Topological Spaces</a></li>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#topological-spaces"><i class="fa fa-check"></i><b>1.1</b> Topological Spaces</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#basis-of-a-topology"><i class="fa fa-check"></i><b>1.2</b> Basis of a Topology</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="continiuous-functons..html"><a href="continiuous-functons..html"><i class="fa fa-check"></i><b>2</b> Continiuous functons.</a></li>
+<li class="chapter" data-level="2" data-path="chapter-2-name.html"><a href="chapter-2-name.html"><i class="fa fa-check"></i><b>2</b> Chapter 2 name</a></li>
+<li class="chapter" data-level="3" data-path="chapter-03-name.html"><a href="chapter-03-name.html"><i class="fa fa-check"></i><b>3</b> Chapter 03 name</a></li>
 <li class="divider"></li>
 <li><a href="https://ashanjayamal.github.io/academicpages/" target="blank">Property of Ashan</a></li>
 
@@ -106,10 +108,11 @@
 <p class="author"><em>Ashan Jayamal</em></p>
 <p class="date"><em>2024-02-13</em></p>
 </div>
-<div id="topological-spaces" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">Chapter 1</span> Topological Spaces<a href="index.html#topological-spaces" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="topological-spaces-1" class="section level2 hasAnchor" number="1.1">
-<h2><span class="header-section-number">1.1</span> Topological Spaces<a href="index.html#topological-spaces-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="topology" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">Chapter 1</span> Topology<a href="index.html#topology" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>A topology is a geometric structure defined on a set. Basically it is given by declaring which subsets are “open” sets. Thus the axioms are the abstraction of the properties that open sets have.</p>
+<div id="topological-spaces" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> Topological Spaces<a href="index.html#topological-spaces" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div class="definition">
 <p><span id="def:Top" class="definition"><strong>Definition 1.1  </strong></span>A topology on a set <span class="math inline">\(X\)</span> is a collection <span class="math inline">\(\mathcal{T}\)</span> of subsets of <span class="math inline">\(X\)</span> such that</p>
 <p>(T1) <span class="math inline">\(\phi\)</span> and <span class="math inline">\(X\)</span> are in <span class="math inline">\(\mathcal{T}\)</span>;</p>
@@ -147,7 +150,34 @@ Figure 1.2: <span class="math inline">\(~\)</span>
 <p><span id="exm:unnamed-chunk-5" class="example"><strong>Example 1.4  </strong></span>The collection consisting of <span class="math inline">\(X\)</span> and <span class="math inline">\(\emptyset\)</span> only is also a topologyon <span class="math inline">\(X\)</span>. we shall call it the <em>indiscrete topology</em>, or the trivial topology.</p>
 </div>
 <div class="example">
-<p><span id="exm:unnamed-chunk-6" class="example"><strong>Example 1.5  </strong></span>a</p>
+<p><span id="exm:unnamed-chunk-6" class="example"><strong>Example 1.5  </strong></span>Let <span class="math inline">\(X\)</span> be a set and let <span class="math inline">\(\tau_f\)</span> be the collection of all subsets U of X such that <span class="math inline">\(X\setminus U\)</span> either is finite or is all of <span class="math inline">\(X\)</span>. In oter words,
+<span class="math display">\[\tau_f:=\left\{U\subseteq X : \text{Either is finite or is all of } X\right\}\]</span>
+Let’s check is <span class="math inline">\(\tau_f\)</span> a topology. First obseve that both <span class="math inline">\(X\)</span> and <span class="math inline">\(\emptyset\)</span> are in <span class="math inline">\(\tau_f\)</span> , because <span class="math inline">\(X\setminus X\)</span> is finite and $X$ is all of <span class="math inline">\(X\)</span>.So <span class="math inline">\(\tau_f\)</span> statified the T1 condition. Now let’s check the T2 condition. Let <span class="math inline">\(\{U_{\alpha}:\alpha\in I, I \text{is index set}\}\)</span>.Now we need to show that <span class="math inline">\(\cup{\alpha\in I} U_\alpha\in \tau_f\)</span>. So consider,
+<span class="math display">\[X\setminus \cup_{\alpha\in I} U_\alpha =\cap_{\alpha\in I} (X\setminus  U_\alpha).\]</span>
+Now obsevere that <em>{I} (XU</em>) is finite, because each set <span class="math inline">\((X\setminus U_\alpha)\)</span> is finite and arbitary intersection of finite sets is finite. So, <span class="math inline">\(\tau_f\)</span> stattified the T2 condition also.
+Finaly check the last condition, T3 condition. Let <span class="math inline">\(U_1,...,U_n\)</span> are nonempty elements of <span class="math inline">\(\tau_f\)</span> , to show that <span class="math inline">\(\Cup_i U_i \in \tau_f\)</span> , we compute
+<span class="math display">\[X\setminus \cap_{i=1}^n U_i = \cup_{i=1}^n(X \setminus U_i).\]</span>
+Note that the set <span class="math inline">\(\cup_{i=1}^n(X \setminus U_i)\)</span> is a finite union of finite sets and, therefore, finite. So it statisfiy the T3 condition also. Thefore <span class="math inline">\(\tau_f\)</span> is a topology. Furthur <span class="math inline">\(\tau_f\)</span> is called the finite <em>complement topology</em>.</p>
+</div>
+<div class="example">
+<p><span id="exm:unnamed-chunk-7" class="example"><strong>Example 1.6  </strong></span>Let <span class="math inline">\(X\)</span> be a set. Define <span class="math inline">\(\mathcal{T}\)</span> to be the collection of all subsets <span class="math inline">\(U\)</span> of <span class="math inline">\(X\)</span> such that <span class="math inline">\(X\setminus U\)</span> either is finite or is all of <span class="math inline">\(X\)</span>. Then <span class="math inline">\(\mathcal{T}\)</span> defines a topology on <span class="math inline">\(X\)</span>, called finite complement topology of <span class="math inline">\(X\)</span>.</p>
+</div>
+</div>
+<div id="basis-of-a-topology" class="section level2 hasAnchor" number="1.2">
+<h2><span class="header-section-number">1.2</span> Basis of a Topology<a href="index.html#basis-of-a-topology" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Once we define a structure on a set, often we try to understand what the minimum data you need to specify the structure. In many cases, this minimum data is called a basis and we say that the basis generate the structure. The notion of a basis of the structure will help us to describe examples more systematically.</p>
+<div class="definition">
+<p><span id="def:unnamed-chunk-8" class="definition"><strong>Definition 1.2  </strong></span>Let <span class="math inline">\(X\)</span> be a set. A basis of a topology on <span class="math inline">\(X\)</span> is a collection <span class="math inline">\(\mathcal{B}\)</span> of subsets in <span class="math inline">\(X\)</span> such that</p>
+<p>(B1) For every <span class="math inline">\(x \in X\)</span>, there exist an element <span class="math inline">\(B\)</span> in <span class="math inline">\(\mathcal{B}\)</span> such that <span class="math inline">\(x \in B\)</span>.</p>
+<p>(B2) If <span class="math inline">\(x \in B_{1} \cap B_{2}\)</span> where <span class="math inline">\(B_{1}, B_{2}\)</span> are in <span class="math inline">\(\mathcal{B}\)</span>, then there is <span class="math inline">\(B_{3}\)</span> in <span class="math inline">\(\mathcal{B}\)</span> such that <span class="math inline">\(x \in B_{3} \subseteq B_{1} \cap B_{2}\)</span>.</p>
+</div>
+<div class="lemma">
+<p><span id="lem:unnamed-chunk-9" class="lemma"><strong>Lemma 1.1  (Generating of a topology) </strong></span>Let <span class="math inline">\(\mathcal{B}\)</span> be a basis of a topology on X. Define <span class="math inline">\(\mathcal{T}_{\mathcal{B}}\)</span> to be the collection of subsets <span class="math inline">\(U \subset X\)</span> satisfting</p>
+<p>(G1) For every <span class="math inline">\(x \in U\)</span>, there is <span class="math inline">\(B \in \mathcal{B}\)</span> such that <span class="math inline">\(x \in B \subset U\)</span>.</p>
+<p>Then <span class="math inline">\(\tau_{\mathcal{B}}\)</span> defines a topology on <span class="math inline">\(X\)</span>. Here we assume that <span class="math inline">\(\varnothing\)</span> trivially satisfies the condition, so that <span class="math inline">\(\varnothing \in \tau_{\mathcal{B}}\)</span>.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-2" class="proof"><em>Proof</em>. </span>We need to check the three axioms:</p>
 </div>
 
 </div>
@@ -158,7 +188,7 @@ Figure 1.2: <span class="math inline">\(~\)</span>
         </div>
       </div>
 
-<a href="continiuous-functons..html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="chapter-2-name.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
