@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.3.20)  14 FEB 2024 20:02
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.3.20)  16 FEB 2024 10:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -735,8 +735,8 @@ LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
 
 LaTeX Warning: Reference `fig:gi' on page 5 undefined on input line 134.
 
-File: figure 01.png Graphic file (type bmp)
-<figure 01.png>
+File: figures/figure 01.png Graphic file (type bmp)
+<figures/figure 01.png>
 
 LaTeX Warning: Reference `fig:fig2' on page 5 undefined on input line 144.
 
@@ -744,8 +744,8 @@ LaTeX Warning: Reference `fig:fig2' on page 5 undefined on input line 144.
 LaTeX Warning: Reference `fig:fig2' on page 5 undefined on input line 146.
 
 [5]
-File: figure 02.png Graphic file (type bmp)
-<figure 02.png>
+File: figures/figure 02.png Graphic file (type bmp)
+<figures/figure 02.png>
 Missing character: There is no ⧵ (U+29F5) in font [latinmodern-math.otf]/OT:script=math;language=dflt;!
 Missing character: There is no ⧵ (U+29F5) in font [latinmodern-math.otf]/OT:script=math;language=dflt;!
 Missing character: There is no ⧵ (U+29F5) in font [lmroman10-regular]:mapping=tex-text;!
@@ -759,54 +759,39 @@ Missing character: There is no ⧵ (U+29F5) in font [latinmodern-math.otf]/OT:sc
 Missing character: There is no ⧵ (U+29F5) in font [latinmodern-math.otf]/OT:script=math;language=dflt;!
 Missing character: There is no ⧵ (U+29F5) in font [latinmodern-math.otf]/OT:script=math;language=dflt;!
 Missing character: There is no ⧵ (U+29F5) in font [latinmodern-math.otf]/OT:script=math;language=dflt;!
-File: figure 03.jpg Graphic file (type bmp)
-<figure 03.jpg>
+File: figures/figure 03.jpg Graphic file (type bmp)
+<figures/figure 03.jpg>
 [7] [8] [9] [10]
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 14.4pt on input line 346.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 14.4013pt on input line 346.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 14.39845pt on input line 346.
-[11]
-
-LaTeX Warning: Reference `fig:fig4' on page 12 undefined on input line 362.
-
-
-LaTeX Warning: Reference `fig:fig5' on page 12 undefined on input line 379.
-
-File: figure 04.jpg Graphic file (type bmp)
-<figure 04.jpg>
-File: figure 05.jpg Graphic file (type bmp)
-<figure 05.jpg>
-
-Underfull \hbox (badness 10000) in paragraph at lines 383--385
+File: figures/figure 06.jpg Graphic file (type bmp)
+<figures/figure 06.jpg>
+[11] [12]
+Overfull \hbox (68.8493pt too wide) detected at line 426
 [][]
  []
 
+File: figures/figure 07.jpg Graphic file (type bmp)
+<figures/figure 07.jpg>
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+LaTeX Warning: Reference `lem:finerLemma' on page 13 undefined on input line 465.
 
-[12]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Missing character: There is no ∈ (U+2208) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no ⊂ (U+2282) in font [lmroman10-regular]:mapping=tex-text;!
 
-[13]
-
-! LaTeX Error: \symcalallowed only in math mode.
+! LaTeX Error: \symbballowed only in math mode.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.398 ...24}Let \(X\) be a set.A subbasis \mathcal
-                                                  {S} for a topology on \(X\... 
+l.465 ...mma} the lower limit topology on $\mathbb
+                                                  {R}$ is finer than standar... 
 Here is how much of TeX's memory you used:
- 17065 strings out of 478683
- 315467 string characters out of 5847233
- 1863012 words of memory out of 5000000
- 36949 multiletter control sequences out of 15000+600000
- 519707 words of font info for 92 fonts, out of 8000000 for 9000
+ 17056 strings out of 478683
+ 315444 string characters out of 5847233
+ 1864012 words of memory out of 5000000
+ 36942 multiletter control sequences out of 15000+600000
+ 518746 words of font info for 86 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 86i,6n,121p,1155b,488s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 86i,12n,121p,1155b,516s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on _main.pdf (13 pages).
+Output written on _main.pdf (12 pages).

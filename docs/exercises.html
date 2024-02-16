@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 2 Chapter 2 name | Topology</title>
+  <title>Chapter 4 Exercises | Topology</title>
   <meta name="description" content="This my attempt to do the topolgy." />
   <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 2 Chapter 2 name | Topology" />
+  <meta property="og:title" content="Chapter 4 Exercises | Topology" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This my attempt to do the topolgy." />
   <meta name="github-repo" content="https://github.com/ashanjayamal/topology_bookdown.git" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 2 Chapter 2 name | Topology" />
+  <meta name="twitter:title" content="Chapter 4 Exercises | Topology" />
   
   <meta name="twitter:description" content="This my attempt to do the topolgy." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-<link rel="prev" href="index.html"/>
-<link rel="next" href="chapter-03-name.html"/>
+<link rel="prev" href="chapter-03-name.html"/>
+
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -112,17 +112,30 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="chapter-2-name" class="section level1 hasAnchor" number="2">
-<h1><span class="header-section-number">Chapter 2</span> Chapter 2 name<a href="chapter-2-name.html#chapter-2-name" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="exercises" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">Chapter 4</span> Exercises<a href="exercises.html#exercises" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="exercise-after-section-16-in-munkress-book" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Exercise after Section 16 in Munkress Book<a href="exercises.html#exercise-after-section-16-in-munkress-book" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-50" class="exercise"><strong>Exercise 4.1  </strong></span>Show that if <span class="math inline">\(Y\)</span> is a subspace of $X, and <span class="math inline">\(A\)</span> is a subset of <span class="math inline">\(Y\)</span> , then the topology <span class="math inline">\(A\)</span> inherits as a subspace of <span class="math inline">\(Y\)</span> is the same as the topology it inherits as a subspace of <span class="math inline">\(X\)</span>.</p>
+</div>
+<p><strong>Solution</strong>:
+Let’s denote the topology on <span class="math inline">\(X\)</span> as <span class="math inline">\(\mathcal{T}_X\)</span>, the topology on <span class="math inline">\(Y\)</span> as <span class="math inline">\(\mathcal{T}_Y\)</span>, and the topology on <span class="math inline">\(A\)</span> as <span class="math inline">\(\mathcal{T}_A\)</span>.</p>
+<p>We know that <span class="math inline">\(Y\)</span> is a subspace of <span class="math inline">\(X\)</span>, so the topology <span class="math inline">\(\mathcal{T}_Y\)</span> that <span class="math inline">\(Y\)</span> inherits from <span class="math inline">\(X\)</span> is <span class="math inline">\(\mathcal{T}_Y = \{ Y \cap U : U \in \mathcal{T}_X \}\)</span>.</p>
+<p>Similarly, <span class="math inline">\(A\)</span> is a subset of <span class="math inline">\(Y\)</span>, so the topology <span class="math inline">\(\mathcal{T}_A\)</span> that <span class="math inline">\(A\)</span> inherits from <span class="math inline">\(Y\)</span> is <span class="math inline">\(\mathcal{T}_A = \{ A \cap V : V \in \mathcal{T}_Y \}\)</span>.</p>
+<p>Substituting <span class="math inline">\(\mathcal{T}_Y\)</span> into the equation for <span class="math inline">\(\mathcal{T}_A\)</span>, we get <span class="math inline">\(\mathcal{T}_A = \{ A \cap (Y \cap U) : U \in \mathcal{T}_X \}\)</span>.</p>
+<p>Since <span class="math inline">\(A\)</span> is a subset of <span class="math inline">\(Y\)</span>, <span class="math inline">\(A \cap Y = A\)</span>. So, <span class="math inline">\(\mathcal{T}_A = \{ A \cap U : U \in \mathcal{T}_X \}\)</span>.</p>
+<p>This is exactly the topology that <span class="math inline">\(A\)</span> would inherit as a subspace of <span class="math inline">\(X\)</span>. Therefore, the topology <span class="math inline">\(A\)</span> inherits as a subspace of <span class="math inline">\(Y\)</span> is the same as the topology it inherits as a subspace of <span class="math inline">\(X\)</span>.</p>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="chapter-03-name.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="chapter-03-name.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -153,7 +166,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/ashanjayamal/topology_bookdown.git/01-Basis.Rmd",
+"link": "https://github.com/ashanjayamal/topology_bookdown.git/03-Exercises.Rmd",
 "text": "Edit"
 },
 "history": {

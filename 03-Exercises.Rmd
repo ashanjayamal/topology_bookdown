@@ -1,0 +1,18 @@
+# Exercises
+## Exercise after Section 16 in Munkress Book
+
+```{exercise }
+Show that if $Y$ is a subspace of $X, and $A$ is a subset of $Y$ , then the topology $A$ inherits as a subspace of $Y$ is the same as the topology it inherits as a subspace of $X$.
+```
+**Solution**: 
+Let's denote the topology on $X$ as $\mathcal{T}_X$, the topology on $Y$ as $\mathcal{T}_Y$, and the topology on $A$ as $\mathcal{T}_A$. 
+
+We know that $Y$ is a subspace of $X$, so the topology $\mathcal{T}_Y$ that $Y$ inherits from $X$ is $\mathcal{T}_Y = \{ Y \cap U : U \in \mathcal{T}_X \}$.
+
+Similarly, $A$ is a subset of $Y$, so the topology $\mathcal{T}_A$ that $A$ inherits from $Y$ is $\mathcal{T}_A = \{ A \cap V : V \in \mathcal{T}_Y \}$.
+
+Substituting $\mathcal{T}_Y$ into the equation for $\mathcal{T}_A$, we get $\mathcal{T}_A = \{ A \cap (Y \cap U) : U \in \mathcal{T}_X \}$.
+
+Since $A$ is a subset of $Y$, $A \cap Y = A$. So, $\mathcal{T}_A = \{ A \cap U : U \in \mathcal{T}_X \}$.
+
+This is exactly the topology that $A$ would inherit as a subspace of $X$. Therefore, the topology $A$ inherits as a subspace of $Y$ is the same as the topology it inherits as a subspace of $X$.

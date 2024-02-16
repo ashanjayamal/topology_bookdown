@@ -23,13 +23,13 @@
 <meta name="author" content="Ashan Jayamal" />
 
 
-<meta name="date" content="2024-02-14" />
+<meta name="date" content="2024-02-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
-  
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
 <link rel="next" href="chapter-2-name.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -81,10 +81,17 @@
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#topological-spaces"><i class="fa fa-check"></i><b>1.1</b> Topological Spaces</a></li>
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#basis-of-a-topology"><i class="fa fa-check"></i><b>1.2</b> Basis of a Topology</a></li>
 <li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#comparing-topologies"><i class="fa fa-check"></i><b>1.3</b> Comparing Topologies</a></li>
-<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#product-toplogy-on-x-times-y."><i class="fa fa-check"></i><b>1.4</b> Product Toplogy on <span class="math inline">\(X \times Y\)</span>.</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#order-topology"><i class="fa fa-check"></i><b>1.4</b> Order Topology</a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#product-toplogy-on-x-times-y."><i class="fa fa-check"></i><b>1.5</b> Product Toplogy on <span class="math inline">\(X \times Y\)</span>.</a></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#the-subspace-topology"><i class="fa fa-check"></i><b>1.6</b> The Subspace Topology</a></li>
+<li class="chapter" data-level="1.7" data-path="index.html"><a href="index.html#closed-sets-and-limit-points"><i class="fa fa-check"></i><b>1.7</b> Closed Sets and Limit Points</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="chapter-2-name.html"><a href="chapter-2-name.html"><i class="fa fa-check"></i><b>2</b> Chapter 2 name</a></li>
 <li class="chapter" data-level="3" data-path="chapter-03-name.html"><a href="chapter-03-name.html"><i class="fa fa-check"></i><b>3</b> Chapter 03 name</a></li>
+<li class="chapter" data-level="4" data-path="exercises.html"><a href="exercises.html"><i class="fa fa-check"></i><b>4</b> Exercises</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="exercises.html"><a href="exercises.html#exercise-after-section-16-in-munkress-book"><i class="fa fa-check"></i><b>4.1</b> Exercise after Section 16 in Munkress Book</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://ashanjayamal.github.io/academicpages/" target="blank">Property of Ashan</a></li>
 
@@ -108,7 +115,7 @@
 <div id="header">
 <h1 class="title">Topology</h1>
 <p class="author"><em>Ashan Jayamal</em></p>
-<p class="date"><em>2024-02-14</em></p>
+<p class="date"><em>2024-02-16</em></p>
 </div>
 <div id="topology" class="section level1 hasAnchor" number="1">
 <h1><span class="header-section-number">Chapter 1</span> Topology<a href="index.html#topology" class="anchor-section" aria-label="Anchor link to header"></a></h1>
@@ -129,7 +136,7 @@
 <p><span id="exm:unnamed-chunk-2" class="example"><strong>Example 1.2  </strong></span>Let <span class="math inline">\(X\)</span> be a three-element set, <span class="math inline">\(X = \{a, b, c\}\)</span> as pervoius. There are many possible topologies on <span class="math inline">\(X\)</span>, some of which are indicated schematically in figure <a href="index.html#fig:gi">1.1</a>. Furthur, we can see that even a three-element set has many different topologies.</p>
 </div>
 <div class="figure"><span style="display:block;" id="fig:gi"></span>
-<img src="figure%2001.png" alt="$~$"  />
+<img src="figures/figure%2001.png" alt="$~$"  />
 <p class="caption">
 Figure 1.1: <span class="math inline">\(~\)</span>
 </p>
@@ -140,7 +147,7 @@ Figure 1.1: <span class="math inline">\(~\)</span>
 <p>Now consider the right hand coner figure. <span class="math inline">\(\{a,b\}\)</span> and <span class="math inline">\(\{b,c\}\)</span> in collection, but <span class="math inline">\(\{a,b\}\cap\{b,c\}=\{b\}\)</span> is not in the collection.</p>
 </div>
 <div class="figure"><span style="display:block;" id="fig:fig2"></span>
-<img src="figure%2002.png" alt="$~$"  />
+<img src="figures/figure%2002.png" alt="$~$"  />
 <p class="caption">
 Figure 1.2: <span class="math inline">\(~\)</span>
 </p>
@@ -174,7 +181,7 @@ Note that the set <span class="math inline">\(\bigcup_{i=1}^n(X \setminus U_i)\)
 <p>(B2) If <span class="math inline">\(x \in B_{1} \cap B_{2}\)</span> where <span class="math inline">\(B_{1}, B_{2}\)</span> are in <span class="math inline">\(\mathcal{B}\)</span>, then there is <span class="math inline">\(B_{3}\)</span> in <span class="math inline">\(\mathcal{B}\)</span> such that <span class="math inline">\(x \in B_{3} \subseteq B_{1} \cap B_{2}\)</span>.</p>
 </div>
 <div class="figure"><span style="display:block;" id="fig:fig3"></span>
-<img src="figure%2003.jpg" alt="$~$"  />
+<img src="figures/figure%2003.jpg" alt="$~$"  />
 <p class="caption">
 Figure 1.3: <span class="math inline">\(~\)</span>
 </p>
@@ -234,7 +241,7 @@ This is a basis for a topology on <span class="math inline">\(\mathbb{R}\)</span
 <p><span id="unlabeled-div-3" class="remark"><em>Remark</em>. </span>Let <span class="math inline">\(\mathcal{T}\)</span> be a topology on <span class="math inline">\(X\)</span>. If <span class="math inline">\(\mathcal{B} \subset \mathcal{T}\)</span> and <span class="math inline">\(\mathcal{B}\)</span> satisfies (B1) and (B2), it is easy to see that <span class="math inline">\(\mathcal{T}_{\mathcal{B}} \subset \mathcal{T}\)</span>. This is just because of (G1). If <span class="math inline">\(U \in \mathcal{T}_{\mathcal{B}}\)</span>, (G1) is satisfied for <span class="math inline">\(U\)</span> so that <span class="math inline">\(\forall x \in U, \exists B_{x} \in \mathcal{B}\)</span> such that <span class="math inline">\(x \in B_{x} \subset U\)</span>. Therefore <span class="math inline">\(U=\cup_{x \in U} B_{x}\)</span>. By (T2), <span class="math inline">\(U \in \mathcal{T}\)</span>.</p>
 </div>
 <div class="lemma">
-<p><span id="lem:unnamed-chunk-14" class="lemma"><strong>Lemma 1.2  </strong></span>Let <span class="math inline">\((X, \mathcal{T})\)</span> be a topological space. Let <span class="math inline">\(\mathcal{B} \subset \mathcal{T}\)</span>. Then <span class="math inline">\(\mathcal{B}\)</span> is a basis and <span class="math inline">\(\mathcal{T}_{\mathcal{B}}=\mathcal{T}\)</span> if and only if <span class="math inline">\(\mathcal{T}\)</span> is the set of all unions of elements in <span class="math inline">\(\mathcal{B}\)</span>.</p>
+<p><span id="lem:lemmaTequalsTB" class="lemma"><strong>Lemma 1.2  </strong></span>Let <span class="math inline">\((X, \mathcal{T})\)</span> be a topological space. Let <span class="math inline">\(\mathcal{B} \subset \mathcal{T}\)</span>. Then <span class="math inline">\(\mathcal{B}\)</span> is a basis and <span class="math inline">\(\mathcal{T}_{\mathcal{B}}=\mathcal{T}\)</span> if and only if <span class="math inline">\(\mathcal{T}\)</span> is the set of all unions of elements in <span class="math inline">\(\mathcal{B}\)</span>.</p>
 </div>
 <div class="proof">
 <p><span id="unlabeled-div-4" class="proof"><em>Proof</em>. </span></p>
@@ -244,7 +251,7 @@ This is a basis for a topology on <span class="math inline">\(\mathbb{R}\)</span
 </ul>
 </div>
 <div class="lemma">
-<p><span id="lem:unnamed-chunk-16" class="lemma"><strong>Lemma 1.3  </strong></span>Let <span class="math inline">\((X, \mathcal{T})\)</span> be a topological space. Let <span class="math inline">\(\mathcal{B} \subset \mathcal{T}\)</span>. Then <span class="math inline">\(\mathcal{B}\)</span> is a basis and <span class="math inline">\(\mathcal{T}_{\mathcal{B}}=\mathcal{T}\)</span> if and if any <span class="math inline">\(U \in \mathcal{T}\)</span> satisfies (Gl), i.e. <span class="math inline">\(\forall x \in U, \exists B_{x} \in \mathcal{B}\)</span> s.t. <span class="math inline">\(x \in B_{x} \subset U\)</span>.</p>
+<p><span id="lem:lemma110" class="lemma"><strong>Lemma 1.3  </strong></span>Let <span class="math inline">\((X, \mathcal{T})\)</span> be a topological space. Let <span class="math inline">\(\mathcal{B} \subset \mathcal{T}\)</span>. Then <span class="math inline">\(\mathcal{B}\)</span> is a basis and <span class="math inline">\(\mathcal{T}_{\mathcal{B}}=\mathcal{T}\)</span> if and if any <span class="math inline">\(U \in \mathcal{T}\)</span> satisfies (Gl), i.e. <span class="math inline">\(\forall x \in U, \exists B_{x} \in \mathcal{B}\)</span> s.t. <span class="math inline">\(x \in B_{x} \subset U\)</span>.</p>
 </div>
 <div class="proof">
 <p><span id="unlabeled-div-5" class="proof"><em>Proof</em>. </span></p>
@@ -257,44 +264,130 @@ This is a basis for a topology on <span class="math inline">\(\mathbb{R}\)</span
 <div id="comparing-topologies" class="section level2 hasAnchor" number="1.3">
 <h2><span class="header-section-number">1.3</span> Comparing Topologies<a href="index.html#comparing-topologies" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div class="definition">
-<p><span id="def:unnamed-chunk-18" class="definition"><strong>Definition 1.4  </strong></span>Let <span class="math inline">\(\mathcal{T}, \mathcal{T}^{\prime}\)</span> be two topologies for a set <span class="math inline">\(X\)</span>. We say <span class="math inline">\(\mathcal{T}^{\prime}\)</span> is finer than <span class="math inline">\(\mathcal{T}\)</span> or <span class="math inline">\(\mathcal{T}\)</span> is coarser than <span class="math inline">\(\mathcal{T}^{\prime}\)</span> if <span class="math inline">\(\mathcal{T} \subset \mathcal{T}^{\prime}\)</span>. The intuition for this notion is ” <span class="math inline">\(\left(X, \mathcal{T}^{\prime}\right)\)</span> has more open subsets to separate two points in <span class="math inline">\(X\)</span> than <span class="math inline">\((X, \mathcal{T})\)</span> “.</p>
+<p><span id="def:unnamed-chunk-16" class="definition"><strong>Definition 1.4  </strong></span>Let <span class="math inline">\(\mathcal{T}, \mathcal{T}^{\prime}\)</span> be two topologies for a set <span class="math inline">\(X\)</span>. We say <span class="math inline">\(\mathcal{T}^{\prime}\)</span> is finer than <span class="math inline">\(\mathcal{T}\)</span> or <span class="math inline">\(\mathcal{T}\)</span> is coarser than <span class="math inline">\(\mathcal{T}^{\prime}\)</span> if <span class="math inline">\(\mathcal{T} \subset \mathcal{T}^{\prime}\)</span>. The intuition for this notion is ” <span class="math inline">\(\left(X, \mathcal{T}^{\prime}\right)\)</span> has more open subsets to separate two points in <span class="math inline">\(X\)</span> than <span class="math inline">\((X, \mathcal{T})\)</span> “.</p>
 </div>
 <div class="lemma">
-<p><span id="lem:unnamed-chunk-19" class="lemma"><strong>Lemma 1.4  </strong></span>Let <span class="math inline">\(\mathcal{B}, \mathcal{B}^{\prime}\)</span> be bases of topologies <span class="math inline">\(\tau, \tau^{\prime}\)</span> on <span class="math inline">\(X\)</span> respectively. Then <span class="math inline">\(\tau^{\prime}\)</span> is finer than <span class="math inline">\(\tau \Leftrightarrow\)</span> <span class="math inline">\(\forall B \in \mathcal{B}\)</span> and <span class="math inline">\(\forall x \in B, \exists B^{\prime} \in \mathcal{B}^{\prime}\)</span> s.t. <span class="math inline">\(x \in B^{\prime} \subset B\)</span>.</p>
+<p><span id="lem:finerLemma" class="lemma"><strong>Lemma 1.4  </strong></span>Let <span class="math inline">\(\mathcal{B}, \mathcal{B}^{\prime}\)</span> be bases of topologies <span class="math inline">\(\mathcal{T}, \mathcal{T}^{\prime}\)</span> on <span class="math inline">\(X\)</span> respectively. Then <span class="math inline">\(\mathcal{T}^{\prime}\)</span> is finer than <span class="math inline">\(\mathcal{T} \Leftrightarrow\)</span> <span class="math inline">\(\forall B \in \mathcal{B}\)</span> and <span class="math inline">\(\forall x \in B, \exists B^{\prime} \in \mathcal{B}^{\prime}\)</span> s.t. <span class="math inline">\(x \in B^{\prime} \subseteq B\)</span>.</p>
 </div>
 <div class="proof">
 <p><span id="unlabeled-div-6" class="proof"><em>Proof</em>. </span></p>
 <ul>
-<li><p><span class="math inline">\(\Rightarrow\)</span> Since <span class="math inline">\(\mathcal{B} \subset \tau \subset \tau^{\prime}\)</span>, all subsets in <span class="math inline">\(\mathcal{B}\)</span> satisfies (G1) for <span class="math inline">\(\tau^{\prime}\)</span>, which is exactly the statement we wanted to prove.</p></li>
-<li><p><span class="math inline">\(\Leftarrow\)</span> The LHS says <span class="math inline">\(\mathcal{B} \subset \tau^{\prime}\)</span>. We need to show that it implies that any <span class="math inline">\(U \in \tau\)</span> satisfies (G1) for <span class="math inline">\(\tau^{\prime}\)</span> too.
+<li><p><span class="math inline">\(\Rightarrow\)</span> Since <span class="math inline">\(\mathcal{B} \subset \mathcal{T} \subset \mathcal{T}^{\prime}\)</span>, all subsets in <span class="math inline">\(\mathcal{B}\)</span> satisfies (G1) for <span class="math inline">\(\mathcal{T}^{\prime}\)</span>, which is exactly the statement we wanted to prove.</p></li>
+<li><p><span class="math inline">\(\Leftarrow\)</span> The LHS says <span class="math inline">\(\mathcal{B} \subset \mathcal{T}^{\prime}\)</span>. We need to show that it implies that any <span class="math inline">\(U \in \mathcal{T}\)</span> satisfies (G1) for <span class="math inline">\(\mathcal{T}^{\prime}\)</span> too.
 <span class="math display">\[
-\forall U \in \tau, \forall x \in U, \exists B \in \mathcal{B} \text { s.t. } x \in B \subset U
+\forall U \in \mathcal{T}, \forall x \in U, \exists B \in \mathcal{B} \text { s.t. } x \in B \subset U
 \]</span>But<span class="math display">\[
 \forall B \in \mathcal{B}, \forall x \in B, \exists B^{\prime} \in \mathcal{B}^{\prime} \text { s.t. } x \in B^{\prime} \subset B .
 \]</span>
 Combining those two,
 <span class="math display">\[
-\forall U \in \tau, \forall x \in U, \exists B^{\prime} \in \mathcal{B}^{\prime} \text { s.t. } x \in B^{\prime} \subset B \subset U .
+\forall U \in \mathcal{T}, \forall x \in U, \exists B^{\prime} \in \mathcal{B}^{\prime} \text { s.t. } x \in B^{\prime} \subset B \subset U .
 \]</span></p></li>
 </ul>
 </div>
+<div class="definition">
+<p><span id="def:unnamed-chunk-18" class="definition"><strong>Definition 1.5  (subbasis) </strong></span>Let <span class="math inline">\(X\)</span> be a set.A subbasis <span class="math inline">\(\mathcal{S}\)</span> for a topology on <span class="math inline">\(X\)</span> is a collection of subsets of <span class="math inline">\(X\)</span> whose union equals <span class="math inline">\(X\)</span>.
+<span class="math display">\[\left(\text{i.e. }\forall x\in X ~\exists S\in\mathcal{S} \text{  such that } x\in S\right)\]</span></p>
 </div>
-<div id="product-toplogy-on-x-times-y." class="section level2 hasAnchor" number="1.4">
-<h2><span class="header-section-number">1.4</span> Product Toplogy on <span class="math inline">\(X \times Y\)</span>.<a href="index.html#product-toplogy-on-x-times-y." class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="figure"><span style="display:block;" id="fig:64"></span>
+<img src="figures/figure%2006.jpg" alt="$~$"  />
+<p class="caption">
+Figure 1.4: <span class="math inline">\(~\)</span>
+</p>
+</div>
+<div class="definition">
+<p><span id="def:unnamed-chunk-19" class="definition"><strong>Definition 1.6  </strong></span>The topology generated by the subbasis <span class="math inline">\(\mathcal{S}\)</span> is defined to be the collection <span class="math inline">\(\mathcal{T}\)</span> of all unions of finite intersections of elements of <span class="math inline">\(\mathcal{S}\)</span>.</p>
+</div>
+</div>
+<div id="order-topology" class="section level2 hasAnchor" number="1.4">
+<h2><span class="header-section-number">1.4</span> Order Topology<a href="index.html#order-topology" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="definition">
+<p><span id="def:unnamed-chunk-20" class="definition"><strong>Definition 1.7  (Linear Order/ Complete Order) </strong></span>Consider order relation “<span class="math inline">\(&lt;\)</span>”.</p>
+<ol style="list-style-type: decimal">
+<li>If <span class="math inline">\(x \neq y\)</span>, then either <span class="math inline">\(x &lt; y\)</span> or <span class="math inline">\(y &lt; x\)</span>.</li>
+<li>If <span class="math inline">\(x &lt; y\)</span>, then <span class="math inline">\(x\neq y\)</span>.</li>
+<li>If <span class="math inline">\(x &lt; y\)</span> and <span class="math inline">\(y &lt; z\)</span>, then <span class="math inline">\(x &lt; z\)</span>.</li>
+</ol>
+</div>
+<div class="example">
+<p><span id="exm:unnamed-chunk-21" class="example"><strong>Example 1.8  </strong></span><span class="math inline">\(\mathbb{R}\)</span> is ordered set with less than relation.</p>
+</div>
+<p>First, let’s see intervals in an Ordered Set.</p>
+<p>Suppose that <span class="math inline">\(X\)</span> is a set having a simple order relation <span class="math inline">\(&lt;\)</span>. Given elements <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>
+of <span class="math inline">\(X\)</span> such that <span class="math inline">\(a &lt; b\)</span>, there are four subsets of <span class="math inline">\(X\)</span> that are called the intervals determined by <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>. They are the following :</p>
+<ul>
+<li><span class="math inline">\((a, b) = \{x\in X | a &lt; x &lt; b\}\)</span> (Type: open interval in <span class="math inline">\(X\)</span>),</li>
+<li><span class="math inline">\((a, b] = \{x\in X | a &lt; x ≤ b\}\)</span>(Type: half-open interval in <span class="math inline">\(X\)</span>),</li>
+<li><span class="math inline">\([a, b) = \{x\in X | a ≤ x &lt; b\}\)</span>(Type: half-open interval in <span class="math inline">\(X\)</span>),</li>
+<li><span class="math inline">\([a, b] = \{x\in X | a ≤ x ≤ b\}\)</span> (Type: closed interval in <span class="math inline">\(X\)</span>),</li>
+</ul>
+<p>The notation used here is familiar to you already in the case where <span class="math inline">\(X\)</span> is the real line,but these are intervals in an arbitrary ordered set.</p>
+<p>The use of the term “open” in this connection suggests that open intervals in <span class="math inline">\(X\)</span> should turn out to be open sets when
+we put a topology on <span class="math inline">\(X\)</span>. And so they will.</p>
+<div class="definition">
+<p><span id="def:unnamed-chunk-22" class="definition"><strong>Definition 1.8  </strong></span>Let <span class="math inline">\(X\)</span> be a set with a simple order relation; assume <span class="math inline">\(X\)</span> has more than one element. Let <span class="math inline">\(\mathcal{B}\)</span> be the collection of all sets of the following types:</p>
+<ol style="list-style-type: decimal">
+<li>All open intervals <span class="math inline">\((a, b)\)</span> in <span class="math inline">\(X\)</span>.</li>
+<li>All intervals of the form <span class="math inline">\([a_0, b)\)</span>, where <span class="math inline">\(a_0\)</span> is the smallest element (if any) of <span class="math inline">\(X\)</span>.</li>
+<li>All intervals of the form <span class="math inline">\((a, b_0]\)</span>, where <span class="math inline">\(b_0\)</span> is the largest element (if any) of <span class="math inline">\(X\)</span>.</li>
+</ol>
+<p>i.e.:
+<span class="math display">\[\begin{aligned}
+\mathcal{B}:=&amp;\{(a,b):a&lt;b, a,b\in X\}\\
+&amp; \bigcup \{[a,b:a&lt;b, a_0,b\in X \text{ and if $X$ has a smallest element and $a_0$ is the smallest element}\}\\
+&amp; \bigcup \{(a,b]:a&lt;b, a,b_0\in X \text{ and if $X$ has a largest element and $b_0$ is the largest element}\}
+\end{aligned}\]</span>
+The collection <span class="math inline">\(\mathcal{B}\)</span> is a basis for a topology on <span class="math inline">\(X\)</span>, which is called the order topology.</p>
+</div>
+<p><strong>Notation</strong>:
+Denote an arbitrary element of <span class="math inline">\(\mathbb{R} \times \mathbb{R}\)</span> by <span class="math inline">\(x \times y\)</span>, to avoid difficulty with notation.</p>
+<div class="definition">
+<p><span id="def:unnamed-chunk-23" class="definition"><strong>Definition 1.9  (Dictionary Oreder) </strong></span>Suppose that <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are two sets with order relations <span class="math inline">\(&lt;_{A}\)</span> and <span class="math inline">\(&lt;_{B}\)</span> respectively. Define an order relation <span class="math inline">\(&lt;\)</span> on <span class="math inline">\(A \times B\)</span> by defining <span class="math inline">\(a_{1} \times b_{1} &lt; a_{2} \times b_{2}\)</span> if <span class="math inline">\(a_{1} &lt;_{A} a_{2}\)</span>, or if <span class="math inline">\(a_{1} = a_{2}\)</span> and <span class="math inline">\(b_{1} &lt;_{B} b_{2}\)</span>. It is called the dictionary order relation on <span class="math inline">\(A \times B\)</span>.</p>
+</div>
+<div class="example">
+<p><span id="exm:unnamed-chunk-24" class="example"><strong>Example 1.9  </strong></span>Consider the set <span class="math inline">\(\mathbb{R} \times \mathbb{R}\)</span> in the dictionary order. The set <span class="math inline">\(\mathbb{R} \times \mathbb{R}\)</span> has neither a largest nor a smallest element, so the order topology on <span class="math inline">\(\mathbb{R} \times \mathbb{R}\)</span> has as basis the collection of all open intervals of the form <span class="math inline">\((a \times b, c \times d)\)</span> for <span class="math inline">\(a &lt; c\)</span>, and for <span class="math inline">\(a = c\)</span> and <span class="math inline">\(b &lt; d\)</span>.</p>
+<p>These two types of intervals are indicated in Figure 14.1. The sub collection consisting of only intervals of the second type is also a basis for the order topology on <span class="math inline">\(\mathbb{R} \times \mathbb{R}\)</span>, as you can check.</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:fi7"></span>
+<img src="figures/figure%2007.jpg" alt="$~$"  />
+<p class="caption">
+Figure 1.5: <span class="math inline">\(~\)</span>
+</p>
+</div>
+<div class="example">
+<p><span id="exm:unnamed-chunk-25" class="example"><strong>Example 1.10  </strong></span>The standard topology,lower limit topology and upper limit topology on <span class="math inline">\(\mathbb{R}\)</span>.</p>
+<p><span class="math display">\[\mathcal{B}:=\{(x,y):x&lt;y, x,y\in \mathbb{R}\}\]</span>
+<span class="math inline">\(\mathcal{B}\)</span> is a basis which generates the standard topology.
+<span class="math display">\[\mathcal{B}^\prime:=\{[x,y):x&lt;y, x,y\in \mathbb{R}\}\]</span>
+<span class="math inline">\(\mathcal{B}^\prime\)</span> is a basis which generates the lower limit topology on <span class="math inline">\(\mathbb{R}\)</span>.
+<span class="math display">\[\mathcal{B}^{\prime\prime}:=\{(x,y]:x&lt;y, x,y\in \mathbb{R}\}\]</span>
+<span class="math inline">\(\mathcal{B}^{\prime\prime}\)</span> is a basis which generates the upper limit topology on <span class="math inline">\(\mathbb{R}\)</span>.</p>
+</div>
+<div class="lemma">
+<p><span id="lem:unnamed-chunk-26" class="lemma"><strong>Lemma 1.5  </strong></span>The lower limit topology on <span class="math inline">\(\mathbb{R}\)</span> is strictly finer than standard topology on <span class="math inline">\(\mathbb{R}\)</span>.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-7" class="proof"><em>Proof</em>. </span>Let <span class="math inline">\((a,b)\in \mathbb{R}\)</span>. We are going to use Lemma <a href="index.html#lem:finerLemma">1.4</a>. Let <span class="math inline">\((a,b)\)</span> be a element from basis of standard topology. Let <span class="math inline">\(x\in (a,b)\)</span>. Then <span class="math inline">\(a&lt;x&lt;b\)</span>. Then observe that $ x:xy, x,y}]
+<span class="math inline">\(\mathcal{B}^{\prime\prime\prime}\)</span> is a basis which generates the discrete topology on <span class="math inline">\(\mathbb{R}\)</span>. Because, <span class="math inline">\(\{a\}=[a,a]\)</span>.</p>
+</div>
+</div>
+<div id="product-toplogy-on-x-times-y." class="section level2 hasAnchor" number="1.5">
+<h2><span class="header-section-number">1.5</span> Product Toplogy on <span class="math inline">\(X \times Y\)</span>.<a href="index.html#product-toplogy-on-x-times-y." class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The Cartesian product of two topological spaces has an induced topology called the product topology. There is also an induced basis for it. Here is the example to keep in mind:</p>
-<p>```{example}Recall that the standard topology of <span class="math inline">\(\mathbb{R}^{2}\)</span> is given by the basis</p>
+<div class="example">
+<p><span id="exm:egR2" class="example"><strong>Example 1.11  </strong></span>Recall that the standard topology of <span class="math inline">\(\mathbb{R}^{2}\)</span> is given by the basis</p>
 <p><span class="math display">\[
 \mathcal{B}:=\left\{(a, b) \times(c, d) \subset \mathbb{R}^{2} \mid a&lt;b, c&lt;d\right\}
-\]</span>
-```</p>
+\]</span></p>
+</div>
 <div class="proof">
-<p><span id="unlabeled-div-7" class="proof"><em>Proof</em>. </span>(Proof of <span class="math inline">\(\mathcal{B}\)</span> is basis.)
+<p><span id="unlabeled-div-8" class="proof"><em>Proof</em>. </span>(Proof of <span class="math inline">\(\mathcal{B}\)</span> is basis.)
 - (B1) Let <span class="math inline">\((x,y)\in \mathbb{R}^2\)</span>. Then observe that <span class="math inline">\(x\in(x-1,x+1)\subseteq \mathbb{R}\)</span>, and <span class="math inline">\(y\in(y-1,y+1)\subseteq \mathbb{R}\)</span>. Thus
 <span class="math display">\[(x,y)\in (x-1,x+1)\times (y-1,y+1).\]</span></p>
-<p>See figure <a href="index.html#fig:fig4">1.4</a>.
+<p>See figure <a href="index.html#fig:fig4">1.6</a>.
 Therefore, this satisfied the B1 condition.</p>
 <ul>
-<li>Now supposose that <span class="math inline">\((x,y)\in (a_1,b_1)\times(c_1,d_1)\cap (a_2,b_2)\times(c_2,d_2)\)</span>
+<li>Now suppose that <span class="math inline">\((x,y)\in (a_1,b_1)\times(c_1,d_1)\cap (a_2,b_2)\times(c_2,d_2)\)</span>
 Now observe
 <span class="math inline">\((x,y)\in (a_1,b_1)\times(c_1,d_1)\implies x\in(a_1,b_1)\)</span> and <span class="math inline">\(y\in(c_1,d_1)\)</span></li>
 </ul>
@@ -303,41 +396,190 @@ Now observe
 Let <span class="math inline">\(a=\max\{a_1,a_2\},b=\min\{b_1,b_2\}, c=\max\{c_1,c_2\}\)</span> and <span class="math inline">\(d=\min\{d_1,d_2\}\)</span>. Then observe that
 <span class="math display">\[x\in (a,b)\quad \text{and} y\in (c,d)\]</span>.
 Further, <span class="math display">\[(x,y)\in (a,b)\times (c,d)\subseteq (a_2,b_2)\times(c_2,d_2)\implies x\in(a_2,b_2)\]</span>.
-See figure <a href="index.html#fig:fig5">1.5</a>.
+See figure <a href="index.html#fig:fig5">1.7</a>.
 This satisfies B2 condition.</p>
 </div>
 <div class="figure"><span style="display:block;" id="fig:fig4"></span>
-<img src="figure%2004.jpg" alt="$~$"  />
-<p class="caption">
-Figure 1.4: <span class="math inline">\(~\)</span>
-</p>
-</div>
-<div class="figure"><span style="display:block;" id="fig:fig5"></span>
-<img src="figure%2005.jpg" alt="$~$"  />
-<p class="caption">
-Figure 1.5: <span class="math inline">\(~\)</span>
-</p>
-</div>
-<div class="definition">
-<p><span id="def:unnamed-chunk-22" class="definition"><strong>Definition 1.5  </strong></span>If <span class="math inline">\(\left(X, \tau_{X}\right)\)</span> and <span class="math inline">\(\left(Y, \tau_{Y}\right)\)</span> are topological spaces, then the collection <span class="math inline">\(\mathcal{B}\)</span> of subsets of the form <span class="math inline">\(U \times V \subset X \times Y, U \in \tau_{X}, V \in \tau_{Y}\)</span> forms a basis of a topology. The topology generated by <span class="math inline">\(\mathcal{B}\)</span> is called product topology on <span class="math inline">\(X \times Y\)</span>.</p>
-</div>
-<div class="proof">
-<p><span id="unlabeled-div-8" class="proof"><em>Proof</em>. </span>(Proof of <span class="math inline">\(\mathcal{B}\)</span> is basis)
-(B1) Let <span class="math inline">\((x, y) \in X \times Y\)</span> be an arbitrary element. We need to find a subset in <span class="math inline">\(\mathcal{B}\)</span> containing <span class="math inline">\((x, y)\)</span>, but since <span class="math inline">\(X \times Y \in \mathcal{B}\)</span>, it is obvious.</p>
-<p>(B2) For any <span class="math inline">\(U_{1} \times V_{1}, U_{2} \times V_{2} \in \mathcal{B}\)</span>, the intersection is <span class="math inline">\(\left(U_{1} \times V_{1}\right) \cap\left(U_{2} \times V_{2}\right)=\left(U_{1} \cap U_{2}\right) \times\left(V_{1} \cap V_{2}\right) \in \mathcal{B}\)</span>. So it is obvious again.</p>
-</div>
-<div class="definition">
-<p><span id="def:unnamed-chunk-24" class="definition"><strong>Definition 1.6  (subbasis) </strong></span>Let <span class="math inline">\(X\)</span> be a set.A subbasis for a topology on <span class="math inline">\(X\)</span> is a collection of subsets of <span class="math inline">\(X\)</span> whose union equals <span class="math inline">\(X\)</span>.
-<span class="math display">\[\left(\text{i.e. }\forall x\in X ~\exists S\in\mathcal{S} \text{  such that } x\in S\right)\]</span></p>
-</div>
-<div class="figure"><span style="display:block;" id="fig:64"></span>
-<img src="figure%2006.jpg" alt="$~$"  />
+<img src="figures/figure%2004.jpg" alt="$~$"  />
 <p class="caption">
 Figure 1.6: <span class="math inline">\(~\)</span>
 </p>
 </div>
+<div class="figure"><span style="display:block;" id="fig:fig5"></span>
+<img src="figures/figure%2005.jpg" alt="$~$"  />
+<p class="caption">
+Figure 1.7: <span class="math inline">\(~\)</span>
+</p>
+</div>
+<p>Let’s go to a rigid definition.</p>
 <div class="definition">
-<p><span id="def:unnamed-chunk-25" class="definition"><strong>Definition 1.7  </strong></span>The topology generated by the subbasis is defined to be the collection T of all unions of finite intersections of elements of .</p>
+<p><span id="def:unnamed-chunk-34" class="definition"><strong>Definition 1.10  </strong></span>If <span class="math inline">\(\left(X, \mathcal{T}_{X}\right)\)</span> and <span class="math inline">\(\left(Y, \mathcal{T}_{Y}\right)\)</span> are topological spaces, then the collection <span class="math inline">\(\mathcal{B}\)</span> of subsets of the form <span class="math inline">\(U \times V \subset X \times Y, U \in \mathcal{T}_{X}, V \in \mathcal{T}_{Y}\)</span> forms a basis of a topology.</p>
+<p>i.e.:
+<span class="math display">\[\mathcal{B}:=\{U \times V \subset X \times Y: U \in \mathcal{T}_{X}, V \in \mathcal{T}_{Y}\}\]</span>
+The topology generated by <span class="math inline">\(\mathcal{B}\)</span> is called product topology on <span class="math inline">\(X \times Y\)</span>.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-9" class="proof"><em>Proof</em>. </span>(Proof of <span class="math inline">\(\mathcal{B}\)</span> is basis)</p>
+<ul>
+<li><p>(B1) Let <span class="math inline">\((x, y) \in X \times Y\)</span> be an arbitrary element. We need to find a subset in <span class="math inline">\(\mathcal{B}\)</span> containing <span class="math inline">\((x, y)\)</span>, but since <span class="math inline">\(X \times Y \in \mathcal{B}\)</span>, it is obvious.</p></li>
+<li><p>(B2) For any <span class="math inline">\(U_{1} \times V_{1}, U_{2} \times V_{2} \in \mathcal{B}\)</span>, the intersection is <span class="math inline">\(\left(U_{1} \times V_{1}\right) \cap\left(U_{2} \times V_{2}\right)=\left(U_{1} \cap U_{2}\right) \times\left(V_{1} \cap V_{2}\right) \in \mathcal{B}\)</span>. So it is obvious again.</p></li>
+</ul>
+</div>
+<div class="figure"><span style="display:block;" id="fig:fig09"></span>
+<img src="figures/figure%2009.jpg" alt="$~$"  />
+<p class="caption">
+Figure 1.8: <span class="math inline">\(~\)</span>
+</p>
+</div>
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-36" class="theorem"><strong>Theorem 1.1  </strong></span>If <span class="math inline">\(\mathcal{B}_X\)</span> is a basis of <span class="math inline">\((X, \mathcal{T}_X)\)</span> and <span class="math inline">\(\mathcal{B}_Y\)</span> is a basis of <span class="math inline">\((Y, \mathcal{T}_Y)\)</span>, then <span class="math inline">\(\mathcal{B}_X \times \mathcal{B}_Y\)</span> is a basis of the product topology on <span class="math inline">\(X \times Y\)</span>.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-10" class="proof"><em>Proof</em>. </span>To check <span class="math inline">\(\mathcal{B}_{X \times Y}\)</span>, let’s use lemma <a href="index.html#lem:lemma110">1.3</a> which states that <span class="math inline">\(\mathcal{B}\)</span> is a basis for <span class="math inline">\(\mathcal{T}\)</span> iff for any <span class="math inline">\(U \in T\)</span> and any <span class="math inline">\(x \in U\)</span>, there is <span class="math inline">\(B \in \mathcal{B}\)</span> such that <span class="math inline">\(x \in B \subseteq U\)</span>.</p>
+<p>Let <span class="math inline">\(W \in \mathcal{T}_{prod}\)</span> and <span class="math inline">\((x, y) \in W\)</span>. By the definition of product topology, there are <span class="math inline">\(U \in \mathcal{T}_X\)</span> and <span class="math inline">\(V \in \mathcal{T}_Y\)</span> such that <span class="math inline">\((x,y) \in U \times V \subseteq W\)</span>. Since <span class="math inline">\(\mathcal{B}_X\)</span> and <span class="math inline">\(\mathcal{B}_Y\)</span> are bases, there are <span class="math inline">\(B \in \mathcal{B}_X\)</span> and <span class="math inline">\(C \in \mathcal{B}_Y\)</span> such that <span class="math inline">\(x \in B \subseteq U\)</span> and <span class="math inline">\(y \in C \subseteq V\)</span>. Thus we found <span class="math inline">\(B \times C \in \mathcal{B}_{X \times Y}\)</span> such that <span class="math inline">\((x,y) \in B \times C \subseteq W\)</span>.</p>
+</div>
+<div class="example">
+<p><span id="exm:unnamed-chunk-38" class="example"><strong>Example 1.12  </strong></span>The standard topology on <span class="math inline">\(\mathbb{R}^2=\mathbb{R}\times\mathbb{R}\)</span> is the product toplogy. (See example <a href="index.html#exm:egR2">1.11</a>)</p>
+<p>Obsereve that basis elements in product topology in <span class="math inline">\(\mathbb{R}^2\)</span> are open recatngles (product of two open intervals.).</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:fig10"></span>
+<img src="figures/figure%2010.jpg" alt="$~$"  />
+<p class="caption">
+Figure 1.9: <span class="math inline">\(~\)</span>
+</p>
+</div>
+<div class="lemma">
+<p><span id="lem:unnamed-chunk-39" class="lemma"><strong>Lemma 1.6  </strong></span>The dictionary topology <span class="math inline">\(\mathbb{R}^2\)</span> is strictly finer than standard toplogy in <span class="math inline">\(\mathbb{R}^2\)</span></p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-11" class="proof"><em>Proof</em>. </span>We are going to use <a href="index.html#lem:finerLemma">1.4</a>.
+Let <span class="math inline">\((a,b)\times(c,d)\subset\mathbb{R}^2\)</span> be a element of basis of standard toplogy on <span class="math inline">\(\mathbb{R}^2\)</span>, and let <span class="math inline">\(x\times y\in (a,b)\times (c,d)\)</span>. Now we need to find basis element of the dictionary order topology that contained in <span class="math inline">\((a,b)\times (c,d)\)</span>.
+So,
+<span class="math display">\[x\times y \in (x\times c ,x\times d)\subset (a,b)\times(c,d).\]</span>
+Note that <span class="math inline">\((x\times c ,x\times d)\)</span> is a basis element in the dictonary order topology. Now let’s proove the stricly finer condition.</p>
+<p>Let <span class="math inline">\((p\times q,p \times s)\)</span> be basis element of order toplogy. Let <span class="math inline">\(p\times y \in (p\times q,p \times s)\)</span>. Now observe that there is no open rectangle that containing <span class="math inline">\(p\times y\)</span> and contained in <span class="math inline">\((p\times q,p \times s)\)</span>. By lemma <a href="index.html#lem:finerLemma">1.4</a>, the order topology on <span class="math inline">\(\mathbb{R}^2\)</span> is strictly finer than standard topology on <span class="math inline">\(\mathbb{R}^2\)</span>.</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:fig11"></span>
+<img src="figures/figure%2011.jpg" alt="$~$"  />
+<p class="caption">
+Figure 1.10: <span class="math inline">\(~\)</span>
+</p>
+</div>
+<p>Now I am intersected in a problem. That is can we write dictionary order topology as <span class="math inline">\(\mathbb{R}^2\)</span> as product topology. Actually we can,
+<span class="math display">\[\mathbb{R}^2_{dictionary}:=\mathbb{R}_{discrete }\times \mathbb{R}_{standard}\]</span></p>
+<div class="proof">
+<p><span id="unlabeled-div-12" class="proof"><em>Proof</em>. </span>Let <span class="math inline">\(\{a\} \times (c,d)\)</span> be a basis element in product toplogy <span class="math inline">\(\mathbb{R}_d \times \mathbb{R}\)</span>. Let <span class="math inline">\(a\times x\in \{a\} \times (c,d)\)</span> obsereve that
+<span class="math display">\[a\times x\in \{a\} \times (c,d) = (a\times c,a\times d)\]</span>
+and <span class="math inline">\((a\times c,a\times d)\)</span> is basis element of order topology <span class="math inline">\(\mathbb{R}^2\)</span>. Thus by lemma <a href="index.html#lem:finerLemma">1.4</a>, order toplogy in <span class="math inline">\(\mathbb{R}^2\)</span> is finer than the product toplogy <span class="math inline">\(\mathbb{R}_d \times \mathbb{R}\)</span>.</p>
+<p>Now suppose that <span class="math inline">\((p\times q, r \times s)\)</span> be a basis elemenet in order toplogy on <span class="math inline">\(\mathbb{R}^2\)</span>.</p>
+<ul>
+<li>If <span class="math inline">\(p&lt;x\)</span>, define <span class="math inline">\(l=y−1\)</span> and if <span class="math inline">\(p=x\)</span> define <span class="math inline">\(l=r\)</span>. In either case we know that <span class="math inline">\((p\times q)&lt;(x\times l)&lt;(x\times y)\)</span>.</li>
+<li>If <span class="math inline">\(x&lt;r\)</span> define <span class="math inline">\(t=y+1\)</span> and if <span class="math inline">\(x=r\)</span> define <span class="math inline">\(t=s\)</span>. In either case we know that <span class="math inline">\((x\times y)&lt;(x\times t)&lt;(q \times s)\)</span>.</li>
+</ul>
+<p>See figure <a href="index.html#fig:fig12">1.11</a>
+So <span class="math display">\[(x,y) \in \{x\} \times (l,t) \subseteq (p \times q, r \times s).\]</span>
+Thus by lemma <a href="index.html#lem:finerLemma">1.4</a>, product toplogy <span class="math inline">\(\mathbb{R}_d \times \mathbb{R}\)</span> is finer than order toplogy in <span class="math inline">\(\mathbb{R}^2\)</span>.</p>
+<p>Therefore, <span class="math display">\[\mathbb{R}^2_{dictionary}=\mathbb{R}_{discrete }\times \mathbb{R}_{standard}\]</span></p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:fig12"></span>
+<img src="figures/figure%2012.jpg" alt="$~$"  />
+<p class="caption">
+Figure 1.11: <span class="math inline">\(~\)</span>
+</p>
+</div>
+</div>
+<div id="the-subspace-topology" class="section level2 hasAnchor" number="1.6">
+<h2><span class="header-section-number">1.6</span> The Subspace Topology<a href="index.html#the-subspace-topology" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><em>A subset of a topological space has a naturally induced topology, called the subspace topology. In geometry, the subspace topology is the source of all funky typologies.</em></p>
+<div class="definition">
+<p><span id="def:unnamed-chunk-42" class="definition"><strong>Definition 1.11  </strong></span>Let <span class="math inline">\((X, \mathcal{T})\)</span> be a topological space. Let <span class="math inline">\(Y\subseteq X\)</span>. The collection
+<span class="math display">\[\mathcal{T}_Y = \{Y \cap U | U \in \mathcal{T}\}\]</span> is a topology on <span class="math inline">\(Y\)</span>, called the subspace topology.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-13" class="proof"><em>Proof</em>. </span>(Proof of the collection <span class="math inline">\(\mathcal{T}_Y\)</span> is a tology).</p>
+<ul>
+<li>(T1) This is very easy to see. <span class="math inline">\(\mathcal{T}_Y\)</span> contains <span class="math inline">\(\emptyset\)</span> and <span class="math inline">\(Y\)</span> because <span class="math inline">\(\emptyset = Y \cap \emptyset and Y = Y \cap X\)</span>, where <span class="math inline">\(\emptyset\)</span> and <span class="math inline">\(X\)</span> are elements of <span class="math inline">\(\mathcal{T}\)</span>.</li>
+<li>(T2) Let <span class="math inline">\(\{U_\alpha \cap Y\in \mathcal{T_Y}:\alpha \in I, \text{ I is index set}\}\)</span> be collection of open sets in subspace toplogy of <span class="math inline">\(Y\)</span>, where <span class="math inline">\(U_\alpha\in \mathcal{T}\)</span>.
+<span class="math display">\[\bigcup_{\alpha \in I}\left(U_\alpha\cap Y\right)
+  =\bigcup_{\alpha \in I}\left(U_\alpha\right)\cap Y.\]</span>
+Thus it contains in <span class="math inline">\(\mathcal{T}\)</span>. Thus <span class="math inline">\(\mathcal{T}_Y\)</span> is closed under arbitary unions.</li>
+<li>(T3) Let <span class="math inline">\(U_1\cap Y, U_2\cap Y,..., U_n\cap Y\)</span> be finite collection of open sets in subspace toplogy of <span class="math inline">\(Y\)</span> in <span class="math inline">\(X\)</span>.
+<span class="math display">\[(U_1\cap Y)\bigcap (U_2\cap Y)\bigcap \cdots \bigcap (U_n\cap Y)=(U_1\cap U_2 \cap \cdot U_n)\bigcap Y.\]</span>
+Thus it contains in <span class="math inline">\(\mathcal{T}\)</span>.Thus <span class="math inline">\(\mathcal{T}_Y\)</span> is closed under finite intersections.</li>
+</ul>
+</div>
+<div class="lemma">
+<p><span id="lem:unnamed-chunk-44" class="lemma"><strong>Lemma 1.7  </strong></span>Let <span class="math inline">\((X, \mathcal{T})\)</span> be a topological space, and <span class="math inline">\(Y\subseteq X\)</span>. If <span class="math inline">\(\mathcal{B}\)</span> is a basis for <span class="math inline">\(\mathcal{T}\)</span> then the collection
+<span class="math display">\[\mathcal{B}_Y = \{B \cap Y | B \in \mathcal{B}\}\]</span>
+is a basis for the subspace topology on <span class="math inline">\(Y\)</span>.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-14" class="proof"><em>Proof</em>. </span>Let <span class="math inline">\(V\in \mathcal{T}_Y\)</span>. Then <span class="math inline">\(V=U\cap Y\)</span> for some <span class="math inline">\(U\in \mathcal{T}\)</span>. For every <span class="math inline">\(x \in V\)</span>, there is <span class="math inline">\(B \in \mathcal{B}\)</span> such that <span class="math inline">\(x \in B \subset U\)</span> since <span class="math inline">\(\mathcal{B}\)</span> is a basis of <span class="math inline">\(\mathcal{T}\)</span> (Lemma <a href="index.html#lem:lemmaTequalsTB">1.2</a>). Now we found <span class="math inline">\(Y \cap B\)</span> such that <span class="math inline">\(x \in Y \cap B \subset V\)</span>.</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:fig13"></span>
+<img src="figures/figure%2013.jpg" alt="$~$"  />
+<p class="caption">
+Figure 1.12: <span class="math inline">\(~\)</span>
+</p>
+</div>
+<div class="example">
+<p><span id="exm:unnamed-chunk-46" class="example"><strong>Example 1.13  </strong></span>Let <span class="math inline">\(I = [0, 1]\)</span>. The dictionary order on <span class="math inline">\(I \times I\)</span> is just the restriction to <span class="math inline">\(I \times I\)</span> of the dictionary order on the plane <span class="math inline">\(\mathbb{R} \times \mathbb{R}\)</span>. However, the dictionary order topology on <span class="math inline">\(I \times I\)</span> is <strong>NOT</strong> the same as the subspace topology on <span class="math inline">\(I \times I\)</span> obtained from the dictionary order topology on <span class="math inline">\(\mathbb{R} \times \mathbb{R}\)</span>!</p>
+<p>For example, the set <span class="math inline">\(\{\frac{1}{2}\} \times (\frac{1}{2}, 1]\)</span> is open in <span class="math inline">\(I \times I\)</span> in the
+subspace topology, but not in the order topology, as you can check.</p>
+<p>See Figure <a href="index.html#fig:fig14">1.13</a>.</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:fig14"></span>
+<img src="figures/figure%2014.jpg" alt="$~$"  />
+<p class="caption">
+Figure 1.13: <span class="math inline">\(~\)</span>
+</p>
+</div>
+<p><strong>Notation</strong> : The set <span class="math inline">\(I \times I\)</span> in the dictionary order topology will be called the ordered square, and
+denoted by <span class="math inline">\(I_o^2\)</span>.</p>
+<p>Let’s generalized the idea.</p>
+<div class="lemma">
+<p><span id="lem:unnamed-chunk-47" class="lemma"><strong>Lemma 1.8  </strong></span>The subspace topology on <span class="math inline">\(I \times I\)</span> obtained from the dictionary order topology on <span class="math inline">\(\mathbb{R} \times \mathbb{R}\)</span> is strictly finer than the dictionary order toplogy on <span class="math inline">\(I \times I\)</span>.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-15" class="proof"><em>Proof</em>. </span>So, as pervious we have to proove two things they are finer condtion and strictly condition.</p>
+<p>Let <span class="math inline">\((a_1\times b_1, a_2 \times b_2)\)</span> be a basis elemenet of order toplogy. and <span class="math inline">\(x\times y \in (a_1\times b_1, a_2 \times b_2)\)</span></p>
+<ul>
+<li><p><strong>Case I</strong> <span class="math inline">\((a_1&lt;x&lt;a_2)\)</span>:
+<span class="math display">\[x\times y \in (x\times-1,x\times 2)\cap I^2= [x\times 0,x\times 1]=\{x\}\times [0,1] \subset (a_1\times b_1, a_2 \times b_2)\]</span>
+Note that <span class="math inline">\((x\times -1,x\times 2)\cap I^2\)</span> is a basis element of subspace topology.</p></li>
+<li><p><strong>Case II</strong> <span class="math inline">\((a_1=x&lt;a_2)\)</span>:
+<span class="math display">\[x\times y \in (x\times b_1,x\times 2)\cap I^2= [x\times b_1,x\times 1]=\{x\}\times (b_1,1] \subset (a_1\times b_1, a_2 \times b_2)\]</span>
+Note that <span class="math inline">\((x\times b_1,x\times 2)\cap I^2\)</span> is a basis element of subspace topology.</p></li>
+<li><p><strong>Case III</strong> <span class="math inline">\((a_1&lt;x=a_2)\)</span>:
+<span class="math display">\[x\times y \in (x\times -1,x\times b_2)\cap I^2= [x\times 0,x\times b_2]=\{x\}\times [0,b_2) \subset (a_1\times b_1, a_2 \times b_2)\]</span>
+Note that <span class="math inline">\((x\times -1,x\times b_2)\cap I^2\)</span> is a basis element of subspace topology.</p></li>
+<li><p><strong>Case IV</strong> <span class="math inline">\((a_1=x=a_2)\)</span>:
+<span class="math display">\[x\times y \in (x\times b_1,x\times b_2)\cap I^2= [x\times b_1,x\times b_2]=\{x\}\times [b_1,b_2) \subset (a_1\times b_1, a_2 \times b_2)\]</span>
+Note that <span class="math inline">\((x\times b_1,x\times b_2)\cap I^2\)</span> is a basis element of subspace topology.</p></li>
+</ul>
+<p>See figure <a href="index.html#fig:fig15">1.14</a></p>
+<p>In above all four cases, we have found basis element of subspace topology that conatain <span class="math inline">\(x\times y\)</span> and conatined in <span class="math inline">\((a_1\times b_1, a_2 \times b_2)\)</span>.</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:fig15"></span>
+<img src="figures/figure%2015.jpg" alt="$~$"  />
+<p class="caption">
+Figure 1.14: <span class="math inline">\(~\)</span>
+</p>
+</div>
+</div>
+<div id="closed-sets-and-limit-points" class="section level2 hasAnchor" number="1.7">
+<h2><span class="header-section-number">1.7</span> Closed Sets and Limit Points<a href="index.html#closed-sets-and-limit-points" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><em>Closed sets are nothing but complement of open sets. On the other hand, we can also say that open sets are nothing but
+complement of closed sets. Thus we can actually use closed sets to define topology, although mathematicians usually use
+open sets to define topology.</em></p>
+<div class="definition">
+<p><span id="def:unnamed-chunk-49" class="definition"><strong>Definition 1.12  </strong></span>Let <span class="math inline">\(A\)</span> be a subset of a topological space <span class="math inline">\((X, T)\)</span>.</p>
+<ul>
+<li><span class="math inline">\(A\)</span> is a closed set of <span class="math inline">\(X\)</span> if <span class="math inline">\(X - A\)</span> is an open set.</li>
+<li>The closure <span class="math inline">\(\overline{A}\)</span> of <span class="math inline">\(A\)</span> in <span class="math inline">\(X\)</span> is the intersection of all closed sets of <span class="math inline">\(X\)</span>, containing <span class="math inline">\(A\)</span>.</li>
+<li>The interior <span class="math inline">\(\text{Int}A\)</span> of <span class="math inline">\(A\)</span> in <span class="math inline">\(X\)</span> is the union of all open sets of <span class="math inline">\(X\)</span>, contained in <span class="math inline">\(A\)</span>.</li>
+<li><span class="math inline">\(x \in X\)</span> is a limit point of <span class="math inline">\(A\)</span> if <span class="math inline">\(x \in A\setminus\{x\}\)</span></li>
+</ul>
 </div>
 
 </div>
