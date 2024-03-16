@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Topology</title>
+  <meta name="description" content="This my attempt to do the topolgy." />
+  <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Topology" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This my attempt to do the topolgy." />
+  <meta name="github-repo" content="https://github.com/ashanjayamal/topology_bookdown.git" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Topology" />
+  
+  <meta name="twitter:description" content="This my attempt to do the topolgy." />
+  
+
+<meta name="author" content="Ashan Jayamal" />
+
+
+<meta name="date" content="2024-03-17" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+<link rel="next" href="chapter-2-name.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Topology</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Topology</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#topological-spaces"><i class="fa fa-check"></i><b>1.1</b> Topological Spaces</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#basis-of-a-topology"><i class="fa fa-check"></i><b>1.2</b> Basis of a Topology</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#comparing-topologies"><i class="fa fa-check"></i><b>1.3</b> Comparing Topologies</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#order-topology"><i class="fa fa-check"></i><b>1.4</b> Order Topology</a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#product-toplogy-on-x-times-y."><i class="fa fa-check"></i><b>1.5</b> Product Toplogy on <span class="math inline">\(X \times Y\)</span>.</a></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#the-subspace-topology"><i class="fa fa-check"></i><b>1.6</b> The Subspace Topology</a></li>
+<li class="chapter" data-level="1.7" data-path="index.html"><a href="index.html#closed-sets-and-limit-points"><i class="fa fa-check"></i><b>1.7</b> Closed Sets and Limit Points</a>
+<ul>
+<li class="chapter" data-level="1.7.1" data-path="index.html"><a href="index.html#closed-set"><i class="fa fa-check"></i><b>1.7.1</b> Closed Set</a></li>
+<li class="chapter" data-level="1.7.2" data-path="index.html"><a href="index.html#closure-and-interior-of-a-set"><i class="fa fa-check"></i><b>1.7.2</b> Closure and Interior of a Set</a></li>
+</ul></li>
+<li class="chapter" data-level="1.8" data-path="index.html"><a href="index.html#hausdorff-spaces"><i class="fa fa-check"></i><b>1.8</b> Hausdorff Spaces</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="chapter-2-name.html"><a href="chapter-2-name.html"><i class="fa fa-check"></i><b>2</b> Chapter 2 name</a></li>
+<li class="chapter" data-level="3" data-path="chapter-03-name.html"><a href="chapter-03-name.html"><i class="fa fa-check"></i><b>3</b> Chapter 03 name</a></li>
+<li class="chapter" data-level="4" data-path="exercises.html"><a href="exercises.html"><i class="fa fa-check"></i><b>4</b> Exercises</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="exercises.html"><a href="exercises.html#section-16-in-munkress-book"><i class="fa fa-check"></i><b>4.1</b> Section 16 in Munkress Book</a></li>
+<li class="chapter" data-level="4.2" data-path="exercises.html"><a href="exercises.html#section-17-in-munkress-book"><i class="fa fa-check"></i><b>4.2</b> Section 17 in Munkress Book</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://ashanjayamal.github.io/academicpages/" target="blank">Property of Ashan</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Topology</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Topology</h1>
+<p class="author"><em>Ashan Jayamal</em></p>
+<p class="date"><em>2024-03-17</em></p>
+</div>
+<div id="topology" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">Chapter 1</span> Topology<a href="index.html#topology" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>A topology is a geometric structure defined on a set. Basically it is given by declaring which subsets are “open” sets. Thus the axioms are the abstraction of the properties that open sets have.</p>
+<div id="topological-spaces" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> Topological Spaces<a href="index.html#topological-spaces" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="definition">
+<p><span id="def:Top" class="definition"><strong>Definition 1.1  </strong></span>A topology on a set <span class="math inline">\(X\)</span> is a collection <span class="math inline">\(\mathcal{T}\)</span> of subsets of <span class="math inline">\(X\)</span> such that</p>
+<p>(T1) <span class="math inline">\(\phi\)</span> and <span class="math inline">\(X\)</span> are in <span class="math inline">\(\mathcal{T}\)</span>;</p>
+<p>(T2) Any union of subsets in <span class="math inline">\(\mathcal{T}\)</span> is in <span class="math inline">\(\mathcal{T}\)</span>;</p>
+<p>(T3) The finite intersection of subsets in <span class="math inline">\(\mathcal{T}\)</span> is in <span class="math inline">\(\mathcal{T}\)</span>.</p>
+</div>
+<p>A set <span class="math inline">\(X\)</span> with a topology <span class="math inline">\(\mathcal{T}\)</span> is called a topological space. Denoted by <span class="math inline">\((X,\mathcal{T})\)</span>. An element of <span class="math inline">\(\mathcal{T}\)</span> is called an open set.</p>
+<div class="example">
+<p><span id="exm:unnamed-chunk-1" class="example"><strong>Example 1.1  </strong></span>Let <span class="math inline">\(X\)</span> be a three-element set, <span class="math inline">\(X = \{a, b, c\}\)</span> and <span class="math inline">\(\mathcal{T}=\{X, \emptyset,\{a, b\}, \{b\}, \{b, c\}\}\)</span>. We can check T1,T2 and T3 conditions.</p>
+</div>
+<div class="example">
+<p><span id="exm:unnamed-chunk-2" class="example"><strong>Example 1.2  </strong></span>Let <span class="math inline">\(X\)</span> be a three-element set, <span class="math inline">\(X = \{a, b, c\}\)</span> as pervoius. There are many possible topologies on <span class="math inline">\(X\)</span>, some of which are indicated schematically in figure <a href="index.html#fig:gi">1.1</a>. Furthur, we can see that even a three-element set has many different topologies.</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:gi"></span>
+<img src="figures/figure%2001.png" alt="$~$"  />
+<p class="caption">
+Figure 1.1: <span class="math inline">\(~\)</span>
+</p>
+</div>
+<div class="remark">
+<p><span id="unlabeled-div-1" class="remark"><em>Remark</em>. </span>Not every collection of subsets of <span class="math inline">\(X\)</span> is a topology on <span class="math inline">\(X\)</span>. Observe that Neither of the collections indicated in figure <a href="index.html#fig:fig2">1.2</a> is a topology.</p>
+<p>First let’s consider the left hand coner of figure <a href="index.html#fig:fig2">1.2</a>. <span class="math inline">\(\{a\}\)</span> and <span class="math inline">\(\{b\}\)</span> in the collection, but <span class="math inline">\(\{a\}\cup \{b\}\)</span> is not in the collection.</p>
+<p>Now consider the right hand coner figure. <span class="math inline">\(\{a,b\}\)</span> and <span class="math inline">\(\{b,c\}\)</span> in collection, but <span class="math inline">\(\{a,b\}\cap\{b,c\}=\{b\}\)</span> is not in the collection.</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:fig2"></span>
+<img src="figures/figure%2002.png" alt="$~$"  />
+<p class="caption">
+Figure 1.2: <span class="math inline">\(~\)</span>
+</p>
+</div>
+<div class="example">
+<p><span id="exm:unnamed-chunk-4" class="example"><strong>Example 1.3  </strong></span>If <span class="math inline">\(X\)</span> is any set, the collection of all subsets of <span class="math inline">\(X\)</span> (Power set) is a topology on <span class="math inline">\(X\)</span>. This trivail statified T1 T2 and T3 conditions. Furthur,This is called the <em>discrete topology</em>.</p>
+</div>
+<div class="example">
+<p><span id="exm:unnamed-chunk-5" class="example"><strong>Example 1.4  </strong></span>The collection consisting of <span class="math inline">\(X\)</span> and <span class="math inline">\(\emptyset\)</span> only is also a topologyon <span class="math inline">\(X\)</span>. we shall call it the <em>indiscrete topology</em>, or the trivial topology.</p>
+</div>
+<div class="example">
+<p><span id="exm:unnamed-chunk-6" class="example"><strong>Example 1.5  </strong></span>Let <span class="math inline">\(X\)</span> be a set and let <span class="math inline">\(\mathcal{T}_f\)</span> be the collection of all subsets U of X such that <span class="math inline">\(X\setminus U\)</span> either is finite or is all of <span class="math inline">\(X\)</span>. In oter words,
+<span class="math display">\[\mathcal{T}_f:=\left\{U\subseteq X : \text{Either is finite or is all of } X\right\}\]</span>
+Let’s check is <span class="math inline">\(\mathcal{T}_f\)</span> a topology. First obseve that both <span class="math inline">\(X\)</span> and <span class="math inline">\(\emptyset\)</span> are in <span class="math inline">\(\mathcal{T}_f\)</span> , because <span class="math inline">\(X\setminus X=\emptyset\)</span> is finite and $X$ is all of <span class="math inline">\(X\)</span>.So <span class="math inline">\(\mathcal{T}_f\)</span> statified the T1 condition. Now let’s check the T2 condition. Let <span class="math inline">\(\{U_{\alpha}:\alpha\in I, I \text{ is index set}\}\)</span>.Now we need to show that <span class="math inline">\(\cup{\alpha\in I} U_\alpha\in \mathcal{T}_f\)</span>. So consider,
+<span class="math display">\[X\setminus \bigcup_{\alpha\in I} U_\alpha =\bigcap_{\alpha\in I} (X\setminus  U_\alpha).\]</span>
+Now obsevere that <span class="math inline">\(\cap_{\alpha\in I} (X\setminus U_\alpha)\)</span> is finite, because each set <span class="math inline">\((X\setminus U_\alpha)\)</span> is finite and arbitary intersection of finite sets is finite. So, <span class="math inline">\(\mathcal{T}_f\)</span> stattified the T2 condition also.
+Finaly check the last condition, T3 condition. Let <span class="math inline">\(U_1,...,U_n\)</span> are nonempty elements of <span class="math inline">\(\mathcal{T}_f\)</span> , to show that <span class="math inline">\(\bigcup_i U_i \in \mathcal{T}_f\)</span> , we compute
+<span class="math display">\[X\setminus \bigcap_{i=1}^n U_i = \bigcup_{i=1}^n(X \setminus U_i).\]</span>
+Note that the set <span class="math inline">\(\bigcup_{i=1}^n(X \setminus U_i)\)</span> is a finite union of finite sets and, therefore, finite. So it statisfiy the T3 condition also. Thefore <span class="math inline">\(\mathcal{T}_f\)</span> is a topology. Furthur <span class="math inline">\(\mathcal{T}_f\)</span> is called the finite <em>complement topology</em>.</p>
+</div>
+<div class="example">
+<p><span id="exm:unnamed-chunk-7" class="example"><strong>Example 1.6  </strong></span>Let <span class="math inline">\(X\)</span> be a set. Define <span class="math inline">\(\mathcal{T}\)</span> to be the collection of all subsets <span class="math inline">\(U\)</span> of <span class="math inline">\(X\)</span> such that <span class="math inline">\(X\setminus U\)</span> either is finite or is all of <span class="math inline">\(X\)</span>. Then <span class="math inline">\(\mathcal{T}\)</span> defines a topology on <span class="math inline">\(X\)</span>, called finite complement topology of <span class="math inline">\(X\)</span>.</p>
+</div>
+</div>
+<div id="basis-of-a-topology" class="section level2 hasAnchor" number="1.2">
+<h2><span class="header-section-number">1.2</span> Basis of a Topology<a href="index.html#basis-of-a-topology" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Once we define a structure on a set, often we try to understand what the minimum data you need to specify the structure. In many cases, this minimum data is called a basis and we say that the basis generate the structure. The notion of a basis of the structure will help us to describe examples more systematically.</p>
+<div class="definition">
+<p><span id="def:unnamed-chunk-8" class="definition"><strong>Definition 1.2  </strong></span>Let <span class="math inline">\(X\)</span> be a set. A basis of a topology on <span class="math inline">\(X\)</span> is a collection <span class="math inline">\(\mathcal{B}\)</span> of subsets in <span class="math inline">\(X\)</span> such that</p>
+<p>(B1) For every <span class="math inline">\(x \in X\)</span>, there exist an element <span class="math inline">\(B\)</span> in <span class="math inline">\(\mathcal{B}\)</span> such that <span class="math inline">\(x \in B\)</span>.</p>
+<p>(B2) If <span class="math inline">\(x \in B_{1} \cap B_{2}\)</span> where <span class="math inline">\(B_{1}, B_{2}\)</span> are in <span class="math inline">\(\mathcal{B}\)</span>, then there is <span class="math inline">\(B_{3}\)</span> in <span class="math inline">\(\mathcal{B}\)</span> such that <span class="math inline">\(x \in B_{3} \subseteq B_{1} \cap B_{2}\)</span>.</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:fig3"></span>
+<img src="figures/figure%2003.jpg" alt="$~$"  />
+<p class="caption">
+Figure 1.3: <span class="math inline">\(~\)</span>
+</p>
+</div>
+<div class="lemma">
+<p><span id="lem:unnamed-chunk-9" class="lemma"><strong>Lemma 1.1  (Generating of a topology) </strong></span>Let <span class="math inline">\(\mathcal{B}\)</span> be a basis of a topology on X. Define <span class="math inline">\(\mathcal{T}_{\mathcal{B}}\)</span> to be the collection of subsets <span class="math inline">\(U \subset X\)</span> satisfting</p>
+<p>(G1) For every <span class="math inline">\(x \in U\)</span>, there is <span class="math inline">\(B \in \mathcal{B}\)</span> such that <span class="math inline">\(x \in B \subset U\)</span>.</p>
+<p>Then <span class="math inline">\(\mathcal{T}_{\mathcal{B}}\)</span> defines a topology on <span class="math inline">\(X\)</span>. Here we assume that <span class="math inline">\(\emptyset\)</span> trivially satisfies the condition, so that <span class="math inline">\(\emptyset \in \mathcal{T}_{\mathcal{B}}\)</span>.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-2" class="proof"><em>Proof</em>. </span>We need to check the three axioms:</p>
+<ul>
+<li><p>(T1) <span class="math inline">\(\emptyset \in \mathcal{T}_{\mathcal{B}}\)</span> as we assumed. <span class="math inline">\(X \in \mathcal{T}_{\mathcal{B}}\)</span> by (B1).</p></li>
+<li><p>(T2) Consider a collection of subsets <span class="math inline">\(U_{\alpha} \in \mathcal{T}_{\mathcal{B}}, \alpha \in \mathrm{J}\)</span>. We need to show</p></li>
+</ul>
+<p><span class="math display">\[
+U:=\bigcup_{\alpha \in J} U_{\alpha} \quad \in \mathcal{T}_{\mathcal{B}}
+\]</span>
+By the definition of the union, for each <span class="math inline">\(x \in U\)</span>, there is <span class="math inline">\(U_{\alpha}\)</span> such that <span class="math inline">\(x \in U_{\alpha}\)</span>. Since <span class="math inline">\(U_{\alpha} \in \mathcal{T}_{\mathcal{B}}\)</span>, there is <span class="math inline">\(B \in \mathcal{B}\)</span> such that <span class="math inline">\(x \in B \subset U_{\alpha}\)</span>. Since <span class="math inline">\(U_{\alpha} \subset U\)</span>, we found <span class="math inline">\(B \in \mathcal{B}\)</span> such that <span class="math inline">\(x \in B \subset U\)</span>. Thus <span class="math inline">\(U \in \mathcal{T}_{\mathcal{B}}\)</span>.</p>
+<ul>
+<li><p>(T3) Now consider a finite number of subsets <span class="math inline">\(U_{1},..., U_{n} \in \mathcal{T}_{\mathcal{B}}\)</span>. We need to show that
+<span class="math display">\[
+U&#39;:=\bigcap_{i=1}^{n} U_{i} \quad \in \mathcal{T}_{\mathcal{B}}
+\]</span></p></li>
+<li><p>Let’s just check for two subsets <span class="math inline">\(U_{1}, U_{2}\)</span> first. For each <span class="math inline">\(x \in U_{1} \cap U_{2}\)</span>, there are <span class="math inline">\(B_{1}, B_{2} \in \mathcal{B}\)</span> such that <span class="math inline">\(x \in B_{1} \subset U_{1}\)</span> and <span class="math inline">\(x \in B_{2} \subset U_{2}\)</span>. This is because <span class="math inline">\(U_{1}, U_{2} \in \mathcal{T}_{\mathcal{B}}\)</span> and <span class="math inline">\(x \in U_{1}, x \in U_{2}\)</span>. By (B2), there is <span class="math inline">\(B_{3} \in \mathcal{B}\)</span> such that <span class="math inline">\(x \in B_{3} \subset B_{1} \cap B_{2}\)</span>. Now we found <span class="math inline">\(B_{3} \in \mathcal{B}\)</span> such that <span class="math inline">\(x \in B_{3} \subset U\)</span>.</p></li>
+<li><p>We can generalize the above proof to <span class="math inline">\(n\)</span> subsets, but let’s use induction to prove it. This is going to be the induction on the number of subsets.</p>
+<ul>
+<li>When <span class="math inline">\(n=1\)</span>, the claim is trivial.</li>
+<li>Suppose that the claim is true when we have <span class="math inline">\(n-1\)</span> subsets, i.e. <span class="math inline">\(U_{1} \cap \cdots \cap U_{n-1} \in \mathcal{T}_{\mathcal{B}}\)</span>. Since <span class="math display">\[
+U=U_{1} \cap \cdots \cap U_{n}=\left(U_{1} \cap \cdots \cap U_{n-1}\right) \cap U_{n}
+\]</span>
+and regarding <span class="math inline">\(U^{\prime}:=U_{1} \cap \cdots \cap U_{n-1}\)</span>, we have two subsets case <span class="math inline">\(U=U^{\prime} \cap U_{n}\)</span>. By the first arguments, <span class="math inline">\(U \in \mathcal{T}_{\mathcal{B}}\)</span>.</li>
+</ul></li>
+</ul>
+</div>
+<div class="definition">
+<p><span id="def:unnamed-chunk-11" class="definition"><strong>Definition 1.3  </strong></span><span class="math inline">\(\mathcal{T}_{\mathcal{B}}\)</span> is called the <strong>topology generated by a basis <span class="math inline">\(\mathcal{B}\)</span></strong>. On the other hand, if <span class="math inline">\((X, \mathcal{T})\)</span> is a topological space and <span class="math inline">\(\mathcal{B}\)</span> is a basis of a topology such that <span class="math inline">\(\mathcal{T}_{\mathcal{B}}=\mathcal{T}\)</span>, then we say <span class="math inline">\(\mathcal{B}\)</span> is a basis of <span class="math inline">\(\mathcal{T}\)</span>. Note that <span class="math inline">\(\mathcal{T}\)</span> itself is a basis of the topology <span class="math inline">\(\mathcal{T}\)</span>. So there is always a basis for a given topology.</p>
+</div>
+<div class="example">
+<p><span id="exm:unnamed-chunk-12" class="example"><strong>Example 1.7  </strong></span></p>
+<ul>
+<li><p>(Standard Topology of <span class="math inline">\(\mathbb{R}\)</span> ) Let <span class="math inline">\(\mathbb{R}\)</span> be the set of all real numbers. Let <span class="math inline">\(\mathcal{B}\)</span> be the collection of all open intervals:
+<span class="math display">\[
+(a, b):=\{x \in \mathbb{R} \mid a&lt;x&lt;b\}
+\]</span>
+Then <span class="math inline">\(\mathcal{B}\)</span> is a basis of a topology and the topology generated by <span class="math inline">\(\mathcal{B}\)</span> is called the standard topology of <span class="math inline">\(\mathbb{R}\)</span>.</p></li>
+<li><p>Let <span class="math inline">\(\mathbb{R}^{2}\)</span> be the set of all ordered pairs of real numbers, i.e. <span class="math inline">\(\mathbb{R}^{2}:=\mathbb{R} \times \mathbb{R}\)</span> (cartesian product). Let <span class="math inline">\(\mathcal{B}\)</span> be the collection of cartesian product of open intervals, <span class="math inline">\((a, b) \times(c, d)\)</span>. Then <span class="math inline">\(\mathcal{B}\)</span> is a basis of a topology and the topology generated by <span class="math inline">\(\mathcal{B}\)</span> is called the standard topology of <span class="math inline">\(\mathbb{R}^{2}\)</span>.</p></li>
+<li><p>(Lower limit topology of <span class="math inline">\(\mathbb{R}\)</span> ) Consider the collection <span class="math inline">\(\mathcal{B}\)</span> of subsets in <span class="math inline">\(\mathbb{R}\)</span> :
+<span class="math display">\[
+\mathcal{B}:=\{[a, b):=\{x \in \mathbb{R} \mid a \leq x&lt;b\} \mid a, b \in \mathbb{R}\}
+\]</span>
+This is a basis for a topology on <span class="math inline">\(\mathbb{R}\)</span>. This topology is called the lower limit topology.</p></li>
+</ul>
+</div>
+<p>The following two lemma are useful to determine whehter a collection <span class="math inline">\(\mathcal{B}\)</span> of open sets in <span class="math inline">\(\mathcal{T}\)</span> is a basis for <span class="math inline">\(\mathcal{T}\)</span> or not.</p>
+<div class="remark">
+<p><span id="unlabeled-div-3" class="remark"><em>Remark</em>. </span>Let <span class="math inline">\(\mathcal{T}\)</span> be a topology on <span class="math inline">\(X\)</span>. If <span class="math inline">\(\mathcal{B} \subset \mathcal{T}\)</span> and <span class="math inline">\(\mathcal{B}\)</span> satisfies (B1) and (B2), it is easy to see that <span class="math inline">\(\mathcal{T}_{\mathcal{B}} \subset \mathcal{T}\)</span>. This is just because of (G1). If <span class="math inline">\(U \in \mathcal{T}_{\mathcal{B}}\)</span>, (G1) is satisfied for <span class="math inline">\(U\)</span> so that <span class="math inline">\(\forall x \in U, \exists B_{x} \in \mathcal{B}\)</span> such that <span class="math inline">\(x \in B_{x} \subset U\)</span>. Therefore <span class="math inline">\(U=\cup_{x \in U} B_{x}\)</span>. By (T2), <span class="math inline">\(U \in \mathcal{T}\)</span>.</p>
+</div>
+<div class="lemma">
+<p><span id="lem:lemmaTequalsTB" class="lemma"><strong>Lemma 1.2  </strong></span>Let <span class="math inline">\((X, \mathcal{T})\)</span> be a topological space. Let <span class="math inline">\(\mathcal{B} \subset \mathcal{T}\)</span>. Then <span class="math inline">\(\mathcal{B}\)</span> is a basis and <span class="math inline">\(\mathcal{T}_{\mathcal{B}}=\mathcal{T}\)</span> if and only if <span class="math inline">\(\mathcal{T}\)</span> is the set of all unions of elements in <span class="math inline">\(\mathcal{B}\)</span>.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-4" class="proof"><em>Proof</em>. </span></p>
+<ul>
+<li><span class="math inline">\(\quad(\Rightarrow)\)</span> Let <span class="math inline">\(\mathcal{T}^{\prime}\)</span> be the set of all unions of open sets in <span class="math inline">\(\mathcal{B}\)</span>. If <span class="math inline">\(U \in \mathcal{T}\)</span>, then <span class="math inline">\(U\)</span> satisfies (G1), i.e. <span class="math inline">\(\forall x \in U, \exists B_{x} \in \mathcal{B}\)</span> s.t. <span class="math inline">\(x \in B_{x} \subset U\)</span>. Thus <span class="math inline">\(U=\cup_{x \in U} B_{x}\)</span>. Therefore <span class="math inline">\(U \in \mathcal{T}^{\prime}\)</span>. We proved <span class="math inline">\(\mathcal{T} \subset \mathcal{T}^{\prime}\)</span>. It follows from (T2) that <span class="math inline">\(\mathcal{T}^{\prime} \subset \mathcal{T}\)</span>.</li>
+<li><span class="math inline">\((\Leftarrow)\)</span> Since <span class="math inline">\(X \in \mathcal{T}, X=\cup_{\alpha} B_{\alpha}\)</span> some union of sets in <span class="math inline">\(\mathcal{B}\)</span>. Thus <span class="math inline">\(\forall x \in X, \exists B_{\alpha}\)</span> s.t. <span class="math inline">\(x \in B_{\alpha}\)</span>. This proves (B1) for <span class="math inline">\(\mathcal{B}\)</span>. If <span class="math inline">\(B_{1}, B_{2} \in \mathcal{B}\)</span>, then <span class="math inline">\(B_{1} \cap B_{2} \in \mathcal{T}\)</span> by (T2). Thus <span class="math inline">\(B_{1} \cap B_{2}=\cup_{\alpha} B_{\alpha}, B_{\alpha} \in \mathcal{B}\)</span>. So <span class="math inline">\(\forall x \in B_{1} \cap B_{2}, \exists B_{\alpha} \in B\)</span> s.t. <span class="math inline">\(x \in B_{\alpha}\)</span>. This <span class="math inline">\(B_{\alpha}\)</span> plays the role of <span class="math inline">\(B_{3}\)</span> in (B2). Thus <span class="math inline">\(\mathcal{B}\)</span> is a basis. Now it makes sense to consider <span class="math inline">\(\mathcal{T}_{\mathcal{B}}\)</span> and we need to show <span class="math inline">\(\mathcal{T}_{\mathcal{B}}=\mathcal{T}\)</span>. By the remark, we already know that <span class="math inline">\(\mathcal{T}_{\mathcal{B}} \subset \mathcal{T}\)</span>. On the other hand, if <span class="math inline">\(U \in \mathcal{T}\)</span>, then <span class="math inline">\(U=\cup_{\alpha} B_{\alpha}, B_{\alpha} \in \mathcal{B}\)</span>. Hence, <span class="math inline">\(\forall x \in U, \exists B_{\alpha}\)</span> such that <span class="math inline">\(x \in B_{\alpha} \subset U\)</span>. Thus (G1) is satisfied for <span class="math inline">\(U\)</span>. Thus <span class="math inline">\(U \in \mathcal{T}_{\mathcal{B}}\)</span>. This proves <span class="math inline">\(\mathcal{T}_{\mathcal{B}} \supset \mathcal{T}\)</span>.</li>
+</ul>
+</div>
+<div class="lemma">
+<p><span id="lem:lemma110" class="lemma"><strong>Lemma 1.3  </strong></span>Let <span class="math inline">\((X, \mathcal{T})\)</span> be a topological space. Let <span class="math inline">\(\mathcal{B} \subset \mathcal{T}\)</span>. Then <span class="math inline">\(\mathcal{B}\)</span> is a basis and <span class="math inline">\(\mathcal{T}_{\mathcal{B}}=\mathcal{T}\)</span> if and if any <span class="math inline">\(U \in \mathcal{T}\)</span> satisfies (Gl), i.e. <span class="math inline">\(\forall x \in U, \exists B_{x} \in \mathcal{B}\)</span> s.t. <span class="math inline">\(x \in B_{x} \subset U\)</span>.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-5" class="proof"><em>Proof</em>. </span></p>
+<ul>
+<li><p>(<span class="math inline">\(\Rightarrow\)</span>) Trivial by the definition of <span class="math inline">\(\mathcal{T}_{\mathcal{B}}\)</span>.</p></li>
+<li><p>(<span class="math inline">\(\Leftarrow X\)</span>) satisfies (G1) so <span class="math inline">\(\mathcal{B}\)</span> satisfies (B1). Let <span class="math inline">\(B_{1}, B_{2} \in \mathcal{B} \subset \mathcal{T}\)</span>. By (T3), <span class="math inline">\(B_{1} \cap B_{2} \in \mathcal{T}\)</span>. Thus <span class="math inline">\(B_{1} \cap B_{2}\)</span> satisfies (G1). This means (B2) holds for <span class="math inline">\(\mathcal{B}\)</span>. Thus <span class="math inline">\(\mathcal{B}\)</span> is a basis. Now the assumption can be rephrased as <span class="math inline">\(\mathcal{T} \subset \mathcal{T}_{\mathcal{B}}\)</span>. By the remark above, we already know <span class="math inline">\(\mathcal{T} \supset \mathcal{T}_{\mathcal{B}}\)</span>.</p></li>
+</ul>
+</div>
+</div>
+<div id="comparing-topologies" class="section level2 hasAnchor" number="1.3">
+<h2><span class="header-section-number">1.3</span> Comparing Topologies<a href="index.html#comparing-topologies" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="definition">
+<p><span id="def:unnamed-chunk-16" class="definition"><strong>Definition 1.4  </strong></span>Let <span class="math inline">\(\mathcal{T}, \mathcal{T}^{\prime}\)</span> be two topologies for a set <span class="math inline">\(X\)</span>. We say <span class="math inline">\(\mathcal{T}^{\prime}\)</span> is finer than <span class="math inline">\(\mathcal{T}\)</span> or <span class="math inline">\(\mathcal{T}\)</span> is coarser than <span class="math inline">\(\mathcal{T}^{\prime}\)</span> if <span class="math inline">\(\mathcal{T} \subset \mathcal{T}^{\prime}\)</span>. The intuition for this notion is ” <span class="math inline">\(\left(X, \mathcal{T}^{\prime}\right)\)</span> has more open subsets to separate two points in <span class="math inline">\(X\)</span> than <span class="math inline">\((X, \mathcal{T})\)</span> “.</p>
+</div>
+<div class="lemma">
+<p><span id="lem:finerLemma" class="lemma"><strong>Lemma 1.4  </strong></span>Let <span class="math inline">\(\mathcal{B}, \mathcal{B}^{\prime}\)</span> be bases of topologies <span class="math inline">\(\mathcal{T}, \mathcal{T}^{\prime}\)</span> on <span class="math inline">\(X\)</span> respectively. Then <span class="math inline">\(\mathcal{T}^{\prime}\)</span> is finer than <span class="math inline">\(\mathcal{T} \Leftrightarrow\)</span> <span class="math inline">\(\forall B \in \mathcal{B}\)</span> and <span class="math inline">\(\forall x \in B, \exists B^{\prime} \in \mathcal{B}^{\prime}\)</span> s.t. <span class="math inline">\(x \in B^{\prime} \subseteq B\)</span>.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-6" class="proof"><em>Proof</em>. </span></p>
+<ul>
+<li><p><span class="math inline">\(\Rightarrow\)</span> Since <span class="math inline">\(\mathcal{B} \subset \mathcal{T} \subset \mathcal{T}^{\prime}\)</span>, all subsets in <span class="math inline">\(\mathcal{B}\)</span> satisfies (G1) for <span class="math inline">\(\mathcal{T}^{\prime}\)</span>, which is exactly the statement we wanted to prove.</p></li>
+<li><p><span class="math inline">\(\Leftarrow\)</span> The LHS says <span class="math inline">\(\mathcal{B} \subset \mathcal{T}^{\prime}\)</span>. We need to show that it implies that any <span class="math inline">\(U \in \mathcal{T}\)</span> satisfies (G1) for <span class="math inline">\(\mathcal{T}^{\prime}\)</span> too.
+<span class="math display">\[
+\forall U \in \mathcal{T}, \forall x \in U, \exists B \in \mathcal{B} \text { s.t. } x \in B \subset U
+\]</span>But<span class="math display">\[
+\forall B \in \mathcal{B}, \forall x \in B, \exists B^{\prime} \in \mathcal{B}^{\prime} \text { s.t. } x \in B^{\prime} \subset B .
+\]</span>
+Combining those two,
+<span class="math display">\[
+\forall U \in \mathcal{T}, \forall x \in U, \exists B^{\prime} \in \mathcal{B}^{\prime} \text { s.t. } x \in B^{\prime} \subset B \subset U .
+\]</span></p></li>
+</ul>
+</div>
+<div class="definition">
+<p><span id="def:unnamed-chunk-18" class="definition"><strong>Definition 1.5  (subbasis) </strong></span>Let <span class="math inline">\(X\)</span> be a set.A subbasis <span class="math inline">\(\mathcal{S}\)</span> for a topology on <span class="math inline">\(X\)</span> is a collection of subsets of <span class="math inline">\(X\)</span> whose union equals <span class="math inline">\(X\)</span>.
+<span class="math display">\[\left(\text{i.e. }\forall x\in X ~\exists S\in\mathcal{S} \text{  such that } x\in S\right)\]</span></p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:64"></span>
+<img src="figures/figure%2006.jpg" alt="$~$"  />
+<p class="caption">
+Figure 1.4: <span class="math inline">\(~\)</span>
+</p>
+</div>
+<div class="definition">
+<p><span id="def:unnamed-chunk-19" class="definition"><strong>Definition 1.6  </strong></span>The topology generated by the subbasis <span class="math inline">\(\mathcal{S}\)</span> is defined to be the collection <span class="math inline">\(\mathcal{T}\)</span> of all unions of finite intersections of elements of <span class="math inline">\(\mathcal{S}\)</span>.</p>
+</div>
+</div>
+<div id="order-topology" class="section level2 hasAnchor" number="1.4">
+<h2><span class="header-section-number">1.4</span> Order Topology<a href="index.html#order-topology" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="definition">
+<p><span id="def:unnamed-chunk-20" class="definition"><strong>Definition 1.7  (Linear Order/ Complete Order) </strong></span>Consider order relation “<span class="math inline">\(&lt;\)</span>”.</p>
+<ol style="list-style-type: decimal">
+<li>If <span class="math inline">\(x \neq y\)</span>, then either <span class="math inline">\(x &lt; y\)</span> or <span class="math inline">\(y &lt; x\)</span>.</li>
+<li>If <span class="math inline">\(x &lt; y\)</span>, then <span class="math inline">\(x\neq y\)</span>.</li>
+<li>If <span class="math inline">\(x &lt; y\)</span> and <span class="math inline">\(y &lt; z\)</span>, then <span class="math inline">\(x &lt; z\)</span>.</li>
+</ol>
+</div>
+<div class="example">
+<p><span id="exm:unnamed-chunk-21" class="example"><strong>Example 1.8  </strong></span><span class="math inline">\(\mathbb{R}\)</span> is ordered set with less than relation.</p>
+</div>
+<p>First, let’s see intervals in an Ordered Set.</p>
+<p>Suppose that <span class="math inline">\(X\)</span> is a set having a simple order relation <span class="math inline">\(&lt;\)</span>. Given elements <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> of <span class="math inline">\(X\)</span> such that <span class="math inline">\(a &lt; b\)</span>, there are four subsets of <span class="math inline">\(X\)</span> that are called the intervals determined by <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>. They are the following :</p>
+<ul>
+<li><span class="math inline">\((a, b) = \{x\in X | a &lt; x &lt; b\}\)</span> (Type: open interval in <span class="math inline">\(X\)</span>),</li>
+<li><span class="math inline">\((a, b] = \{x\in X | a &lt; x ≤ b\}\)</span>(Type: half-open interval in <span class="math inline">\(X\)</span>),</li>
+<li><span class="math inline">\([a, b) = \{x\in X | a ≤ x &lt; b\}\)</span>(Type: half-open interval in <span class="math inline">\(X\)</span>),</li>
+<li><span class="math inline">\([a, b] = \{x\in X | a ≤ x ≤ b\}\)</span> (Type: closed interval in <span class="math inline">\(X\)</span>),</li>
+</ul>
+<p>The notation used here is familiar to you already in the case where <span class="math inline">\(X\)</span> is the real line,but these are intervals in an arbitrary ordered set.</p>
+<p>The use of the term “open” in this connection suggests that open intervals in <span class="math inline">\(X\)</span> should turn out to be open sets when we put a topology on <span class="math inline">\(X\)</span>. And so they will.</p>
+<div class="definition">
+<p><span id="def:unnamed-chunk-22" class="definition"><strong>Definition 1.8  </strong></span>Let <span class="math inline">\(X\)</span> be a set with a simple order relation; assume <span class="math inline">\(X\)</span> has more than one element. Let <span class="math inline">\(\mathcal{B}\)</span> be the collection of all sets of the following types:</p>
+<ol style="list-style-type: decimal">
+<li>All open intervals <span class="math inline">\((a, b)\)</span> in <span class="math inline">\(X\)</span>.</li>
+<li>All intervals of the form <span class="math inline">\([a_0, b)\)</span>, where <span class="math inline">\(a_0\)</span> is the smallest element (if any) of <span class="math inline">\(X\)</span>.</li>
+<li>All intervals of the form <span class="math inline">\((a, b_0]\)</span>, where <span class="math inline">\(b_0\)</span> is the largest element (if any) of <span class="math inline">\(X\)</span>.</li>
+</ol>
+<p>i.e.:
+<span class="math display">\[\begin{aligned}
+\mathcal{B}:=&amp;\{(a,b):a&lt;b, a,b\in X\}\\
+&amp; \bigcup \{[a,b:a&lt;b, a_0,b\in X \text{ and if $X$ has a smallest element and $a_0$ is the smallest element}\}\\
+&amp; \bigcup \{(a,b]:a&lt;b, a,b_0\in X \text{ and if $X$ has a largest element and $b_0$ is the largest element}\}
+\end{aligned}\]</span>
+The collection <span class="math inline">\(\mathcal{B}\)</span> is a basis for a topology on <span class="math inline">\(X\)</span>, which is called the order topology.</p>
+</div>
+<p><strong>Notation</strong>: Denote an arbitrary element of <span class="math inline">\(\mathbb{R} \times \mathbb{R}\)</span> by <span class="math inline">\(x \times y\)</span>, to avoid difficulty with notation.</p>
+<div class="definition">
+<p><span id="def:unnamed-chunk-23" class="definition"><strong>Definition 1.9  (Dictionary Oreder) </strong></span>Suppose that <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are two sets with order relations <span class="math inline">\(&lt;_{A}\)</span> and <span class="math inline">\(&lt;_{B}\)</span> respectively. Define an order relation <span class="math inline">\(&lt;\)</span> on <span class="math inline">\(A \times B\)</span> by defining <span class="math inline">\(a_{1} \times b_{1} &lt; a_{2} \times b_{2}\)</span> if <span class="math inline">\(a_{1} &lt;_{A} a_{2}\)</span>, or if <span class="math inline">\(a_{1} = a_{2}\)</span> and <span class="math inline">\(b_{1} &lt;_{B} b_{2}\)</span>. It is called the dictionary order relation on <span class="math inline">\(A \times B\)</span>.</p>
+</div>
+<div class="example">
+<p><span id="exm:unnamed-chunk-24" class="example"><strong>Example 1.9  </strong></span>Consider the set <span class="math inline">\(\mathbb{R} \times \mathbb{R}\)</span> in the dictionary order. The set <span class="math inline">\(\mathbb{R} \times \mathbb{R}\)</span> has neither a largest nor a smallest element, so the order topology on <span class="math inline">\(\mathbb{R} \times \mathbb{R}\)</span> has as basis the collection of all open intervals of the form <span class="math inline">\((a \times b, c \times d)\)</span> for <span class="math inline">\(a &lt; c\)</span>, and for <span class="math inline">\(a = c\)</span> and <span class="math inline">\(b &lt; d\)</span>.</p>
+<p>These two types of intervals are indicated in Figure 14.1. The sub collection consisting of only intervals of the second type is also a basis for the order topology on <span class="math inline">\(\mathbb{R} \times \mathbb{R}\)</span>, as you can check.</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:fi7"></span>
+<img src="figures/figure%2007.jpg" alt="$~$"  />
+<p class="caption">
+Figure 1.5: <span class="math inline">\(~\)</span>
+</p>
+</div>
+<div class="example">
+<p><span id="exm:unnamed-chunk-25" class="example"><strong>Example 1.10  </strong></span>The standard topology,lower limit topology and upper limit topology on <span class="math inline">\(\mathbb{R}\)</span>.</p>
+<p><span class="math display">\[\mathcal{B}:=\{(x,y):x&lt;y, x,y\in \mathbb{R}\}\]</span>
+<span class="math inline">\(\mathcal{B}\)</span> is a basis which generates the standard topology.
+<span class="math display">\[\mathcal{B}^\prime:=\{[x,y):x&lt;y, x,y\in \mathbb{R}\}\]</span>
+<span class="math inline">\(\mathcal{B}^\prime\)</span> is a basis which generates the lower limit topology on <span class="math inline">\(\mathbb{R}\)</span>.
+<span class="math display">\[\mathcal{B}^{\prime \prime}:=\{(x,y]:x&lt;y, x,y\in \mathbb{R}\}\]</span>
+<span class="math inline">\(\mathcal{B}^{\prime \prime}\)</span> is a basis which generates the upper limit topology on <span class="math inline">\(\mathbb{R}\)</span>.</p>
+</div>
+<div class="lemma">
+<p><span id="lem:unnamed-chunk-26" class="lemma"><strong>Lemma 1.5  </strong></span>The lower limit topology on <span class="math inline">\(\mathbb{R}\)</span> is strictly finer than standard topology on <span class="math inline">\(\mathbb{R}\)</span>.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-7" class="proof"><em>Proof</em>. </span>Let <span class="math inline">\((a,b)\in \mathbb{R}\)</span>. We are going to use Lemma <a href="index.html#lem:finerLemma">1.4</a>. Let <span class="math inline">\((a,b)\)</span> be a element from basis of standard topology. Let <span class="math inline">\(x\in (a,b)\)</span>. Then <span class="math inline">\(a&lt;x&lt;b\)</span>. Then observe that <span class="math inline">\(x\in [x,b)\subset (a,b)\)</span>. Note that <span class="math inline">\([x,b)\)</span> is element of basis of lower limit topology. Thus, by lemma <a href="index.html#lem:finerLemma">1.4</a> the lower limit topology on <span class="math inline">\(\mathbb{R}\)</span> is finer than standard topology on <span class="math inline">\(\mathbb{R}\)</span>. Now we have to prove that <strong>strictly property</strong>.</p>
+<p>Now let <span class="math inline">\([c,d)\)</span> is element of basis of lower limit topology on <span class="math inline">\(\mathbb{R}\)</span>. Now observe that there is no open interval that containing <span class="math inline">\(c\)</span> and contained in <span class="math inline">\([c,d)\)</span>. By lemma <a href="index.html#lem:finerLemma">1.4</a>, the lower limit topology on <span class="math inline">\(\mathbb{R}\)</span> is strictly finer than standard topology on <span class="math inline">\(\mathbb{R}\)</span>.</p>
+</div>
+<p>Note that basis element in lower limit toplogy is <strong>not</strong> open in the standard toplogy. But otherway around is very true. As an example, <span class="math display">\[(1,2)=\bigcup_{n\in \mathbb{N}}[1+\frac{1}{n},2).\]</span> Clearly left hand side is open in lower limit toplogy by T2.</p>
+<div class="corollary">
+<p><span id="cor:unnamed-chunk-28" class="corollary"><strong>Corollary 1.1  </strong></span>The lower limit topology on <span class="math inline">\(\mathbb{R}\)</span> is not comparable upper limit topology on <span class="math inline">\(\mathbb{R}\)</span>.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-8" class="proof"><em>Proof</em>. </span>Exercise</p>
+<p>Hint: (try to find counter example)</p>
+</div>
+<p><strong>Notation</strong>:</p>
+<ul>
+<li><span class="math inline">\(\mathbb{R}_l:=\mathbb{R}\)</span> with lower limit topology.</li>
+<li><span class="math inline">\(\mathbb{R}_u:=\mathbb{R}\)</span> with upper limit topology.</li>
+<li><span class="math inline">\(\mathbb{R}:=\mathbb{R}\)</span> with standard topology.</li>
+</ul>
+<div class="example">
+<p><span id="exm:unnamed-chunk-30" class="example"><strong>Example 1.11  </strong></span>The positive integers <span class="math inline">\(\mathbb{Z}^+:=\{1,2,3,...\}\)</span> form an ordered set with a smallest element. The order topology on <span class="math inline">\(\mathbb{Z}^+\)</span> is the discrete topology, for every one-point set is open: If <span class="math inline">\(n &gt; 1\)</span>, then the one-point set <span class="math inline">\(\{n\} = (n - 1, n + 1)\)</span> is a basis element; and if <span class="math inline">\(n = 1\)</span>, the one-point set <span class="math inline">\(\{1\}=[1, 2)\)</span> is a basis element.</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:fig8"></span>
+<img src="figures/figure%2008.jpg" alt="$~$"  />
+<p class="caption">
+Figure 1.6: <span class="math inline">\(~\)</span>
+</p>
+</div>
+<div class="example">
+<p><span id="exm:unnamed-chunk-31" class="example"><strong>Example 1.12  </strong></span>The set <span class="math inline">\(X = \{1, 2\} \times \mathbb{Z}^+\)</span> in the dictionary order is another example of an ordered set with a smallest element. Denoting <span class="math inline">\(1 \times n\)</span> by <span class="math inline">\(a_n\)</span> and <span class="math inline">\(2 \times n\)</span> by <span class="math inline">\(b_n\)</span>, we can represent <span class="math inline">\(X\)</span> by
+<span class="math display">\[a_1, a_2,..., b_1, b_2,....\]</span></p>
+<p>i.e.:<span class="math display">\[X=\{1\times 1,1 \times 2, 1 \times 3, ..., 2\times 1, 2 \times 2, ....\}\]</span>
+Here <span class="math inline">\(a_1=1\times 1\)</span> is the smallest element in <span class="math inline">\(X\)</span>.</p>
+<p>The order topology on <span class="math inline">\(X\)</span> is <strong>not</strong> the discrete topology. Most one-point sets are open, but there is an exception-the one-point set <span class="math inline">\(\{b_1\}={2\times 1}\)</span>. Any open set containing <span class="math inline">\(b_1\)</span> must contain a basis element about <span class="math inline">\(b_1\)</span> (G1 condition), and any basis element containing <span class="math inline">\(b_1\)</span> contains points of the <span class="math inline">\(a_i\)</span> sequence.
+As an example, <span class="math inline">\(b_1=2\times 1\in (1\times 7,2\times 8)\)</span>. Then the sequence <span class="math inline">\(a_8,a_9,a_{10},....=1\times 8,1\times 9, 1\times 10,...\)</span> contained in <span class="math inline">\((a_7,b_8)=(1\times 7,2\times 8)\)</span>. So, we cannot find an open interval in <span class="math inline">\(X\)</span> that contains <span class="math inline">\(b_1\)</span> and is contained in <span class="math inline">\(\{b_1\}\)</span>.</p>
+</div>
+<div class="example">
+<p><span id="exm:unnamed-chunk-32" class="example"><strong>Example 1.13  </strong></span><span class="math display">\[\mathcal{B}^{\prime\prime\prime}:=\{[x,y]:x\leq y, x,y\in \mathbb{R}\}\]</span>
+<span class="math inline">\(\mathcal{B}^{\prime\prime\prime}\)</span> is a basis which generates the discrete topology on <span class="math inline">\(\mathbb{R}\)</span>. Because, <span class="math inline">\(\{a\}=[a,a]\)</span>.</p>
+</div>
+</div>
+<div id="product-toplogy-on-x-times-y." class="section level2 hasAnchor" number="1.5">
+<h2><span class="header-section-number">1.5</span> Product Toplogy on <span class="math inline">\(X \times Y\)</span>.<a href="index.html#product-toplogy-on-x-times-y." class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The Cartesian product of two topological spaces has an induced topology called the product topology. There is also an induced basis for it. Here is the example to keep in mind:</p>
+<div class="example">
+<p><span id="exm:egR2" class="example"><strong>Example 1.14  </strong></span>Recall that the standard topology of <span class="math inline">\(\mathbb{R}^{2}\)</span> is given by the basis</p>
+<p><span class="math display">\[
+\mathcal{B}:=\left\{(a, b) \times(c, d) \subset \mathbb{R}^{2} \mid a&lt;b, c&lt;d\right\}
+\]</span></p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-9" class="proof"><em>Proof</em>. </span>(Proof of <span class="math inline">\(\mathcal{B}\)</span> is basis.)
+- (B1) Let <span class="math inline">\((x,y)\in \mathbb{R}^2\)</span>. Then observe that <span class="math inline">\(x\in(x-1,x+1)\subseteq \mathbb{R}\)</span>, and <span class="math inline">\(y\in(y-1,y+1)\subseteq \mathbb{R}\)</span>. Thus
+<span class="math display">\[(x,y)\in (x-1,x+1)\times (y-1,y+1).\]</span></p>
+<p>See figure <a href="index.html#fig:fig4">1.7</a>.
+Therefore, this satisfied the B1 condition.</p>
+<ul>
+<li>Now suppose that <span class="math inline">\((x,y)\in (a_1,b_1)\times(c_1,d_1)\cap (a_2,b_2)\times(c_2,d_2)\)</span>
+Now observe
+<span class="math inline">\((x,y)\in (a_1,b_1)\times(c_1,d_1)\implies x\in(a_1,b_1)\)</span> and <span class="math inline">\(y\in(c_1,d_1)\)</span></li>
+</ul>
+<p>and</p>
+<p><span class="math inline">\((x,y)\in (a_2,b_2)\times(c_2,d_2)\implies x\in(a_2,b_2)\)</span> and <span class="math inline">\(y\in(c_2,d_2)\)</span>
+Let <span class="math inline">\(a=\max\{a_1,a_2\},b=\min\{b_1,b_2\}, c=\max\{c_1,c_2\}\)</span> and <span class="math inline">\(d=\min\{d_1,d_2\}\)</span>. Then observe that
+<span class="math display">\[x\in (a,b)\quad \text{and} y\in (c,d)\]</span>.
+Further, <span class="math display">\[(x,y)\in (a,b)\times (c,d)\subseteq (a_2,b_2)\times(c_2,d_2)\implies x\in(a_2,b_2)\]</span>.
+See figure <a href="index.html#fig:fig5">1.8</a>.
+This satisfies B2 condition.</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:fig4"></span>
+<img src="figures/figure%2004.jpg" alt="$~$"  />
+<p class="caption">
+Figure 1.7: <span class="math inline">\(~\)</span>
+</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:fig5"></span>
+<img src="figures/figure%2005.jpg" alt="$~$"  />
+<p class="caption">
+Figure 1.8: <span class="math inline">\(~\)</span>
+</p>
+</div>
+<p>Let’s go to a rigid definition.</p>
+<div class="definition">
+<p><span id="def:unnamed-chunk-34" class="definition"><strong>Definition 1.10  </strong></span>If <span class="math inline">\(\left(X, \mathcal{T}_{X}\right)\)</span> and <span class="math inline">\(\left(Y, \mathcal{T}_{Y}\right)\)</span> are topological spaces, then the collection <span class="math inline">\(\mathcal{B}\)</span> of subsets of the form <span class="math inline">\(U \times V \subset X \times Y, U \in \mathcal{T}_{X}, V \in \mathcal{T}_{Y}\)</span> forms a basis of a topology.</p>
+<p>i.e.:
+<span class="math display">\[\mathcal{B}:=\{U \times V \subset X \times Y: U \in \mathcal{T}_{X}, V \in \mathcal{T}_{Y}\}\]</span>
+The topology generated by <span class="math inline">\(\mathcal{B}\)</span> is called product topology on <span class="math inline">\(X \times Y\)</span>.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-10" class="proof"><em>Proof</em>. </span>(Proof of <span class="math inline">\(\mathcal{B}\)</span> is basis)</p>
+<ul>
+<li><p>(B1) Let <span class="math inline">\((x, y) \in X \times Y\)</span> be an arbitrary element. We need to find a subset in <span class="math inline">\(\mathcal{B}\)</span> containing <span class="math inline">\((x, y)\)</span>, but since <span class="math inline">\(X \times Y \in \mathcal{B}\)</span>, it is obvious.</p></li>
+<li><p>(B2) For any <span class="math inline">\(U_{1} \times V_{1}, U_{2} \times V_{2} \in \mathcal{B}\)</span>, the intersection is <span class="math inline">\(\left(U_{1} \times V_{1}\right) \cap\left(U_{2} \times V_{2}\right)=\left(U_{1} \cap U_{2}\right) \times\left(V_{1} \cap V_{2}\right) \in \mathcal{B}\)</span>. So it is obvious again.</p></li>
+</ul>
+</div>
+<div class="figure"><span style="display:block;" id="fig:fig09"></span>
+<img src="figures/figure%2009.jpg" alt="$~$"  />
+<p class="caption">
+Figure 1.9: <span class="math inline">\(~\)</span>
+</p>
+</div>
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-36" class="theorem"><strong>Theorem 1.1  </strong></span>If <span class="math inline">\(\mathcal{B}_X\)</span> is a basis of <span class="math inline">\((X, \mathcal{T}_X)\)</span> and <span class="math inline">\(\mathcal{B}_Y\)</span> is a basis of <span class="math inline">\((Y, \mathcal{T}_Y)\)</span>, then <span class="math inline">\(\mathcal{B}_X \times \mathcal{B}_Y\)</span> is a basis of the product topology on <span class="math inline">\(X \times Y\)</span>.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-11" class="proof"><em>Proof</em>. </span>To check <span class="math inline">\(\mathcal{B}_{X \times Y}\)</span>, let’s use lemma <a href="index.html#lem:lemma110">1.3</a> which states that <span class="math inline">\(\mathcal{B}\)</span> is a basis for <span class="math inline">\(\mathcal{T}\)</span> iff for any <span class="math inline">\(U \in T\)</span> and any <span class="math inline">\(x \in U\)</span>, there is <span class="math inline">\(B \in \mathcal{B}\)</span> such that <span class="math inline">\(x \in B \subseteq U\)</span>.</p>
+<p>Let <span class="math inline">\(W \in \mathcal{T}_{prod}\)</span> and <span class="math inline">\((x, y) \in W\)</span>. By the definition of product topology, there are <span class="math inline">\(U \in \mathcal{T}_X\)</span> and <span class="math inline">\(V \in \mathcal{T}_Y\)</span> such that <span class="math inline">\((x,y) \in U \times V \subseteq W\)</span>. Since <span class="math inline">\(\mathcal{B}_X\)</span> and <span class="math inline">\(\mathcal{B}_Y\)</span> are bases, there are <span class="math inline">\(B \in \mathcal{B}_X\)</span> and <span class="math inline">\(C \in \mathcal{B}_Y\)</span> such that <span class="math inline">\(x \in B \subseteq U\)</span> and <span class="math inline">\(y \in C \subseteq V\)</span>. Thus we found <span class="math inline">\(B \times C \in \mathcal{B}_{X \times Y}\)</span> such that <span class="math inline">\((x,y) \in B \times C \subseteq W\)</span>.</p>
+</div>
+<div class="example">
+<p><span id="exm:unnamed-chunk-38" class="example"><strong>Example 1.15  </strong></span>The standard topology on <span class="math inline">\(\mathbb{R}^2=\mathbb{R}\times\mathbb{R}\)</span> is the product toplogy. (See example <a href="index.html#exm:egR2">1.14</a>)</p>
+<p>Obsereve that basis elements in product topology in <span class="math inline">\(\mathbb{R}^2\)</span> are open recatngles (product of two open intervals.).</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:fig10"></span>
+<img src="figures/figure%2010.jpg" alt="$~$"  />
+<p class="caption">
+Figure 1.10: <span class="math inline">\(~\)</span>
+</p>
+</div>
+<div class="lemma">
+<p><span id="lem:unnamed-chunk-39" class="lemma"><strong>Lemma 1.6  </strong></span>The dictionary topology <span class="math inline">\(\mathbb{R}^2\)</span> is strictly finer than standard toplogy in <span class="math inline">\(\mathbb{R}^2\)</span></p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-12" class="proof"><em>Proof</em>. </span>We are going to use <a href="index.html#lem:finerLemma">1.4</a>.
+Let <span class="math inline">\((a,b)\times(c,d)\subset\mathbb{R}^2\)</span> be a element of basis of standard toplogy on <span class="math inline">\(\mathbb{R}^2\)</span>, and let <span class="math inline">\(x\times y\in (a,b)\times (c,d)\)</span>. Now we need to find basis element of the dictionary order topology that contained in <span class="math inline">\((a,b)\times (c,d)\)</span>.
+So,
+<span class="math display">\[x\times y \in (x\times c ,x\times d)\subset (a,b)\times(c,d).\]</span>
+Note that <span class="math inline">\((x\times c ,x\times d)\)</span> is a basis element in the dictonary order topology. Now let’s proove the stricly finer condition.</p>
+<p>Let <span class="math inline">\((p\times q,p \times s)\)</span> be basis element of order toplogy. Let <span class="math inline">\(p\times y \in (p\times q,p \times s)\)</span>. Now observe that there is no open rectangle that containing <span class="math inline">\(p\times y\)</span> and contained in <span class="math inline">\((p\times q,p \times s)\)</span>. By lemma <a href="index.html#lem:finerLemma">1.4</a>, the order topology on <span class="math inline">\(\mathbb{R}^2\)</span> is strictly finer than standard topology on <span class="math inline">\(\mathbb{R}^2\)</span>.</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:fig11"></span>
+<img src="figures/figure%2011.jpg" alt="$~$"  />
+<p class="caption">
+Figure 1.11: <span class="math inline">\(~\)</span>
+</p>
+</div>
+<p>Now I am intersected in a problem. That is can we write dictionary order topology as <span class="math inline">\(\mathbb{R}^2\)</span> as product topology. Actually we can, <span class="math display">\[\mathbb{R}^2_{dictionary}:=\mathbb{R}_{discrete }\times \mathbb{R}_{standard}\]</span></p>
+<div class="proof">
+<p><span id="unlabeled-div-13" class="proof"><em>Proof</em>. </span>Let <span class="math inline">\(\{a\} \times (c,d)\)</span> be a basis element in product toplogy <span class="math inline">\(\mathbb{R}_d \times \mathbb{R}\)</span>. Let <span class="math inline">\(a\times x\in \{a\} \times (c,d)\)</span> obsereve that
+<span class="math display">\[a\times x\in \{a\} \times (c,d) = (a\times c,a\times d)\]</span>
+and <span class="math inline">\((a\times c,a\times d)\)</span> is basis element of order topology <span class="math inline">\(\mathbb{R}^2\)</span>. Thus by lemma <a href="index.html#lem:finerLemma">1.4</a>, order toplogy in <span class="math inline">\(\mathbb{R}^2\)</span> is finer than the product toplogy <span class="math inline">\(\mathbb{R}_d \times \mathbb{R}\)</span>.</p>
+<p>Now suppose that <span class="math inline">\((p\times q, r \times s)\)</span> be a basis elemenet in order toplogy on <span class="math inline">\(\mathbb{R}^2\)</span>.</p>
+<ul>
+<li>If <span class="math inline">\(p&lt;x\)</span>, define <span class="math inline">\(l=y−1\)</span> and if <span class="math inline">\(p=x\)</span> define <span class="math inline">\(l=r\)</span>. In either case we know that <span class="math inline">\((p\times q)&lt;(x\times l)&lt;(x\times y)\)</span>.</li>
+<li>If <span class="math inline">\(x&lt;r\)</span> define <span class="math inline">\(t=y+1\)</span> and if <span class="math inline">\(x=r\)</span> define <span class="math inline">\(t=s\)</span>. In either case we know that <span class="math inline">\((x\times y)&lt;(x\times t)&lt;(q \times s)\)</span>.</li>
+</ul>
+<p>See figure <a href="index.html#fig:fig12">1.12</a>
+So <span class="math display">\[(x,y) \in \{x\} \times (l,t) \subseteq (p \times q, r \times s).\]</span>
+Thus by lemma <a href="index.html#lem:finerLemma">1.4</a>, product toplogy <span class="math inline">\(\mathbb{R}_d \times \mathbb{R}\)</span> is finer than order toplogy in <span class="math inline">\(\mathbb{R}^2\)</span>.</p>
+<p>Therefore, <span class="math display">\[\mathbb{R}^2_{dictionary}=\mathbb{R}_{discrete }\times \mathbb{R}_{standard}\]</span></p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:fig12"></span>
+<img src="figures/figure%2012.jpg" alt="$~$"  />
+<p class="caption">
+Figure 1.12: <span class="math inline">\(~\)</span>
+</p>
+</div>
+<div class="definition">
+<p><span id="def:unnamed-chunk-42" class="definition"><strong>Definition 1.11  </strong></span>Let <span class="math inline">\(\pi_1 : X \times Y \to X\)</span> be defined by the equation
+<span class="math inline">\(\pi_1(x, y) = x\)</span>;<br />
+and let <span class="math inline">\(\pi_2 : X \times Y \to Y\)</span> be defined by the equation
+<span class="math inline">\(\pi_2(x, y) = y\)</span>.</p>
+<p>The maps <span class="math inline">\(\pi_1\)</span> and <span class="math inline">\(\pi_2\)</span> are called the <em>projections</em> of <span class="math inline">\(X \times Y\)</span> onto its first and second factors, respectively.</p>
+</div>
+</div>
+<div id="the-subspace-topology" class="section level2 hasAnchor" number="1.6">
+<h2><span class="header-section-number">1.6</span> The Subspace Topology<a href="index.html#the-subspace-topology" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><em>A subset of a topological space has a naturally induced topology, called the subspace topology. In geometry, the subspace topology is the source of all funky typologies.</em></p>
+<div class="definition">
+<p><span id="def:unnamed-chunk-43" class="definition"><strong>Definition 1.12  </strong></span>Let <span class="math inline">\((X, \mathcal{T})\)</span> be a topological space. Let <span class="math inline">\(Y\subseteq X\)</span>. The collection
+<span class="math display">\[\mathcal{T}_Y = \{Y \cap U | U \in \mathcal{T}\}\]</span> is a topology on <span class="math inline">\(Y\)</span>, called the subspace topology.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-14" class="proof"><em>Proof</em>. </span>(Proof of the collection <span class="math inline">\(\mathcal{T}_Y\)</span> is a tology).</p>
+<ul>
+<li>(T1) This is very easy to see. <span class="math inline">\(\mathcal{T}_Y\)</span> contains <span class="math inline">\(\emptyset\)</span> and <span class="math inline">\(Y\)</span> because <span class="math inline">\(\emptyset = Y \cap \emptyset and Y = Y \cap X\)</span>, where <span class="math inline">\(\emptyset\)</span> and <span class="math inline">\(X\)</span> are elements of <span class="math inline">\(\mathcal{T}\)</span>.</li>
+<li>(T2) Let <span class="math inline">\(\{U_\alpha \cap Y\in \mathcal{T_Y}:\alpha \in I, \text{ I is index set}\}\)</span> be collection of open sets in subspace toplogy of <span class="math inline">\(Y\)</span>, where <span class="math inline">\(U_\alpha\in \mathcal{T}\)</span>.
+<span class="math display">\[\bigcup_{\alpha \in I}\left(U_\alpha\cap Y\right)
+  =\bigcup_{\alpha \in I}\left(U_\alpha\right)\cap Y.\]</span>
+Thus it contains in <span class="math inline">\(\mathcal{T}\)</span>. Thus <span class="math inline">\(\mathcal{T}_Y\)</span> is closed under arbitary unions.</li>
+<li>(T3) Let <span class="math inline">\(U_1\cap Y, U_2\cap Y,..., U_n\cap Y\)</span> be finite collection of open sets in subspace toplogy of <span class="math inline">\(Y\)</span> in <span class="math inline">\(X\)</span>.
+<span class="math display">\[(U_1\cap Y)\bigcap (U_2\cap Y)\bigcap \cdots \bigcap (U_n\cap Y)=(U_1\cap U_2 \cap \cdot U_n)\bigcap Y.\]</span>
+Thus it contains in <span class="math inline">\(\mathcal{T}\)</span>.Thus <span class="math inline">\(\mathcal{T}_Y\)</span> is closed under finite intersections.</li>
+</ul>
+</div>
+<div class="lemma">
+<p><span id="lem:unnamed-chunk-45" class="lemma"><strong>Lemma 1.7  </strong></span>Let <span class="math inline">\((X, \mathcal{T})\)</span> be a topological space, and <span class="math inline">\(Y\subseteq X\)</span>. If <span class="math inline">\(\mathcal{B}\)</span> is a basis for <span class="math inline">\(\mathcal{T}\)</span> then the collection
+<span class="math display">\[\mathcal{B}_Y = \{B \cap Y | B \in \mathcal{B}\}\]</span>
+is a basis for the subspace topology on <span class="math inline">\(Y\)</span>.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-15" class="proof"><em>Proof</em>. </span>Let <span class="math inline">\(V\in \mathcal{T}_Y\)</span>. Then <span class="math inline">\(V=U\cap Y\)</span> for some <span class="math inline">\(U\in \mathcal{T}\)</span>. For every <span class="math inline">\(x \in V\)</span>, there is <span class="math inline">\(B \in \mathcal{B}\)</span> such that <span class="math inline">\(x \in B \subset U\)</span> since <span class="math inline">\(\mathcal{B}\)</span> is a basis of <span class="math inline">\(\mathcal{T}\)</span> (Lemma <a href="index.html#lem:lemmaTequalsTB">1.2</a>). Now we found <span class="math inline">\(Y \cap B\)</span> such that <span class="math inline">\(x \in Y \cap B \subset V\)</span>.</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:fig13"></span>
+<img src="figures/figure%2013.jpg" alt="$~$"  />
+<p class="caption">
+Figure 1.13: <span class="math inline">\(~\)</span>
+</p>
+</div>
+<div class="example">
+<p><span id="exm:unnamed-chunk-47" class="example"><strong>Example 1.16  </strong></span>Let <span class="math inline">\(I = [0, 1]\)</span>. The dictionary order on <span class="math inline">\(I \times I\)</span> is just the restriction to <span class="math inline">\(I \times I\)</span> of the dictionary order on the plane <span class="math inline">\(\mathbb{R} \times \mathbb{R}\)</span>. However, the dictionary order topology on <span class="math inline">\(I \times I\)</span> is <strong>NOT</strong> the same as the subspace topology on <span class="math inline">\(I \times I\)</span> obtained from the dictionary order topology on <span class="math inline">\(\mathbb{R} \times \mathbb{R}\)</span>!</p>
+<p>For example, the set <span class="math inline">\(\{\frac{1}{2}\} \times (\frac{1}{2}, 1]\)</span> is open in <span class="math inline">\(I \times I\)</span> in the
+subspace topology, but not in the order topology, as you can check.</p>
+<p>See Figure <a href="index.html#fig:fig14">1.14</a>.</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:fig14"></span>
+<img src="figures/figure%2014.jpg" alt="$~$"  />
+<p class="caption">
+Figure 1.14: <span class="math inline">\(~\)</span>
+</p>
+</div>
+<p><strong>Notation</strong> : The set <span class="math inline">\(I \times I\)</span> in the dictionary order topology will be called the ordered square, and denoted by <span class="math inline">\(I_o^2\)</span>.</p>
+<p>Let’s generalized the idea.</p>
+<div class="lemma">
+<p><span id="lem:unnamed-chunk-48" class="lemma"><strong>Lemma 1.8  </strong></span>The subspace topology on <span class="math inline">\(I \times I\)</span> obtained from the dictionary order topology on <span class="math inline">\(\mathbb{R} \times \mathbb{R}\)</span> is strictly finer than the dictionary order toplogy on <span class="math inline">\(I \times I\)</span>.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-16" class="proof"><em>Proof</em>. </span>So, as pervious we have to proove two things they are finer condtion and strictly condition.</p>
+<p>Let <span class="math inline">\((a_1\times b_1, a_2 \times b_2)\)</span> be a basis elemenet of order toplogy. and <span class="math inline">\(x\times y \in (a_1\times b_1, a_2 \times b_2)\)</span></p>
+<ul>
+<li><p><strong>Case I</strong> <span class="math inline">\((a_1&lt;x&lt;a_2)\)</span>:
+<span class="math display">\[x\times y \in (x\times-1,x\times 2)\cap I^2= [x\times 0,x\times 1]=\{x\}\times [0,1] \subset (a_1\times b_1, a_2 \times b_2)\]</span>
+Note that <span class="math inline">\((x\times -1,x\times 2)\cap I^2\)</span> is a basis element of subspace topology.</p></li>
+<li><p><strong>Case II</strong> <span class="math inline">\((a_1=x&lt;a_2)\)</span>:
+<span class="math display">\[x\times y \in (x\times b_1,x\times 2)\cap I^2= [x\times b_1,x\times 1]=\{x\}\times (b_1,1] \subset (a_1\times b_1, a_2 \times b_2)\]</span>
+Note that <span class="math inline">\((x\times b_1,x\times 2)\cap I^2\)</span> is a basis element of subspace topology.</p></li>
+<li><p><strong>Case III</strong> <span class="math inline">\((a_1&lt;x=a_2)\)</span>:
+<span class="math display">\[x\times y \in (x\times -1,x\times b_2)\cap I^2= [x\times 0,x\times b_2]=\{x\}\times [0,b_2) \subset (a_1\times b_1, a_2 \times b_2)\]</span>
+Note that <span class="math inline">\((x\times -1,x\times b_2)\cap I^2\)</span> is a basis element of subspace topology.</p></li>
+<li><p><strong>Case IV</strong> <span class="math inline">\((a_1=x=a_2)\)</span>:
+<span class="math display">\[x\times y \in (x\times b_1,x\times b_2)\cap I^2= [x\times b_1,x\times b_2]=\{x\}\times [b_1,b_2) \subset (a_1\times b_1, a_2 \times b_2)\]</span>
+Note that <span class="math inline">\((x\times b_1,x\times b_2)\cap I^2\)</span> is a basis element of subspace topology.</p></li>
+</ul>
+<p>See figure <a href="index.html#fig:fig15">1.15</a></p>
+<p>In above all four cases, we have found basis element of subspace topology that conatain <span class="math inline">\(x\times y\)</span> and conatined in <span class="math inline">\((a_1\times b_1, a_2 \times b_2)\)</span>.</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:fig15"></span>
+<img src="figures/figure%2015.jpg" alt="$~$"  />
+<p class="caption">
+Figure 1.15: <span class="math inline">\(~\)</span>
+</p>
+</div>
+</div>
+<div id="closed-sets-and-limit-points" class="section level2 hasAnchor" number="1.7">
+<h2><span class="header-section-number">1.7</span> Closed Sets and Limit Points<a href="index.html#closed-sets-and-limit-points" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Now that we have a few examples at hand, we can introduce some of the basic concepts associated with topological spaces. In this section, we treat the notions of closed set closure of a set, and limit point. These lead naturally to consideration of a certain axiom for topological spaces called the Hausdorff axiom.</p>
+<div id="closed-set" class="section level3 hasAnchor" number="1.7.1">
+<h3><span class="header-section-number">1.7.1</span> Closed Set<a href="index.html#closed-set" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><em>Closed sets are nothing but complement of open sets. On the other hand, we can also say that open sets are nothing but complement of closed sets. Thus we can actually use closed sets to define topology, although mathematicians usually use open sets to define topology.</em></p>
+<div class="definition">
+<p><span id="def:unnamed-chunk-50" class="definition"><strong>Definition 1.13  </strong></span>Let <span class="math inline">\(A\)</span> be a subset of a topological space <span class="math inline">\((X, \mathcal{})\)</span>.</p>
+<p><span class="math inline">\(A\)</span> is a closed set of <span class="math inline">\(X\)</span> if <span class="math inline">\(X\setminus A\)</span> is an open set.
+- The closure Cl<span class="math inline">\((A)=\overline{A}\)</span> of <span class="math inline">\(A\)</span> in <span class="math inline">\(X\)</span> is the intersection of all closed sets of <span class="math inline">\(X\)</span>, containing <span class="math inline">\(A\)</span>.
+<span class="math display">\[\text{Cl}(A)=\overline{A}=\bigcap \left\{C \text{ is closed in } X~ \&amp;~  A \subset C\right\}\]</span>
+The smallest closed set that containing<span class="math inline">\(A\)</span> is the closure of <span class="math inline">\(A\)</span>.
+- The interior <span class="math inline">\(\text{Int}(A)=\mathring{A}\)</span> of <span class="math inline">\(A\)</span> in <span class="math inline">\(X\)</span> is the union of all open sets of <span class="math inline">\(X\)</span>, contained in <span class="math inline">\(A\)</span>.
+<span class="math display">\[\text{Int}(A)=\mathring{A}=\bigcup \left\{U \text{ is open in } X~ \&amp;~  U \subset A\right\}\]</span>
+The largest open set contanied in <span class="math inline">\(A\)</span> is the interior of <span class="math inline">\(A\)</span>.
+- <span class="math inline">\(x \in X\)</span> is a limit point (or “cluster point,” or “point of accumulation”) of <span class="math inline">\(A\)</span>,
+if every neighborhood
+of <span class="math inline">\(x\)</span> intersects <span class="math inline">\(A\)</span> in some point other than <span class="math inline">\(x\)</span> itself. In other words, <span class="math inline">\(x \in X\)</span> is a limit point of <span class="math inline">\(A\)</span>, if <span class="math inline">\(x \in \overline{A\setminus\{x\}}\)</span>.</p>
+</div>
+<div class="remark">
+<p><span id="unlabeled-div-17" class="remark"><em>Remark</em>. </span></p>
+<ul>
+<li><span class="math inline">\(\emptyset, X\)</span> are closed.</li>
+</ul>
+<p><em>I am not going to proove these things. I just give an idea.</em>
+(This is trivial.)
+- Fnite unions of closed sets are closed.
+<span class="math display">\[  \bigcup_{i=1}^n
+    \underbrace{(X\setminus~ \underbrace{U_i}_{\text{open}})}_{\text{closed}}
+    =X\setminus \underbrace{\bigcap_{i=1}^nU_i}_{\text{open}}\]</span>
+- Arbitrary intersection of closed sets are closed.
+<span class="math display">\[  \bigcap_{\alpha\in I}
+    \underbrace{(X\setminus~ \underbrace{U_\alpha}_{\text{open}})}_{\text{closed}}
+    =X\setminus \underbrace{\bigcup_{\alpha \in I} U_i}_{\text{open}}\]</span></p>
+</div>
+<div class="example">
+<p><span id="exm:unnamed-chunk-52" class="example"><strong>Example 1.17  </strong></span>The subset <span class="math inline">\([a, b]\)</span> of <span class="math inline">\(\mathbb{R}\)</span> is closed because its complement
+<span class="math display">\[\mathbb{R}\setminus [a, b] = (−\infty, a) \cup (b, +\infty)\]</span>,
+is open.</p>
+</div>
+<div class="remark">
+<p><span id="unlabeled-div-18" class="remark"><em>Remark</em>. </span>These facts justify our use of the terms “closed interval” and “closed ray.” The subset <span class="math inline">\([a, b)\)</span> of <span class="math inline">\(\mathbb{R}\)</span> is neither open nor closed.</p>
+</div>
+<div class="example">
+<p><span id="exm:unnamed-chunk-54" class="example"><strong>Example 1.18  </strong></span>Similary,the subset <span class="math inline">\([a, +\infty)\)</span> of <span class="math inline">\(\mathbb{R}\)</span> is closed because its complement
+<span class="math display">\[\mathbb{R}\setminus [a, +\infty) = (−\infty, a) \]</span>,
+is open.</p>
+</div>
+<div class="example">
+<p><span id="exm:unnamed-chunk-55" class="example"><strong>Example 1.19  </strong></span>In the plane <span class="math inline">\(\mathbb{R}^2\)</span>, the set
+<span class="math display">\[\{x \times y | x \geq 0 \text{ and }y ≥ 0\}\]</span>
+is closed, because its complement is the union of the two sets
+<span class="math display">\[(−\infty, 0) \times \mathbb{R} \text { and }\mathbb{R} \times (−\infty, 0),\]</span>
+each of which is a product of open sets of <span class="math inline">\(\mathbb{R}\)</span> and is, therefore, open in <span class="math inline">\(\mathbb{R}^2\)</span>.</p>
+</div>
+<div class="example">
+<p><span id="exm:unnamed-chunk-56" class="example"><strong>Example 1.20  </strong></span>In the finite complement topology on a set <span class="math inline">\(X\)</span>, the closed sets consist of <span class="math inline">\(X\)</span> itself and all finite subsets of <span class="math inline">\(X\)</span>.</p>
+</div>
+<div class="example">
+<p><span id="exm:unnamed-chunk-57" class="example"><strong>Example 1.21  </strong></span>In the discrete topology on the set <span class="math inline">\(X\)</span>, every set is open; it follows that every set is closed as well.</p>
+</div>
+<div class="example">
+<p><span id="exm:unnamed-chunk-58" class="example"><strong>Example 1.22  </strong></span>Consider the following subset of the real line:
+<span class="math display">\[Y = [0, 1] \cup (2, 3)\]</span>,
+in the subspace topology. In this space,</p>
+<p>The set <span class="math inline">\([0, 1]\)</span> is open, since it is the intersection of the open set <span class="math inline">\((−\frac{1}{2} , \frac{3}{2} )\)</span> of <span class="math inline">\(\mathbb{R}\)</span> with <span class="math inline">\(Y\)</span> . Similarly, <span class="math inline">\((2, 3)\)</span> is open as a subset of <span class="math inline">\(Y\)</span> ; it is even open as a subset of <span class="math inline">\(\mathbb{R}\)</span>. Since <span class="math inline">\([0, 1]\)</span> and <span class="math inline">\((2, 3)\)</span> are complements in <span class="math inline">\(Y\)</span> of each other, we conclude that both <span class="math inline">\([0, 1]\)</span> and <span class="math inline">\((2, 3)\)</span> are closed as subsets of <span class="math inline">\(Y\)</span>.</p>
+</div>
+<p><strong>Fun Fact</strong>: These examples suggest that an answer to the mathematician’s riddle: “How is a set different from a door?” should be: “A door must be either open or closed, and cannot be both, while a set can be open, or closed, or both, or neither!</p>
+<p>The collection of closed subsets of a space X has properties similar to those satisfied by the collection of open subsets of <span class="math inline">\(X\)</span>;</p>
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-59" class="theorem"><strong>Theorem 1.2  </strong></span>Let <span class="math inline">\(X\)</span> be a topological space. Then the following conditions hold:</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\emptyset\)</span> and <span class="math inline">\(X\)</span> are closed.</li>
+<li>Arbitrary intersections of closed sets are closed.</li>
+<li>Finite unions of closed sets are closed.</li>
+</ol>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-19" class="proof"><em>Proof</em>. </span></p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\emptyset\)</span> and <span class="math inline">\(X\)</span> are closed because they are the complements of the open sets <span class="math inline">\(X\)</span> and <span class="math inline">\(\emptyset\)</span>, respectively.</li>
+<li>Given a collection of closed sets <span class="math inline">\(\{A_{\alpha}\}_{\alpha \in J}\)</span>, we apply DeMorgan’s law, <span class="math display">\[X \setminus \bigcup_{\alpha \in J} A_{\alpha} = \bigcap_{\alpha \in J} (X \setminus A_{\alpha})\]</span>. Since the sets <span class="math inline">\(X \setminus A_{\alpha}\)</span> are open by definition, the right side of this equation represents an arbitrary union of open sets, and is thus open. Therefore, <span class="math inline">\(\bigcup A_{\alpha}\)</span> is closed.</li>
+<li>Similarly, if <span class="math inline">\(A_i\)</span> is closed for <span class="math inline">\(i = 1, \ldots, n\)</span>, consider the equation <span class="math display">\[X \setminus \bigcap_{i=1}^{n} A_i = \bigcup_{i=1}^{n} (X \setminus A_i)\]</span>.
+The set on the right side of this equation is a finite intersection of open sets. Hence <span class="math inline">\(\bigcup A_i\)</span> is closed.</li>
+</ol>
+</div>
+<p>Instead of using open sets, one could just as well specify a topology on a space by giving a collection of sets (to be called “closed sets”) satisfying the three properties of this theorem. One could then define open sets as the complements of closed sets and proceed just as before. This procedure has no particular advantage over the one we have adopted, and most mathematicians prefer to use open sets to define topologies.</p>
+<p>Now when dealing with subspaces, one needs to be careful in using the term “closed set.” If <span class="math inline">\(Y\)</span> is a subspace of <span class="math inline">\(X\)</span>, we say that a set <span class="math inline">\(A\)</span> is closed in <span class="math inline">\(Y\)</span> if <span class="math inline">\(A\)</span> is a subset of <span class="math inline">\(Y\)</span> and if <span class="math inline">\(A\)</span> is closed in the subspace topology of <span class="math inline">\(Y\)</span> (that is, if <span class="math inline">\(Y \setminus A\)</span> is open in <span class="math inline">\(Y\)</span> ). We have the following theorem:</p>
+<div class="theorem">
+<p><span id="thm:qw" class="theorem"><strong>Theorem 1.3  </strong></span>Let <span class="math inline">\(X\)</span> be a toplogical space and <span class="math inline">\(Y\)</span> is a subspace of <span class="math inline">\(X\)</span>, and <span class="math inline">\(A\)</span> is a subset of <span class="math inline">\(Y\)</span> , then <span class="math inline">\(A\)</span> is closed <span class="math inline">\(\iff ~A=Y \cap C\)</span> forsome <span class="math inline">\(C\)</span> is closed in <span class="math inline">\(X\)</span>.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-20" class="proof"><em>Proof</em>. </span></p>
+<ul>
+<li>(<span class="math inline">\(\Longleftarrow\)</span>) Suppose that <span class="math inline">\(A=Y \cap C\)</span> for some closed set <span class="math inline">\(C\)</span> in <span class="math inline">\(X\)</span>. (See Figure <a href="index.html#fig:fig19">1.16</a> Thus, <span class="math inline">\(X\setminus C\)</span> is open in <span class="math inline">\(X\)</span>. So, <span class="math inline">\((X\setminus C)\cap Y\)</span> is open in <span class="math inline">\(Y\)</span>, by definition of the subspace topology. But,
+<span class="math display">\[(X\setminus C)\cap Y=Y\setminus (C\cap Y)=Y\setminus A.\]</span>
+. Hence <span class="math inline">\(Y \setminus A\)</span> is open in <span class="math inline">\(Y\)</span>.Therfore, <span class="math inline">\(A\)</span> is closed in <span class="math inline">\(Y\)</span>.</li>
+<li>(<span class="math inline">\(\Longrightarrow\)</span>) Now Suppose that <span class="math inline">\(A\)</span> is closed in <span class="math inline">\(Y\)</span>. (See Figure <a href="index.html#fig:fig20">1.17</a> Then, <span class="math inline">\(Y\setminus A\)</span> is open in <span class="math inline">\(Y\)</span>. Thus by definition, <span class="math inline">\(Y\setminus A= U \cap Y\)</span>, forsome open set <span class="math inline">\(U\)</span> in <span class="math inline">\(X\)</span>. So, <span class="math inline">\(X\setminus U\)</span> is closed in <span class="math inline">\(X\)</span>. Now consider,
+<span class="math display">\[Y \cap (X\setminus U)=Y\setminus (Y \cap U)=Y\setminus (Y \setminus U)=A.\]</span>
+Thefore, <span class="math inline">\(Y \cap C\)</span> forsome <span class="math inline">\(C\)</span> is closed in <span class="math inline">\(X\)</span>.</li>
+</ul>
+</div>
+<div class="figure"><span style="display:block;" id="fig:fig19"></span>
+<img src="figures/figure%2019.jpg" alt="$~$" width="50%" />
+<p class="caption">
+Figure 1.16: <span class="math inline">\(~\)</span>
+</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:fig20"></span>
+<img src="figures/figure%2020.jpg" alt="$~$" width="50%" />
+<p class="caption">
+Figure 1.17: <span class="math inline">\(~\)</span>
+</p>
+</div>
+<div class="remark">
+<p><span id="unlabeled-div-21" class="remark"><em>Remark</em>. </span>A set <span class="math inline">\(A\)</span> that is closed in the subspace <span class="math inline">\(Y\)</span> may or may not be closed in the larger space <span class="math inline">\(X\)</span>.</p>
+</div>
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-63" class="theorem"><strong>Theorem 1.4  </strong></span>Let <span class="math inline">\(Y\)</span> be a subspace of <span class="math inline">\(X\)</span>. If <span class="math inline">\(A\)</span> is closed in <span class="math inline">\(Y\)</span> and <span class="math inline">\(Y\)</span> is closed in <span class="math inline">\(X\)</span>, then <span class="math inline">\(A\)</span> is closed in <span class="math inline">\(X\)</span>.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-22" class="proof"><em>Proof</em>. </span>Since <span class="math inline">\(Y\)</span> is subspace in <span class="math inline">\(X\)</span> and <span class="math inline">\(A\)</span> is closed in <span class="math inline">\(Y\)</span>, by theorm <a href="index.html#thm:qw">1.3</a>, then there exist closed set <span class="math inline">\(C\)</span> in <span class="math inline">\(X\)</span> such that <span class="math display">\[A=Y\cap C\]</span>
+Since, <span class="math inline">\(Y\)</span> is closed in <span class="math inline">\(X\)</span> and <span class="math inline">\(X\)</span> is toplogical space, <span class="math inline">\(A=Y\cap C\)</span> is closed in <span class="math inline">\(X\)</span>.</p>
+</div>
+</div>
+<div id="closure-and-interior-of-a-set" class="section level3 hasAnchor" number="1.7.2">
+<h3><span class="header-section-number">1.7.2</span> Closure and Interior of a Set<a href="index.html#closure-and-interior-of-a-set" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="definition">
+<p><span id="def:unnamed-chunk-65" class="definition"><strong>Definition 1.14  </strong></span>Let <span class="math inline">\(A\)</span> be a subset of a topological space <span class="math inline">\((X, \mathcal{})\)</span>.</p>
+<ul>
+<li>The closure Cl<span class="math inline">\((A)=\overline{A}\)</span> of <span class="math inline">\(A\)</span> in <span class="math inline">\(X\)</span> is the intersection of all closed sets of <span class="math inline">\(X\)</span>, containing <span class="math inline">\(A\)</span>.
+<span class="math display">\[\text{Cl}(A)=\overline{A}=\bigcap \left\{C \text{ is closed in } X~ \&amp;~  A \subset C\right\}\]</span>
+The smallest closed set that containing<span class="math inline">\(A\)</span> is the closure of <span class="math inline">\(A\)</span>.</li>
+<li>The interior <span class="math inline">\(\text{Int}(A)=\mathring{A}\)</span> of <span class="math inline">\(A\)</span> in <span class="math inline">\(X\)</span> is the union of all open sets of <span class="math inline">\(X\)</span>, contained in <span class="math inline">\(A\)</span>.
+<span class="math display">\[\text{Int}(A)=\mathring{A}=\bigcup \left\{U \text{ is open in } X~ \&amp;~  U \subset A\right\}\]</span>
+The largest open set contanied in <span class="math inline">\(A\)</span> is the interior of <span class="math inline">\(A\)</span>.</li>
+</ul>
+</div>
+<p>Obviously <span class="math inline">\(\text{Int}(A)\)</span> is an open set and <span class="math inline">\(\overline{A}\)</span> is a closed set; furthermore,
+<span class="math display">\[\text{Int}(A) \subseteq A \subseteq \overline{A}\]</span></p>
+<div class="lemma">
+<p><span id="lem:unnamed-chunk-66" class="lemma"><strong>Lemma 1.9  </strong></span>Let <span class="math inline">\(Y\)</span> be a subspace of <span class="math inline">\(X\)</span> and <span class="math inline">\(A\subset Y\)</span>. Let <span class="math inline">\(\bar{A}\)</span> denote the closure of <span class="math inline">\(A\)</span> in <span class="math inline">\(X\)</span>. Then the closure of <span class="math inline">\(A\)</span> in <span class="math inline">\(Y\)</span> equals <span class="math inline">\(\bar{A} \cap Y\)</span>.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-23" class="proof"><em>Proof</em>. </span>Let <span class="math inline">\(B\)</span> denote the closure of <span class="math inline">\(A\)</span> in <span class="math inline">\(Y\)</span>.</p>
+<ul>
+<li><strong>Claim</strong>: <span class="math inline">\(B \subseteq \bar{A}\cap Y\)</span></li>
+</ul>
+<p>The set <span class="math inline">\(\bar{A}\)</span> is closed in <span class="math inline">\(X\)</span>, so <span class="math inline">\(\bar{A} \cap Y\)</span> is closed in <span class="math inline">\(Y\)</span> (By lemma <a href="#lem:qw"><strong>??</strong></a>). Since <span class="math inline">\(A\subset \bar{A}\cap Y\)</span>(Since, <span class="math inline">\(\bar{A}\)</span> is the smallest subset that conatin <span class="math inline">\(A\)</span>, and <span class="math inline">\(A\subseteq Y\)</span>), and since by definition <span class="math inline">\(B\)</span> equals the intersection of all closed subsets of <span class="math inline">\(Y\)</span> containing <span class="math inline">\(A\)</span>, we must have <span class="math inline">\(B \subseteq (\bar{A} \cap Y)\)</span>.</p>
+<ul>
+<li><strong>Case-II</strong>: <span class="math inline">\(\bar{A}\cap Y \subseteq B\)</span></li>
+</ul>
+<p>we know that <span class="math inline">\(B\)</span> is closed in <span class="math inline">\(Y\)</span>. Hence by lemma <a href="index.html#thm:qw">1.3</a>, <span class="math inline">\(B = C \cap Y\)</span> for some set <span class="math inline">\(C\)</span> closed in <span class="math inline">\(X\)</span>. Then <span class="math inline">\(C\)</span> is a closed set of <span class="math inline">\(X\)</span> containing <span class="math inline">\(A\)</span>; because <span class="math inline">\(\bar{A}\)</span> is the intersection of all such closed sets, we conclude that <span class="math inline">\(\bar{A} \subseteq C\)</span>. Then
+<span class="math inline">\((\bar{A}\cap Y ) \subset (C \cap Y ) = B\)</span>.</p>
+</div>
+<p><strong>Terminology</strong> : We shorten the statement to “<span class="math inline">\(U\)</span> is an open set containing <span class="math inline">\(x\)</span>” to the phrase “<span class="math inline">\(U\)</span> is a neighbourhood of <span class="math inline">\(x\)</span>.</p>
+<div class="proposition">
+<p><span id="prp:prop1" class="proposition"><strong>Proposition 1.1  </strong></span>Let <span class="math inline">\(A\)</span> be a subset of the topological space <span class="math inline">\(X\)</span>.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Then <span class="math inline">\(x \in \bar{A}\)</span> if and only if every neighborhood <span class="math inline">\(U\)</span> of <span class="math inline">\(x\)</span> intersects <span class="math inline">\(A\)</span>. (has non-empty intersection with <span class="math inline">\(A\)</span>.)</p></li>
+<li><p>Let <span class="math inline">\(\mathcal{B}\)</span> be a basis for <span class="math inline">\(X\)</span> , then <span class="math inline">\(x \in \bar{A}\)</span> if and only if <span class="math inline">\(B\in \mathcal{B}\)</span> which containing <span class="math inline">\(x\)</span> intersects <span class="math inline">\(A\)</span>.</p></li>
+</ol>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-24" class="proof"><em>Proof</em>. </span></p>
+<ul>
+<li>Statemet a)
+<ul>
+<li>(<span class="math inline">\(\Longrightarrow\)</span>): We are going to use indirect proof. Assume that <span class="math inline">\(x\in \bar{A}\)</span>. Then <span class="math inline">\(U=X\setminus \bar{A}\)</span> is neighbohood of <span class="math inline">\(x\)</span> which does not intersect <span class="math inline">\(A\)</span> (<span class="math inline">\(\bar{A} \cap U=\emptyset\)</span>). Since, <span class="math inline">\(A\subset \bar{A}\)</span>, then <span class="math inline">\(A \cup U =\emptyset\)</span>.</li>
+<li>(<span class="math inline">\(\Longleftarrow\)</span>):
+Let <span class="math inline">\(U\)</span> be a neighborhood of <span class="math inline">\(x\)</span> which does not intersect <span class="math inline">\(A\)</span>. So, <span class="math inline">\(X\setminus U\)</span> is closed and <span class="math inline">\(A\subset X\setminus U\)</span>, then <span class="math inline">\(\bar{A}\subset X\setminus U\)</span>. (because $\bar{A} is the smallest closed set that containing <span class="math inline">\(A\)</span>.So, <span class="math inline">\(x\in \bar{A}\)</span>).</li>
+</ul></li>
+<li>Statemet b)
+<ul>
+<li><p><span class="math inline">\((\Longleftarrow)\)</span>: If every open set containing <span class="math inline">\(x\)</span> intersects <span class="math inline">\(A\)</span>, so does
+every basis element <span class="math inline">\(B\)</span> containing <span class="math inline">\(x\)</span>, because <span class="math inline">\(B\)</span> is an open set.</p></li>
+<li><p><span class="math inline">\((\Longrightarrow)\)</span> if every
+basis element containing <span class="math inline">\(x\)</span> intersects <span class="math inline">\(A\)</span>, so does every open set <span class="math inline">\(U\)</span> containing <span class="math inline">\(x\)</span>, because <span class="math inline">\(U\)</span> contains a basis element that contains <span class="math inline">\(x\)</span>.</p></li>
+</ul></li>
+</ul>
+</div>
+<div class="lemma">
+<p><span id="lem:unnamed-chunk-69" class="lemma"><strong>Lemma 1.10  </strong></span>Let A be a subset of the topological space <span class="math inline">\(X\)</span>; let <span class="math inline">\(A^\prime\)</span> be the set of all limit points of <span class="math inline">\(A\)</span>. Then <span class="math inline">\(\bar{A} = A \cup A^\prime\)</span>.
+.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-25" class="proof"><em>Proof</em>. </span></p>
+<ul>
+<li><p><strong>Claim 1</strong>: <span class="math inline">\(A^{\prime}\subseteq \bar{A}\)</span><br />
+Supoose that <span class="math inline">\(x\in A^{\prime}\)</span>. Every neighborhood of <span class="math inline">\(x\)</span> intersects <span class="math inline">\(A\)</span> (in a point different from <span class="math inline">\(x\)</span>). Therefore, by propostion <a href="index.html#prp:prop1">1.1</a>, <span class="math inline">\(x\)</span> belongs to <span class="math inline">\(\overline{A}\)</span>. Hence <span class="math inline">\(A^{\prime} \subseteq \overline{A}\)</span>.</p></li>
+<li><p><strong>Claim 2</strong>: <span class="math inline">\(A \cup A^{\prime} \subseteq \overline{A}\)</span>.<br />
+Since by definition <span class="math inline">\(A \subseteq \overline{A}\)</span>, it follows that <span class="math inline">\(A \cup A^{\prime} \subseteq \overline{A}\)</span>.</p></li>
+<li><p><strong>Claim 3</strong>:<span class="math inline">\(A \cup A^{\prime}\supseteq \overline{A}\)</span>.<br />
+Let <span class="math inline">\(x\in \overline{A}\)</span>.</p>
+<ul>
+<li>Case I: If <span class="math inline">\(x\in A\)</span> then noting to proove.</li>
+<li>Case II: If <span class="math inline">\(x\not\in A\)</span>. Since <span class="math inline">\(x \in \overline{A}\)</span>, we know that every neighborhood <span class="math inline">\(U\)</span> of <span class="math inline">\(x\)</span> intersects <span class="math inline">\(A\)</span>; because <span class="math inline">\(x \notin A\)</span>, the set <span class="math inline">\(U\)</span> must intersect <span class="math inline">\(A\)</span> in a point different from <span class="math inline">\(x\)</span>. Then <span class="math inline">\(x \in A^{\prime}\)</span>, so that <span class="math inline">\(x \in A \cup A^{\circ}\)</span>, as desired.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="hausdorff-spaces" class="section level2 hasAnchor" number="1.8">
+<h2><span class="header-section-number">1.8</span> Hausdorff Spaces<a href="index.html#hausdorff-spaces" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="definition">
+<p><span id="def:unnamed-chunk-71" class="definition"><strong>Definition 1.15  </strong></span>A topological space <span class="math inline">\((X,\mathcal{T})\)</span> is called a Hausdorff space if<br />
+(H1) <span class="math inline">\(\forall x,y \in X\)</span> such that <span class="math inline">\(x \neq y\)</span>, <span class="math inline">\(\exists U_x, U_y \in \mathcal{T}\)</span> such that <span class="math inline">\(x \in U_x\)</span>, <span class="math inline">\(y \in U_y\)</span>, and <span class="math inline">\(U_x \cap U_y = \emptyset\)</span>.</p>
+<p>i.e., for every pair of distinct points <span class="math inline">\(x, y\)</span> in <span class="math inline">\(X\)</span>, there are disjoint neighborhoods <span class="math inline">\(U_x\)</span> and <span class="math inline">\(U_y\)</span> of <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> respectively.</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:fig16"></span>
+<img src="figures/figure%2016.jpg" alt="$~$"  />
+<p class="caption">
+Figure 1.18: <span class="math inline">\(~\)</span>
+</p>
+</div>
+<p>We called Hausdorff condition as <span class="math inline">\(T_2\)</span> axiom. So Let’s see another definition</p>
+<div class="figure"><span style="display:block;" id="fig:fig02"></span>
+<img src="figures/figure%2002.png" alt="$~$"  />
+<p class="caption">
+Figure 1.19: <span class="math inline">\(~\)</span>
+</p>
+</div>
+<div class="definition">
+<p><span id="def:unnamed-chunk-72" class="definition"><strong>Definition 1.16  </strong></span>A space <span class="math inline">\(X\)</span> is a <em>T1 space</em> if and only if it satisfies the following condition: For each <span class="math inline">\(x, y \in X\)</span> such that <span class="math inline">\(x \neq y\)</span>, there exists an open set <span class="math inline">\(U \subset X\)</span> such that <span class="math inline">\(x \in U\)</span> but <span class="math inline">\(y \notin U\)</span>.</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:fig17"></span>
+<img src="figures/figure%2017.jpg" alt="$~$"  />
+<p class="caption">
+Figure 1.20: <span class="math inline">\(~\)</span>
+</p>
+</div>
+<p>These <span class="math inline">\(T_1\)</span> and <span class="math inline">\(T_2\)</span> axioms are called the separation axioms.</p>
+<div class="example">
+<p><span id="exm:unnamed-chunk-73" class="example"><strong>Example 1.23  </strong></span>Let <span class="math inline">\(X\)</span> b a set. Consider <span class="math inline">\(X\)</span> with finite complemenet topology is <span class="math inline">\(T_1\)</span> Space. (i.e.:<span class="math inline">\((X,\mathcal{T}_f)\)</span> is <span class="math inline">\(T_1\)</span> space.) But <span class="math inline">\(X\)</span> is not <span class="math inline">\(T_2\)</span> if <span class="math inline">\(X\)</span> is infinite.</p>
+</div>
+<p><strong>Claim 1</strong> : <span class="math inline">\((X,\mathcal{T}_{f})\)</span> is <span class="math inline">\(T_1\)</span> space.</p>
+<div class="proof">
+<p><span id="unlabeled-div-26" class="proof"><em>Proof</em>. </span>Let <span class="math inline">\(x,y\in X\)</span>. Then</p>
+<ul>
+<li><span class="math inline">\(X\setminus \{x\}\)</span> is an open set of <span class="math inline">\(\mathcal{T}_{f}\)</span> containing <span class="math inline">\(y\)</span> but not <span class="math inline">\(x\)</span>.</li>
+<li><span class="math inline">\(X\setminus \{y\}\)</span> is an open set of <span class="math inline">\(\mathcal{T}_{f}\)</span> containing <span class="math inline">\(x\)</span>
+but not <span class="math inline">\(y\)</span>.
+Hence the result from definition of <span class="math inline">\(T_1\)</span> space.</li>
+</ul>
+</div>
+<p><strong>Claim 2</strong> : <span class="math inline">\(X\)</span> is not <span class="math inline">\(T_2\)</span> if <span class="math inline">\(X\)</span> is infinite.</p>
+<div class="proof">
+<p><span id="unlabeled-div-27" class="proof"><em>Proof</em>. </span>Let <span class="math inline">\(x_1,x_2\in X\)</span> with <span class="math inline">\(x_1\neq x_2\)</span> Suppose <span class="math inline">\(x_1,x_2\)</span> have disjoint neighbhood <span class="math inline">\(U_1\)</span> and <span class="math inline">\(U_2\)</span>. I.e.: <span class="math inline">\(U_1\cap U_2=\emptyset\)</span>. Thus
+<span class="math display">\[\begin{eqnarray}
+X &amp;=&amp; X\setminus (U_1\cap U_2)\\
+&amp;=&amp; \underbrace{(X \setminus U_1 )}_{\text{finite}} \cup \underbrace{(X\setminus U_2)}_{\text{finite}}
+\end{eqnarray}\]</span>
+Note that both <span class="math inline">\((X \setminus U_1 )\)</span> and <span class="math inline">\((X \setminus U_2 )\)</span> are finite. Thus, X is finite. Hence, if <span class="math inline">\(X\)</span> is <span class="math inline">\(T_2\)</span> then <span class="math inline">\(X\)</span> is finite. (Contrapostive of given statement). Therefore, if <span class="math inline">\(X\)</span> is infinite then <span class="math inline">\(X\)</span> is not <span class="math inline">\(T_2\)</span>.</p>
+</div>
+<div class="definition">
+<p><span id="def:unnamed-chunk-76" class="definition"><strong>Definition 1.17  </strong></span>Let <span class="math inline">\(X\)</span> be topological sapce. A sequence <span class="math inline">\(x_1,x_2,x_3,...\)</span> in <span class="math inline">\(X\)</span> <strong>converges</strong> to <span class="math inline">\(x\in X\)</span> if for every neighborhood <span class="math inline">\(U\)</span> of <span class="math inline">\(x\)</span> there exists <span class="math inline">\(N\in \mathbb{N}\)</span> such that <span class="math inline">\(x_n \in U\)</span> for all <span class="math inline">\(n\geq N\)</span></p>
+<p>Notataion: <span class="math inline">\(x_n \to x\)</span></p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:fig18"></span>
+<img src="figures/figure%2018.jpg" alt="$~$"  />
+<p class="caption">
+Figure 1.21: <span class="math inline">\(~\)</span>
+</p>
+</div>
+<div class="proposition">
+<p><span id="prp:unnamed-chunk-77" class="proposition"><strong>Proposition 1.2  </strong></span>Let <span class="math inline">\(X\)</span> be a Hausdorff space. If <span class="math inline">\(x_n\)</span> convergence the limit <span class="math inline">\(x\)</span> is unique.<br />
+In other words: The limit of a convergent sequence in a Hausdorff space is unique.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-28" class="proof"><em>Proof</em>. </span>We are going to indirect proof. Assume that <span class="math inline">\(x_n \to x\)</span> and <span class="math inline">\(x_n \to y\)</span> and <span class="math inline">\(x\neq y\)</span>. Since <span class="math inline">\(X\)</span> is a Hausdorff space, there are disjoint open sets <span class="math inline">\(U\)</span> and <span class="math inline">\(V\)</span> of <span class="math inline">\(X\)</span> such that <span class="math inline">\(x\in U\)</span> and $ yV$.</p>
+<ul>
+<li>Since <span class="math inline">\(x_n \to x\)</span>, <span class="math inline">\(U\)</span> is an open neighbourhood of <span class="math inline">\(x\)</span>, there is a <span class="math inline">\(N_0\in \mathbb{N}\)</span> , such that <span class="math inline">\(x_n \in U\)</span> for all <span class="math inline">\(n\geq N_0\)</span></li>
+<li>Since <span class="math inline">\(x_n \to y\)</span>, <span class="math inline">\(V\)</span> is an open neighbourhood of <span class="math inline">\(y\)</span>, there is a <span class="math inline">\(N_1\in \mathbb{N}\)</span> , such that <span class="math inline">\(x_n \in V\)</span> for all <span class="math inline">\(n\geq N_1\)</span></li>
+</ul>
+<p>Let <span class="math inline">\(N=max\{N_0,N_1\}\)</span>.
+Since <span class="math inline">\(N&gt;N_0\)</span>, then <span class="math inline">\(x_N\in U\)</span>.
+Since <span class="math inline">\(N&gt;N_1\)</span>, then <span class="math inline">\(x_N\in V\)</span>.
+Thus, <span class="math inline">\(x_N\in U \cap V\)</span>. This contardict disjointness the <span class="math inline">\(u\)</span> and <span class="math inline">\(V\)</span>. Thefore, <span class="math inline">\(x=y\)</span></p>
+</div>
+<div class="proposition">
+<p><span id="prp:unnamed-chunk-79" class="proposition"><strong>Proposition 1.3  </strong></span>Let <span class="math inline">\(X\)</span> be a Hausdorff space and <span class="math inline">\(A\subset X\)</span><br />
+<span class="math inline">\(x\in X\)</span> is a limit point <span class="math inline">\(\iff\)</span> every neighbourhood intersect <span class="math inline">\(A\)</span> is infinetly many points.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-29" class="proof"><em>Proof</em>. </span></p>
+<ul>
+<li>(<span class="math inline">\(\Longleftarrow\)</span>) The direction is trivial.</li>
+<li></li>
+</ul>
+</div>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="chapter-2-name.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/ashanjayamal/topology_bookdown.git/index.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 4 Exercises | Topology</title>
+  <meta name="description" content="This my attempt to do the topolgy." />
+  <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 4 Exercises | Topology" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This my attempt to do the topolgy." />
+  <meta name="github-repo" content="https://github.com/ashanjayamal/topology_bookdown.git" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 4 Exercises | Topology" />
+  
+  <meta name="twitter:description" content="This my attempt to do the topolgy." />
+  
+
+<meta name="author" content="Ashan Jayamal" />
+
+
+<meta name="date" content="2024-03-17" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="prev" href="chapter-03-name.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Topology</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Topology</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#topological-spaces"><i class="fa fa-check"></i><b>1.1</b> Topological Spaces</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#basis-of-a-topology"><i class="fa fa-check"></i><b>1.2</b> Basis of a Topology</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#comparing-topologies"><i class="fa fa-check"></i><b>1.3</b> Comparing Topologies</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#order-topology"><i class="fa fa-check"></i><b>1.4</b> Order Topology</a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#product-toplogy-on-x-times-y."><i class="fa fa-check"></i><b>1.5</b> Product Toplogy on <span class="math inline">\(X \times Y\)</span>.</a></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#the-subspace-topology"><i class="fa fa-check"></i><b>1.6</b> The Subspace Topology</a></li>
+<li class="chapter" data-level="1.7" data-path="index.html"><a href="index.html#closed-sets-and-limit-points"><i class="fa fa-check"></i><b>1.7</b> Closed Sets and Limit Points</a>
+<ul>
+<li class="chapter" data-level="1.7.1" data-path="index.html"><a href="index.html#closed-set"><i class="fa fa-check"></i><b>1.7.1</b> Closed Set</a></li>
+<li class="chapter" data-level="1.7.2" data-path="index.html"><a href="index.html#closure-and-interior-of-a-set"><i class="fa fa-check"></i><b>1.7.2</b> Closure and Interior of a Set</a></li>
+</ul></li>
+<li class="chapter" data-level="1.8" data-path="index.html"><a href="index.html#hausdorff-spaces"><i class="fa fa-check"></i><b>1.8</b> Hausdorff Spaces</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="chapter-2-name.html"><a href="chapter-2-name.html"><i class="fa fa-check"></i><b>2</b> Chapter 2 name</a></li>
+<li class="chapter" data-level="3" data-path="chapter-03-name.html"><a href="chapter-03-name.html"><i class="fa fa-check"></i><b>3</b> Chapter 03 name</a></li>
+<li class="chapter" data-level="4" data-path="exercises.html"><a href="exercises.html"><i class="fa fa-check"></i><b>4</b> Exercises</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="exercises.html"><a href="exercises.html#section-16-in-munkress-book"><i class="fa fa-check"></i><b>4.1</b> Section 16 in Munkress Book</a></li>
+<li class="chapter" data-level="4.2" data-path="exercises.html"><a href="exercises.html#section-17-in-munkress-book"><i class="fa fa-check"></i><b>4.2</b> Section 17 in Munkress Book</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://ashanjayamal.github.io/academicpages/" target="blank">Property of Ashan</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Topology</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="exercises" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">Chapter 4</span> Exercises<a href="exercises.html#exercises" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="section-16-in-munkress-book" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Section 16 in Munkress Book<a href="exercises.html#section-16-in-munkress-book" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-1" class="exercise"><strong>Exercise 4.1  (Mun 2.16.2) </strong></span>Show that if <span class="math inline">\(Y\)</span> is a subspace of $X, and <span class="math inline">\(A\)</span> is a subset of <span class="math inline">\(Y\)</span> , then the topology <span class="math inline">\(A\)</span> inherits as a subspace of <span class="math inline">\(Y\)</span> is the same as the topology it inherits as a subspace of <span class="math inline">\(X\)</span>.</p>
+</div>
+<p><strong>Solution</strong>:
+Let’s denote the topology on <span class="math inline">\(X\)</span> as <span class="math inline">\(\mathcal{T}_X\)</span>, the topology on <span class="math inline">\(Y\)</span> as <span class="math inline">\(\mathcal{T}_Y\)</span>, and the topology on <span class="math inline">\(A\)</span> as <span class="math inline">\(\mathcal{T}_A\)</span>.</p>
+<p>We know that <span class="math inline">\(Y\)</span> is a subspace of <span class="math inline">\(X\)</span>, so the topology <span class="math inline">\(\mathcal{T}_Y\)</span> that <span class="math inline">\(Y\)</span> inherits from <span class="math inline">\(X\)</span> is <span class="math inline">\(\mathcal{T}_Y = \{ Y \cap U : U \in \mathcal{T}_X \}\)</span>.</p>
+<p>Similarly, <span class="math inline">\(A\)</span> is a subset of <span class="math inline">\(Y\)</span>, so the topology <span class="math inline">\(\mathcal{T}_A\)</span> that <span class="math inline">\(A\)</span> inherits from <span class="math inline">\(Y\)</span> is <span class="math inline">\(\mathcal{T}_A = \{ A \cap V : V \in \mathcal{T}_Y \}\)</span>.</p>
+<p>Substituting <span class="math inline">\(\mathcal{T}_Y\)</span> into the equation for <span class="math inline">\(\mathcal{T}_A\)</span>, we get <span class="math inline">\(\mathcal{T}_A = \{ A \cap (Y \cap U) : U \in \mathcal{T}_X \}\)</span>.</p>
+<p>Since <span class="math inline">\(A\)</span> is a subset of <span class="math inline">\(Y\)</span>, <span class="math inline">\(A \cap Y = A\)</span>. So, <span class="math inline">\(\mathcal{T}_A = \{ A \cap U : U \in \mathcal{T}_X \}\)</span>.</p>
+<p>This is exactly the topology that <span class="math inline">\(A\)</span> would inherit as a subspace of <span class="math inline">\(X\)</span>. Therefore, the topology <span class="math inline">\(A\)</span> inherits as a subspace of <span class="math inline">\(Y\)</span> is the same as the topology it inherits as a subspace of <span class="math inline">\(X\)</span>.</p>
+<p><img src="figures/Exercises/Ex%202.16/ex1-1.png" /><!-- --></p>
+<p><img src="figures/Exercises/Ex%202.16/ex1-2.png" /><!-- --></p>
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-4" class="exercise"><strong>Exercise 4.2  (Mun 2.16.2) </strong></span>If <span class="math inline">\(\mathcal{T}\)</span> and <span class="math inline">\(\mathcal{T}\)</span> are topologies on <span class="math inline">\(X\)</span> and <span class="math inline">\(\mathcal{T}\)</span> is strictly finer than <span class="math inline">\(\mathcal{T}\)</span> , what can you
+say about the corresponding subspace topologies on the subset <span class="math inline">\(Y\)</span> of <span class="math inline">\(X\)</span>?</p>
+</div>
+<p><strong>Solution</strong>:
+<img src="figures/Exercises/Ex%202.16/ex%202.jpg" /><!-- --></p>
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-6" class="exercise"><strong>Exercise 4.3  (Mun 2.16.3) </strong></span>Consider the set <span class="math inline">\(Y = [−1, 1]\)</span> as a subspace of <span class="math inline">\(\mathbb{R}\)</span>. Which of the following sets are open in <span class="math inline">\(Y\)</span> ? Which are open in <span class="math inline">\(\mathbb{R}\)</span>?
+<span class="math display">\[\begin{align}
+A &amp;= \{ x \mid \frac{1}{2} &lt; |x| &lt; 1 \}\\
+B &amp;= \{ x \mid \frac{1}{2} &lt; |x| \leq 1 \} \\
+C &amp;= \{ x \mid \frac{1}{2} \leq |x| &lt; 1 \}\\
+D &amp;= \{ x \mid \frac{1}{2} \leq |x| \leq 1 \}\\
+E &amp;= \{ x \mid 0 &lt; |x| &lt; 1 \text{ and } \frac{1}{x} \notin \mathbb{Z}^+ \}
+\end{align}\]</span></p>
+</div>
+<p><strong>Solution</strong>:
+<img src="figures/Exercises/Ex%202.16/ex%203-1.jpg" /><!-- --></p>
+<p><img src="figures/Exercises/Ex%202.16/ex%203-2.jpg" /><!-- --></p>
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-9" class="exercise"><strong>Exercise 4.4  </strong></span>A map <span class="math inline">\(f : X \to Y\)</span>. We say that <span class="math inline">\(f\)</span> is an <strong>open map</strong> if, for every open set <span class="math inline">\(U\)</span> in <span class="math inline">\(X\)</span>, the set <span class="math inline">\(f(U)\)</span> is open in <span class="math inline">\(Y\)</span>. Show that the projections <span class="math inline">\(\pi_1 : X \times Y \to X\)</span> and <span class="math inline">\(\pi_2 : X \times Y \to Y\)</span> are open maps.
+``</p>
+</div>
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-10" class="exercise"><strong>Exercise 4.5  </strong></span>Let <span class="math inline">\(X\)</span> and <span class="math inline">\(X^\prime\)</span> denote a single set in the topologies <span class="math inline">\(\mathcal{T}\)</span> and <span class="math inline">\(\mathcal{T}^\prime\)</span> , respectively; let <span class="math inline">\(Y\)</span>
+and <span class="math inline">\(Y&#39;\)</span> denote a single set in the topologies <span class="math inline">\(\mathcal{U}\)</span> and <span class="math inline">\(\mathcal{U}^\prime\)</span>, respectively. Assume these sets are nonempty.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Show that if <span class="math inline">\(\mathcal{T}&#39; \supset \mathcal{T}\)</span> and <span class="math inline">\(\mathcal{U}&#39;\supset \mathcal{U}\)</span>, then the product topology on <span class="math inline">\(X&#39;\times Y&#39;\)</span> is
+finer than the product topology on <span class="math inline">\(X \times Y\)</span>.</li>
+<li>Does the converse of a. hold? Justify your answer</li>
+</ol>
+</div>
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-11" class="exercise"><strong>Exercise 4.6  (Mun 2.16.7) </strong></span>Show that the countable collection
+<span class="math display">\[\{(a, b) \times (c, d) | a &lt; b \text{ and } c &lt; d, \text{ and } a, b, c, d \text{ are rational}\}\]</span>
+is a basis for <span class="math inline">\(\mathbb{R}^2\)</span>.”</p>
+</div>
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-12" class="exercise"><strong>Exercise 4.7  </strong></span>Let <span class="math inline">\(X\)</span> be an ordered set. If <span class="math inline">\(Y\)</span> is a proper subset of <span class="math inline">\(X\)</span> that is convex in <span class="math inline">\(X\)</span>, does it follow that <span class="math inline">\(Y\)</span> is an interval or a ray in <span class="math inline">\(X\)</span>?</p>
+</div>
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-13" class="exercise"><strong>Exercise 4.8  </strong></span>If <span class="math inline">\(L\)</span> is a straight line in the plane, describe the topology <span class="math inline">\(L\)</span> inherits as a subspace of <span class="math inline">\(\mathbb{R}_l \times \mathbb{R}\)</span> and as a subspace of <span class="math inline">\(\mathbb{R}_l \times \mathbb{R}_l\)</span>. In each case it is a familiar topology.</p>
+</div>
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-14" class="exercise"><strong>Exercise 4.9  </strong></span>Show that the dictionary order topology on the set <span class="math inline">\(\mathbb{R} \times \mathbb{R}\)</span> is the same as the product topology <span class="math inline">\(\mathbb{R}_d \times \mathbb{R}\)</span>, where <span class="math inline">\(\mathbb{R}_d\)</span> denotes <span class="math inline">\(\mathbb{R}\)</span> in the discrete topology. Compare this topology with the standard topology on <span class="math inline">\(\mathbb{R}^2\)</span>.</p>
+</div>
+<p><span class="math display">\[\mathbb{R}^2_{dictionary}:=\mathbb{R}_{discrete }\times \mathbb{R}_{standard}\]</span></p>
+<div class="proof">
+<p><span id="unlabeled-div-1" class="proof"><em>Proof</em>. </span>Let <span class="math inline">\(\{a\} \times (c,d)\)</span> be a basis element in product toplogy <span class="math inline">\(\mathbb{R}_d \times \mathbb{R}\)</span>. Let <span class="math inline">\(a\times x\in \{a\} \times (c,d)\)</span> obsereve that
+<span class="math display">\[a\times x\in \{a\} \times (c,d) = (a\times c,a\times d)\]</span>
+and <span class="math inline">\((a\times c,a\times d)\)</span> is basis element of order topology <span class="math inline">\(\mathbb{R}^2\)</span>. Thus by lemma <a href="#lem:finerLemma"><strong>??</strong></a>, order toplogy in <span class="math inline">\(\mathbb{R}^2\)</span> is finer than the product toplogy <span class="math inline">\(\mathbb{R}_d \times \mathbb{R}\)</span>.</p>
+<p>Now suppose that <span class="math inline">\((p\times q, r \times s)\)</span> be a basis elemenet in order toplogy on <span class="math inline">\(\mathbb{R}^2\)</span>.</p>
+<ul>
+<li>If <span class="math inline">\(p&lt;x\)</span>, define <span class="math inline">\(l=y−1\)</span> and if <span class="math inline">\(p=x\)</span> define <span class="math inline">\(l=r\)</span>. In either case we know that <span class="math inline">\((p\times q)&lt;(x\times l)&lt;(x\times y)\)</span>.</li>
+<li>If <span class="math inline">\(x&lt;r\)</span> define <span class="math inline">\(t=y+1\)</span> and if <span class="math inline">\(x=r\)</span> define <span class="math inline">\(t=s\)</span>. In either case we know that <span class="math inline">\((x\times y)&lt;(x\times t)&lt;(q \times s)\)</span>.</li>
+</ul>
+<p>See figure <a href="#fig:fig12"><strong>??</strong></a>
+So <span class="math display">\[(x,y) \in \{x\} \times (l,t) \subseteq (p \times q, r \times s).\]</span>
+Thus by lemma <a href="#lem:finerLemma"><strong>??</strong></a>, product toplogy <span class="math inline">\(\mathbb{R}_d \times \mathbb{R}\)</span> is finer than order toplogy in <span class="math inline">\(\mathbb{R}^2\)</span>.</p>
+<p>Therefore, <span class="math display">\[\mathbb{R}^2_{dictionary}=\mathbb{R}_{discrete }\times \mathbb{R}_{standard}\]</span></p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:figm12"></span>
+<img src="figures/figure%2012.jpg" alt="$~$"  />
+<p class="caption">
+Figure 4.1: <span class="math inline">\(~\)</span>
+</p>
+</div>
+<p>Let <span class="math inline">\(I = [0, 1]\)</span>. Compare the product topology on <span class="math inline">\(I \times I\)</span>, the dictionary order topology on <span class="math inline">\(I \times I\)</span>, and the topology <span class="math inline">\(I \times I\)</span> inherits as a subspace of <span class="math inline">\(\mathbb{R} \times \mathbb{R}\)</span> in the dictionary order topology.</p>
+<p><img src="figures/Exercises/Ex%202.16/ex-10-1.png" /><!-- -->
+<img src="figures/Exercises/Ex%202.16/ex-10-2.png" /><!-- -->
+<img src="figures/Exercises/Ex%202.16/ex-10-3.png" /><!-- -->
+<img src="figures/Exercises/Ex%202.16/ex-10-4.png" /><!-- -->
+<img src="figures/Exercises/Ex%202.16/ex-10-5.png" /><!-- --></p>
+<p><strong>Claim</strong>: <span class="math inline">\(\mathcal{T_2}\subsetneq\mathcal{T3}\)</span><br />
+So, as previous we have to prove two things they are finer condition and strictly condition.</p>
+<p>Let <span class="math inline">\((a_1\times b_1, a_2 \times b_2)\)</span> be a basis element of order topology. and <span class="math inline">\(x\times y \in (a_1\times b_1, a_2 \times b_2)\)</span></p>
+<ul>
+<li><p><strong>Case I</strong> <span class="math inline">\((a_1&lt;x&lt;a_2)\)</span>:
+<span class="math display">\[x\times y \in (x\times-1,x\times 2)\cap I^2= [x\times 0,x\times 1]=\{x\}\times [0,1] \subset (a_1\times b_1, a_2 \times b_2)\]</span>
+Note that <span class="math inline">\((x\times -1,x\times 2)\cap I^2\)</span> is a basis element of subspace topology.</p></li>
+<li><p><strong>Case II</strong> <span class="math inline">\((a_1=x&lt;a_2)\)</span>:
+<span class="math display">\[x\times y \in (x\times b_1,x\times 2)\cap I^2= [x\times b_1,x\times 1]=\{x\}\times (b_1,1] \subset (a_1\times b_1, a_2 \times b_2)\]</span>
+Note that <span class="math inline">\((x\times b_1,x\times 2)\cap I^2\)</span> is a basis element of subspace topology.</p></li>
+<li><p><strong>Case III</strong> <span class="math inline">\((a_1&lt;x=a_2)\)</span>:
+<span class="math display">\[x\times y \in (x\times -1,x\times b_2)\cap I^2= [x\times 0,x\times b_2]=\{x\}\times [0,b_2) \subset (a_1\times b_1, a_2 \times b_2)\]</span>
+Note that <span class="math inline">\((x\times -1,x\times b_2)\cap I^2\)</span> is a basis element of subspace topology.</p></li>
+<li><p><strong>Case IV</strong> <span class="math inline">\((a_1=x=a_2)\)</span>:
+<span class="math display">\[x\times y \in (x\times b_1,x\times b_2)\cap I^2= [x\times b_1,x\times b_2]=\{x\}\times [b_1,b_2) \subset (a_1\times b_1, a_2 \times b_2)\]</span>
+Note that <span class="math inline">\((x\times b_1,x\times b_2)\cap I^2\)</span> is a basis element of subspace topology.</p></li>
+</ul>
+<p>See figure <a href="exercises.html#fig:fige15">4.2</a></p>
+<p>In above all four cases, we have found basis element of subspace topology that contain <span class="math inline">\(x\times y\)</span> and contained in <span class="math inline">\((a_1\times b_1, a_2 \times b_2)\)</span>. Therefore, <span class="math inline">\(\mathcal{T_2}\subsetneq\mathcal{T3}\)</span></p>
+<div class="figure"><span style="display:block;" id="fig:fige15"></span>
+<img src="figures/figure%2015.jpg" alt="$~$"  />
+<p class="caption">
+Figure 4.2: <span class="math inline">\(~\)</span>
+</p>
+</div>
+<p><img src="figures/Exercises/Ex%202.16/ex-10-6.png" style="display: block; margin: auto;" />
+<img src="figures/Exercises/Ex%202.16/ex-10-7.png" style="display: block; margin: auto;" />
+<img src="figures/Exercises/Ex%202.16/ex-10-8.png" style="display: block; margin: auto;" /></p>
+</div>
+<div id="section-17-in-munkress-book" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Section 17 in Munkress Book<a href="exercises.html#section-17-in-munkress-book" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-16" class="exercise"><strong>Exercise 4.10  (Mun 2.17.1) </strong></span>Let <span class="math inline">\(\mathcal{C}\)</span> be a collection of subsets of the set <span class="math inline">\(X\)</span>. Suppose that $$and <span class="math inline">\(X\)</span> are in <span class="math inline">\(\mathcal{C}\)</span>, and that finite unions and arbitrary intersections of elements of <span class="math inline">\(\mathcal{C}\)</span> are in <span class="math inline">\(\mathcal{C}\)</span>. Show that the collection
+<span class="math display">\[\mathcal{T} = \{X \setminus C  | C\in  \mathcal{C}\}\]</span>
+is a topology on X.</p>
+</div>
+<p><strong>Solution</strong>:</p>
+<div class="proof">
+<p><span id="unlabeled-div-2" class="proof"><em>Proof</em>. </span></p>
+<ul>
+<li>(T1)
+<ul>
+<li><span class="math inline">\(\emptyset \in \mathcal{C}\implies X\setminus \emptyset=X \in \mathcal{T}\)</span>.</li>
+<li><span class="math inline">\(X \in \mathcal{C}\implies X\setminus X=\emptyset \in \mathcal{T}\)</span></li>
+</ul></li>
+<li>(T2)
+Let <span class="math inline">\(\{U_\alpha\}_{\alpha\in J}\)</span> be family of elements in <span class="math inline">\(\mathcal{C}\)</span>. Then <span class="math inline">\((X\setminus U_\alpha\}_{\alpha\in J}\in \mathcal{T}\)</span>. Then,
+<span class="math display">\[\bigcup_{\alpha\in J}(X\setminus U_\alpha)=X\setminus \bigcup_{\alpha\in J}U_\alpha\]</span>
+Since <span class="math inline">\(\mathcal{C}\)</span> is closed arbitrary intersection, <span class="math inline">\(\bigcup_{\alpha\in J}\in \mathcal{C}\)</span>. Thus,<span class="math inline">\(\bigcap_{\alpha\in J}(X\setminus U_\alpha)=X\setminus \bigcup_{\alpha\in J}U_\alpha\in \mathcal{T}\)</span>.</li>
+<li>(T3)
+Let <span class="math inline">\(U_1,U_2,...,U_n\in \mathcal{C}\)</span>. Then <span class="math inline">\((X\setminus U_1),(X\setminus U_2),...,(X\setminus U_n)\in \mathcal{T}\)</span>. Then,
+<span class="math display">\[\bigcap_{i=1}^n(X\setminus U_i)=X\setminus \bigcup_{i=1}^nU_i\]</span>
+Since <span class="math inline">\(\mathcal{C}\)</span> is closed under finite union, <span class="math inline">\(\bigcup_{i=1}^nU_i\in \mathcal{C}\)</span>. Thus,<span class="math inline">\(\bigcap_{i=1}^n(X\setminus U_i)=X\setminus \bigcup_{i=1}^nU_i\in \mathcal{T}\)</span>.
+Therefore <span class="math inline">\(\mathcal{T}\)</span> is a topology on <span class="math inline">\(X\)</span>.</li>
+</ul>
+</div>
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-18" class="exercise"><strong>Exercise 4.11  (Mun 2.17.2) </strong></span>Show that if <span class="math inline">\(A\)</span> is closed in <span class="math inline">\(Y\)</span> and <span class="math inline">\(Y\)</span> is closed in <span class="math inline">\(X\)</span>, then <span class="math inline">\(A\)</span> is closed in <span class="math inline">\(X\)</span>.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-3" class="proof"><em>Proof</em>. </span>Suppose that <span class="math inline">\(A\)</span> is closed in <span class="math inline">\(Y\)</span> and <span class="math inline">\(Y\)</span> is closed in <span class="math inline">\(X\)</span>.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-4" class="proof"><em>Proof</em>. </span>Since <span class="math inline">\(Y\)</span> is subspace in <span class="math inline">\(X\)</span> and <span class="math inline">\(A\)</span> is closed in <span class="math inline">\(Y\)</span>, by theorm <a href="#thm:qw"><strong>??</strong></a>, then there exist closed set <span class="math inline">\(C\)</span> in <span class="math inline">\(X\)</span> such that <span class="math display">\[A=Y\cap C\]</span>
+Since, <span class="math inline">\(Y\)</span> is closed in <span class="math inline">\(X\)</span> and <span class="math inline">\(X\)</span> is toplogical space, <span class="math inline">\(A=Y\cap C\)</span> is closed in <span class="math inline">\(X\)</span>.</p>
+</div>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="chapter-03-name.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/ashanjayamal/topology_bookdown.git/03-Exercises.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

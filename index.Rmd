@@ -17,12 +17,12 @@ github-repo: https://github.com/ashanjayamal/topology_bookdown.git
 site: bookdown::bookdown_site
 ---
 
-
-
 # Topology
+
 A topology is a geometric structure defined on a set. Basically it is given by declaring which subsets are "open" sets. Thus the axioms are the abstraction of the properties that open sets have.
 
 ## Topological Spaces
+
 ```{definition,label="Top"}
 A topology on a set $X$ is a collection $\mathcal{T}$ of subsets of $X$ such that
 
@@ -39,6 +39,7 @@ A set $X$ with a topology $\mathcal{T}$ is called a topological space. Denoted b
 ```{example}
 Let $X$ be a three-element set, $X = \{a, b, c\}$ and $\mathcal{T}=\{X, \emptyset,\{a, b\}, \{b\}, \{b, c\}\}$. We can check T1,T2 and T3 conditions.
 ```
+
 ```{example}
 Let $X$ be a three-element set, $X = \{a, b, c\}$ as pervoius. There are many possible topologies on $X$, some of which are indicated schematically in figure \@ref(fig:gi). Furthur, we can see that even a three-element set has many different topologies.
 ```
@@ -55,7 +56,6 @@ First let's consider the left hand coner of figure  \@ref(fig:fig2). $\{a\}$ and
 Now consider the right hand coner figure. $\{a,b\}$ and $\{b,c\}$ in collection, but $\{a,b\}\cap\{b,c\}=\{b\}$ is not in the collection.
 ```
 
-
 ```{r echo=FALSE,fig.cap='$~$',label='fig2'}
   knitr::include_graphics('figures/figure 02.png') 
 ```
@@ -63,6 +63,7 @@ Now consider the right hand coner figure. $\{a,b\}$ and $\{b,c\}$ in collection,
 ```{example}
 If $X$ is any set, the collection of all subsets of $X$ (Power set) is a topology on $X$. This trivail statified T1 T2 and T3 conditions. Furthur,This is called the _discrete topology_. 
 ```
+
 ```{example}
 The collection consisting of $X$ and $\emptyset$ only is also a topologyon $X$. we shall call it the _indiscrete topology_, or the trivial topology.
 ```
@@ -82,12 +83,8 @@ Note that the set $\bigcup_{i=1}^n(X \setminus U_i)$ is a finite union of finite
  Let $X$ be a set. Define $\mathcal{T}$ to be the collection of all subsets $U$ of $X$ such that $X\setminus U$ either is finite or is all of $X$. Then $\mathcal{T}$ defines a topology on $X$, called finite complement topology of $X$.
 ```
 
+## Basis of a Topology
 
-
-
-
-
-##  Basis of a Topology
 Once we define a structure on a set, often we try to understand what the minimum data you need to specify the structure. In many cases, this minimum data is called a basis and we say that the basis generate the structure. The notion of a basis of the structure will help us to describe examples more systematically.
 
 ```{definition}
@@ -98,6 +95,7 @@ Let $X$ be a set. A basis of a topology on $X$ is a collection $\mathcal{B}$ of 
 (B2) If $x \in B_{1} \cap B_{2}$ where $B_{1}, B_{2}$ are in $\mathcal{B}$, then there is $B_{3}$ in $\mathcal{B}$ such that $x \in B_{3} \subseteq B_{1} \cap B_{2}$.
 
 ```
+
 ```{r echo=FALSE,fig.cap='$~$',label='fig3'}
   knitr::include_graphics('figures/figure 03.jpg') 
 ```
@@ -109,6 +107,7 @@ Let $\mathcal{B}$ be a basis of a topology on X. Define $\mathcal{T}_{\mathcal{B
 
 Then $\mathcal{T}_{\mathcal{B}}$ defines a topology on $X$. Here we assume that $\emptyset$ trivially satisfies the condition, so that $\emptyset \in \mathcal{T}_{\mathcal{B}}$.
 ```
+
 ```{proof}
 We need to check the three axioms:
 
@@ -156,14 +155,17 @@ $$
 $$
 This is a basis for a topology on $\mathbb{R}$. This topology is called the lower limit topology.
 ```
+
 The following two lemma are useful to determine whehter a collection $\mathcal{B}$ of open sets in $\mathcal{T}$ is a basis for $\mathcal{T}$ or not.
 
 ```{remark}
 Let $\mathcal{T}$ be a topology on $X$. If $\mathcal{B} \subset \mathcal{T}$ and $\mathcal{B}$ satisfies (B1) and (B2), it is easy to see that $\mathcal{T}_{\mathcal{B}} \subset \mathcal{T}$. This is just because of (G1). If $U \in \mathcal{T}_{\mathcal{B}}$, (G1) is satisfied for $U$ so that $\forall x \in U, \exists B_{x} \in \mathcal{B}$ such that $x \in B_{x} \subset U$. Therefore $U=\cup_{x \in U} B_{x}$. By (T2), $U \in \mathcal{T}$.
 ```
+
 ```{lemma,label='lemmaTequalsTB'}
 Let $(X, \mathcal{T})$ be a topological space. Let $\mathcal{B} \subset \mathcal{T}$. Then $\mathcal{B}$ is a basis and $\mathcal{T}_{\mathcal{B}}=\mathcal{T}$ if and only if $\mathcal{T}$ is the set of all unions of elements in $\mathcal{B}$.
 ```
+
 ```{proof}
 - $\quad(\Rightarrow)$ Let $\mathcal{T}^{\prime}$ be the set of all unions of open sets in $\mathcal{B}$. If $U \in \mathcal{T}$, then $U$ satisfies (G1), i.e. $\forall x \in U, \exists B_{x} \in \mathcal{B}$ s.t. $x \in B_{x} \subset U$. Thus $U=\cup_{x \in U} B_{x}$. Therefore $U \in \mathcal{T}^{\prime}$. We proved $\mathcal{T} \subset \mathcal{T}^{\prime}$. It follows from (T2) that $\mathcal{T}^{\prime} \subset \mathcal{T}$.
 - $(\Leftarrow)$ Since $X \in \mathcal{T}, X=\cup_{\alpha} B_{\alpha}$ some union of sets in $\mathcal{B}$. Thus $\forall x \in X, \exists B_{\alpha}$ s.t. $x \in B_{\alpha}$. This proves (B1) for $\mathcal{B}$. If $B_{1}, B_{2} \in \mathcal{B}$, then $B_{1} \cap B_{2} \in \mathcal{T}$ by (T2). Thus $B_{1} \cap B_{2}=\cup_{\alpha} B_{\alpha}, B_{\alpha} \in \mathcal{B}$. So $\forall x \in B_{1} \cap B_{2}, \exists B_{\alpha} \in B$ s.t. $x \in B_{\alpha}$. This $B_{\alpha}$ plays the role of $B_{3}$ in (B2). Thus $\mathcal{B}$ is a basis. Now it makes sense to consider $\mathcal{T}_{\mathcal{B}}$ and we need to show $\mathcal{T}_{\mathcal{B}}=\mathcal{T}$. By the remark, we already know that $\mathcal{T}_{\mathcal{B}} \subset \mathcal{T}$. On the other hand, if $U \in \mathcal{T}$, then $U=\cup_{\alpha} B_{\alpha}, B_{\alpha} \in \mathcal{B}$. Hence, $\forall x \in U, \exists B_{\alpha}$ such that $x \in B_{\alpha} \subset U$. Thus (G1) is satisfied for $U$. Thus $U \in \mathcal{T}_{\mathcal{B}}$. This proves $\mathcal{T}_{\mathcal{B}} \supset \mathcal{T}$.
@@ -172,6 +174,7 @@ Let $(X, \mathcal{T})$ be a topological space. Let $\mathcal{B} \subset \mathcal
 ```{lemma,'lemma110'}
 Let $(X, \mathcal{T})$ be a topological space. Let $\mathcal{B} \subset \mathcal{T}$. Then $\mathcal{B}$ is a basis and $\mathcal{T}_{\mathcal{B}}=\mathcal{T}$ if and if any $U \in \mathcal{T}$ satisfies (Gl), i.e. $\forall x \in U, \exists B_{x} \in \mathcal{B}$ s.t. $x \in B_{x} \subset U$.
 ```
+
 ```{proof}
 - ($\Rightarrow$) Trivial by the definition of $\mathcal{T}_{\mathcal{B}}$.
 
@@ -180,14 +183,17 @@ Let $(X, \mathcal{T})$ be a topological space. Let $\mathcal{B} \subset \mathcal
 ```
 
 ## Comparing Topologies
+
 ```{definition}
 Let $\mathcal{T}, \mathcal{T}^{\prime}$ be two topologies for a set $X$. We say $\mathcal{T}^{\prime}$ is finer than $\mathcal{T}$ or $\mathcal{T}$ is coarser than $\mathcal{T}^{\prime}$ if $\mathcal{T} \subset \mathcal{T}^{\prime}$. The intuition for this notion is " $\left(X, \mathcal{T}^{\prime}\right)$ has more open subsets to separate two points in $X$ than $(X, \mathcal{T})$ ".
 
 ```
-```{lemma,label="finerLemma"}
+
+```{lemma,label='finerLemma'}
 Let $\mathcal{B}, \mathcal{B}^{\prime}$ be bases of topologies $\mathcal{T}, \mathcal{T}^{\prime}$ on $X$ respectively. Then $\mathcal{T}^{\prime}$ is finer than $\mathcal{T} \Leftrightarrow$ $\forall B \in \mathcal{B}$ and $\forall x \in B, \exists B^{\prime} \in \mathcal{B}^{\prime}$ s.t. $x \in B^{\prime} \subseteq B$.
 
 ```
+
 ```{proof}
 - $\Rightarrow$ Since $\mathcal{B} \subset \mathcal{T} \subset \mathcal{T}^{\prime}$, all subsets in $\mathcal{B}$ satisfies (G1) for $\mathcal{T}^{\prime}$, which is exactly the statement we wanted to prove. 
 
@@ -204,14 +210,10 @@ $$
 
 ```
 
-
-
-
 ```{definition,name='subbasis'}
 Let $X$ be a set.A subbasis $\mathcal{S}$ for a topology on $X$ is a collection of subsets of $X$ whose union equals $X$. 
 \[\left(\text{i.e. }\forall x\in X ~\exists S\in\mathcal{S} \text{  such that } x\in S\right)\]
 ```
-
 
 ```{r echo=FALSE,fig.cap='$~$',label='64'}
   knitr::include_graphics('figures/figure 06.jpg') 
@@ -220,7 +222,9 @@ Let $X$ be a set.A subbasis $\mathcal{S}$ for a topology on $X$ is a collection 
 ```{definition}
 The topology generated by the subbasis $\mathcal{S}$ is defined to be the collection $\mathcal{T}$ of all unions of finite intersections of elements of $\mathcal{S}$.
 ```
+
 ## Order Topology
+
 ```{definition,name='Linear Order/ Complete Order'}
 Consider order relation "$<$".
 
@@ -232,20 +236,19 @@ Consider order relation "$<$".
 ```{example}
 $\mathbb{R}$ is ordered set with less than relation.
 ```
+
 First, let's see intervals in an Ordered Set.
 
-Suppose that $X$ is a set having a simple order relation $<$. Given elements $a$ and $b$
-of $X$ such that $a < b$, there are four subsets of $X$ that are called the intervals determined by $a$ and $b$. They are the following :
+Suppose that $X$ is a set having a simple order relation $<$. Given elements $a$ and $b$ of $X$ such that $a < b$, there are four subsets of $X$ that are called the intervals determined by $a$ and $b$. They are the following :
 
-- $(a, b) = \{x\in X | a < x < b\}$ (Type: open interval in $X$),
-- $(a, b] = \{x\in X | a < x ≤ b\}$(Type: half-open interval in $X$),
-- $[a, b) = \{x\in X | a ≤ x < b\}$(Type: half-open interval in $X$),
-- $[a, b] = \{x\in X | a ≤ x ≤ b\}$ (Type: closed interval in $X$),
+-   $(a, b) = \{x\in X | a < x < b\}$ (Type: open interval in $X$),
+-   $(a, b] = \{x\in X | a < x ≤ b\}$(Type: half-open interval in $X$),
+-   $[a, b) = \{x\in X | a ≤ x < b\}$(Type: half-open interval in $X$),
+-   $[a, b] = \{x\in X | a ≤ x ≤ b\}$ (Type: closed interval in $X$),
 
-The notation used here is familiar to you already in the case where $X$ is the real line,but these are intervals in an arbitrary ordered set. 
+The notation used here is familiar to you already in the case where $X$ is the real line,but these are intervals in an arbitrary ordered set.
 
-The use of the term “open” in this connection suggests that open intervals in $X$ should turn out to be open sets when
-we put a topology on $X$. And so they will.
+The use of the term “open” in this connection suggests that open intervals in $X$ should turn out to be open sets when we put a topology on $X$. And so they will.
 
 ```{definition}
 Let $X$ be a set with a simple order relation; assume $X$ has more than one element. Let $\mathcal{B}$ be the collection of all sets of the following types:
@@ -264,8 +267,7 @@ The collection $\mathcal{B}$ is a basis for a topology on $X$, which is called t
 
 ```
 
-**Notation**: 
-Denote an arbitrary element of $\mathbb{R} \times \mathbb{R}$ by $x \times y$, to avoid difficulty with notation.
+**Notation**: Denote an arbitrary element of $\mathbb{R} \times \mathbb{R}$ by $x \times y$, to avoid difficulty with notation.
 
 ```{definition,name='Dictionary Oreder'}
 Suppose that $A$ and $B$ are two sets with order relations $<_{A}$ and $<_{B}$ respectively. Define an order relation $<$ on $A \times B$ by defining $a_{1} \times b_{1} < a_{2} \times b_{2}$ if $a_{1} <_{A} a_{2}$, or if $a_{1} = a_{2}$ and $b_{1} <_{B} b_{2}$. It is called the dictionary order relation on $A \times B$.
@@ -290,37 +292,39 @@ The standard topology,lower limit topology and upper limit topology on $\mathbb{
 $\mathcal{B}$ is a basis which generates the standard topology.
 \[\mathcal{B}^\prime:=\{[x,y):x<y, x,y\in \mathbb{R}\}\]
 $\mathcal{B}^\prime$ is a basis which generates the lower limit topology on $\mathbb{R}$.
-\[\mathcal{B}^{\prime\prime}:=\{(x,y]:x<y, x,y\in \mathbb{R}\}\]
-$\mathcal{B}^{\prime\prime}$ is a basis which generates the upper limit topology on $\mathbb{R}$.
+\[\mathcal{B}^{\prime \prime}:=\{(x,y]:x<y, x,y\in \mathbb{R}\}\]
+$\mathcal{B}^{\prime \prime}$ is a basis which generates the upper limit topology on $\mathbb{R}$.
 
 ```
 
 ```{lemma}
 The lower limit topology on $\mathbb{R}$ is strictly finer than standard topology on $\mathbb{R}$.
 ```
+
 ```{proof}
-Let $(a,b)\in \mathbb{R}$. We are going to use Lemma \@ref(lem:finerLemma).  Let $(a,b)$ be a element from basis of standard topology. Let $x\in (a,b)$. Then $a<x<b$. Then observe that $ x\in [x,b)\subset (a,b) $. Note that $[x,b)$ is element of basis of lower limit topology. Thus, by lemma \@ref(lem:finerLemma) the lower limit topology on $\mathbb{R}$ is finer than standard topology on $\mathbb{R}$. Now we have to prove that **strictly property**.
+Let $(a,b)\in \mathbb{R}$. We are going to use Lemma \@ref(lem:finerLemma).  Let $(a,b)$ be a element from basis of standard topology. Let $x\in (a,b)$. Then $a<x<b$. Then observe that $x\in [x,b)\subset (a,b)$. Note that $[x,b)$ is element of basis of lower limit topology. Thus, by lemma \@ref(lem:finerLemma) the lower limit topology on $\mathbb{R}$ is finer than standard topology on $\mathbb{R}$. Now we have to prove that **strictly property**.
 
 Now let $[c,d)$ is element of basis of lower limit topology on $\mathbb{R}$. Now observe that there is no open interval that containing $c$ and contained in $[c,d)$. By lemma \@ref(lem:finerLemma), the lower limit topology on $\mathbb{R}$ is strictly finer than standard topology on $\mathbb{R}$.
 
 ```
-Note that basis element in lower limit toplogy is **not** open in the standard toplogy. But otherway around is very true. As an example,
-\[(1,2)=\bigcup_{n\in \mathbb{N}}[1+\frac{1}{n},2).\]
-Clearly left hand side is open in lower limit toplogy by T2.
+
+Note that basis element in lower limit toplogy is **not** open in the standard toplogy. But otherway around is very true. As an example, $$(1,2)=\bigcup_{n\in \mathbb{N}}[1+\frac{1}{n},2).$$ Clearly left hand side is open in lower limit toplogy by T2.
 
 ```{corollary}
 The lower limit topology on $\mathbb{R}$ is not comparable upper limit topology on $\mathbb{R}$.
 ```
+
 ```{proof}
 Exercise
 
 Hint: (try to find counter example)
 ```
+
 **Notation**:
 
-- $\mathbb{R}_l:=\mathbb{R}$ with lower limit topology.
-- $\mathbb{R}_u:=\mathbb{R}$ with upper limit topology.
-- $\mathbb{R}:=\mathbb{R}$ with standard topology.
+-   $\mathbb{R}_l:=\mathbb{R}$ with lower limit topology.
+-   $\mathbb{R}_u:=\mathbb{R}$ with upper limit topology.
+-   $\mathbb{R}:=\mathbb{R}$ with standard topology.
 
 ```{example}
 The positive integers $\mathbb{Z}^+:=\{1,2,3,...\}$ form an ordered set with a smallest element. The order topology on $\mathbb{Z}^+$ is the discrete topology, for every one-point set is open: If $n > 1$, then the one-point set $\{n\} = (n - 1, n + 1)$ is a basis element; and if $n = 1$, the one-point set $\{1\}=[1, 2)$ is a basis element.
@@ -329,6 +333,7 @@ The positive integers $\mathbb{Z}^+:=\{1,2,3,...\}$ form an ordered set with a s
 ```{r echo=FALSE,fig.cap='$~$',label='fig8'}
   knitr::include_graphics('figures/figure 08.jpg') 
 ```
+
 ```{example}
 The set $X = \{1, 2\} \times \mathbb{Z}^+$ in the dictionary order is another example of an ordered set with a smallest element. Denoting $1 \times n$ by $a_n$ and $2 \times n$ by $b_n$, we can represent $X$ by
 \[a_1, a_2,..., b_1, b_2,....\]
@@ -340,13 +345,14 @@ The order topology on $X$ is **not** the discrete topology. Most one-point sets 
 As an example, $b_1=2\times 1\in (1\times 7,2\times 8)$. Then the sequence $a_8,a_9,a_{10},....=1\times 8,1\times 9, 1\times 10,...$ contained in $(a_7,b_8)=(1\times 7,2\times 8)$. So, we cannot find an open interval in $X$ that contains $b_1$ and is contained in $\{b_1\}$.
 
 ```
+
 ```{example}
 \[\mathcal{B}^{\prime\prime\prime}:=\{[x,y]:x\leq y, x,y\in \mathbb{R}\}\]
 $\mathcal{B}^{\prime\prime\prime}$ is a basis which generates the discrete topology on $\mathbb{R}$. Because, $\{a\}=[a,a]$. 
 ```
 
-
 ## Product Toplogy on $X \times Y$.
+
 The Cartesian product of two topological spaces has an induced topology called the product topology. There is also an induced basis for it. Here is the example to keep in mind:
 
 ```{example,label='egR2'}
@@ -357,7 +363,7 @@ $$
 $$
 ```
 
-```{proof} 
+```{proof}
 (Proof of $\mathcal{B}$ is basis.)
 - (B1) Let $(x,y)\in \mathbb{R}^2$. Then observe that $x\in(x-1,x+1)\subseteq \mathbb{R}$, and $y\in(y-1,y+1)\subseteq \mathbb{R}$. Thus
 \[(x,y)\in (x-1,x+1)\times (y-1,y+1).\]
@@ -382,9 +388,11 @@ This satisfies B2 condition.
 ```{r echo=FALSE,fig.cap='$~$',label='fig4'}
   knitr::include_graphics('figures/figure 04.jpg') 
 ```
+
 ```{r echo=FALSE,fig.cap='$~$',label='fig5'}
   knitr::include_graphics('figures/figure 05.jpg') 
 ```
+
 Let's go to a rigid definition.
 
 ```{definition}
@@ -395,6 +403,7 @@ i.e.:
 The topology generated by $\mathcal{B}$ is called product topology on $X \times Y$.
 
 ```
+
 ```{proof}
 (Proof of $\mathcal{B}$ is basis)
 
@@ -441,11 +450,12 @@ Note that $(x\times c ,x\times d)$ is a basis element in the dictonary order top
 
 Let $(p\times q,p \times s)$ be basis element of order toplogy. Let $p\times y \in (p\times q,p \times s)$. Now observe that there is no open rectangle that containing $p\times y$ and contained in $(p\times q,p \times s)$. By lemma \@ref(lem:finerLemma), the order topology on $\mathbb{R}^2$ is strictly finer than standard topology on $\mathbb{R}^2$.
 ```
+
 ```{r echo=FALSE,fig.cap='$~$',label='fig11'}
   knitr::include_graphics('figures/figure 11.jpg') 
 ```
-Now I am intersected in a problem. That is can we write dictionary order topology as $\mathbb{R}^2$ as product topology. Actually we can,
-\[\mathbb{R}^2_{dictionary}:=\mathbb{R}_{discrete }\times \mathbb{R}_{standard}\]
+
+Now I am intersected in a problem. That is can we write dictionary order topology as $\mathbb{R}^2$ as product topology. Actually we can, $$\mathbb{R}^2_{dictionary}:=\mathbb{R}_{discrete }\times \mathbb{R}_{standard}$$
 
 ```{proof}
 Let $\{a\} \times (c,d)$ be a basis element in product toplogy $\mathbb{R}_d \times \mathbb{R}$. Let $a\times x\in \{a\} \times (c,d)$ obsereve that 
@@ -469,8 +479,18 @@ Therefore, \[\mathbb{R}^2_{dictionary}=\mathbb{R}_{discrete }\times \mathbb{R}_{
   knitr::include_graphics('figures/figure 12.jpg') 
 ```
 
+```{definition}
+Let \(\pi_1 : X \times Y \to X\) be defined by the equation
+\(\pi_1(x, y) = x\);\
+and let \(\pi_2 : X \times Y \to Y\) be defined by the equation
+\(\pi_2(x, y) = y\).
+
+The maps \(\pi_1\) and \(\pi_2\) are called the _projections_ of \(X \times Y\) onto its first and second factors, respectively.
+```
+
 ## The Subspace Topology
-_A subset of a topological space has a naturally induced topology, called the subspace topology. In geometry, the subspace topology is the source of all funky typologies._
+
+*A subset of a topological space has a naturally induced topology, called the subspace topology. In geometry, the subspace topology is the source of all funky typologies.*
 
 ```{definition}
 Let $(X, \mathcal{T})$ be a topological space. Let $Y\subseteq X$. The collection 
@@ -512,19 +532,18 @@ subspace topology, but not in the order topology, as you can check.
 
 See Figure \@ref(fig:fig14).
 ```
+
 ```{r echo=FALSE,fig.cap='$~$',label='fig14'}
   knitr::include_graphics('figures/figure 14.jpg') 
 ```
 
-**Notation** : The set $I \times I$ in the dictionary order topology will be called the ordered square, and
-denoted by $I_o^2$.
+**Notation** : The set $I \times I$ in the dictionary order topology will be called the ordered square, and denoted by $I_o^2$.
 
 Let's generalized the idea.
 
 ```{lemma}
 The subspace topology on $I \times I$ obtained from the dictionary order topology on $\mathbb{R} \times \mathbb{R}$ is strictly  finer than the dictionary order toplogy on $I \times I$.
 ```
-
 
 ```{proof}
 So, as pervious we have to proove two things they are finer condtion and strictly condition.
@@ -556,17 +575,320 @@ In above all four cases, we have found basis element of subspace topology that c
   knitr::include_graphics('figures/figure 15.jpg') 
 ```
 
+
+
+
+
+
 ## Closed Sets and Limit Points
 
-_Closed sets are nothing but complement of open sets. On the other hand, we can also say that open sets are nothing but
-complement of closed sets. Thus we can actually use closed sets to define topology, although mathematicians usually use
-open sets to define topology._
+Now that we have a few examples at hand, we can introduce some of the basic concepts associated with topological spaces. In this section, we treat the notions of closed set closure of a set, and limit point. These lead naturally to consideration of a certain axiom for topological spaces called the Hausdorff axiom.
+
+### Closed Set
+
+*Closed sets are nothing but complement of open sets. On the other hand, we can also say that open sets are nothing but complement of closed sets. Thus we can actually use closed sets to define topology, although mathematicians usually use open sets to define topology.*
 
 ```{definition}
-Let $A$ be a subset of a topological space $(X, T)$.
+Let $A$ be a subset of a topological space $(X, \mathcal{})$.
 
-- $A$ is a closed set of $X$ if $X - A$ is an open set.
-- The closure $\overline{A}$ of $A$ in $X$ is the intersection of all closed sets of $X$, containing $A$.
-- The interior $\text{Int}A$ of $A$ in $X$ is the union of all open sets of $X$, contained in $A$.
-- $x \in X$ is a limit point of $A$ if $x \in A\setminus\{x\}$
+$A$ is a closed set of $X$ if $X\setminus A$ is an open set.
+- The closure Cl$(A)=\overline{A}$ of $A$ in $X$ is the intersection of all closed sets of $X$, containing $A$.
+\[\text{Cl}(A)=\overline{A}=\bigcap \left\{C \text{ is closed in } X~ \&~  A \subset C\right\}\]
+The smallest closed set that containing$A$ is the closure of $A$.
+- The interior $\text{Int}(A)=\mathring{A}$ of $A$ in $X$ is the union of all open sets of $X$, contained in $A$.
+\[\text{Int}(A)=\mathring{A}=\bigcup \left\{U \text{ is open in } X~ \&~  U \subset A\right\}\]
+The largest open set contanied in $A$ is the interior of $A$.
+- $x \in X$ is a limit point (or “cluster point,” or “point of accumulation”) of $A$, 
+if every neighborhood
+of $x$ intersects $A$ in some point other than $x$ itself. In other words, $x \in X$ is a limit point of $A$, if $x \in \overline{A\setminus\{x\}}$. 
+```
+
+```{remark}
+- $\emptyset, X$ are closed. 
+
+_I am not going to proove these things. I just give an idea._
+(This is trivial.)
+- Fnite unions of closed sets are closed.
+\[  \bigcup_{i=1}^n
+    \underbrace{(X\setminus~ \underbrace{U_i}_{\text{open}})}_{\text{closed}}
+    =X\setminus \underbrace{\bigcap_{i=1}^nU_i}_{\text{open}}\]
+- Arbitrary intersection of closed sets are closed.
+\[  \bigcap_{\alpha\in I}
+    \underbrace{(X\setminus~ \underbrace{U_\alpha}_{\text{open}})}_{\text{closed}}
+    =X\setminus \underbrace{\bigcup_{\alpha \in I} U_i}_{\text{open}}\]
+```
+
+```{example}
+The subset $[a, b]$ of $\mathbb{R}$ is closed because its complement 
+\[\mathbb{R}\setminus [a, b] = (−\infty, a) \cup (b, +\infty)\],
+is open.
+```
+
+```{remark}
+These facts justify our use of the terms “closed interval” and “closed ray.” The subset $[a, b)$ of $\mathbb{R}$ is neither open nor closed.
+```
+
+```{example}
+Similary,the subset $[a, +\infty)$ of $\mathbb{R}$ is closed because its complement 
+\[\mathbb{R}\setminus [a, +\infty) = (−\infty, a) \],
+is open.
+```
+
+```{example}
+In the plane $\mathbb{R}^2$, the set 
+\[\{x \times y | x \geq 0 \text{ and }y ≥ 0\}\]
+is closed, because its complement is the union of the two sets
+\[(−\infty, 0) \times \mathbb{R} \text { and }\mathbb{R} \times (−\infty, 0),\]
+each of which is a product of open sets of $\mathbb{R}$ and is, therefore, open in $\mathbb{R}^2$.
+```
+
+```{example}
+In the finite complement topology on a set $X$, the closed sets consist of $X$ itself and all finite subsets of $X$.
+```
+
+```{example}
+In the discrete topology on the set $X$, every set is open; it follows that every set is closed as well.
+```
+
+```{example}
+Consider the following subset of the real line:
+\[Y = [0, 1] \cup (2, 3)\], 
+in the subspace topology. In this space, 
+
+The set $[0, 1]$ is open, since it is the intersection of the open set $(−\frac{1}{2} , \frac{3}{2} )$ of $\mathbb{R}$ with $Y$ . Similarly, $(2, 3)$ is open as a subset of $Y$ ; it is even open as a subset of $\mathbb{R}$. Since $[0, 1]$ and $(2, 3)$ are complements in $Y$ of each other, we conclude that both $[0, 1]$ and $(2, 3)$ are closed as subsets of $Y$.
+```
+
+**Fun Fact**: These examples suggest that an answer to the mathematician’s riddle: “How is a set different from a door?” should be: “A door must be either open or closed, and cannot be both, while a set can be open, or closed, or both, or neither!
+
+The collection of closed subsets of a space X has properties similar to those satisfied by the collection of open subsets of $X$;
+
+```{theorem}
+Let $X$ be a topological space. Then the following conditions hold:
+  
+(1) $\emptyset$ and $X$ are closed.
+(2) Arbitrary intersections of closed sets are closed.
+(3) Finite unions of closed sets are closed.
+```
+
+```{proof}
+
+1) $\emptyset$ and $X$ are closed because they are the complements of the open sets $X$ and $\emptyset$, respectively.
+1) Given a collection of closed sets $\{A_{\alpha}\}_{\alpha \in J}$, we apply DeMorgan’s law, \[X \setminus \bigcup_{\alpha \in J} A_{\alpha} = \bigcap_{\alpha \in J} (X \setminus A_{\alpha})\]. Since the sets $X \setminus A_{\alpha}$ are open by definition, the right side of this equation represents an arbitrary union of open sets, and is thus open. Therefore, $\bigcup A_{\alpha}$ is closed.
+1) Similarly, if $A_i$ is closed for $i = 1, \ldots, n$, consider the equation $$X \setminus \bigcap_{i=1}^{n} A_i = \bigcup_{i=1}^{n} (X \setminus A_i)$$. 
+The set on the right side of this equation is a finite intersection of open sets. Hence $\bigcup A_i$ is closed.
+```
+
+Instead of using open sets, one could just as well specify a topology on a space by giving a collection of sets (to be called “closed sets”) satisfying the three properties of this theorem. One could then define open sets as the complements of closed sets and proceed just as before. This procedure has no particular advantage over the one we have adopted, and most mathematicians prefer to use open sets to define topologies.
+
+Now when dealing with subspaces, one needs to be careful in using the term “closed set.” If $Y$ is a subspace of $X$, we say that a set $A$ is closed in $Y$ if $A$ is a subset of $Y$ and if $A$ is closed in the subspace topology of $Y$ (that is, if $Y \setminus A$ is open in $Y$ ). We have the following theorem:
+
+
+
+```{theorem,label='qw'}
+Let $X$ be a toplogical space and $Y$ is a subspace of $X$, and $A$ is a subset of $Y$ , then $A$ is closed $\iff ~A=Y \cap C$ forsome $C$ is closed in $X$.
+```
+
+
+
+```{proof}
+- ($\Longleftarrow$) Suppose that $A=Y \cap C$ for some closed set $C$ in $X$.  (See Figure \@ref(fig:fig19) Thus, $X\setminus C$ is open in $X$. So, $(X\setminus C)\cap Y$ is open in $Y$,  by definition of the subspace topology. But,
+\[(X\setminus C)\cap Y=Y\setminus (C\cap Y)=Y\setminus A.\]
+. Hence $Y \setminus A$ is open in $Y$.Therfore, $A$ is closed in $Y$. 
+- ($\Longrightarrow$) Now Suppose that $A$ is closed in $Y$. (See Figure \@ref(fig:fig20)  Then, $Y\setminus A$  is open in $Y$. Thus by definition, $Y\setminus A= U \cap Y$, forsome open set $U$ in $X$.  So, $X\setminus U$ is closed in $X$. Now consider,
+\[Y \cap (X\setminus U)=Y\setminus (Y \cap U)=Y\setminus (Y \setminus U)=A.\]
+Thefore, $Y \cap C$ forsome $C$ is closed in $X$. 
+```
+
+```{r, echo=FALSE,out.width='50%',fig.cap='$~$',label='fig19',fig.height=2,fig.width=2}
+  knitr::include_graphics('figures/figure 19.jpg')
+```
+
+```{r, echo=FALSE,out.width='50%',fig.cap='$~$',label='fig20'}
+  knitr::include_graphics('figures/figure 20.jpg')
+```
+```{remark}
+A set $A$ that is closed in the subspace $Y$ may or may not be closed in the larger space $X$. 
+```
+
+```{theorem} 
+Let $Y$ be a subspace of $X$. If $A$ is closed in $Y$ and $Y$ is closed in $X$, then $A$ is closed in $X$.
+```
+
+
+```{proof}
+ Since $Y$ is subspace in $X$ and $A$ is closed in $Y$, by theorm \@ref(thm:qw), then there exist closed set $C$ in $X$ such that \[A=Y\cap C\]
+Since, $Y$ is closed in $X$ and $X$ is toplogical space, $A=Y\cap C$ is closed in  $X$. 
+```
+
+### Closure and Interior of a Set
+
+```{definition}
+Let $A$ be a subset of a topological space $(X, \mathcal{})$.
+
+- The closure Cl$(A)=\overline{A}$ of $A$ in $X$ is the intersection of all closed sets of $X$, containing $A$.
+\[\text{Cl}(A)=\overline{A}=\bigcap \left\{C \text{ is closed in } X~ \&~  A \subset C\right\}\]
+The smallest closed set that containing$A$ is the closure of $A$.
+- The interior $\text{Int}(A)=\mathring{A}$ of $A$ in $X$ is the union of all open sets of $X$, contained in $A$.
+\[\text{Int}(A)=\mathring{A}=\bigcup \left\{U \text{ is open in } X~ \&~  U \subset A\right\}\]
+The largest open set contanied in $A$ is the interior of $A$.
+```
+
+Obviously $\text{Int}(A)$ is an open set and $\overline{A}$ is a closed set; furthermore,
+\[\text{Int}(A) \subseteq A \subseteq \overline{A}\]
+
+```{lemma}
+Let $Y$ be a subspace of $X$ and $A\subset Y$. Let $\bar{A}$ denote the closure of $A$ in $X$. Then the closure of $A$ in $Y$ equals $\bar{A} \cap Y$.
+```
+
+```{proof}
+Let $B$ denote the closure of $A$ in $Y$.
+
+- **Claim**: $B \subseteq \bar{A}\cap Y$
+
+The set $\bar{A}$ is closed in $X$, so $\bar{A} \cap Y$ is closed in $Y$ (By lemma \@ref(lem:qw)). Since $A\subset \bar{A}\cap Y$(Since, $\bar{A}$ is the smallest subset that conatin $A$, and $A\subseteq Y$), and since by definition $B$ equals the intersection of all closed subsets of $Y$ containing $A$, we must have $B \subseteq (\bar{A} \cap Y)$.
+
+- **Case-II**: $\bar{A}\cap Y \subseteq B$
+  
+we know that $B$ is closed in $Y$. Hence by lemma \@ref(thm:qw), $B = C \cap Y$ for some set $C$ closed in $X$. Then $C$ is a closed set of $X$ containing $A$; because $\bar{A}$ is the intersection of all such closed sets, we conclude that $\bar{A} \subseteq C$. Then
+$(\bar{A}\cap Y ) \subset (C \cap Y ) = B$.
+```
+
+**Terminology** : We shorten the statement to “$U$ is an open set containing $x$” to the phrase “$U$ is a neighbourhood of $x$.
+
+```{proposition,label='prop1'}
+Let $A$ be a subset of the topological space $X$.
+
+a) Then $x \in \bar{A}$ if and only if every neighborhood $U$ of $x$ intersects $A$. (has non-empty intersection with $A$.)
+
+a) Let $\mathcal{B}$ be a basis for $X$ , then $x \in \bar{A}$ if and only if $B\in \mathcal{B}$ which containing $x$ intersects $A$.
+
+```
+
+```{proof}
+- Statemet a) 
+  - ($\Longrightarrow$): We are going to use indirect proof. Assume that $x\in \bar{A}$. Then $U=X\setminus \bar{A}$ is neighbohood of $x$ which does not intersect $A$ ($\bar{A} \cap U=\emptyset$). Since, $A\subset \bar{A}$, then $A \cup U =\emptyset$.
+  - ($\Longleftarrow$): 
+    Let $U$ be a neighborhood of $x$ which does not intersect $A$. So, $X\setminus U$ is closed and $A\subset X\setminus U$, then $\bar{A}\subset X\setminus U$. (because $\\bar{A} is the smallest closed set that containing $A$.So, $x\in \bar{A}$).
+  
+- Statemet b) 
+  - $(\Longleftarrow)$:  If every open set containing $x$ intersects $A$, so does
+every basis element $B$ containing $x$, because $B$ is an open set.
+
+  - $(\Longrightarrow)$ if every
+basis element containing $x$ intersects $A$, so does every open set $U$ containing $x$, because $U$ contains a basis element that contains $x$.
+```
+
+```{lemma}
+Let A be a subset of the topological space $X$; let $A^\prime$ be the set of all limit points of $A$. Then $\bar{A} = A \cup A^\prime$.
+.
+```
+
+```{proof}
+
+- **Claim 1**:  $A^{\prime}\subseteq \bar{A}$\
+Supoose that $x\in A^{\prime}$. Every neighborhood of $x$ intersects $A$ (in a point different from $x$). Therefore, by propostion \@ref(prp:prop1), $x$ belongs to $\overline{A}$. Hence $A^{\prime} \subseteq \overline{A}$. 
+
+- **Claim 2**:  $A \cup A^{\prime} \subseteq \overline{A}$.\
+Since by definition $A \subseteq \overline{A}$, it follows that $A \cup A^{\prime} \subseteq \overline{A}$.
+
+- **Claim 3**:$A \cup A^{\prime}\supseteq  \overline{A}$.\
+Let $x\in \overline{A}$. 
+
+  - Case I: If $x\in A$ then noting to proove.
+  - Case II: If $x\not\in A$. Since $x \in \overline{A}$, we know that every neighborhood $U$ of $x$ intersects $A$; because $x \notin A$, the set $U$ must intersect $A$ in a point different from $x$. Then $x \in A^{\prime}$, so that $x \in A \cup A^{\circ}$, as desired.
+
+```
+
+## Hausdorff Spaces
+
+```{definition }
+A topological space $(X,\mathcal{T})$ is called a Hausdorff space if \
+(H1) $\forall x,y \in X$ such that $x \neq y$, $\exists U_x, U_y \in \mathcal{T}$ such that $x \in U_x$, $y \in U_y$, and $U_x \cap U_y = \emptyset$.
+
+i.e., for every pair of distinct points $x, y$ in $X$, there are disjoint neighborhoods $U_x$ and $U_y$ of $x$ and $y$ respectively.
+```
+
+```{r echo=FALSE,fig.cap='$~$',label='fig16'}
+  knitr::include_graphics('figures/figure 16.jpg') 
+```
+
+We called Hausdorff condition as $T_2$ axiom. So Let's see another definition
+
+```{r echo=FALSE,fig.cap='$~$',label='fig02'}
+  knitr::include_graphics('figures/figure 02.png') 
+```
+
+```{definition}
+A space \(X\) is a _T1 space_ if and only if it satisfies the following condition: For each \(x, y \in X\) such that \(x \neq y\), there exists an open set \(U \subset X\) such that \(x \in U\) but \(y \notin U\).
+
+```
+
+```{r echo=FALSE,fig.cap='$~$',label='fig17'}
+  knitr::include_graphics('figures/figure 17.jpg') 
+```
+
+These $T_1$ and $T_2$ axioms are called the separation axioms.
+
+```{example}
+Let $X$ b a set. Consider $X$ with finite complemenet topology is $T_1$ Space. (i.e.:$(X,\mathcal{T}_f)$ is $T_1$ space.) But $X$ is not $T_2$  if $X$ is infinite.
+```
+
+**Claim 1** : $(X,\mathcal{T}_{f})$ is $T_1$ space.
+
+```{proof}
+Let $x,y\in X$. Then
+
+- $X\setminus \{x\}$ is an open set of $\mathcal{T}_{f}$ containing $y$ but not $x$.
+- $X\setminus \{y\}$ is an open set of $\mathcal{T}_{f}$ containing $x$
+ but not $y$.
+Hence the result from definition of $T_1$ space.
+
+```
+
+**Claim 2** : $X$ is not $T_2$ if $X$ is infinite.
+
+```{proof}
+Let $x_1,x_2\in X$ with $x_1\neq x_2$ Suppose $x_1,x_2$ have disjoint  neighbhood $U_1$ and $U_2$. I.e.: $U_1\cap U_2=\emptyset$. Thus
+\begin{eqnarray}
+X &=& X\setminus (U_1\cap U_2)\\
+&=& \underbrace{(X \setminus U_1 )}_{\text{finite}} \cup \underbrace{(X\setminus U_2)}_{\text{finite}}
+\end{eqnarray}
+Note that both $(X \setminus U_1 )$ and $(X \setminus U_2 )$ are finite. Thus, X is finite. Hence, if $X$ is $T_2$ then $X$ is finite. (Contrapostive of given statement). Therefore, if $X$ is infinite then $X$ is not $T_2$. 
+```
+
+```{definition}
+Let $X$ be topological sapce. A sequence $x_1,x_2,x_3,...$ in $X$  **converges** to $x\in X$ if for every neighborhood $U$ of $x$ there exists $N\in \mathbb{N}$ such that $x_n \in U$ for all $n\geq  N$
+  
+Notataion: $x_n \to x$
+```
+
+```{r echo=FALSE,fig.cap='$~$',label='fig18'}
+  knitr::include_graphics('figures/figure 18.jpg') 
+```
+
+```{proposition}
+Let $X$ be a Hausdorff space. If $x_n$ convergence the limit $x$ is unique.\
+In other words:  The limit of a convergent sequence in a Hausdorff space is unique.
+```
+
+```{proof}
+We are going to indirect proof. Assume that $x_n \to x$ and $x_n \to y$ and $x\neq y$. Since $X$ is a Hausdorff space, there are disjoint open sets $U$ and $V$ of $X$ such that $x\in U$ and $ y\in V$.
+
+- Since $x_n \to x$,  $U$ is an open neighbourhood of $x$, there is a $N_0\in \mathbb{N}$ , such that $x_n \in U$ for all $n\geq  N_0$ 
+- Since $x_n \to y$,  $V$ is an open neighbourhood of $y$, there is a $N_1\in \mathbb{N}$ , such that $x_n \in V$ for all $n\geq  N_1$ 
+
+Let $N=max\{N_0,N_1\}$. 
+Since $N>N_0$, then $x_N\in U$. 
+Since $N>N_1$, then $x_N\in V$.
+Thus, $x_N\in U \cap V$. This contardict disjointness the $u$ and $V$. Thefore, $x=y$ 
+```
+
+```{proposition}
+Let $X$ be a Hausdorff space and $A\subset X$\
+$x\in X$ is a limit point $\iff$ every neighbourhood intersect $A$ is infinetly many points.
+```
+
+```{proof}
+- ($\Longleftarrow$) The direction is trivial.
+- 
 ```
