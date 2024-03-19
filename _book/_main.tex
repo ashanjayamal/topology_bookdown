@@ -80,7 +80,7 @@
 
 \title{Topology}
 \author{Ashan Jayamal}
-\date{2024-03-17}
+\date{2024-03-19}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -791,18 +791,28 @@ Now that we have a few examples at hand, we can introduce some of the basic conc
 \emph{Closed sets are nothing but complement of open sets. On the other hand, we can also say that open sets are nothing but complement of closed sets. Thus we can actually use closed sets to define topology, although mathematicians usually use open sets to define topology.}
 
 \begin{definition}
-\protect\hypertarget{def:unnamed-chunk-50}{}\label{def:unnamed-chunk-50}Let \(A\) be a subset of a topological space \((X, \mathcal{})\).
+\protect\hypertarget{def:unnamed-chunk-50}{}\label{def:unnamed-chunk-50}
+
+Let \(A\) be a subset of a topological space \((X, \mathcal{})\).
 
 \(A\) is a closed set of \(X\) if \(X\setminus A\) is an open set.
-- The closure Cl\((A)=\overline{A}\) of \(A\) in \(X\) is the intersection of all closed sets of \(X\), containing \(A\).
-\[\text{Cl}(A)=\overline{A}=\bigcap \left\{C \text{ is closed in } X~ \&~  A \subset C\right\}\]
-The smallest closed set that containing\(A\) is the closure of \(A\).
-- The interior \(\text{Int}(A)=\mathring{A}\) of \(A\) in \(X\) is the union of all open sets of \(X\), contained in \(A\).
-\[\text{Int}(A)=\mathring{A}=\bigcup \left\{U \text{ is open in } X~ \&~  U \subset A\right\}\]
-The largest open set contanied in \(A\) is the interior of \(A\).
-- \(x \in X\) is a limit point (or ``cluster point,'' or ``point of accumulation'') of \(A\),
-if every neighborhood
-of \(x\) intersects \(A\) in some point other than \(x\) itself. In other words, \(x \in X\) is a limit point of \(A\), if \(x \in \overline{A\setminus\{x\}}\).
+
+\begin{itemize}
+\tightlist
+\item
+  The closure Cl\((A)=\overline{A}\) of \(A\) in \(X\) is the intersection of all closed sets of \(X\), containing \(A\).
+  \[\text{Cl}(A)=\overline{A}=\bigcap \left\{C \text{ is closed in } X~ \&~  A \subset C\right\}\]
+  The smallest closed set that containing\(A\) is the closure of \(A\).
+\item
+  The interior \(\text{Int}(A)=\mathring{A}\) of \(A\) in \(X\) is the union of all open sets of \(X\), contained in \(A\).
+  \[\text{Int}(A)=\mathring{A}=\bigcup \left\{U \text{ is open in } X~ \&~  U \subset A\right\}\]
+  The largest open set contanied in \(A\) is the interior of \(A\).
+\item
+  \(x \in X\) is a limit point (or ``cluster point,'' or ``point of accumulation'') of \(A\),
+  if every neighborhood
+  of \(x\) intersects \(A\) in some point other than \(x\) itself. In other words, \(x \in X\) is a limit point of \(A\), if \(x \in \overline{A\setminus\{x\}}\).
+\end{itemize}
+
 \end{definition}
 
 \begin{remark}
@@ -990,7 +1000,7 @@ Let \(B\) denote the closure of \(A\) in \(Y\).
   \textbf{Claim}: \(B \subseteq \bar{A}\cap Y\)
 \end{itemize}
 
-The set \(\bar{A}\) is closed in \(X\), so \(\bar{A} \cap Y\) is closed in \(Y\) (By lemma \ref{lem:qw}). Since \(A\subset \bar{A}\cap Y\)(Since, \(\bar{A}\) is the smallest subset that conatin \(A\), and \(A\subseteq Y\)), and since by definition \(B\) equals the intersection of all closed subsets of \(Y\) containing \(A\), we must have \(B \subseteq (\bar{A} \cap Y)\).
+The set \(\bar{A}\) is closed in \(X\), so \(\bar{A} \cap Y\) is closed in \(Y\) (By lemma \ref{thm:qw}). Since \(A\subset \bar{A}\cap Y\)(Since, \(\bar{A}\) is the smallest subset that conatin \(A\), and \(A\subseteq Y\)), and since by definition \(B\) equals the intersection of all closed subsets of \(Y\) containing \(A\), we must have \(B \subseteq (\bar{A} \cap Y)\).
 
 \begin{itemize}
 \tightlist
@@ -1002,7 +1012,7 @@ we know that \(B\) is closed in \(Y\). Hence by lemma \ref{thm:qw}, \(B = C \cap
 \((\bar{A}\cap Y ) \subset (C \cap Y ) = B\).
 \end{proof}
 
-\textbf{Terminology} : We shorten the statement to ``\(U\) is an open set containing \(x\)'' to the phrase ``\(U\) is a neighbourhood of \(x\).
+\textbf{Terminology} : We shorten the statement to ``\(U\) is an open set containing \(x\)'' to the phrase ``\textbf{\(U\) is a neighbourhood of \(x\)}.
 
 \begin{proposition}
 \protect\hypertarget{prp:prop1}{}\label{prp:prop1}
@@ -1050,10 +1060,79 @@ Let \(A\) be a subset of the topological space \(X\).
 
 \end{proof}
 
-\begin{lemma}
-\protect\hypertarget{lem:unnamed-chunk-69}{}\label{lem:unnamed-chunk-69}Let A be a subset of the topological space \(X\); let \(A^\prime\) be the set of all limit points of \(A\). Then \(\bar{A} = A \cup A^\prime\).
-.
-\end{lemma}
+\begin{example}
+\protect\hypertarget{exm:e1}{}\label{exm:e1}
+
+Let \(X\) be the real line \(\mathbb{R}\).
+
+\begin{itemize}
+\tightlist
+\item
+  If \(A = (0, 1]\), then \(\overline{A} = [0, 1]\), for every neighbourhood of 0 intersects \(A\), while every point outside \([0, 1]\) has a neighbourhood disjoint from \(A\).
+\end{itemize}
+
+Similar arguments apply to the following subsets of \(X\),
+
+\begin{itemize}
+\item
+  If \(B = \left\{\frac{1}{n} | n \in \mathbb{Z}^{+}\right\}\), then \(\overline{B} = \{0\} \cup B\).
+\item
+  If \(C = \{0\} \cup (1, 2)\), then \(\overline{C} = \{0\}\cup[1, 2]\).
+\item
+  If \(\mathbb{Q}\) is the set of rational numbers, then \(\overline{\mathbb{Q}} = \mathbb{R}\).
+\item
+  If \(\mathbb{Z}^{+}\) is the set of positive integers, then \(\overline{\mathbb{Z}^{+}} = \mathbb{Z}^{+}\).
+\item
+  If \(\mathbb{R}^{+}\) is the set of positive reals, then the closure of \(\mathbb{R}^{+}\) is the set \(\mathbb{R}^{+} \cup \{0\}\).
+\end{itemize}
+
+\end{example}
+
+\begin{example}
+\protect\hypertarget{exm:unnamed-chunk-69}{}\label{exm:unnamed-chunk-69}Consider the subspace \(Y = (0, 1]\) of the real line \(\mathbb{R}\). The set \(A = \left(0, \frac{1}{2}\right)\) is a subset of \(Y\); its closure in \(\mathbb{R}\) is the set \(\left[0, \frac{1}{2}\right]\), and its closure in \(Y\) is the set \(\left[0, \frac{1}{2}\right] \cap Y = \left(0, \frac{1}{2}\right]\).
+\end{example}
+
+\hypertarget{limit-points}{%
+\subsection{Limit Points}\label{limit-points}}
+
+There is yet another way of describing the closure of a set, a way that involves the important concept of limit point, which we consider now.
+
+\begin{definition}[Limit Point]
+\protect\hypertarget{def:unnamed-chunk-70}{}\label{def:unnamed-chunk-70}If \(A\) is a subset of the topological space \(X\) and if \(x\) is a point of \(X\), we say that \(x\) is a limit point (or ``cluster point,'' or ``point of accumulation'') of \(A\) if every neighborhood of \(x\) intersects \(A\) in some point other than \(x\) itself.
+
+Said differently, \(x\) is a limit point of \(A\) if it belongs to the closure of \(A \setminus \{x\}\). The point \(x\) may lie in \(A\) or not; for this definition it does not matter.
+\end{definition}
+
+\textbf{Notation}: let \(A^\prime\) be the set of all limit points of \(A\).
+
+\begin{example}
+\protect\hypertarget{exm:e2}{}\label{exm:e2}
+
+Consider the real line \(\mathbb{R}\).
+
+\begin{itemize}
+\item
+  If \(A = (0, 1]\), then the point 0 is a limit point of \(A\) and so is the point \(\frac{1}{2}\). In fact, every point of the interval \([0, 1]\) is a limit point of \(A\), but no other point of \(\mathbb{R}\) is a limit point of \(A\).
+\item
+  If \(B = \left\{\frac{1}{n} | n \in \mathbb{Z}^{+}\right\}\), then 0 is the only limit point of \(B\). Every other point \(x\) of \(\mathbb{R}\) has a neighborhood that either does not intersect \(B\) at all, or it intersects \(B\) only in the point \(x\) itself.
+\item
+  If \(C = \{0\} \cup (1, 2)\), then the limit points of \(C\) are the points of the interval \([1, 2]\).
+\item
+  If \(\mathbb{Q}\) is the set of rational numbers, every point of \(\mathbb{R}\) is a limit point of \(\mathbb{Q}\).
+\item
+  If \(\mathbb{Z}^{+}\) is the set of positive integers, no point of \(\mathbb{R}\) is a limit point of \(\mathbb{Z}^{+}\).
+\item
+  If \(\mathbb{R}^{+}\) is the set of positive reals, then every point of \(\{0\} \cup \mathbb{R}^{+}\) is a limit point of \(\mathbb{R}^{+}\).
+\end{itemize}
+
+\end{example}
+
+Comparison of Examples \ref{exm:e1} and \ref{exm:e2} suggests a relationship between the closure of a
+set and the limit points of a set. That relationship is given in the following theorem:
+
+\begin{theorem}
+\protect\hypertarget{thm:unnamed-chunk-71}{}\label{thm:unnamed-chunk-71}Let A be a subset of the topological space \(X\); let \(A^\prime\) be the set of all limit points of \(A\). Then \[\bar{A} = A \cup A^\prime\].
+\end{theorem}
 
 \begin{proof}
 \leavevmode
@@ -1080,11 +1159,19 @@ Let \(A\) be a subset of the topological space \(X\).
 
 \end{proof}
 
+\begin{corollary}
+\protect\hypertarget{cor:unnamed-chunk-73}{}\label{cor:unnamed-chunk-73}A subset of a topological space is closed if and only if it contains all its limit points.
+\end{corollary}
+
+\begin{proof}
+The set \(A\) is closed if and only if \(A = \overline{A}\), and the latter holds if and only if \(A^{\prime} \subset A\).
+\end{proof}
+
 \hypertarget{hausdorff-spaces}{%
-\section{Hausdorff Spaces}\label{hausdorff-spaces}}
+\subsection{Hausdorff Spaces}\label{hausdorff-spaces}}
 
 \begin{definition}
-\protect\hypertarget{def:unnamed-chunk-71}{}\label{def:unnamed-chunk-71}A topological space \((X,\mathcal{T})\) is called a Hausdorff space if\\
+\protect\hypertarget{def:unnamed-chunk-75}{}\label{def:unnamed-chunk-75}A topological space \((X,\mathcal{T})\) is called a Hausdorff space if\\
 (H1) \(\forall x,y \in X\) such that \(x \neq y\), \(\exists U_x, U_y \in \mathcal{T}\) such that \(x \in U_x\), \(y \in U_y\), and \(U_x \cap U_y = \emptyset\).
 
 i.e., for every pair of distinct points \(x, y\) in \(X\), there are disjoint neighborhoods \(U_x\) and \(U_y\) of \(x\) and \(y\) respectively.
@@ -1105,7 +1192,7 @@ We called Hausdorff condition as \(T_2\) axiom. So Let's see another definition
 \end{figure}
 
 \begin{definition}
-\protect\hypertarget{def:unnamed-chunk-72}{}\label{def:unnamed-chunk-72}A space \(X\) is a \emph{T1 space} if and only if it satisfies the following condition: For each \(x, y \in X\) such that \(x \neq y\), there exists an open set \(U \subset X\) such that \(x \in U\) but \(y \notin U\).
+\protect\hypertarget{def:unnamed-chunk-76}{}\label{def:unnamed-chunk-76}A space \(X\) is a \emph{T1 space} if and only if it satisfies the following condition: For each \(x, y \in X\) such that \(x \neq y\), there exists an open set \(U \subset X\) such that \(x \in U\) but \(y \notin U\).
 \end{definition}
 
 \begin{figure}
@@ -1117,7 +1204,7 @@ We called Hausdorff condition as \(T_2\) axiom. So Let's see another definition
 These \(T_1\) and \(T_2\) axioms are called the separation axioms.
 
 \begin{example}
-\protect\hypertarget{exm:unnamed-chunk-73}{}\label{exm:unnamed-chunk-73}Let \(X\) b a set. Consider \(X\) with finite complemenet topology is \(T_1\) Space. (i.e.:\((X,\mathcal{T}_f)\) is \(T_1\) space.) But \(X\) is not \(T_2\) if \(X\) is infinite.
+\protect\hypertarget{exm:unnamed-chunk-77}{}\label{exm:unnamed-chunk-77}Let \(X\) b a set. Consider \(X\) with finite complemenet topology is \(T_1\) Space. (i.e.:\((X,\mathcal{T}_f)\) is \(T_1\) space.) But \(X\) is not \(T_2\) if \(X\) is infinite.
 \end{example}
 
 \textbf{Claim 1} : \((X,\mathcal{T}_{f})\) is \(T_1\) space.
@@ -1149,8 +1236,19 @@ X &=& X\setminus (U_1\cap U_2)\\
 Note that both \((X \setminus U_1 )\) and \((X \setminus U_2 )\) are finite. Thus, X is finite. Hence, if \(X\) is \(T_2\) then \(X\) is finite. (Contrapostive of given statement). Therefore, if \(X\) is infinite then \(X\) is not \(T_2\).
 \end{proof}
 
+\begin{theorem}
+\protect\hypertarget{thm:unnamed-chunk-80}{}\label{thm:unnamed-chunk-80}Every finite point set in a Hausdorff space \(X\) is closed.
+\end{theorem}
+
+\begin{proof}
+It suffices to show that every one-point set \(\{x_0\}\) is closed. If \(x\) is a point of \(X\)
+different from \(x_0\), then \(x\) and \(x_0\) have disjoint neighborhoods \(U\) and \(V\), respectively.
+Since \(U\) does not intersect \(\{x_0\}\), the point \(x\) cannot belong to the closure of the set \(\{x_0\}\).
+As a result, the closure of the set \(\{x_0\}\) is \(\{x_0\}\) itself, so that it is closed.
+\end{proof}
+
 \begin{definition}
-\protect\hypertarget{def:unnamed-chunk-76}{}\label{def:unnamed-chunk-76}Let \(X\) be topological sapce. A sequence \(x_1,x_2,x_3,...\) in \(X\) \textbf{converges} to \(x\in X\) if for every neighborhood \(U\) of \(x\) there exists \(N\in \mathbb{N}\) such that \(x_n \in U\) for all \(n\geq N\)
+\protect\hypertarget{def:unnamed-chunk-82}{}\label{def:unnamed-chunk-82}Let \(X\) be topological sapce. A sequence \(x_1,x_2,x_3,...\) in \(X\) \textbf{converges} to \(x\in X\) if for every neighborhood \(U\) of \(x\) there exists \(N\in \mathbb{N}\) such that \(x_n \in U\) for all \(n\geq N\)
 
 Notataion: \(x_n \to x\)
 \end{definition}
@@ -1162,7 +1260,7 @@ Notataion: \(x_n \to x\)
 \end{figure}
 
 \begin{proposition}
-\protect\hypertarget{prp:unnamed-chunk-77}{}\label{prp:unnamed-chunk-77}Let \(X\) be a Hausdorff space. If \(x_n\) convergence the limit \(x\) is unique.\\
+\protect\hypertarget{prp:unnamed-chunk-83}{}\label{prp:unnamed-chunk-83}Let \(X\) be a Hausdorff space. If \(x_n\) convergence the limit \(x\) is unique.\\
 In other words: The limit of a convergent sequence in a Hausdorff space is unique.
 \end{proposition}
 
@@ -1184,7 +1282,7 @@ Thus, \(x_N\in U \cap V\). This contardict disjointness the \(u\) and \(V\). The
 \end{proof}
 
 \begin{proposition}
-\protect\hypertarget{prp:unnamed-chunk-79}{}\label{prp:unnamed-chunk-79}Let \(X\) be a Hausdorff space and \(A\subset X\)\\
+\protect\hypertarget{prp:unnamed-chunk-85}{}\label{prp:unnamed-chunk-85}Let \(X\) be a Hausdorff space and \(A\subset X\)\\
 \(x\in X\) is a limit point \(\iff\) every neighbourhood intersect \(A\) is infinetly many points.
 \end{proposition}
 
@@ -1199,6 +1297,33 @@ Thus, \(x_N\in U \cap V\). This contardict disjointness the \(u\) and \(V\). The
 \end{itemize}
 
 \end{proof}
+
+\hypertarget{continuous-functions}{%
+\section{Continuous Functions}\label{continuous-functions}}
+
+\hypertarget{continuity-of-a-function}{%
+\subsection{Continuity of a Function}\label{continuity-of-a-function}}
+
+\begin{definition}
+\protect\hypertarget{def:unnamed-chunk-87}{}\label{def:unnamed-chunk-87}Let \(X\) and \(Y\) be topological spaces. A function \(f : X \to Y\) is said to be continuous if for each open subset \(V\) of \(Y\) , the set \(f^{−1}(V)\) is an open subset of \(X\).
+\end{definition}
+
+Recall that,
+\[f^{ −1}(V)=\{x\in X: f(x)\in V\}\]
+
+\begin{remark}
+\leavevmode
+
+\begin{itemize}
+\tightlist
+\item
+  If it is empty if \(V\) does not intersect the image set \(f (X)\) of \(f\) .
+\item
+  Continuity of a function depends \emph{not} only upon the function \(f\) itself, but also on the topologies specified for its domain and range.\\
+  I like to emphasize this fact, we can say that \(f\) is continuous \emph{relative} to specific topologies on \(X\) and \(Y\).
+\end{itemize}
+
+\end{remark}
 
 \hypertarget{chapter-2-name}{%
 \chapter{Chapter 2 name}\label{chapter-2-name}}
@@ -1215,7 +1340,7 @@ Up to there is none.
 \section{Section 16 in Munkress Book}\label{section-16-in-munkress-book}}
 
 \begin{exercise}[Mun 2.16.2]
-\protect\hypertarget{exr:unnamed-chunk-81}{}\label{exr:unnamed-chunk-81}Show that if \(Y\) is a subspace of \$X, and \(A\) is a subset of \(Y\) , then the topology \(A\) inherits as a subspace of \(Y\) is the same as the topology it inherits as a subspace of \(X\).
+\protect\hypertarget{exr:unnamed-chunk-89}{}\label{exr:unnamed-chunk-89}Show that if \(Y\) is a subspace of \$X, and \(A\) is a subset of \(Y\) , then the topology \(A\) inherits as a subspace of \(Y\) is the same as the topology it inherits as a subspace of \(X\).
 \end{exercise}
 
 \textbf{Solution}:
@@ -1236,7 +1361,7 @@ This is exactly the topology that \(A\) would inherit as a subspace of \(X\). Th
 \includegraphics{figures/Exercises/Ex 2.16/ex1-2.png}
 
 \begin{exercise}[Mun 2.16.2]
-\protect\hypertarget{exr:unnamed-chunk-84}{}\label{exr:unnamed-chunk-84}If \(\mathcal{T}\) and \(\mathcal{T}\) are topologies on \(X\) and \(\mathcal{T}\) is strictly finer than \(\mathcal{T}\) , what can you
+\protect\hypertarget{exr:unnamed-chunk-92}{}\label{exr:unnamed-chunk-92}If \(\mathcal{T}\) and \(\mathcal{T}\) are topologies on \(X\) and \(\mathcal{T}\) is strictly finer than \(\mathcal{T}\) , what can you
 say about the corresponding subspace topologies on the subset \(Y\) of \(X\)?
 \end{exercise}
 
@@ -1244,7 +1369,7 @@ say about the corresponding subspace topologies on the subset \(Y\) of \(X\)?
 \includegraphics{figures/Exercises/Ex 2.16/ex 2.jpg}
 
 \begin{exercise}[Mun 2.16.3]
-\protect\hypertarget{exr:unnamed-chunk-86}{}\label{exr:unnamed-chunk-86}Consider the set \(Y = [−1, 1]\) as a subspace of \(\mathbb{R}\). Which of the following sets are open in \(Y\) ? Which are open in \(\mathbb{R}\)?
+\protect\hypertarget{exr:unnamed-chunk-94}{}\label{exr:unnamed-chunk-94}Consider the set \(Y = [−1, 1]\) as a subspace of \(\mathbb{R}\). Which of the following sets are open in \(Y\) ? Which are open in \(\mathbb{R}\)?
 \begin{align}
 A &= \{ x \mid \frac{1}{2} < |x| < 1 \}\\ 
 B &= \{ x \mid \frac{1}{2} < |x| \leq 1 \} \\
@@ -1260,12 +1385,12 @@ E &= \{ x \mid 0 < |x| < 1 \text{ and } \frac{1}{x} \notin \mathbb{Z}^+ \}
 \includegraphics{figures/Exercises/Ex 2.16/ex 3-2.jpg}
 
 \begin{exercise}
-\protect\hypertarget{exr:unnamed-chunk-89}{}\label{exr:unnamed-chunk-89}A map \(f : X \to Y\). We say that \(f\) is an \textbf{open map} if, for every open set \(U\) in \(X\), the set \(f(U)\) is open in \(Y\). Show that the projections \(\pi_1 : X \times Y \to X\) and \(\pi_2 : X \times Y \to Y\) are open maps.
+\protect\hypertarget{exr:unnamed-chunk-97}{}\label{exr:unnamed-chunk-97}A map \(f : X \to Y\). We say that \(f\) is an \textbf{open map} if, for every open set \(U\) in \(X\), the set \(f(U)\) is open in \(Y\). Show that the projections \(\pi_1 : X \times Y \to X\) and \(\pi_2 : X \times Y \to Y\) are open maps.
 ``
 \end{exercise}
 
 \begin{exercise}
-\protect\hypertarget{exr:unnamed-chunk-90}{}\label{exr:unnamed-chunk-90}
+\protect\hypertarget{exr:unnamed-chunk-98}{}\label{exr:unnamed-chunk-98}
 
 Let \(X\) and \(X^\prime\) denote a single set in the topologies \(\mathcal{T}\) and \(\mathcal{T}^\prime\) , respectively; let \(Y\)
 and \(Y'\) denote a single set in the topologies \(\mathcal{U}\) and \(\mathcal{U}^\prime\), respectively. Assume these sets are nonempty.
@@ -1283,21 +1408,21 @@ and \(Y'\) denote a single set in the topologies \(\mathcal{U}\) and \(\mathcal{
 \end{exercise}
 
 \begin{exercise}[Mun 2.16.7]
-\protect\hypertarget{exr:unnamed-chunk-91}{}\label{exr:unnamed-chunk-91}Show that the countable collection
+\protect\hypertarget{exr:unnamed-chunk-99}{}\label{exr:unnamed-chunk-99}Show that the countable collection
 \[\{(a, b) \times (c, d) | a < b \text{ and } c < d, \text{ and } a, b, c, d \text{ are rational}\}\]
 is a basis for \(\mathbb{R}^2\).''
 \end{exercise}
 
 \begin{exercise}
-\protect\hypertarget{exr:unnamed-chunk-92}{}\label{exr:unnamed-chunk-92}Let \(X\) be an ordered set. If \(Y\) is a proper subset of \(X\) that is convex in \(X\), does it follow that \(Y\) is an interval or a ray in \(X\)?
+\protect\hypertarget{exr:unnamed-chunk-100}{}\label{exr:unnamed-chunk-100}Let \(X\) be an ordered set. If \(Y\) is a proper subset of \(X\) that is convex in \(X\), does it follow that \(Y\) is an interval or a ray in \(X\)?
 \end{exercise}
 
 \begin{exercise}
-\protect\hypertarget{exr:unnamed-chunk-93}{}\label{exr:unnamed-chunk-93}If \(L\) is a straight line in the plane, describe the topology \(L\) inherits as a subspace of \(\mathbb{R}_l \times \mathbb{R}\) and as a subspace of \(\mathbb{R}_l \times \mathbb{R}_l\). In each case it is a familiar topology.
+\protect\hypertarget{exr:unnamed-chunk-101}{}\label{exr:unnamed-chunk-101}If \(L\) is a straight line in the plane, describe the topology \(L\) inherits as a subspace of \(\mathbb{R}_l \times \mathbb{R}\) and as a subspace of \(\mathbb{R}_l \times \mathbb{R}_l\). In each case it is a familiar topology.
 \end{exercise}
 
 \begin{exercise}
-\protect\hypertarget{exr:unnamed-chunk-94}{}\label{exr:unnamed-chunk-94}Show that the dictionary order topology on the set \(\mathbb{R} \times \mathbb{R}\) is the same as the product topology \(\mathbb{R}_d \times \mathbb{R}\), where \(\mathbb{R}_d\) denotes \(\mathbb{R}\) in the discrete topology. Compare this topology with the standard topology on \(\mathbb{R}^2\).
+\protect\hypertarget{exr:unnamed-chunk-102}{}\label{exr:unnamed-chunk-102}Show that the dictionary order topology on the set \(\mathbb{R} \times \mathbb{R}\) is the same as the product topology \(\mathbb{R}_d \times \mathbb{R}\), where \(\mathbb{R}_d\) denotes \(\mathbb{R}\) in the discrete topology. Compare this topology with the standard topology on \(\mathbb{R}^2\).
 \end{exercise}
 
 \[\mathbb{R}^2_{dictionary}:=\mathbb{R}_{discrete }\times \mathbb{R}_{standard}\]
@@ -1382,7 +1507,7 @@ In above all four cases, we have found basis element of subspace topology that c
 \section{Section 17 in Munkress Book}\label{section-17-in-munkress-book}}
 
 \begin{exercise}[Mun 2.17.1]
-\protect\hypertarget{exr:unnamed-chunk-96}{}\label{exr:unnamed-chunk-96}Let \(\mathcal{C}\) be a collection of subsets of the set \(X\). Suppose that \$\$\emptyset and \(X\) are in \(\mathcal{C}\), and that finite unions and arbitrary intersections of elements of \(\mathcal{C}\) are in \(\mathcal{C}\). Show that the collection
+\protect\hypertarget{exr:unnamed-chunk-104}{}\label{exr:unnamed-chunk-104}Let \(\mathcal{C}\) be a collection of subsets of the set \(X\). Suppose that \$\$\emptyset and \(X\) are in \(\mathcal{C}\), and that finite unions and arbitrary intersections of elements of \(\mathcal{C}\) are in \(\mathcal{C}\). Show that the collection
 \[\mathcal{T} = \{X \setminus C  | C\in  \mathcal{C}\}\]
 is a topology on X.
 \end{exercise}
@@ -1420,17 +1545,282 @@ is a topology on X.
 \end{proof}
 
 \begin{exercise}[Mun 2.17.2]
-\protect\hypertarget{exr:unnamed-chunk-98}{}\label{exr:unnamed-chunk-98}Show that if \(A\) is closed in \(Y\) and \(Y\) is closed in \(X\), then \(A\) is closed in \(X\).
+\protect\hypertarget{exr:unnamed-chunk-106}{}\label{exr:unnamed-chunk-106}Show that if \(A\) is closed in \(Y\) and \(Y\) is closed in \(X\), then \(A\) is closed in \(X\).
 \end{exercise}
-
-\begin{proof}
-Suppose that \(A\) is closed in \(Y\) and \(Y\) is closed in \(X\).
-\end{proof}
 
 \begin{proof}
 Since \(Y\) is subspace in \(X\) and \(A\) is closed in \(Y\), by theorm \ref{thm:qw}, then there exist closed set \(C\) in \(X\) such that \[A=Y\cap C\]
 Since, \(Y\) is closed in \(X\) and \(X\) is toplogical space, \(A=Y\cap C\) is closed in \(X\).
 \end{proof}
+
+\begin{exercise}[Mun 2.17.3]
+\protect\hypertarget{exr:unnamed-chunk-108}{}\label{exr:unnamed-chunk-108}Show that if \(A\) is closed in \(X\) and \(B\) is closed in \(Y\) , then \(A\times B\) is closed in \(X\times Y\)
+\end{exercise}
+
+\begin{proof}
+Suppose that \(A\) is closed in \(X\) and \(B\) is closed in \(Y\). Then \(X\setminus A\) is open in \(X\) and \(X\setminus B\) is open in \(Y\).
+
+\textbf{Claim}: \((X\times Y) \setminus (A\times B)=  ((X\setminus A)\times Y)\cup((X\times (Y\setminus B)))\)\\
+\emph{Proof of Claim}:
+\begin{eqnarray}
+(x\times y)\in (X\times Y) \setminus (A\times B) 
+&\iff & (x\times y)\not\in (A\times B)\\
+&\iff & x\not\in A \text{ or } y \not\in B\\
+&\iff & x\in X\setminus A \text{ or } y \in Y\setminus B\\
+&\iff& (x\times y) \in ((X\setminus A)\times Y)\cup((X\times (Y\setminus B)))
+\end{eqnarray}
+So, now we are done proof of the claim.
+Thus, \((X\times Y) \setminus (A\times B)\) is union of open sets and hence, \((X\times Y) \setminus (A\times B)\) is open in \(X \times Y\). Thus, \((A\times B)\) is closed in \(X\times Y\).
+\end{proof}
+
+\begin{exercise}[Mun 2.17.4]
+\protect\hypertarget{exr:unnamed-chunk-110}{}\label{exr:unnamed-chunk-110}Show that if \(U\) is open in \(X\) and \(A\) is closed in \(X\), then \(U \setminus A\) is open in \(X\), and \(A \setminus U\) is closed in \(X\).
+\end{exercise}
+
+\begin{proof}
+Suppose that \(U\) is open in \(X\) and \(A\) is closed in \(X\).
+
+\textbf{Claim 1}: \((U\setminus A)=U\cap (X\setminus A)\).\\
+\begin{eqnarray}
+x \in (U\setminus A)
+&\iff& x\in U \text{ and } x\not\in A\\
+&\iff& x\in U  \text{ and } x\in X\setminus A\\
+&\iff& x\in U  \cap X\setminus A\\
+\end{eqnarray}
+Since, \(A\) is closed in \(X\), \(X\setminus A\) is open in \(X\). Thus, \((U\setminus A)=U\cap (X\setminus A)\) is open in \(X\). (By finite intersection property.)
+
+\textbf{Claim 2}: \((A\setminus U)=A\cap (X\setminus U)\).\\
+Similar to proof of claim 1 we can prove this claim.
+
+Since, \(U\) is open in \(X\), \(X\setminus U\) is closed in \(X\). Thus, \((A\setminus U)=A\cap (X\setminus U)\) is closed in \(X\).
+\end{proof}
+
+\begin{exercise}[Mun 2.17.5]
+\protect\hypertarget{exr:unnamed-chunk-112}{}\label{exr:unnamed-chunk-112}Let \(X\) be an ordered set in the order topology. Show that \(\overline{(a, b)} \subseteq [a, b]\). Under what conditions does equality hold?
+\end{exercise}
+
+\begin{proof}
+\emph{(Proof of \(\overline{(a, b)} \subseteq [a, b]\))}
+
+\textbf{Claim 1}: \([a,b]\) is closed in \(X\) under order toplology.\\
+Observe that,
+\[X\setminus[a,b] =(-\infty,a)\cup (b,\infty).\]
+Note that, \((-\infty,a)\) and \((b,\infty)\) are open rays.
+Then \((-\infty,a)\cup (b,\infty)=X\setminus [a,b]\) is open.
+Thus, \([a,b]\) is closed in \(X\) under order toplogy.
+
+\textbf{Claim 2}: \((a,b)\subseteq [a,b]\)\\
+Now, let \(x \in (a, b)\) then \(a < x < b\) so clearly \(a \leq x \leq b\) so \(x\) is in \([a, b]\). Thus \((a,b)\subseteq [a,b]\).
+
+Therefore, by cliam 1 and 2, \([a, b]\) is a closed set containing \((a, b)\).
+
+Now, to show \(\overline{(a, b)} \subseteq [a, b]\), recall that \(\overline{(a, b)}\) is the intersection of all closed sets containing \((a, b)\).
+Let \(x \in \overline{(a, b)}\) Since, \(x\) is in every closed set containing \((a, b)\) and \([a, b]\) is a closed set containing \((a, b)\),then \(x \in [a, b]\) as needed.
+
+Let \(a^{+} = \inf\{x : x > a\}\) and let \(b^{-} = \sup\{x : x < b\}\). Consider the closed set \([x, y]\). If \([x, y]\) contains
+\((a, b)\), then \(x \leq a^{+}\) and \(y \geq b^{-}\). Thus there exists a closed set containing \((a, b)\) that does not contain
+\(a\) or \(b\) if and only if \(a^{+} \neq a\) or \(b^{-} \neq b\). This is true exactly when \(a\) has an immediate successor or \(b\)
+has an immediate predecessor.
+\end{proof}
+
+\begin{itemize}
+\tightlist
+\item
+  For example, in the order topology on \(\mathbb{Z}\), \[\overline{(1, 4)} = [2, 3] \subsetneq [1, 4].\]
+\end{itemize}
+
+\begin{exercise}[Mun 2.17.6]
+\protect\hypertarget{exr:unnamed-chunk-114}{}\label{exr:unnamed-chunk-114}
+
+Let \(A\), \(B\), and \(A_{\alpha}\) denote subsets of a space \(X\). Prove the following:
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  If \(A \subset B\), then \(\overline{A} \subset \overline{B}\).
+\item
+  \(\overline{A \cup B} = \overline{\overline{A}} \cup \overline{\overline{B}}\).
+\item
+  \(\overline{\bigcup A_{\alpha}} \supseteq \bigcup \overline{A_{\alpha}}\); give an example where equality fails.
+\end{enumerate}
+
+\end{exercise}
+
+\begin{proof}
+
+Let \(A\), \(B\), and \(A_{\alpha}\) denote subsets of a space \(X\).
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\item
+  By definition, \(\overline{A}\) is the intersection of all closed sets containing \(A\). Since \(\overline{B}\) is a closed set that contains \(B\) and hence \(A\), it must therefore contain \(\overline{A}\).
+\item
+\end{enumerate}
+
+\begin{itemize}
+\item
+  \textbf{Claim 1}: \(\overline{A \cup B} \supseteq {\overline{A}} \cup {\overline{B}}\)\\
+  The set \(\overline{A \cup B}\) is a closed set that contains \(A \cup B\), so it contains both \(A\) and \(B\),
+  and therefore it contains both \(\overline{A}\) and \(\overline{B}\). Therefore, \(\overline{A \cup B} \supseteq {\overline{A}} \cup {\overline{B}}\).
+\item
+  \textbf{Claim 2}: \(\overline{A \cup B} \subseteq {\overline{A}} \cup {\overline{B}}\)\\
+  \({\overline{A}} \cup \overline{B}\) is a closed set (since it is the union of two closed sets) that
+  contains \(A \cup B\), (Beacuse \(A\subseteq\overline{A}\) and \(B \subseteq \overline{B}\implies A \cup B \subseteq \overline{A} \cup \overline{B}\).) so it contains \(\overline{A \cup B}\).
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  The set \(\overline{\bigcup A_{\alpha}}\) is a closed set that contains each \(A_{\alpha}\), so it contains each \(\overline{A_{\alpha}}\), and thus it contains \(\bigcup \overline{A_{\alpha}}\). Thus, \(\overline{\bigcup A_{\alpha}} \supseteq \bigcup \overline{A_{\alpha}}\)\\
+  (But we can't do the converse because an arbitrary union of closures isn't necessarily closed!)\\
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Example 1 }that equality fails,\\
+  Let \(A_n\) be the closed set \([\frac{1}{n}, 1] \subset \mathbb{R}\). Then \[\bigcup_{n \in \mathbb{N}} \overline{A_n} = \bigcup_{n \in \mathbb{N}} A_n =\bigcup_{n \in \mathbb{N}} [\frac{1}{n}, 1] = (0, 1], \text{ But } \bigcup_{n \in \mathbb{N}} A_n = [0, 1]\].
+\item
+  \textbf{Example 2 }that equality fails,\\
+  Consider \(\mathbb{R}\) with the standard topology and all one-point sets \(\{q\}\) with \(q\) rational. Then \(\overline{\{q\}} = \{q\}\) for every such set, so that \(\bigcup_{q \in \mathbb{Q}} \overline{\{q\}} = \mathbb{Q}\), but \(\overline{\bigcup_{q \in \mathbb{Q}} \{q\}} = \overline{\mathbb{Q}} = \mathbb{R}\).
+\end{itemize}
+
+\end{proof}
+
+\begin{exercise}[Mun 2.17.7]
+\protect\hypertarget{exr:unnamed-chunk-116}{}\label{exr:unnamed-chunk-116}Criticize the following ``proof'' that \(\overline{\cup A_\alpha} \subset \cup \overline{A_\alpha}\):\\
+if \(\{A_\alpha\}\) is a collection of sets in \(X\) and if \(x \in \overline{\cup A_\alpha}\), then every neighborhood \(U\) of \(x\) intersects \(\cup A_\alpha\).Thus \(U\) must intersect some \(A_\alpha\), so that \(x\) must belong to the closure of some \(A_\alpha\). Therefore, \(x \in \cup \overline{A_\alpha}\).
+\end{exercise}
+
+\textbf{Solution}:
+If \(\{A_\alpha\}\) is a collection of sets in \(X\) and if \(x \in \overline{\cup A_\alpha}\), then every neighborhood \(U\) of \(x\) intersects \(\cup A_\alpha\).Thus \(U\) must intersect some \(A_\alpha\). But this \(A_{\alpha}\) may be distinct for different neighbourhoods, so not necessarily every neighbourhood \(U\) of \(A_{\alpha}\) intersects the same \(A_{\alpha}\). Hence we cannot conclude that \(x\) must belong to the closure of some fixed \(A_{\alpha}\).
+
+\begin{exercise}[Mun2.17.8]
+\protect\hypertarget{exr:unnamed-chunk-117}{}\label{exr:unnamed-chunk-117}Let \(A\), \(B\), and \(A_{\alpha}\) denote subsets of a space \(X\). Determine whether the following equations hold; if an equality fails, determine whether one of the inclusions \(\supset\) or \(\subset\) holds.
+(a) \(A \cap B = \overline{A} \cap \overline{B}\).
+(b) \(\bigcup A_{\alpha} = \bigcup \overline{A_{\alpha}}\).
+(c) \(A - B = \overline{A} - B\).
+\end{exercise}
+
+\textbf{Solution}
+
+(a)\\
+\includegraphics{figures/Exercises/Ex 2.17/ex-8-1.png}
+
+(b)\\
+\includegraphics{figures/Exercises/Ex 2.17/ex-8-2.png}
+
+(c)\\
+\includegraphics{figures/Exercises/Ex 2.17/ex-8-3.png}
+\includegraphics{figures/Exercises/Ex 2.17/ex-8-4.png}
+
+\begin{exercise}[Mun 2.17.9]
+\protect\hypertarget{exr:unnamed-chunk-122}{}\label{exr:unnamed-chunk-122}Let \(A \subset X\) and \(B \subset Y\). Show that in the space \(X \times Y\),
+\[\overline{A \times B} = \overline{A} \times \overline{B}\].
+\end{exercise}
+
+\includegraphics{figures/Exercises/Ex 2.17/ex-9.png}
+
+\begin{exercise}[Mun 2.17.10]
+\protect\hypertarget{exr:unnamed-chunk-124}{}\label{exr:unnamed-chunk-124}Show that every order topology is Hausdorff.
+\end{exercise}
+
+\includegraphics{figures/Exercises/Ex 2.17/ex-10.png}
+
+\begin{exercise}[Mun 2.17.11]
+\protect\hypertarget{exr:unnamed-chunk-126}{}\label{exr:unnamed-chunk-126}Show that the product of two Hausdorff spaces is Hausdorff.
+\end{exercise}
+
+\includegraphics{figures/Exercises/Ex 2.17/ex-11.png}
+
+\begin{exercise}[Mun 2.17.12]
+\protect\hypertarget{exr:unnamed-chunk-128}{}\label{exr:unnamed-chunk-128}Show that a subspace of a Hausdorff space is Hausdorff.
+\end{exercise}
+
+\includegraphics{figures/Exercises/Ex 2.17/ex-12.png}
+
+\begin{exercise}[Mun 2.17.13]
+\protect\hypertarget{exr:unnamed-chunk-130}{}\label{exr:unnamed-chunk-130}Show that \(X\) is Hausdorff if and only if the diagonal \(\Delta = \{x\times x | x \in X\}\) is closed in \(X \times X\).
+\end{exercise}
+
+\includegraphics{figures/Exercises/Ex 2.17/ex-13.png}
+
+\begin{exercise}[Mun 2.17.14]
+\protect\hypertarget{exr:unnamed-chunk-132}{}\label{exr:unnamed-chunk-132}In the finite complement topology on \(\mathbb{R}\), to what point or points does the sequence \(x_n = \frac{1}{n}\) converge?
+\end{exercise}
+
+\includegraphics{figures/Exercises/Ex 2.17/ex-14.png}
+
+\begin{exercise}[Mun 2.17.15]
+\protect\hypertarget{exr:unnamed-chunk-134}{}\label{exr:unnamed-chunk-134}Show the \(T_1\) axiom is equivalent to the condition that for each pair of points of \(X\), each has a neighborhood not containing the other.
+\end{exercise}
+
+\includegraphics{figures/Exercises/Ex 2.17/ex-15-1.png}
+
+\includegraphics{figures/Exercises/Ex 2.17/ex-15-2.png}
+
+\begin{exercise}
+\protect\hypertarget{exr:unnamed-chunk-137}{}\label{exr:unnamed-chunk-137}
+
+Consider the following five topologies on \(\mathbb{R}\) given
+
+\begin{eqnarray}
+\mathcal{T_1} &:=& \text{the standard topology},\\
+\mathcal{T_2} &:=& \text{the topology of  } \mathbb{R}_K ,\\
+\mathcal{T_3} &:=& \text{the finite complement topology,}\\
+\mathcal{T_4} &:=& \text{the upper limit topology, having all sets $(a, b]$ as basis},\\
+\mathcal{T_5} &:=& \text{the topology having all sets $(-\infty, a) = \{x | x < a\}$ as basis.}\\
+\end{eqnarray}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  Determine the closure of the set \(K = \left\{1/n | n \in \mathbb{Z}^+\right\}\) under each of these topologies.
+\item
+  Which of these topologies satisfy the Hausdorff axiom? the \(T_1\) axiom?
+\end{enumerate}
+
+\end{exercise}
+
+\includegraphics{figures/Exercises/Ex 2.17/Notsure.png}
+
+As a summary
+
+\begin{longtable}[]{@{}ccccc@{}}
+\toprule\noalign{}
+Topologies & \(\overline{K}\) & Is \(T_2\) space ? & Is \(T_1\) Space & \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\(\mathcal{T_1}\) & \(K\cup\{0\}\) & \(\checkmark\) & \(\times\) & \\
+\(\mathcal{T_2}\) & \(K\) & \(\checkmark\) & \(\checkmark\) & \\
+\(\mathcal{T_2}\) & \({0}\) & \(\checkmark\) & \(\checkmark\) & \\
+\(\mathcal{T_2}\) & \(K\) & \(\checkmark\) & \(\checkmark\) & \\
+\(\mathcal{T_2}\) & \([0,\infty)\) & \(\checkmark\) & \(\checkmark\) & \\
+\(\mathcal{T_2}\) & \({0}\) & \(\checkmark\) & \(\checkmark\) & \\
+\end{longtable}
+
+\begin{exercise}[Mun 2.17.17]
+\protect\hypertarget{exr:unnamed-chunk-139}{}\label{exr:unnamed-chunk-139}Consider the lower limit topology on \(\mathbb{R}\) and the topology given by the basis \(C\) of Exercise 8 of §13. Determine the closures of the intervals \(A = (0, \sqrt{2})\) and \(B = (\sqrt{2}, 3)\) in these two topologies.
+\end{exercise}
+
+\includegraphics{figures/Exercises/Ex 2.17/Notsure.png}
+
+\begin{exercise}[Mun 2.17.18]
+\protect\hypertarget{exr:unnamed-chunk-141}{}\label{exr:unnamed-chunk-141}Determine the closures of the following subsets of the ordered square:
+\begin{align}
+A &:= \left\{\frac{1}{n} \times 0 \mid n \in \mathbb{Z}^{+}\right\}, \\
+B &:= \left\{\left(1 - \frac{1}{n}\right) \times \frac{1}{2} \mid n \in \mathbb{Z}^{+}\right\}, \\
+C &:= \left\{x \times 0 \mid 0 < x < 1\right\}, \\
+D &:= \left\{x \times \frac{1}{2} \mid 0 < x < 1\right\}, \\
+E &:= \left\{\frac{1}{2} \times y \mid 0 < y < 1\right\}.
+\end{align}
+\end{exercise}
 
   \bibliography{book.bib,packages.bib}
 

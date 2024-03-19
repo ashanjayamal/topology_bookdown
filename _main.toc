@@ -8,9 +8,12 @@
 \contentsline {section}{\numberline {1.7}Closed Sets and Limit Points}{27}{section.1.7}%
 \contentsline {subsection}{\numberline {1.7.1}Closed Set}{29}{subsection.1.7.1}%
 \contentsline {subsection}{\numberline {1.7.2}Closure and Interior of a Set}{33}{subsection.1.7.2}%
-\contentsline {section}{\numberline {1.8}Hausdorff Spaces}{35}{section.1.8}%
-\contentsline {chapter}{\numberline {2}Chapter 2 name}{39}{chapter.2}%
-\contentsline {chapter}{\numberline {3}Chapter 03 name}{41}{chapter.3}%
-\contentsline {chapter}{\numberline {4}Exercises}{43}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Section 16 in Munkress Book}{43}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Section 17 in Munkress Book}{61}{section.4.2}%
+\contentsline {subsection}{\numberline {1.7.3}Limit Points}{35}{subsection.1.7.3}%
+\contentsline {subsection}{\numberline {1.7.4}Hausdorff Spaces}{36}{subsection.1.7.4}%
+\contentsline {section}{\numberline {1.8}Continuous Functions}{39}{section.1.8}%
+\contentsline {subsection}{\numberline {1.8.1}Continuity of a Function}{39}{subsection.1.8.1}%
+\contentsline {chapter}{\numberline {2}Chapter 2 name}{41}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Chapter 03 name}{43}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Exercises}{45}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Section 16 in Munkress Book}{45}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Section 17 in Munkress Book}{63}{section.4.2}%

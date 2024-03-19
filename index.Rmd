@@ -592,6 +592,7 @@ Now that we have a few examples at hand, we can introduce some of the basic conc
 Let $A$ be a subset of a topological space $(X, \mathcal{})$.
 
 $A$ is a closed set of $X$ if $X\setminus A$ is an open set.
+
 - The closure Cl$(A)=\overline{A}$ of $A$ in $X$ is the intersection of all closed sets of $X$, containing $A$.
 \[\text{Cl}(A)=\overline{A}=\bigcap \left\{C \text{ is closed in } X~ \&~  A \subset C\right\}\]
 The smallest closed set that containing$A$ is the closure of $A$.
@@ -745,7 +746,7 @@ Let $B$ denote the closure of $A$ in $Y$.
 
 - **Claim**: $B \subseteq \bar{A}\cap Y$
 
-The set $\bar{A}$ is closed in $X$, so $\bar{A} \cap Y$ is closed in $Y$ (By lemma \@ref(lem:qw)). Since $A\subset \bar{A}\cap Y$(Since, $\bar{A}$ is the smallest subset that conatin $A$, and $A\subseteq Y$), and since by definition $B$ equals the intersection of all closed subsets of $Y$ containing $A$, we must have $B \subseteq (\bar{A} \cap Y)$.
+The set $\bar{A}$ is closed in $X$, so $\bar{A} \cap Y$ is closed in $Y$ (By lemma \@ref(thm:qw)). Since $A\subset \bar{A}\cap Y$(Since, $\bar{A}$ is the smallest subset that conatin $A$, and $A\subseteq Y$), and since by definition $B$ equals the intersection of all closed subsets of $Y$ containing $A$, we must have $B \subseteq (\bar{A} \cap Y)$.
 
 - **Case-II**: $\bar{A}\cap Y \subseteq B$
   
@@ -753,7 +754,7 @@ we know that $B$ is closed in $Y$. Hence by lemma \@ref(thm:qw), $B = C \cap Y$ 
 $(\bar{A}\cap Y ) \subset (C \cap Y ) = B$.
 ```
 
-**Terminology** : We shorten the statement to “$U$ is an open set containing $x$” to the phrase “$U$ is a neighbourhood of $x$.
+**Terminology** : We shorten the statement to “$U$ is an open set containing $x$” to the phrase “**$U$ is a neighbourhood of $x$**.
 
 ```{proposition,label='prop1'}
 Let $A$ be a subset of the topological space $X$.
@@ -778,9 +779,60 @@ every basis element $B$ containing $x$, because $B$ is an open set.
 basis element containing $x$ intersects $A$, so does every open set $U$ containing $x$, because $U$ contains a basis element that contains $x$.
 ```
 
-```{lemma}
-Let A be a subset of the topological space $X$; let $A^\prime$ be the set of all limit points of $A$. Then $\bar{A} = A \cup A^\prime$.
-.
+
+```{example,label='e1'} 
+Let $X$ be the real line $\mathbb{R}$. 
+
+- If $A = (0, 1]$, then $\overline{A} = [0, 1]$, for every neighbourhood of 0 intersects $A$, while every point outside $[0, 1]$ has a neighbourhood disjoint from $A$. 
+
+
+Similar arguments apply to the following subsets of $X$,
+
+- If $B = \left\{\frac{1}{n} | n \in \mathbb{Z}^{+}\right\}$, then $\overline{B} = \{0\} \cup B$. 
+- If $C = \{0\} \cup (1, 2)$, then $\overline{C} = \{0\}\cup[1, 2]$.
+
+- If $\mathbb{Q}$ is the set of rational numbers, then $\overline{\mathbb{Q}} = \mathbb{R}$. 
+- If $\mathbb{Z}^{+}$ is the set of positive integers, then $\overline{\mathbb{Z}^{+}} = \mathbb{Z}^{+}$. 
+- If $\mathbb{R}^{+}$ is the set of positive reals, then the closure of $\mathbb{R}^{+}$ is the set $\mathbb{R}^{+} \cup \{0\}$.
+```
+
+```{example}
+Consider the subspace $Y = (0, 1]$ of the real line $\mathbb{R}$. The set $A = \left(0, \frac{1}{2}\right)$ is a subset of $Y$; its closure in $\mathbb{R}$ is the set $\left[0, \frac{1}{2}\right]$, and its closure in $Y$ is the set $\left[0, \frac{1}{2}\right] \cap Y = \left(0, \frac{1}{2}\right]$.
+
+```
+### Limit Points
+There is yet another way of describing the closure of a set, a way that involves the important concept of limit point, which we consider now.
+
+```{definition,name='Limit Point'}
+If $A$ is a subset of the topological space $X$ and if $x$ is a point of $X$, we say that $x$ is a limit point (or "cluster point," or "point of accumulation") of $A$ if every neighborhood of $x$ intersects $A$ in some point other than $x$ itself. 
+
+Said differently, $x$ is a limit point of $A$ if it belongs to the closure of $A \setminus
+\{x\}$. The point $x$ may lie in $A$ or not; for this definition it does not matter.
+```
+**Notation**: let $A^\prime$ be the set of all limit points of $A$.
+
+```{example,label='e2'}
+Consider the real line $\mathbb{R}$. 
+
+- If $A = (0, 1]$, then the point 0 is a limit point of $A$ and so is the point $\frac{1}{2}$. In fact, every point of the interval $[0, 1]$ is a limit point of $A$, but no other point of $\mathbb{R}$ is a limit point of $A$.
+
+- If $B = \left\{\frac{1}{n} | n \in \mathbb{Z}^{+}\right\}$, then 0 is the only limit point of $B$. Every other point $x$ of $\mathbb{R}$ has a neighborhood that either does not intersect $B$ at all, or it intersects $B$ only in the point $x$ itself. 
+
+- If $C = \{0\} \cup (1, 2)$, then the limit points of $C$ are the points of the interval $[1, 2]$. 
+
+- If $\mathbb{Q}$ is the set of rational numbers, every point of $\mathbb{R}$ is a limit point of $\mathbb{Q}$. 
+
+- If $\mathbb{Z}^{+}$ is the set of positive integers, no point of $\mathbb{R}$ is a limit point of $\mathbb{Z}^{+}$. 
+
+- If $\mathbb{R}^{+}$ is the set of positive reals, then every point of $\{0\} \cup \mathbb{R}^{+}$ is a limit point of $\mathbb{R}^{+}$.
+
+```
+
+Comparison of Examples \@ref(exm:e1) and \@ref(exm:e2) suggests a relationship between the closure of a
+set and the limit points of a set. That relationship is given in the following theorem:
+
+```{theorem }
+Let A be a subset of the topological space $X$; let $A^\prime$ be the set of all limit points of $A$. Then $$\bar{A} = A \cup A^\prime$$.
 ```
 
 ```{proof}
@@ -798,8 +850,14 @@ Let $x\in \overline{A}$.
   - Case II: If $x\not\in A$. Since $x \in \overline{A}$, we know that every neighborhood $U$ of $x$ intersects $A$; because $x \notin A$, the set $U$ must intersect $A$ in a point different from $x$. Then $x \in A^{\prime}$, so that $x \in A \cup A^{\circ}$, as desired.
 
 ```
+```{corollary}
+A subset of a topological space is closed if and only if it contains all its limit points.
+```
+```{proof} 
+The set $A$ is closed if and only if $A = \overline{A}$, and the latter holds if and only if $A^{\prime} \subset A$.
+```
 
-## Hausdorff Spaces
+### Hausdorff Spaces
 
 ```{definition }
 A topological space $(X,\mathcal{T})$ is called a Hausdorff space if \
@@ -855,6 +913,16 @@ X &=& X\setminus (U_1\cap U_2)\\
 \end{eqnarray}
 Note that both $(X \setminus U_1 )$ and $(X \setminus U_2 )$ are finite. Thus, X is finite. Hence, if $X$ is $T_2$ then $X$ is finite. (Contrapostive of given statement). Therefore, if $X$ is infinite then $X$ is not $T_2$. 
 ```
+```{theorem}
+Every finite point set in a Hausdorff space $X$ is closed. 
+```
+```{proof}
+It suffices to show that every one-point set $\{x_0\}$ is closed. If $x$ is a point of $X$
+different from $x_0$, then $x$ and $x_0$ have disjoint neighborhoods $U$ and $V$, respectively. 
+Since $U$ does not intersect $\{x_0\}$, the point $x$ cannot belong to the closure of the set $\{x_0\}$.
+As a result, the closure of the set $\{x_0\}$ is $\{x_0\}$ itself, so that it is closed.
+
+```
 
 ```{definition}
 Let $X$ be topological sapce. A sequence $x_1,x_2,x_3,...$ in $X$  **converges** to $x\in X$ if for every neighborhood $U$ of $x$ there exists $N\in \mathbb{N}$ such that $x_n \in U$ for all $n\geq  N$
@@ -891,4 +959,20 @@ $x\in X$ is a limit point $\iff$ every neighbourhood intersect $A$ is infinetly 
 ```{proof}
 - ($\Longleftarrow$) The direction is trivial.
 - 
+```
+
+
+## Continuous Functions
+
+### Continuity of a Function
+```{definition}
+Let $X$ and $Y$ be topological spaces. A function $f : X \to Y$ is said to be continuous if for each open subset $V$ of $Y$ , the set $f^{−1}(V)$ is an open subset of $X$.
+```
+Recall that,
+\[f^{ −1}(V)=\{x\in X: f(x)\in V\}\]
+
+```{remark}
+- If it is empty if $V$ does not intersect the image set $f (X)$ of $f$ .
+- Continuity of a function depends *not* only upon the function $f$ itself, but also on the topologies specified for its domain and range.\
+I like to emphasize this fact, we can say that $f$ is continuous _relative_ to specific topologies on $X$ and $Y$.
 ```

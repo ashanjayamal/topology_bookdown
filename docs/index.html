@@ -23,7 +23,7 @@
 <meta name="author" content="Ashan Jayamal" />
 
 
-<meta name="date" content="2024-03-17" />
+<meta name="date" content="2024-03-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -88,8 +88,13 @@
 <ul>
 <li class="chapter" data-level="1.7.1" data-path="index.html"><a href="index.html#closed-set"><i class="fa fa-check"></i><b>1.7.1</b> Closed Set</a></li>
 <li class="chapter" data-level="1.7.2" data-path="index.html"><a href="index.html#closure-and-interior-of-a-set"><i class="fa fa-check"></i><b>1.7.2</b> Closure and Interior of a Set</a></li>
+<li class="chapter" data-level="1.7.3" data-path="index.html"><a href="index.html#limit-points"><i class="fa fa-check"></i><b>1.7.3</b> Limit Points</a></li>
+<li class="chapter" data-level="1.7.4" data-path="index.html"><a href="index.html#hausdorff-spaces"><i class="fa fa-check"></i><b>1.7.4</b> Hausdorff Spaces</a></li>
 </ul></li>
-<li class="chapter" data-level="1.8" data-path="index.html"><a href="index.html#hausdorff-spaces"><i class="fa fa-check"></i><b>1.8</b> Hausdorff Spaces</a></li>
+<li class="chapter" data-level="1.8" data-path="index.html"><a href="index.html#continuous-functions"><i class="fa fa-check"></i><b>1.8</b> Continuous Functions</a>
+<ul>
+<li class="chapter" data-level="1.8.1" data-path="index.html"><a href="index.html#continuity-of-a-function"><i class="fa fa-check"></i><b>1.8.1</b> Continuity of a Function</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="chapter-2-name.html"><a href="chapter-2-name.html"><i class="fa fa-check"></i><b>2</b> Chapter 2 name</a></li>
 <li class="chapter" data-level="3" data-path="chapter-03-name.html"><a href="chapter-03-name.html"><i class="fa fa-check"></i><b>3</b> Chapter 03 name</a></li>
@@ -121,7 +126,7 @@
 <div id="header">
 <h1 class="title">Topology</h1>
 <p class="author"><em>Ashan Jayamal</em></p>
-<p class="date"><em>2024-03-17</em></p>
+<p class="date"><em>2024-03-19</em></p>
 </div>
 <div id="topology" class="section level1 hasAnchor" number="1">
 <h1><span class="header-section-number">Chapter 1</span> Topology<a href="index.html#topology" class="anchor-section" aria-label="Anchor link to header"></a></h1>
@@ -618,16 +623,18 @@ Figure 1.15: <span class="math inline">\(~\)</span>
 <p><em>Closed sets are nothing but complement of open sets. On the other hand, we can also say that open sets are nothing but complement of closed sets. Thus we can actually use closed sets to define topology, although mathematicians usually use open sets to define topology.</em></p>
 <div class="definition">
 <p><span id="def:unnamed-chunk-50" class="definition"><strong>Definition 1.13  </strong></span>Let <span class="math inline">\(A\)</span> be a subset of a topological space <span class="math inline">\((X, \mathcal{})\)</span>.</p>
-<p><span class="math inline">\(A\)</span> is a closed set of <span class="math inline">\(X\)</span> if <span class="math inline">\(X\setminus A\)</span> is an open set.
-- The closure Cl<span class="math inline">\((A)=\overline{A}\)</span> of <span class="math inline">\(A\)</span> in <span class="math inline">\(X\)</span> is the intersection of all closed sets of <span class="math inline">\(X\)</span>, containing <span class="math inline">\(A\)</span>.
+<p><span class="math inline">\(A\)</span> is a closed set of <span class="math inline">\(X\)</span> if <span class="math inline">\(X\setminus A\)</span> is an open set.</p>
+<ul>
+<li>The closure Cl<span class="math inline">\((A)=\overline{A}\)</span> of <span class="math inline">\(A\)</span> in <span class="math inline">\(X\)</span> is the intersection of all closed sets of <span class="math inline">\(X\)</span>, containing <span class="math inline">\(A\)</span>.
 <span class="math display">\[\text{Cl}(A)=\overline{A}=\bigcap \left\{C \text{ is closed in } X~ \&amp;~  A \subset C\right\}\]</span>
-The smallest closed set that containing<span class="math inline">\(A\)</span> is the closure of <span class="math inline">\(A\)</span>.
-- The interior <span class="math inline">\(\text{Int}(A)=\mathring{A}\)</span> of <span class="math inline">\(A\)</span> in <span class="math inline">\(X\)</span> is the union of all open sets of <span class="math inline">\(X\)</span>, contained in <span class="math inline">\(A\)</span>.
+The smallest closed set that containing<span class="math inline">\(A\)</span> is the closure of <span class="math inline">\(A\)</span>.</li>
+<li>The interior <span class="math inline">\(\text{Int}(A)=\mathring{A}\)</span> of <span class="math inline">\(A\)</span> in <span class="math inline">\(X\)</span> is the union of all open sets of <span class="math inline">\(X\)</span>, contained in <span class="math inline">\(A\)</span>.
 <span class="math display">\[\text{Int}(A)=\mathring{A}=\bigcup \left\{U \text{ is open in } X~ \&amp;~  U \subset A\right\}\]</span>
-The largest open set contanied in <span class="math inline">\(A\)</span> is the interior of <span class="math inline">\(A\)</span>.
-- <span class="math inline">\(x \in X\)</span> is a limit point (or “cluster point,” or “point of accumulation”) of <span class="math inline">\(A\)</span>,
+The largest open set contanied in <span class="math inline">\(A\)</span> is the interior of <span class="math inline">\(A\)</span>.</li>
+<li><span class="math inline">\(x \in X\)</span> is a limit point (or “cluster point,” or “point of accumulation”) of <span class="math inline">\(A\)</span>,
 if every neighborhood
-of <span class="math inline">\(x\)</span> intersects <span class="math inline">\(A\)</span> in some point other than <span class="math inline">\(x\)</span> itself. In other words, <span class="math inline">\(x \in X\)</span> is a limit point of <span class="math inline">\(A\)</span>, if <span class="math inline">\(x \in \overline{A\setminus\{x\}}\)</span>.</p>
+of <span class="math inline">\(x\)</span> intersects <span class="math inline">\(A\)</span> in some point other than <span class="math inline">\(x\)</span> itself. In other words, <span class="math inline">\(x \in X\)</span> is a limit point of <span class="math inline">\(A\)</span>, if <span class="math inline">\(x \in \overline{A\setminus\{x\}}\)</span>.</li>
+</ul>
 </div>
 <div class="remark">
 <p><span id="unlabeled-div-17" class="remark"><em>Remark</em>. </span></p>
@@ -758,14 +765,14 @@ The largest open set contanied in <span class="math inline">\(A\)</span> is the 
 <ul>
 <li><strong>Claim</strong>: <span class="math inline">\(B \subseteq \bar{A}\cap Y\)</span></li>
 </ul>
-<p>The set <span class="math inline">\(\bar{A}\)</span> is closed in <span class="math inline">\(X\)</span>, so <span class="math inline">\(\bar{A} \cap Y\)</span> is closed in <span class="math inline">\(Y\)</span> (By lemma <a href="#lem:qw"><strong>??</strong></a>). Since <span class="math inline">\(A\subset \bar{A}\cap Y\)</span>(Since, <span class="math inline">\(\bar{A}\)</span> is the smallest subset that conatin <span class="math inline">\(A\)</span>, and <span class="math inline">\(A\subseteq Y\)</span>), and since by definition <span class="math inline">\(B\)</span> equals the intersection of all closed subsets of <span class="math inline">\(Y\)</span> containing <span class="math inline">\(A\)</span>, we must have <span class="math inline">\(B \subseteq (\bar{A} \cap Y)\)</span>.</p>
+<p>The set <span class="math inline">\(\bar{A}\)</span> is closed in <span class="math inline">\(X\)</span>, so <span class="math inline">\(\bar{A} \cap Y\)</span> is closed in <span class="math inline">\(Y\)</span> (By lemma <a href="index.html#thm:qw">1.3</a>). Since <span class="math inline">\(A\subset \bar{A}\cap Y\)</span>(Since, <span class="math inline">\(\bar{A}\)</span> is the smallest subset that conatin <span class="math inline">\(A\)</span>, and <span class="math inline">\(A\subseteq Y\)</span>), and since by definition <span class="math inline">\(B\)</span> equals the intersection of all closed subsets of <span class="math inline">\(Y\)</span> containing <span class="math inline">\(A\)</span>, we must have <span class="math inline">\(B \subseteq (\bar{A} \cap Y)\)</span>.</p>
 <ul>
 <li><strong>Case-II</strong>: <span class="math inline">\(\bar{A}\cap Y \subseteq B\)</span></li>
 </ul>
 <p>we know that <span class="math inline">\(B\)</span> is closed in <span class="math inline">\(Y\)</span>. Hence by lemma <a href="index.html#thm:qw">1.3</a>, <span class="math inline">\(B = C \cap Y\)</span> for some set <span class="math inline">\(C\)</span> closed in <span class="math inline">\(X\)</span>. Then <span class="math inline">\(C\)</span> is a closed set of <span class="math inline">\(X\)</span> containing <span class="math inline">\(A\)</span>; because <span class="math inline">\(\bar{A}\)</span> is the intersection of all such closed sets, we conclude that <span class="math inline">\(\bar{A} \subseteq C\)</span>. Then
 <span class="math inline">\((\bar{A}\cap Y ) \subset (C \cap Y ) = B\)</span>.</p>
 </div>
-<p><strong>Terminology</strong> : We shorten the statement to “<span class="math inline">\(U\)</span> is an open set containing <span class="math inline">\(x\)</span>” to the phrase “<span class="math inline">\(U\)</span> is a neighbourhood of <span class="math inline">\(x\)</span>.</p>
+<p><strong>Terminology</strong> : We shorten the statement to “<span class="math inline">\(U\)</span> is an open set containing <span class="math inline">\(x\)</span>” to the phrase “<strong><span class="math inline">\(U\)</span> is a neighbourhood of <span class="math inline">\(x\)</span></strong>.</p>
 <div class="proposition">
 <p><span id="prp:prop1" class="proposition"><strong>Proposition 1.1  </strong></span>Let <span class="math inline">\(A\)</span> be a subset of the topological space <span class="math inline">\(X\)</span>.</p>
 <ol style="list-style-type: lower-alpha">
@@ -791,9 +798,47 @@ basis element containing <span class="math inline">\(x\)</span> intersects <span
 </ul></li>
 </ul>
 </div>
-<div class="lemma">
-<p><span id="lem:unnamed-chunk-69" class="lemma"><strong>Lemma 1.10  </strong></span>Let A be a subset of the topological space <span class="math inline">\(X\)</span>; let <span class="math inline">\(A^\prime\)</span> be the set of all limit points of <span class="math inline">\(A\)</span>. Then <span class="math inline">\(\bar{A} = A \cup A^\prime\)</span>.
-.</p>
+<div class="example">
+<p><span id="exm:e1" class="example"><strong>Example 1.23  </strong></span>Let <span class="math inline">\(X\)</span> be the real line <span class="math inline">\(\mathbb{R}\)</span>.</p>
+<ul>
+<li>If <span class="math inline">\(A = (0, 1]\)</span>, then <span class="math inline">\(\overline{A} = [0, 1]\)</span>, for every neighbourhood of 0 intersects <span class="math inline">\(A\)</span>, while every point outside <span class="math inline">\([0, 1]\)</span> has a neighbourhood disjoint from <span class="math inline">\(A\)</span>.</li>
+</ul>
+<p>Similar arguments apply to the following subsets of <span class="math inline">\(X\)</span>,</p>
+<ul>
+<li><p>If <span class="math inline">\(B = \left\{\frac{1}{n} | n \in \mathbb{Z}^{+}\right\}\)</span>, then <span class="math inline">\(\overline{B} = \{0\} \cup B\)</span>.</p></li>
+<li><p>If <span class="math inline">\(C = \{0\} \cup (1, 2)\)</span>, then <span class="math inline">\(\overline{C} = \{0\}\cup[1, 2]\)</span>.</p></li>
+<li><p>If <span class="math inline">\(\mathbb{Q}\)</span> is the set of rational numbers, then <span class="math inline">\(\overline{\mathbb{Q}} = \mathbb{R}\)</span>.</p></li>
+<li><p>If <span class="math inline">\(\mathbb{Z}^{+}\)</span> is the set of positive integers, then <span class="math inline">\(\overline{\mathbb{Z}^{+}} = \mathbb{Z}^{+}\)</span>.</p></li>
+<li><p>If <span class="math inline">\(\mathbb{R}^{+}\)</span> is the set of positive reals, then the closure of <span class="math inline">\(\mathbb{R}^{+}\)</span> is the set <span class="math inline">\(\mathbb{R}^{+} \cup \{0\}\)</span>.</p></li>
+</ul>
+</div>
+<div class="example">
+<p><span id="exm:unnamed-chunk-69" class="example"><strong>Example 1.24  </strong></span>Consider the subspace <span class="math inline">\(Y = (0, 1]\)</span> of the real line <span class="math inline">\(\mathbb{R}\)</span>. The set <span class="math inline">\(A = \left(0, \frac{1}{2}\right)\)</span> is a subset of <span class="math inline">\(Y\)</span>; its closure in <span class="math inline">\(\mathbb{R}\)</span> is the set <span class="math inline">\(\left[0, \frac{1}{2}\right]\)</span>, and its closure in <span class="math inline">\(Y\)</span> is the set <span class="math inline">\(\left[0, \frac{1}{2}\right] \cap Y = \left(0, \frac{1}{2}\right]\)</span>.</p>
+</div>
+</div>
+<div id="limit-points" class="section level3 hasAnchor" number="1.7.3">
+<h3><span class="header-section-number">1.7.3</span> Limit Points<a href="index.html#limit-points" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>There is yet another way of describing the closure of a set, a way that involves the important concept of limit point, which we consider now.</p>
+<div class="definition">
+<p><span id="def:unnamed-chunk-70" class="definition"><strong>Definition 1.15  (Limit Point) </strong></span>If <span class="math inline">\(A\)</span> is a subset of the topological space <span class="math inline">\(X\)</span> and if <span class="math inline">\(x\)</span> is a point of <span class="math inline">\(X\)</span>, we say that <span class="math inline">\(x\)</span> is a limit point (or “cluster point,” or “point of accumulation”) of <span class="math inline">\(A\)</span> if every neighborhood of <span class="math inline">\(x\)</span> intersects <span class="math inline">\(A\)</span> in some point other than <span class="math inline">\(x\)</span> itself.</p>
+<p>Said differently, <span class="math inline">\(x\)</span> is a limit point of <span class="math inline">\(A\)</span> if it belongs to the closure of <span class="math inline">\(A \setminus \{x\}\)</span>. The point <span class="math inline">\(x\)</span> may lie in <span class="math inline">\(A\)</span> or not; for this definition it does not matter.</p>
+</div>
+<p><strong>Notation</strong>: let <span class="math inline">\(A^\prime\)</span> be the set of all limit points of <span class="math inline">\(A\)</span>.</p>
+<div class="example">
+<p><span id="exm:e2" class="example"><strong>Example 1.25  </strong></span>Consider the real line <span class="math inline">\(\mathbb{R}\)</span>.</p>
+<ul>
+<li><p>If <span class="math inline">\(A = (0, 1]\)</span>, then the point 0 is a limit point of <span class="math inline">\(A\)</span> and so is the point <span class="math inline">\(\frac{1}{2}\)</span>. In fact, every point of the interval <span class="math inline">\([0, 1]\)</span> is a limit point of <span class="math inline">\(A\)</span>, but no other point of <span class="math inline">\(\mathbb{R}\)</span> is a limit point of <span class="math inline">\(A\)</span>.</p></li>
+<li><p>If <span class="math inline">\(B = \left\{\frac{1}{n} | n \in \mathbb{Z}^{+}\right\}\)</span>, then 0 is the only limit point of <span class="math inline">\(B\)</span>. Every other point <span class="math inline">\(x\)</span> of <span class="math inline">\(\mathbb{R}\)</span> has a neighborhood that either does not intersect <span class="math inline">\(B\)</span> at all, or it intersects <span class="math inline">\(B\)</span> only in the point <span class="math inline">\(x\)</span> itself.</p></li>
+<li><p>If <span class="math inline">\(C = \{0\} \cup (1, 2)\)</span>, then the limit points of <span class="math inline">\(C\)</span> are the points of the interval <span class="math inline">\([1, 2]\)</span>.</p></li>
+<li><p>If <span class="math inline">\(\mathbb{Q}\)</span> is the set of rational numbers, every point of <span class="math inline">\(\mathbb{R}\)</span> is a limit point of <span class="math inline">\(\mathbb{Q}\)</span>.</p></li>
+<li><p>If <span class="math inline">\(\mathbb{Z}^{+}\)</span> is the set of positive integers, no point of <span class="math inline">\(\mathbb{R}\)</span> is a limit point of <span class="math inline">\(\mathbb{Z}^{+}\)</span>.</p></li>
+<li><p>If <span class="math inline">\(\mathbb{R}^{+}\)</span> is the set of positive reals, then every point of <span class="math inline">\(\{0\} \cup \mathbb{R}^{+}\)</span> is a limit point of <span class="math inline">\(\mathbb{R}^{+}\)</span>.</p></li>
+</ul>
+</div>
+<p>Comparison of Examples <a href="index.html#exm:e1">1.23</a> and <a href="index.html#exm:e2">1.25</a> suggests a relationship between the closure of a
+set and the limit points of a set. That relationship is given in the following theorem:</p>
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-71" class="theorem"><strong>Theorem 1.5  </strong></span>Let A be a subset of the topological space <span class="math inline">\(X\)</span>; let <span class="math inline">\(A^\prime\)</span> be the set of all limit points of <span class="math inline">\(A\)</span>. Then <span class="math display">\[\bar{A} = A \cup A^\prime\]</span>.</p>
 </div>
 <div class="proof">
 <p><span id="unlabeled-div-25" class="proof"><em>Proof</em>. </span></p>
@@ -810,12 +855,17 @@ Let <span class="math inline">\(x\in \overline{A}\)</span>.</p>
 </ul></li>
 </ul>
 </div>
+<div class="corollary">
+<p><span id="cor:unnamed-chunk-73" class="corollary"><strong>Corollary 1.2  </strong></span>A subset of a topological space is closed if and only if it contains all its limit points.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-26" class="proof"><em>Proof</em>. </span>The set <span class="math inline">\(A\)</span> is closed if and only if <span class="math inline">\(A = \overline{A}\)</span>, and the latter holds if and only if <span class="math inline">\(A^{\prime} \subset A\)</span>.</p>
 </div>
 </div>
-<div id="hausdorff-spaces" class="section level2 hasAnchor" number="1.8">
-<h2><span class="header-section-number">1.8</span> Hausdorff Spaces<a href="index.html#hausdorff-spaces" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="hausdorff-spaces" class="section level3 hasAnchor" number="1.7.4">
+<h3><span class="header-section-number">1.7.4</span> Hausdorff Spaces<a href="index.html#hausdorff-spaces" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div class="definition">
-<p><span id="def:unnamed-chunk-71" class="definition"><strong>Definition 1.15  </strong></span>A topological space <span class="math inline">\((X,\mathcal{T})\)</span> is called a Hausdorff space if<br />
+<p><span id="def:unnamed-chunk-75" class="definition"><strong>Definition 1.16  </strong></span>A topological space <span class="math inline">\((X,\mathcal{T})\)</span> is called a Hausdorff space if<br />
 (H1) <span class="math inline">\(\forall x,y \in X\)</span> such that <span class="math inline">\(x \neq y\)</span>, <span class="math inline">\(\exists U_x, U_y \in \mathcal{T}\)</span> such that <span class="math inline">\(x \in U_x\)</span>, <span class="math inline">\(y \in U_y\)</span>, and <span class="math inline">\(U_x \cap U_y = \emptyset\)</span>.</p>
 <p>i.e., for every pair of distinct points <span class="math inline">\(x, y\)</span> in <span class="math inline">\(X\)</span>, there are disjoint neighborhoods <span class="math inline">\(U_x\)</span> and <span class="math inline">\(U_y\)</span> of <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> respectively.</p>
 </div>
@@ -833,7 +883,7 @@ Figure 1.19: <span class="math inline">\(~\)</span>
 </p>
 </div>
 <div class="definition">
-<p><span id="def:unnamed-chunk-72" class="definition"><strong>Definition 1.16  </strong></span>A space <span class="math inline">\(X\)</span> is a <em>T1 space</em> if and only if it satisfies the following condition: For each <span class="math inline">\(x, y \in X\)</span> such that <span class="math inline">\(x \neq y\)</span>, there exists an open set <span class="math inline">\(U \subset X\)</span> such that <span class="math inline">\(x \in U\)</span> but <span class="math inline">\(y \notin U\)</span>.</p>
+<p><span id="def:unnamed-chunk-76" class="definition"><strong>Definition 1.17  </strong></span>A space <span class="math inline">\(X\)</span> is a <em>T1 space</em> if and only if it satisfies the following condition: For each <span class="math inline">\(x, y \in X\)</span> such that <span class="math inline">\(x \neq y\)</span>, there exists an open set <span class="math inline">\(U \subset X\)</span> such that <span class="math inline">\(x \in U\)</span> but <span class="math inline">\(y \notin U\)</span>.</p>
 </div>
 <div class="figure"><span style="display:block;" id="fig:fig17"></span>
 <img src="figures/figure%2017.jpg" alt="$~$"  />
@@ -843,11 +893,11 @@ Figure 1.20: <span class="math inline">\(~\)</span>
 </div>
 <p>These <span class="math inline">\(T_1\)</span> and <span class="math inline">\(T_2\)</span> axioms are called the separation axioms.</p>
 <div class="example">
-<p><span id="exm:unnamed-chunk-73" class="example"><strong>Example 1.23  </strong></span>Let <span class="math inline">\(X\)</span> b a set. Consider <span class="math inline">\(X\)</span> with finite complemenet topology is <span class="math inline">\(T_1\)</span> Space. (i.e.:<span class="math inline">\((X,\mathcal{T}_f)\)</span> is <span class="math inline">\(T_1\)</span> space.) But <span class="math inline">\(X\)</span> is not <span class="math inline">\(T_2\)</span> if <span class="math inline">\(X\)</span> is infinite.</p>
+<p><span id="exm:unnamed-chunk-77" class="example"><strong>Example 1.26  </strong></span>Let <span class="math inline">\(X\)</span> b a set. Consider <span class="math inline">\(X\)</span> with finite complemenet topology is <span class="math inline">\(T_1\)</span> Space. (i.e.:<span class="math inline">\((X,\mathcal{T}_f)\)</span> is <span class="math inline">\(T_1\)</span> space.) But <span class="math inline">\(X\)</span> is not <span class="math inline">\(T_2\)</span> if <span class="math inline">\(X\)</span> is infinite.</p>
 </div>
 <p><strong>Claim 1</strong> : <span class="math inline">\((X,\mathcal{T}_{f})\)</span> is <span class="math inline">\(T_1\)</span> space.</p>
 <div class="proof">
-<p><span id="unlabeled-div-26" class="proof"><em>Proof</em>. </span>Let <span class="math inline">\(x,y\in X\)</span>. Then</p>
+<p><span id="unlabeled-div-27" class="proof"><em>Proof</em>. </span>Let <span class="math inline">\(x,y\in X\)</span>. Then</p>
 <ul>
 <li><span class="math inline">\(X\setminus \{x\}\)</span> is an open set of <span class="math inline">\(\mathcal{T}_{f}\)</span> containing <span class="math inline">\(y\)</span> but not <span class="math inline">\(x\)</span>.</li>
 <li><span class="math inline">\(X\setminus \{y\}\)</span> is an open set of <span class="math inline">\(\mathcal{T}_{f}\)</span> containing <span class="math inline">\(x\)</span>
@@ -857,15 +907,24 @@ Hence the result from definition of <span class="math inline">\(T_1\)</span> spa
 </div>
 <p><strong>Claim 2</strong> : <span class="math inline">\(X\)</span> is not <span class="math inline">\(T_2\)</span> if <span class="math inline">\(X\)</span> is infinite.</p>
 <div class="proof">
-<p><span id="unlabeled-div-27" class="proof"><em>Proof</em>. </span>Let <span class="math inline">\(x_1,x_2\in X\)</span> with <span class="math inline">\(x_1\neq x_2\)</span> Suppose <span class="math inline">\(x_1,x_2\)</span> have disjoint neighbhood <span class="math inline">\(U_1\)</span> and <span class="math inline">\(U_2\)</span>. I.e.: <span class="math inline">\(U_1\cap U_2=\emptyset\)</span>. Thus
+<p><span id="unlabeled-div-28" class="proof"><em>Proof</em>. </span>Let <span class="math inline">\(x_1,x_2\in X\)</span> with <span class="math inline">\(x_1\neq x_2\)</span> Suppose <span class="math inline">\(x_1,x_2\)</span> have disjoint neighbhood <span class="math inline">\(U_1\)</span> and <span class="math inline">\(U_2\)</span>. I.e.: <span class="math inline">\(U_1\cap U_2=\emptyset\)</span>. Thus
 <span class="math display">\[\begin{eqnarray}
 X &amp;=&amp; X\setminus (U_1\cap U_2)\\
 &amp;=&amp; \underbrace{(X \setminus U_1 )}_{\text{finite}} \cup \underbrace{(X\setminus U_2)}_{\text{finite}}
 \end{eqnarray}\]</span>
 Note that both <span class="math inline">\((X \setminus U_1 )\)</span> and <span class="math inline">\((X \setminus U_2 )\)</span> are finite. Thus, X is finite. Hence, if <span class="math inline">\(X\)</span> is <span class="math inline">\(T_2\)</span> then <span class="math inline">\(X\)</span> is finite. (Contrapostive of given statement). Therefore, if <span class="math inline">\(X\)</span> is infinite then <span class="math inline">\(X\)</span> is not <span class="math inline">\(T_2\)</span>.</p>
 </div>
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-80" class="theorem"><strong>Theorem 1.6  </strong></span>Every finite point set in a Hausdorff space <span class="math inline">\(X\)</span> is closed.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-29" class="proof"><em>Proof</em>. </span>It suffices to show that every one-point set <span class="math inline">\(\{x_0\}\)</span> is closed. If <span class="math inline">\(x\)</span> is a point of <span class="math inline">\(X\)</span>
+different from <span class="math inline">\(x_0\)</span>, then <span class="math inline">\(x\)</span> and <span class="math inline">\(x_0\)</span> have disjoint neighborhoods <span class="math inline">\(U\)</span> and <span class="math inline">\(V\)</span>, respectively.
+Since <span class="math inline">\(U\)</span> does not intersect <span class="math inline">\(\{x_0\}\)</span>, the point <span class="math inline">\(x\)</span> cannot belong to the closure of the set <span class="math inline">\(\{x_0\}\)</span>.
+As a result, the closure of the set <span class="math inline">\(\{x_0\}\)</span> is <span class="math inline">\(\{x_0\}\)</span> itself, so that it is closed.</p>
+</div>
 <div class="definition">
-<p><span id="def:unnamed-chunk-76" class="definition"><strong>Definition 1.17  </strong></span>Let <span class="math inline">\(X\)</span> be topological sapce. A sequence <span class="math inline">\(x_1,x_2,x_3,...\)</span> in <span class="math inline">\(X\)</span> <strong>converges</strong> to <span class="math inline">\(x\in X\)</span> if for every neighborhood <span class="math inline">\(U\)</span> of <span class="math inline">\(x\)</span> there exists <span class="math inline">\(N\in \mathbb{N}\)</span> such that <span class="math inline">\(x_n \in U\)</span> for all <span class="math inline">\(n\geq N\)</span></p>
+<p><span id="def:unnamed-chunk-82" class="definition"><strong>Definition 1.18  </strong></span>Let <span class="math inline">\(X\)</span> be topological sapce. A sequence <span class="math inline">\(x_1,x_2,x_3,...\)</span> in <span class="math inline">\(X\)</span> <strong>converges</strong> to <span class="math inline">\(x\in X\)</span> if for every neighborhood <span class="math inline">\(U\)</span> of <span class="math inline">\(x\)</span> there exists <span class="math inline">\(N\in \mathbb{N}\)</span> such that <span class="math inline">\(x_n \in U\)</span> for all <span class="math inline">\(n\geq N\)</span></p>
 <p>Notataion: <span class="math inline">\(x_n \to x\)</span></p>
 </div>
 <div class="figure"><span style="display:block;" id="fig:fig18"></span>
@@ -875,11 +934,11 @@ Figure 1.21: <span class="math inline">\(~\)</span>
 </p>
 </div>
 <div class="proposition">
-<p><span id="prp:unnamed-chunk-77" class="proposition"><strong>Proposition 1.2  </strong></span>Let <span class="math inline">\(X\)</span> be a Hausdorff space. If <span class="math inline">\(x_n\)</span> convergence the limit <span class="math inline">\(x\)</span> is unique.<br />
+<p><span id="prp:unnamed-chunk-83" class="proposition"><strong>Proposition 1.2  </strong></span>Let <span class="math inline">\(X\)</span> be a Hausdorff space. If <span class="math inline">\(x_n\)</span> convergence the limit <span class="math inline">\(x\)</span> is unique.<br />
 In other words: The limit of a convergent sequence in a Hausdorff space is unique.</p>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-28" class="proof"><em>Proof</em>. </span>We are going to indirect proof. Assume that <span class="math inline">\(x_n \to x\)</span> and <span class="math inline">\(x_n \to y\)</span> and <span class="math inline">\(x\neq y\)</span>. Since <span class="math inline">\(X\)</span> is a Hausdorff space, there are disjoint open sets <span class="math inline">\(U\)</span> and <span class="math inline">\(V\)</span> of <span class="math inline">\(X\)</span> such that <span class="math inline">\(x\in U\)</span> and $ yV$.</p>
+<p><span id="unlabeled-div-30" class="proof"><em>Proof</em>. </span>We are going to indirect proof. Assume that <span class="math inline">\(x_n \to x\)</span> and <span class="math inline">\(x_n \to y\)</span> and <span class="math inline">\(x\neq y\)</span>. Since <span class="math inline">\(X\)</span> is a Hausdorff space, there are disjoint open sets <span class="math inline">\(U\)</span> and <span class="math inline">\(V\)</span> of <span class="math inline">\(X\)</span> such that <span class="math inline">\(x\in U\)</span> and $ yV$.</p>
 <ul>
 <li>Since <span class="math inline">\(x_n \to x\)</span>, <span class="math inline">\(U\)</span> is an open neighbourhood of <span class="math inline">\(x\)</span>, there is a <span class="math inline">\(N_0\in \mathbb{N}\)</span> , such that <span class="math inline">\(x_n \in U\)</span> for all <span class="math inline">\(n\geq N_0\)</span></li>
 <li>Since <span class="math inline">\(x_n \to y\)</span>, <span class="math inline">\(V\)</span> is an open neighbourhood of <span class="math inline">\(y\)</span>, there is a <span class="math inline">\(N_1\in \mathbb{N}\)</span> , such that <span class="math inline">\(x_n \in V\)</span> for all <span class="math inline">\(n\geq N_1\)</span></li>
@@ -890,17 +949,37 @@ Since <span class="math inline">\(N&gt;N_1\)</span>, then <span class="math inli
 Thus, <span class="math inline">\(x_N\in U \cap V\)</span>. This contardict disjointness the <span class="math inline">\(u\)</span> and <span class="math inline">\(V\)</span>. Thefore, <span class="math inline">\(x=y\)</span></p>
 </div>
 <div class="proposition">
-<p><span id="prp:unnamed-chunk-79" class="proposition"><strong>Proposition 1.3  </strong></span>Let <span class="math inline">\(X\)</span> be a Hausdorff space and <span class="math inline">\(A\subset X\)</span><br />
+<p><span id="prp:unnamed-chunk-85" class="proposition"><strong>Proposition 1.3  </strong></span>Let <span class="math inline">\(X\)</span> be a Hausdorff space and <span class="math inline">\(A\subset X\)</span><br />
 <span class="math inline">\(x\in X\)</span> is a limit point <span class="math inline">\(\iff\)</span> every neighbourhood intersect <span class="math inline">\(A\)</span> is infinetly many points.</p>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-29" class="proof"><em>Proof</em>. </span></p>
+<p><span id="unlabeled-div-31" class="proof"><em>Proof</em>. </span></p>
 <ul>
 <li>(<span class="math inline">\(\Longleftarrow\)</span>) The direction is trivial.</li>
 <li></li>
 </ul>
 </div>
+</div>
+</div>
+<div id="continuous-functions" class="section level2 hasAnchor" number="1.8">
+<h2><span class="header-section-number">1.8</span> Continuous Functions<a href="index.html#continuous-functions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="continuity-of-a-function" class="section level3 hasAnchor" number="1.8.1">
+<h3><span class="header-section-number">1.8.1</span> Continuity of a Function<a href="index.html#continuity-of-a-function" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="definition">
+<p><span id="def:unnamed-chunk-87" class="definition"><strong>Definition 1.19  </strong></span>Let <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> be topological spaces. A function <span class="math inline">\(f : X \to Y\)</span> is said to be continuous if for each open subset <span class="math inline">\(V\)</span> of <span class="math inline">\(Y\)</span> , the set <span class="math inline">\(f^{−1}(V)\)</span> is an open subset of <span class="math inline">\(X\)</span>.</p>
+</div>
+<p>Recall that,
+<span class="math display">\[f^{ −1}(V)=\{x\in X: f(x)\in V\}\]</span></p>
+<div class="remark">
+<p><span id="unlabeled-div-32" class="remark"><em>Remark</em>. </span></p>
+<ul>
+<li>If it is empty if <span class="math inline">\(V\)</span> does not intersect the image set <span class="math inline">\(f (X)\)</span> of <span class="math inline">\(f\)</span> .</li>
+<li>Continuity of a function depends <em>not</em> only upon the function <span class="math inline">\(f\)</span> itself, but also on the topologies specified for its domain and range.<br />
+I like to emphasize this fact, we can say that <span class="math inline">\(f\)</span> is continuous <em>relative</em> to specific topologies on <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>.</li>
+</ul>
+</div>
 
+</div>
 </div>
 </div>
             </section>

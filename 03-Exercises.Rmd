@@ -200,10 +200,260 @@ Show that if $A$ is closed in $Y$ and $Y$ is closed in $X$, then $A$ is closed i
 ```
 
 ```{proof}
-Suppose that $A$ is closed in $Y$ and $Y$ is closed in $X$.
+ Since $Y$ is subspace in $X$ and $A$ is closed in $Y$, by theorm \@ref(thm:qw), then there exist closed set $C$ in $X$ such that \[A=Y\cap C\]
+Since, $Y$ is closed in $X$ and $X$ is toplogical space, $A=Y\cap C$ is closed in  $X$. 
+```
+
+```{exercise,name='Mun 2.17.3'}
+Show that if $A$ is closed in $X$ and $B$ is closed in $Y$ , then $A\times B$ is closed in $X\times Y$
 ```
 
 ```{proof}
- Since $Y$ is subspace in $X$ and $A$ is closed in $Y$, by theorm \@ref(thm:qw), then there exist closed set $C$ in $X$ such that \[A=Y\cap C\]
-Since, $Y$ is closed in $X$ and $X$ is toplogical space, $A=Y\cap C$ is closed in  $X$. 
+Suppose that $A$ is closed in $X$ and $B$ is closed in $Y$. Then $X\setminus A$ is open in $X$ and $X\setminus B$ is open in $Y$.
+
+**Claim**: $(X\times Y) \setminus (A\times B)=
+   ((X\setminus A)\times Y)\cup((X\times (Y\setminus B)))$\
+_Proof of Claim_:
+\begin{eqnarray}
+(x\times y)\in (X\times Y) \setminus (A\times B) 
+&\iff & (x\times y)\not\in (A\times B)\\
+&\iff & x\not\in A \text{ or } y \not\in B\\
+&\iff & x\in X\setminus A \text{ or } y \in Y\setminus B\\
+&\iff& (x\times y) \in ((X\setminus A)\times Y)\cup((X\times (Y\setminus B)))
+\end{eqnarray}
+So, now we are done proof of the claim. 
+Thus, $(X\times Y) \setminus (A\times B)$  is union of open  sets and hence, $(X\times Y) \setminus (A\times B)$ is open in $X \times Y$. Thus, $(A\times B)$ is closed in $X\times Y$.
+
+```
+
+```{exercise,name='Mun 2.17.4'}
+Show that if $U$ is open in $X$ and $A$ is closed in $X$, then $U \setminus A$ is open in $X$, and $A \setminus U$ is closed in $X$.
+
+```
+
+```{proof}
+Suppose that $U$ is open in $X$ and $A$ is closed in $X$.
+
+**Claim 1**: $(U\setminus A)=U\cap (X\setminus A)$.\
+\begin{eqnarray}
+x \in (U\setminus A)
+&\iff& x\in U \text{ and } x\not\in A\\
+&\iff& x\in U  \text{ and } x\in X\setminus A\\
+&\iff& x\in U  \cap X\setminus A\\
+\end{eqnarray}
+Since, $A$ is closed in $X$, $X\setminus A$ is open in $X$. Thus, $(U\setminus A)=U\cap (X\setminus A)$ is open in $X$. (By finite intersection property.)
+
+
+**Claim 2**: $(A\setminus U)=A\cap (X\setminus U)$.\
+Similar to proof of claim 1 we can prove this claim.
+
+Since, $U$ is open in $X$, $X\setminus U$ is closed in $X$. Thus, $(A\setminus U)=A\cap (X\setminus U)$ is closed in $X$.
+```
+
+```{exercise,name='Mun 2.17.5'}
+Let $X$ be an ordered set in the order topology. Show that $\overline{(a, b)} \subseteq [a, b]$. Under what conditions does equality hold?
+```
+
+```{proof}
+_(Proof of $\overline{(a, b)} \subseteq [a, b]$)_
+
+**Claim 1**: $[a,b]$ is closed in $X$ under order toplology.\
+Observe that,
+\[X\setminus[a,b] =(-\infty,a)\cup (b,\infty).\]
+Note that, $(-\infty,a)$ and $(b,\infty)$ are open rays.
+Then $(-\infty,a)\cup (b,\infty)=X\setminus [a,b]$ is open. 
+Thus, $[a,b]$ is closed in $X$ under order toplogy.
+
+**Claim 2**: $(a,b)\subseteq [a,b]$\
+Now, let $x \in (a, b)$ then $a < x < b$ so clearly $a \leq x \leq b$ so $x$ is in $[a, b]$. Thus $(a,b)\subseteq [a,b]$.
+
+Therefore, by cliam 1 and 2, $[a, b]$ is a closed set containing $(a, b)$.
+
+Now, to show $\overline{(a, b)} \subseteq [a, b]$, recall that $\overline{(a, b)}$ is the intersection of all closed sets containing $(a, b)$. 
+Let $x \in \overline{(a, b)}$ Since, $x$ is in every closed set containing $(a, b)$ and $[a, b]$ is a closed set containing $(a, b)$,then $x \in [a, b]$ as needed.
+
+Let $a^{+} = \inf\{x : x > a\}$ and let $b^{-} = \sup\{x : x < b\}$. Consider the closed set $[x, y]$. If $[x, y]$ contains
+$(a, b)$, then $x \leq a^{+}$ and $y \geq b^{-}$. Thus there exists a closed set containing $(a, b)$ that does not contain
+$a$ or $b$ if and only if $a^{+} \neq a$ or $b^{-} \neq b$. This is true exactly when $a$ has an immediate successor or $b$
+has an immediate predecessor. 
+
+
+```
+- For example, in the order topology on $\mathbb{Z}$, $$\overline{(1, 4)} = [2, 3] \subsetneq [1, 4].$$
+
+
+
+```{exercise,name='Mun 2.17.6'}
+Let $A$, $B$, and $A_{\alpha}$ denote subsets of a space $X$. Prove the following:
+  
+(a) If $A \subset B$, then $\overline{A} \subset \overline{B}$.
+(b) $\overline{A \cup B} = \overline{\overline{A}} \cup \overline{\overline{B}}$.
+(c) $\overline{\bigcup A_{\alpha}} \supseteq \bigcup \overline{A_{\alpha}}$; give an example where equality fails.
+```
+```{proof}
+Let $A$, $B$, and $A_{\alpha}$ denote subsets of a space $X$.
+
+(a) By definition, $\overline{A}$ is the intersection of all closed sets containing $A$. Since $\overline{B}$ is a closed set that contains $B$ and hence $A$, it must therefore contain $\overline{A}$.
+
+(b) 
+- **Claim 1**: $\overline{A \cup B} \supseteq {\overline{A}} \cup {\overline{B}}$\
+  The set $\overline{A \cup B}$ is a closed set that contains $A \cup B$, so it contains both $A$ and $B$,
+and therefore it contains both $\overline{A}$ and $\overline{B}$. Therefore, $\overline{A \cup B} \supseteq {\overline{A}} \cup {\overline{B}}$.
+
+- **Claim 2**: $\overline{A \cup B} \subseteq {\overline{A}} \cup {\overline{B}}$\
+${\overline{A}} \cup \overline{B}$ is a closed set (since it is the union of two closed sets) that
+contains $A \cup B$, (Beacuse $A\subseteq\overline{A}$ and $B \subseteq \overline{B}\implies A \cup B \subseteq \overline{A} \cup \overline{B}$.) so it contains $\overline{A \cup B}$.
+
+(c) The set $\overline{\bigcup A_{\alpha}}$ is a closed set that contains each $A_{\alpha}$, so it contains each $\overline{A_{\alpha}}$, and thus it contains $\bigcup \overline{A_{\alpha}}$. Thus, $\overline{\bigcup A_{\alpha}} \supseteq \bigcup \overline{A_{\alpha}}$\
+(But we can't do the converse because an arbitrary union of closures isn't necessarily closed!)\
+- **Example 1 **that equality fails, \
+Let $A_n$ be the closed set $[\frac{1}{n}, 1] \subset \mathbb{R}$. Then \[\bigcup_{n \in \mathbb{N}} \overline{A_n} = \bigcup_{n \in \mathbb{N}} A_n =\bigcup_{n \in \mathbb{N}} [\frac{1}{n}, 1] = (0, 1], \text{ But } \bigcup_{n \in \mathbb{N}} A_n = [0, 1]\].
+- **Example 2 **that equality fails, \
+Consider $\mathbb{R}$ with the standard topology and all one-point sets $\{q\}$ with $q$ rational. Then $\overline{\{q\}} = \{q\}$ for every such set, so that $\bigcup_{q \in \mathbb{Q}} \overline{\{q\}} = \mathbb{Q}$, but $\overline{\bigcup_{q \in \mathbb{Q}} \{q\}} = \overline{\mathbb{Q}} = \mathbb{R}$.
+
+```
+
+```{exercise,name='Mun 2.17.7'}
+Criticize the following “proof” that $\overline{\cup A_\alpha} \subset \cup \overline{A_\alpha}$: \
+if $\{A_\alpha\}$ is a collection of sets in $X$ and if $x \in  \overline{\cup A_\alpha}$, then every neighborhood $U$ of $x$ intersects $\cup A_\alpha$.Thus $U$ must intersect some $A_\alpha$, so that $x$ must belong to the closure of some $A_\alpha$. Therefore, $x \in  \cup \overline{A_\alpha}$.
+
+```
+
+**Solution**:
+If $\{A_\alpha\}$ is a collection of sets in $X$ and if $x \in  \overline{\cup A_\alpha}$, then every neighborhood $U$ of $x$ intersects $\cup A_\alpha$.Thus $U$ must intersect some $A_\alpha$. But this $A_{\alpha}$ may be distinct for different neighbourhoods, so not necessarily every neighbourhood $U$ of $A_{\alpha}$ intersects the same $A_{\alpha}$. Hence we cannot conclude that $x$ must belong to the closure of some fixed $A_{\alpha}$.
+
+```{exercise,name='Mun2.17.8'}
+Let $A$, $B$, and $A_{\alpha}$ denote subsets of a space $X$. Determine whether the following equations hold; if an equality fails, determine whether one of the inclusions $\supset$ or $\subset$ holds.
+(a) $A \cap B = \overline{A} \cap \overline{B}$.
+(b) $\bigcup A_{\alpha} = \bigcup \overline{A_{\alpha}}$.
+(c) $A - B = \overline{A} - B$.
+```
+
+**Solution**
+
+(a)\
+```{r echo=FALSE}
+  knitr::include_graphics('figures/Exercises/Ex 2.17/ex-8-1.png') 
+```
+
+(b)\
+```{r echo=FALSE}
+  knitr::include_graphics('figures/Exercises/Ex 2.17/ex-8-2.png') 
+```
+
+(c)\
+```{r echo=FALSE}
+  knitr::include_graphics('figures/Exercises/Ex 2.17/ex-8-3.png') 
+```
+```{r echo=FALSE}
+  knitr::include_graphics('figures/Exercises/Ex 2.17/ex-8-4.png') 
+```
+
+```{exercise,name='Mun 2.17.9'}
+Let $A \subset X$ and $B \subset Y$. Show that in the space $X \times Y$, 
+$$\overline{A \times B} = \overline{A} \times \overline{B}$$.
+```
+```{r echo=FALSE}
+  knitr::include_graphics('figures/Exercises/Ex 2.17/ex-9.png') 
+```
+
+```{exercise,name='Mun 2.17.10'}
+Show that every order topology is Hausdorff.
+```
+```{r echo=FALSE}
+  knitr::include_graphics('figures/Exercises/Ex 2.17/ex-10.png') 
+```
+
+```{exercise,name='Mun 2.17.11'}
+Show that the product of two Hausdorff spaces is Hausdorff.
+```
+```{r echo=FALSE}
+  knitr::include_graphics('figures/Exercises/Ex 2.17/ex-11.png') 
+```
+
+```{exercise,name='Mun 2.17.12'}
+Show that a subspace of a Hausdorff space is Hausdorff.
+```
+```{r echo=FALSE}
+  knitr::include_graphics('figures/Exercises/Ex 2.17/ex-12.png') 
+```
+
+```{exercise,name='Mun 2.17.13'}
+Show that $X$ is Hausdorff if and only if the diagonal $\Delta  = \{x\times x | x \in X\}$ is closed in $X \times X$.
+```
+```{r echo=FALSE}
+  knitr::include_graphics('figures/Exercises/Ex 2.17/ex-13.png') 
+```
+
+```{exercise,name='Mun 2.17.14'}
+In the finite complement topology on $\mathbb{R}$, to what point or points does the sequence $x_n = \frac{1}{n}$ converge?
+```
+```{r echo=FALSE}
+  knitr::include_graphics('figures/Exercises/Ex 2.17/ex-14.png') 
+```
+
+```{exercise,name='Mun 2.17.15'}
+Show the $T_1$ axiom is equivalent to the condition that for each pair of points of $X$, each has a neighborhood not containing the other.
+```
+
+```{r echo=FALSE}
+  knitr::include_graphics('figures/Exercises/Ex 2.17/ex-15-1.png') 
+```
+
+```{r echo=FALSE}
+  knitr::include_graphics('figures/Exercises/Ex 2.17/ex-15-2.png') 
+```
+
+```{exercise,}
+Consider the following five topologies on $\mathbb{R}$ given 
+
+\begin{eqnarray}
+\mathcal{T_1} &:=& \text{the standard topology},\\
+\mathcal{T_2} &:=& \text{the topology of  } \mathbb{R}_K ,\\
+\mathcal{T_3} &:=& \text{the finite complement topology,}\\
+\mathcal{T_4} &:=& \text{the upper limit topology, having all sets $(a, b]$ as basis},\\
+\mathcal{T_5} &:=& \text{the topology having all sets $(-\infty, a) = \{x | x < a\}$ as basis.}\\
+\end{eqnarray}
+
+(a) Determine the closure of the set $K = \left\{1/n | n \in \mathbb{Z}^+\right\}$ under each of these topologies.
+(b) Which of these topologies satisfy the Hausdorff axiom? the $T_1$ axiom?
+  
+
+```
+
+```{r echo=FALSE}
+  knitr::include_graphics('figures/Exercises/Ex 2.17/Notsure.png') 
+```
+
+As a summary
+
+|Topologies| $\overline{K}$| Is $T_2$ space ?| Is $T_1$ Space|
+|:---:|:---:|:---:|:---:|:---:|
+|$\mathcal{T_1}$|$K\cup\{0\}$|$\checkmark$|$\times$|
+|$\mathcal{T_2}$|$K$|$\checkmark$|$\checkmark$|
+|$\mathcal{T_2}$|${0}$|$\checkmark$|$\checkmark$|
+|$\mathcal{T_2}$|$K$|$\checkmark$|$\checkmark$|
+|$\mathcal{T_2}$|$[0,\infty)$|$\checkmark$|$\checkmark$|
+|$\mathcal{T_2}$|${0}$|$\checkmark$|$\checkmark$|
+
+
+```{exercise,name='Mun 2.17.17'}
+Consider the lower limit topology on $\mathbb{R}$ and the topology given by the basis $C$ of Exercise 8 of §13. Determine the closures of the intervals $A = (0, \sqrt{2})$ and $B = (\sqrt{2}, 3)$ in these two topologies.
+```
+
+
+```{r echo=FALSE}
+  knitr::include_graphics('figures/Exercises/Ex 2.17/Notsure.png') 
+```
+
+```{exercise,name='Mun 2.17.18'}
+Determine the closures of the following subsets of the ordered square:
+\begin{align}
+A &:= \left\{\frac{1}{n} \times 0 \mid n \in \mathbb{Z}^{+}\right\}, \\
+B &:= \left\{\left(1 - \frac{1}{n}\right) \times \frac{1}{2} \mid n \in \mathbb{Z}^{+}\right\}, \\
+C &:= \left\{x \times 0 \mid 0 < x < 1\right\}, \\
+D &:= \left\{x \times \frac{1}{2} \mid 0 < x < 1\right\}, \\
+E &:= \left\{\frac{1}{2} \times y \mid 0 < y < 1\right\}.
+\end{align}
+
 ```
