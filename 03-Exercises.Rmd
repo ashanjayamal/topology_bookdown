@@ -31,7 +31,7 @@ say about the corresponding subspace topologies on the subset $Y$ of $X$?
 ```
 **Solution**:
 ```{r echo=FALSE}
-  knitr::include_graphics('figures/Exercises/Ex 2.16/ex 2.jpg') 
+  knitr::include_graphics('figures/Exercises/Ex 2.16/ex-2.jpg') 
 ```
 
 ```{exercise,name='Mun 2.16.3'}
@@ -47,11 +47,11 @@ E &= \{ x \mid 0 < |x| < 1 \text{ and } \frac{1}{x} \notin \mathbb{Z}^+ \}
 
 **Solution**:
 ```{r echo=FALSE}
-  knitr::include_graphics('figures/Exercises/Ex 2.16/ex 3-1.jpg') 
+  knitr::include_graphics('figures/Exercises/Ex 2.16/ex-3-1.jpg') 
 ```
 
 ```{r echo=FALSE}
-  knitr::include_graphics('figures/Exercises/Ex 2.16/ex 3-2.jpg') 
+  knitr::include_graphics('figures/Exercises/Ex 2.16/ex-3-2.jpg') 
 ```
 
 ```{exercise}
@@ -457,3 +457,45 @@ E &:= \left\{\frac{1}{2} \times y \mid 0 < y < 1\right\}.
 \end{align}
 
 ```
+
+```{r echo=FALSE}
+  knitr::include_graphics('figures/Exercises/Ex 2.17/ex-18-1.png') 
+```
+```{r echo=FALSE}
+  knitr::include_graphics('figures/Exercises/Ex 2.17/ex-18-2.png') 
+```
+```{r echo=FALSE}
+  knitr::include_graphics('figures/Exercises/Ex 2.17/ex-18-3.png') 
+```
+
+```{r echo=FALSE}
+  knitr::include_graphics('figures/Exercises/Ex 2.17/ex-18-4.png') 
+```
+
+```{r echo=FALSE}
+  knitr::include_graphics('figures/Exercises/Ex 2.17/ex-18-5.png') 
+```
+
+```{r echo=FALSE}
+  knitr::include_graphics('figures/Exercises/Ex 2.17/ex-18-6.png') 
+```
+
+```{r echo=FALSE}
+  knitr::include_graphics('figures/Exercises/Ex 2.17/ex-18-7.png') 
+```
+
+```{r echo=FALSE}
+  knitr::include_graphics('figures/Exercises/Ex 2.17/ex-18-8.png') 
+```
+
+```{exercise,name='Mun 2.17.19'}
+If $A \subset X$, we define the boundary of $A$ by the equation
+\[\text{Bd} \, A = \overline{A} \cap (X \setminus A).\]
+
+(a) Show that $\text{Int} \, A$ and $\text{Bd} \, A$ are disjoint, and $\overline{A} = \text{Int} \, A \cup \text{Bd} \, A$.
+(b) Show that $\text{Bd} \, A = \emptyset \Leftrightarrow A$ is both open and closed.
+(c) Show that $U$ is open $\Leftrightarrow \text{Bd} \, U = \overline{U} \setminus U$.
+(d) If $U$ is open, is it true that $U = \text{Int}(\overline{U})$? Justify your answer.
+```
+
+

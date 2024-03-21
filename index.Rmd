@@ -308,7 +308,7 @@ Now let $[c,d)$ is element of basis of lower limit topology on $\mathbb{R}$. Now
 
 ```
 
-Note that basis element in lower limit toplogy is **not** open in the standard toplogy. But otherway around is very true. As an example, $$(1,2)=\bigcup_{n\in \mathbb{N}}[1+\frac{1}{n},2).$$ Clearly left hand side is open in lower limit toplogy by T2.
+Note that basis element in lower limit toplogy is **not** open in the standard toplogy. But otherway around is very true. As an example, $$(1,2)=\bigcup_{n\in \mathbb{N}}[1+\frac{1}{n},2).$$ Clearly left hand side is open in lower limit topology by T2.
 
 ```{corollary}
 The lower limit topology on $\mathbb{R}$ is not comparable upper limit topology on $\mathbb{R}$.
@@ -855,6 +855,12 @@ A subset of a topological space is closed if and only if it contains all its lim
 ```
 ```{proof} 
 The set $A$ is closed if and only if $A = \overline{A}$, and the latter holds if and only if $A^{\prime} \subset A$.
+```
+
+### Boundary Points
+```{definition}
+If $A \subset X$, we define the boundary of $A$ by the equation
+\[\text{Bd} \, A = \overline{A} \cap (X - A).\]
 ```
 
 ### Hausdorff Spaces
