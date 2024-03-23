@@ -13,8 +13,10 @@
 \contentsline {subsection}{\numberline {1.7.5}Hausdorff Spaces}{36}{subsection.1.7.5}%
 \contentsline {section}{\numberline {1.8}Continuous Functions}{40}{section.1.8}%
 \contentsline {subsection}{\numberline {1.8.1}Continuity of a Function}{40}{subsection.1.8.1}%
-\contentsline {chapter}{\numberline {2}Chapter 2 name}{41}{chapter.2}%
-\contentsline {chapter}{\numberline {3}Chapter 03 name}{43}{chapter.3}%
-\contentsline {chapter}{\numberline {4}Exercises}{45}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Section 16 in Munkress Book}{45}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Section 17 in Munkress Book}{63}{section.4.2}%
+\contentsline {chapter}{\numberline {2}Chapter 2 name}{43}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Chapter 03 name}{45}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Post After verify}{45}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Exercises}{47}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Section 13 in Munkrees book}{47}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Section 16 in Munkress Book}{56}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Section 17 in Munkress Book}{74}{section.4.3}%

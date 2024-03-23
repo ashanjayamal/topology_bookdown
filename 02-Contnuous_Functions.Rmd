@@ -1,3 +1,19 @@
 # Chapter 03 name
 
 Up to there is none.
+
+## Post After verify
+
+
+a. **Interior of a set is open in X:** The interior of a set $S$, denoted by $\text{int}(S)$, is defined as the union of all open sets contained in $S$. Since the union of open sets is open, $\text{int}(S)$ is open in $X$.
+
+a. **If $T$ is open in $X$ then $T \subseteq S$ if and only if $T \subseteq \text{int}(S)$:** If $T$ is an open set and $T \subseteq S$, then every point in $T$ is an interior point of $S$. Therefore, $T \subseteq \text{int}(S)$. Conversely, if $T \subseteq \text{int}(S)$, then $T$ is a subset of $S$.
+
+a. **Interior of $S$ is an open subset of $S$ when $S$ is given the subspace topology:** The interior of a set $S$, $\text{int}(S)$, is the union of all open sets contained in $S$. Therefore, $\text{int}(S)$ is an open subset of $S$.
+
+a. **$S$ is an open subset of $X$ if and only if $\text{int}(S) = S$:** If $S$ is open, then every point of $S$ is an interior point of $S$, so $\text{int}(S) = S$. Conversely, if $\text{int}(S) = S$, then $S$ is open because the interior of a set is always open.
+
+a. **Interior operator preserves/distributes over binary intersection:** The interior of the intersection of two sets $S$ and $T$, $\text{int}(S \cap T)$, is equal to the intersection of the interiors of $S$ and $T$, $\text{int}(S) \cap \text{int}(T)$. This is because the intersection of two open sets is open, and the interior of a set is the union of all open sets contained in it.
+
+a. **The interior operator does not distribute over unions:** The interior of the union of two sets $S$ and $T$, $\text{int}(S \cup T)$, is a superset of the union of the interiors of $S$ and $T$, $\text{int}(S) \cup \text{int}(T)$. This is because the union of two open sets is open, and the interior of a set is the union of all open sets contained in it. However, the equality might not hold in general. For example, if $X = \mathbb{R}$, $S = (-\infty, 0]$, and $T = (0, \infty)$, then $\text{int}(S) \cup \text{int}(T) = (-\infty, 0) \cup (0, \infty) = \mathbb{R} \setminus \{0\}$, which is a proper subset of $\text{int}(S \cup T) = \text{int}(\mathbb{R}) = \mathbb{R}$.
+
