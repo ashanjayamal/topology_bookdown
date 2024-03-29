@@ -135,13 +135,40 @@ Show that the topologies of $\mathbb{R}_l$ and $\mathbb{R}_K$ are not comparable
   knitr::include_graphics('figures/Exercises/Ex 2.13/ex-6-2.png') 
 ```
 
-```{exercise}
-Consider $s$
+```{exercise,name='Mun 2.13.7'}
+Consider the following topologies on $\mathbb{R}$:
+\begin{eqnarray}
+\mathcal{T}_1 &:=& \text{ the standard topology}\\
+\mathcal{T}_2 &:=& \text{ the topology of $\mathbb{R}_K$,}\\
+\mathcal{T}_3 &:=& \text{ the finite complement topology,}\\
+\mathcal{T}_4 &:=& \text{ the upper limit topology, having all sets $(a, b]$ as basis,}\\
+\mathcal{T}_5 &:=& \text{ the topology having all sets $(-\infty, a) = \{x | x < a\}$ as basis.}
+\end{eqnarray}
+
+Determine, for each of these topologies, which of the others it contains.
+
 ```
 
 
+```{exercise,name='Mun 2.13.8'}
+(a) Apply Lemma 13.2 to show that the countable collection
+\[ \mathcal{B} = \{(a, b) | a < b, a \text{ and } b \text{ rational}\} \]
+is a basis that generates the standard topology on $\mathbb{R}$.
+(b) Show that the collection
+\[ \mathcal{C} = \{[a, b) | a < b, a \text{ and } b \text{ rational}\} \]
+is a basis that generates a topology different from the lower limit topology on $\mathbb{R}$.
+\end{enumerate}
 
 
+```{r echo=FALSE}
+  knitr::include_graphics('figures/Exercises/Ex 2.13/ex-8-1.png') 
+```
+```{r echo=FALSE}
+  knitr::include_graphics('figures/Exercises/Ex 2.13/ex-8-2.png') 
+```
+```{r echo=FALSE}
+  knitr::include_graphics('figures/Exercises/Ex 2.13/ex-8-3.png') 
+```
 
 
 
@@ -185,7 +212,7 @@ Consider $s$
 ## Section 16 in Munkress Book
 
 ```{exercise,name='Mun 2.16.2' }
-Show that if $Y$ is a subspace of $X, and $A$ is a subset of $Y$ , then the topology $A$ inherits as a subspace of $Y$ is the same as the topology it inherits as a subspace of $X$.
+Show that if $Y$ is a subspace of $X$, and $A$ is a subset of $Y$ , then the topology $A$ inherits as a subspace of $Y$ is the same as the topology it inherits as a subspace of $X$.
 ```
 **Solution**: 
 Let's denote the topology on $X$ as $\mathcal{T}_X$, the topology on $Y$ as $\mathcal{T}_Y$, and the topology on $A$ as $\mathcal{T}_A$. 
@@ -743,3 +770,84 @@ Find the boundary and the interior of each of the following subsets of $\mathbb{
 (d) $D = \{(x, y) | x \text{ is rational}\}$
 (e) $E = \{(x, y) | 0 < x^2 - y^2 \leq 1\}$
 (f) $F = \{(x, y) | x \neq 0 \text{ and } y \leq \frac{1}{x}\}$
+
+
+
+## Section 18 in Munkress Book
+
+```{exercise,name='Mun 2.18.1'}
+Proove that the function $f:\mathbb{R}\to\mathbb{R}$, the $\epsilon-\delta$ defintion of continuty implies the open set definition.
+```
+```{r echo=FALSE}
+  knitr::include_graphics('figures/Exercises/Ex 2.18/ex-1.png') 
+```
+
+```{exercise,name='Mun 2.18.2'}
+Suppose that $f:X\to Y$ is continous. If $x$ is a limit point of sub set of $A$ of $X$, is it necessary true that $f(x)$ is a limit point of $f(A)$?
+```
+
+```{r echo=FALSE}
+  knitr::include_graphics('figures/Exercises/Ex 2.18/ex-2.png') 
+```
+
+```{exercise,name='Mun 2.18.3'}
+Let $X$ and $X'$ denote a single set in the two topologies $\mathcal{T}$ and $\mathcal{T}'$, respectively.
+Let $i : X' \rightarrow X$ be the identity function.
+\begin{enumerate}
+\item Show that $i$ is continuous $\Leftrightarrow$ $\mathcal{T}'$ is finer than $\mathcal{T}$.
+\item Show that $i$ is a homeomorphism $\Leftrightarrow$ $\mathcal{T}' = \mathcal{T}$.
+\end{enumerate}
+
+```
+
+```{r echo=FALSE}
+  knitr::include_graphics('figures/Exercises/Ex 2.18/ex-3-1.png') 
+```
+```{r echo=FALSE}
+  knitr::include_graphics('figures/Exercises/Ex 2.18/ex-3-2.png') 
+```
+
+```{exercise,name='Mun 2.18.4'}
+Given $x_0 \in X$ and $y_0 \in Y$, show that the maps $f : X \rightarrow X \times Y$ and $g : Y \rightarrow X \times Y$ defined by
+$f(x) = x \times y_0$ and $g(y) = x_0 \times y$
+are imbeddings.
+```
+```{r echo=FALSE}
+  knitr::include_graphics('figures/Exercises/Ex 2.18/ex-4-1.png') 
+```
+```{r echo=FALSE}
+  knitr::include_graphics('figures/Exercises/Ex 2.18/ex-4-2.png') 
+```
+```{r echo=FALSE}
+  knitr::include_graphics('figures/Exercises/Ex 2.18/ex-4-3.png') 
+```
+
+```{exercise,name='Mun 2.18.5'}
+Show that the subspace $(a, b)$ of $\mathbb{R}$ is homeomorphic with $(0, 1)$ and the subspace $[a, b]$ of $\mathbb{R}$ is homeomorphic with $[0, 1]$.
+```
+```{r echo=FALSE}
+  knitr::include_graphics('figures/Exercises/Ex 2.18/ex-5-1.png') 
+```
+```{r echo=FALSE}
+  knitr::include_graphics('figures/Exercises/Ex 2.18/ex-5-2.png') 
+```
+```{r echo=FALSE}
+  knitr::include_graphics('figures/Exercises/Ex 2.18/ex-5-3.png') 
+```
+```{r echo=FALSE}
+  knitr::include_graphics('figures/Exercises/Ex 2.18/ex-5-4.png') 
+```
+
+```{exercise,name='Mun 2.18.6'}
+Find a function $f : \mathbb{R} \to \mathbb{R}$ that is continuous at precisely one point.
+```
+
+```{r echo=FALSE}
+  knitr::include_graphics('figures/Exercises/Ex 2.18/ex-6-1.png') 
+```
+```{r echo=FALSE}
+  knitr::include_graphics('figures/Exercises/Ex 2.18/ex-6-2.png') 
+```
+```{r echo=FALSE}
+  knitr::include_graphics('figures/Exercises/Ex 2.18/ex-6-3.png') 
+```

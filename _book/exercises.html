@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 4 Exercises | Topology</title>
   <meta name="description" content="This my attempt to do the topolgy." />
-  <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.38 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 4 Exercises | Topology" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Ashan Jayamal" />
 
 
-<meta name="date" content="2024-03-23" />
+<meta name="date" content="2024-03-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -107,6 +107,7 @@
 <li class="chapter" data-level="4.1" data-path="exercises.html"><a href="exercises.html#section-13-in-munkrees-book"><i class="fa fa-check"></i><b>4.1</b> Section 13 in Munkrees book</a></li>
 <li class="chapter" data-level="4.2" data-path="exercises.html"><a href="exercises.html#section-16-in-munkress-book"><i class="fa fa-check"></i><b>4.2</b> Section 16 in Munkress Book</a></li>
 <li class="chapter" data-level="4.3" data-path="exercises.html"><a href="exercises.html#section-17-in-munkress-book"><i class="fa fa-check"></i><b>4.3</b> Section 17 in Munkress Book</a></li>
+<li class="chapter" data-level="4.4" data-path="exercises.html"><a href="exercises.html#section-18-in-munkress-book"><i class="fa fa-check"></i><b>4.4</b> Section 18 in Munkress Book</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://ashanjayamal.github.io/academicpages/" target="blank">Property of Ashan</a></li>
@@ -237,13 +238,36 @@ c)</p>
 <p><img src="figures/Exercises/Ex%202.13/ex-6-1.png" /><!-- -->
 <img src="figures/Exercises/Ex%202.13/ex-6-2.png" /><!-- --></p>
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-112" class="exercise"><strong>Exercise 4.7  </strong></span>Consider <span class="math inline">\(s\)</span></p>
+<p><span id="exr:unnamed-chunk-112" class="exercise"><strong>Exercise 4.7  (Mun 2.13.7) </strong></span>Consider the following topologies on <span class="math inline">\(\mathbb{R}\)</span>:
+<span class="math display">\[\begin{eqnarray}
+\mathcal{T}_1 &amp;:=&amp; \text{ the standard topology}\\
+\mathcal{T}_2 &amp;:=&amp; \text{ the topology of $\mathbb{R}_K$,}\\
+\mathcal{T}_3 &amp;:=&amp; \text{ the finite complement topology,}\\
+\mathcal{T}_4 &amp;:=&amp; \text{ the upper limit topology, having all sets $(a, b]$ as basis,}\\
+\mathcal{T}_5 &amp;:=&amp; \text{ the topology having all sets $(-\infty, a) = \{x | x &lt; a\}$ as basis.}
+\end{eqnarray}\]</span></p>
+<p>Determine, for each of these topologies, which of the others it contains.</p>
 </div>
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-113" class="exercise"><strong>Exercise 4.8  (Mun 2.13.8) </strong></span></p>
+<ol style="list-style-type: lower-alpha">
+<li>Apply Lemma 13.2 to show that the countable collection
+<span class="math display">\[ \mathcal{B} = \{(a, b) | a &lt; b, a \text{ and } b \text{ rational}\} \]</span>
+is a basis that generates the standard topology on <span class="math inline">\(\mathbb{R}\)</span>.</li>
+<li>Show that the collection
+<span class="math display">\[ \mathcal{C} = \{[a, b) | a &lt; b, a \text{ and } b \text{ rational}\} \]</span>
+is a basis that generates a topology different from the lower limit topology on <span class="math inline">\(\mathbb{R}\)</span>.
+\end{enumerate}</li>
+</ol>
+</div>
+<p><img src="figures/Exercises/Ex%202.13/ex-8-1.png" /><!-- -->
+<img src="figures/Exercises/Ex%202.13/ex-8-2.png" /><!-- -->
+<img src="figures/Exercises/Ex%202.13/ex-8-3.png" /><!-- --></p>
 </div>
 <div id="section-16-in-munkress-book" class="section level2 hasAnchor" number="4.2">
 <h2><span class="header-section-number">4.2</span> Section 16 in Munkress Book<a href="exercises.html#section-16-in-munkress-book" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-113" class="exercise"><strong>Exercise 4.8  (Mun 2.16.2) </strong></span>Show that if <span class="math inline">\(Y\)</span> is a subspace of $X, and <span class="math inline">\(A\)</span> is a subset of <span class="math inline">\(Y\)</span> , then the topology <span class="math inline">\(A\)</span> inherits as a subspace of <span class="math inline">\(Y\)</span> is the same as the topology it inherits as a subspace of <span class="math inline">\(X\)</span>.</p>
+<p><span id="exr:unnamed-chunk-117" class="exercise"><strong>Exercise 4.9  (Mun 2.16.2) </strong></span>Show that if <span class="math inline">\(Y\)</span> is a subspace of <span class="math inline">\(X\)</span>, and <span class="math inline">\(A\)</span> is a subset of <span class="math inline">\(Y\)</span> , then the topology <span class="math inline">\(A\)</span> inherits as a subspace of <span class="math inline">\(Y\)</span> is the same as the topology it inherits as a subspace of <span class="math inline">\(X\)</span>.</p>
 </div>
 <p><strong>Solution</strong>:
 Let’s denote the topology on <span class="math inline">\(X\)</span> as <span class="math inline">\(\mathcal{T}_X\)</span>, the topology on <span class="math inline">\(Y\)</span> as <span class="math inline">\(\mathcal{T}_Y\)</span>, and the topology on <span class="math inline">\(A\)</span> as <span class="math inline">\(\mathcal{T}_A\)</span>.</p>
@@ -255,13 +279,13 @@ Let’s denote the topology on <span class="math inline">\(X\)</span> as <span c
 <p><img src="figures/Exercises/Ex%202.16/ex1-1.png" /><!-- --></p>
 <p><img src="figures/Exercises/Ex%202.16/ex1-2.png" /><!-- --></p>
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-116" class="exercise"><strong>Exercise 4.9  (Mun 2.16.2) </strong></span>If <span class="math inline">\(\mathcal{T}\)</span> and <span class="math inline">\(\mathcal{T}\)</span> are topologies on <span class="math inline">\(X\)</span> and <span class="math inline">\(\mathcal{T}\)</span> is strictly finer than <span class="math inline">\(\mathcal{T}\)</span> , what can you
+<p><span id="exr:unnamed-chunk-120" class="exercise"><strong>Exercise 4.10  (Mun 2.16.2) </strong></span>If <span class="math inline">\(\mathcal{T}\)</span> and <span class="math inline">\(\mathcal{T}\)</span> are topologies on <span class="math inline">\(X\)</span> and <span class="math inline">\(\mathcal{T}\)</span> is strictly finer than <span class="math inline">\(\mathcal{T}\)</span> , what can you
 say about the corresponding subspace topologies on the subset <span class="math inline">\(Y\)</span> of <span class="math inline">\(X\)</span>?</p>
 </div>
 <p><strong>Solution</strong>:
 <img src="figures/Exercises/Ex%202.16/ex-2.jpg" /><!-- --></p>
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-118" class="exercise"><strong>Exercise 4.10  (Mun 2.16.3) </strong></span>Consider the set <span class="math inline">\(Y = [−1, 1]\)</span> as a subspace of <span class="math inline">\(\mathbb{R}\)</span>. Which of the following sets are open in <span class="math inline">\(Y\)</span> ? Which are open in <span class="math inline">\(\mathbb{R}\)</span>?
+<p><span id="exr:unnamed-chunk-122" class="exercise"><strong>Exercise 4.11  (Mun 2.16.3) </strong></span>Consider the set <span class="math inline">\(Y = [−1, 1]\)</span> as a subspace of <span class="math inline">\(\mathbb{R}\)</span>. Which of the following sets are open in <span class="math inline">\(Y\)</span> ? Which are open in <span class="math inline">\(\mathbb{R}\)</span>?
 <span class="math display">\[\begin{align}
 A &amp;= \{ x \mid \frac{1}{2} &lt; |x| &lt; 1 \}\\
 B &amp;= \{ x \mid \frac{1}{2} &lt; |x| \leq 1 \} \\
@@ -274,11 +298,11 @@ E &amp;= \{ x \mid 0 &lt; |x| &lt; 1 \text{ and } \frac{1}{x} \notin \mathbb{Z}^
 <img src="figures/Exercises/Ex%202.16/ex-3-1.jpg" /><!-- --></p>
 <p><img src="figures/Exercises/Ex%202.16/ex-3-2.jpg" /><!-- --></p>
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-121" class="exercise"><strong>Exercise 4.11  </strong></span>A map <span class="math inline">\(f : X \to Y\)</span>. We say that <span class="math inline">\(f\)</span> is an <strong>open map</strong> if, for every open set <span class="math inline">\(U\)</span> in <span class="math inline">\(X\)</span>, the set <span class="math inline">\(f(U)\)</span> is open in <span class="math inline">\(Y\)</span>. Show that the projections <span class="math inline">\(\pi_1 : X \times Y \to X\)</span> and <span class="math inline">\(\pi_2 : X \times Y \to Y\)</span> are open maps.
+<p><span id="exr:unnamed-chunk-125" class="exercise"><strong>Exercise 4.12  </strong></span>A map <span class="math inline">\(f : X \to Y\)</span>. We say that <span class="math inline">\(f\)</span> is an <strong>open map</strong> if, for every open set <span class="math inline">\(U\)</span> in <span class="math inline">\(X\)</span>, the set <span class="math inline">\(f(U)\)</span> is open in <span class="math inline">\(Y\)</span>. Show that the projections <span class="math inline">\(\pi_1 : X \times Y \to X\)</span> and <span class="math inline">\(\pi_2 : X \times Y \to Y\)</span> are open maps.
 ``</p>
 </div>
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-122" class="exercise"><strong>Exercise 4.12  </strong></span>Let <span class="math inline">\(X\)</span> and <span class="math inline">\(X^\prime\)</span> denote a single set in the topologies <span class="math inline">\(\mathcal{T}\)</span> and <span class="math inline">\(\mathcal{T}^\prime\)</span> , respectively; let <span class="math inline">\(Y\)</span>
+<p><span id="exr:unnamed-chunk-126" class="exercise"><strong>Exercise 4.13  </strong></span>Let <span class="math inline">\(X\)</span> and <span class="math inline">\(X^\prime\)</span> denote a single set in the topologies <span class="math inline">\(\mathcal{T}\)</span> and <span class="math inline">\(\mathcal{T}^\prime\)</span> , respectively; let <span class="math inline">\(Y\)</span>
 and <span class="math inline">\(Y&#39;\)</span> denote a single set in the topologies <span class="math inline">\(\mathcal{U}\)</span> and <span class="math inline">\(\mathcal{U}^\prime\)</span>, respectively. Assume these sets are nonempty.</p>
 <ol style="list-style-type: lower-alpha">
 <li>Show that if <span class="math inline">\(\mathcal{T}&#39; \supset \mathcal{T}\)</span> and <span class="math inline">\(\mathcal{U}&#39;\supset \mathcal{U}\)</span>, then the product topology on <span class="math inline">\(X&#39;\times Y&#39;\)</span> is
@@ -287,18 +311,18 @@ finer than the product topology on <span class="math inline">\(X \times Y\)</spa
 </ol>
 </div>
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-123" class="exercise"><strong>Exercise 4.13  (Mun 2.16.7) </strong></span>Show that the countable collection
+<p><span id="exr:unnamed-chunk-127" class="exercise"><strong>Exercise 4.14  (Mun 2.16.7) </strong></span>Show that the countable collection
 <span class="math display">\[\{(a, b) \times (c, d) | a &lt; b \text{ and } c &lt; d, \text{ and } a, b, c, d \text{ are rational}\}\]</span>
 is a basis for <span class="math inline">\(\mathbb{R}^2\)</span>.”</p>
 </div>
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-124" class="exercise"><strong>Exercise 4.14  </strong></span>Let <span class="math inline">\(X\)</span> be an ordered set. If <span class="math inline">\(Y\)</span> is a proper subset of <span class="math inline">\(X\)</span> that is convex in <span class="math inline">\(X\)</span>, does it follow that <span class="math inline">\(Y\)</span> is an interval or a ray in <span class="math inline">\(X\)</span>?</p>
+<p><span id="exr:unnamed-chunk-128" class="exercise"><strong>Exercise 4.15  </strong></span>Let <span class="math inline">\(X\)</span> be an ordered set. If <span class="math inline">\(Y\)</span> is a proper subset of <span class="math inline">\(X\)</span> that is convex in <span class="math inline">\(X\)</span>, does it follow that <span class="math inline">\(Y\)</span> is an interval or a ray in <span class="math inline">\(X\)</span>?</p>
 </div>
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-125" class="exercise"><strong>Exercise 4.15  </strong></span>If <span class="math inline">\(L\)</span> is a straight line in the plane, describe the topology <span class="math inline">\(L\)</span> inherits as a subspace of <span class="math inline">\(\mathbb{R}_l \times \mathbb{R}\)</span> and as a subspace of <span class="math inline">\(\mathbb{R}_l \times \mathbb{R}_l\)</span>. In each case it is a familiar topology.</p>
+<p><span id="exr:unnamed-chunk-129" class="exercise"><strong>Exercise 4.16  </strong></span>If <span class="math inline">\(L\)</span> is a straight line in the plane, describe the topology <span class="math inline">\(L\)</span> inherits as a subspace of <span class="math inline">\(\mathbb{R}_l \times \mathbb{R}\)</span> and as a subspace of <span class="math inline">\(\mathbb{R}_l \times \mathbb{R}_l\)</span>. In each case it is a familiar topology.</p>
 </div>
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-126" class="exercise"><strong>Exercise 4.16  </strong></span>Show that the dictionary order topology on the set <span class="math inline">\(\mathbb{R} \times \mathbb{R}\)</span> is the same as the product topology <span class="math inline">\(\mathbb{R}_d \times \mathbb{R}\)</span>, where <span class="math inline">\(\mathbb{R}_d\)</span> denotes <span class="math inline">\(\mathbb{R}\)</span> in the discrete topology. Compare this topology with the standard topology on <span class="math inline">\(\mathbb{R}^2\)</span>.</p>
+<p><span id="exr:unnamed-chunk-130" class="exercise"><strong>Exercise 4.17  </strong></span>Show that the dictionary order topology on the set <span class="math inline">\(\mathbb{R} \times \mathbb{R}\)</span> is the same as the product topology <span class="math inline">\(\mathbb{R}_d \times \mathbb{R}\)</span>, where <span class="math inline">\(\mathbb{R}_d\)</span> denotes <span class="math inline">\(\mathbb{R}\)</span> in the discrete topology. Compare this topology with the standard topology on <span class="math inline">\(\mathbb{R}^2\)</span>.</p>
 </div>
 <p><span class="math display">\[\mathbb{R}^2_{dictionary}:=\mathbb{R}_{discrete }\times \mathbb{R}_{standard}\]</span></p>
 <div class="proof">
@@ -359,7 +383,7 @@ Figure 4.3: <span class="math inline">\(~\)</span>
 <div id="section-17-in-munkress-book" class="section level2 hasAnchor" number="4.3">
 <h2><span class="header-section-number">4.3</span> Section 17 in Munkress Book<a href="exercises.html#section-17-in-munkress-book" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-128" class="exercise"><strong>Exercise 4.17  (Mun 2.17.1) </strong></span>Let <span class="math inline">\(\mathcal{C}\)</span> be a collection of subsets of the set <span class="math inline">\(X\)</span>. Suppose that $$and <span class="math inline">\(X\)</span> are in <span class="math inline">\(\mathcal{C}\)</span>, and that finite unions and arbitrary intersections of elements of <span class="math inline">\(\mathcal{C}\)</span> are in <span class="math inline">\(\mathcal{C}\)</span>. Show that the collection
+<p><span id="exr:unnamed-chunk-132" class="exercise"><strong>Exercise 4.18  (Mun 2.17.1) </strong></span>Let <span class="math inline">\(\mathcal{C}\)</span> be a collection of subsets of the set <span class="math inline">\(X\)</span>. Suppose that $$and <span class="math inline">\(X\)</span> are in <span class="math inline">\(\mathcal{C}\)</span>, and that finite unions and arbitrary intersections of elements of <span class="math inline">\(\mathcal{C}\)</span> are in <span class="math inline">\(\mathcal{C}\)</span>. Show that the collection
 <span class="math display">\[\mathcal{T} = \{X \setminus C  | C\in  \mathcal{C}\}\]</span>
 is a topology on X.</p>
 </div>
@@ -384,14 +408,14 @@ Therefore <span class="math inline">\(\mathcal{T}\)</span> is a topology on <spa
 </ul>
 </div>
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-130" class="exercise"><strong>Exercise 4.18  (Mun 2.17.2) </strong></span>Show that if <span class="math inline">\(A\)</span> is closed in <span class="math inline">\(Y\)</span> and <span class="math inline">\(Y\)</span> is closed in <span class="math inline">\(X\)</span>, then <span class="math inline">\(A\)</span> is closed in <span class="math inline">\(X\)</span>.</p>
+<p><span id="exr:unnamed-chunk-134" class="exercise"><strong>Exercise 4.19  (Mun 2.17.2) </strong></span>Show that if <span class="math inline">\(A\)</span> is closed in <span class="math inline">\(Y\)</span> and <span class="math inline">\(Y\)</span> is closed in <span class="math inline">\(X\)</span>, then <span class="math inline">\(A\)</span> is closed in <span class="math inline">\(X\)</span>.</p>
 </div>
 <div class="proof">
 <p><span id="unlabeled-div-39" class="proof"><em>Proof</em>. </span>Since <span class="math inline">\(Y\)</span> is subspace in <span class="math inline">\(X\)</span> and <span class="math inline">\(A\)</span> is closed in <span class="math inline">\(Y\)</span>, by theorm <a href="index.html#thm:qw">1.3</a>, then there exist closed set <span class="math inline">\(C\)</span> in <span class="math inline">\(X\)</span> such that <span class="math display">\[A=Y\cap C\]</span>
 Since, <span class="math inline">\(Y\)</span> is closed in <span class="math inline">\(X\)</span> and <span class="math inline">\(X\)</span> is toplogical space, <span class="math inline">\(A=Y\cap C\)</span> is closed in <span class="math inline">\(X\)</span>.</p>
 </div>
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-132" class="exercise"><strong>Exercise 4.19  (Mun 2.17.3) </strong></span>Show that if <span class="math inline">\(A\)</span> is closed in <span class="math inline">\(X\)</span> and <span class="math inline">\(B\)</span> is closed in <span class="math inline">\(Y\)</span> , then <span class="math inline">\(A\times B\)</span> is closed in <span class="math inline">\(X\times Y\)</span></p>
+<p><span id="exr:unnamed-chunk-136" class="exercise"><strong>Exercise 4.20  (Mun 2.17.3) </strong></span>Show that if <span class="math inline">\(A\)</span> is closed in <span class="math inline">\(X\)</span> and <span class="math inline">\(B\)</span> is closed in <span class="math inline">\(Y\)</span> , then <span class="math inline">\(A\times B\)</span> is closed in <span class="math inline">\(X\times Y\)</span></p>
 </div>
 <div class="proof">
 <p><span id="unlabeled-div-40" class="proof"><em>Proof</em>. </span>Suppose that <span class="math inline">\(A\)</span> is closed in <span class="math inline">\(X\)</span> and <span class="math inline">\(B\)</span> is closed in <span class="math inline">\(Y\)</span>. Then <span class="math inline">\(X\setminus A\)</span> is open in <span class="math inline">\(X\)</span> and <span class="math inline">\(X\setminus B\)</span> is open in <span class="math inline">\(Y\)</span>.</p>
@@ -408,7 +432,7 @@ So, now we are done proof of the claim.
 Thus, <span class="math inline">\((X\times Y) \setminus (A\times B)\)</span> is union of open sets and hence, <span class="math inline">\((X\times Y) \setminus (A\times B)\)</span> is open in <span class="math inline">\(X \times Y\)</span>. Thus, <span class="math inline">\((A\times B)\)</span> is closed in <span class="math inline">\(X\times Y\)</span>.</p>
 </div>
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-134" class="exercise"><strong>Exercise 4.20  (Mun 2.17.4) </strong></span>Show that if <span class="math inline">\(U\)</span> is open in <span class="math inline">\(X\)</span> and <span class="math inline">\(A\)</span> is closed in <span class="math inline">\(X\)</span>, then <span class="math inline">\(U \setminus A\)</span> is open in <span class="math inline">\(X\)</span>, and <span class="math inline">\(A \setminus U\)</span> is closed in <span class="math inline">\(X\)</span>.</p>
+<p><span id="exr:unnamed-chunk-138" class="exercise"><strong>Exercise 4.21  (Mun 2.17.4) </strong></span>Show that if <span class="math inline">\(U\)</span> is open in <span class="math inline">\(X\)</span> and <span class="math inline">\(A\)</span> is closed in <span class="math inline">\(X\)</span>, then <span class="math inline">\(U \setminus A\)</span> is open in <span class="math inline">\(X\)</span>, and <span class="math inline">\(A \setminus U\)</span> is closed in <span class="math inline">\(X\)</span>.</p>
 </div>
 <div class="proof">
 <p><span id="unlabeled-div-41" class="proof"><em>Proof</em>. </span>Suppose that <span class="math inline">\(U\)</span> is open in <span class="math inline">\(X\)</span> and <span class="math inline">\(A\)</span> is closed in <span class="math inline">\(X\)</span>.</p>
@@ -425,7 +449,7 @@ Similar to proof of claim 1 we can prove this claim.</p>
 <p>Since, <span class="math inline">\(U\)</span> is open in <span class="math inline">\(X\)</span>, <span class="math inline">\(X\setminus U\)</span> is closed in <span class="math inline">\(X\)</span>. Thus, <span class="math inline">\((A\setminus U)=A\cap (X\setminus U)\)</span> is closed in <span class="math inline">\(X\)</span>.</p>
 </div>
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-136" class="exercise"><strong>Exercise 4.21  (Mun 2.17.5) </strong></span>Let <span class="math inline">\(X\)</span> be an ordered set in the order topology. Show that <span class="math inline">\(\overline{(a, b)} \subseteq [a, b]\)</span>. Under what conditions does equality hold?</p>
+<p><span id="exr:unnamed-chunk-140" class="exercise"><strong>Exercise 4.22  (Mun 2.17.5) </strong></span>Let <span class="math inline">\(X\)</span> be an ordered set in the order topology. Show that <span class="math inline">\(\overline{(a, b)} \subseteq [a, b]\)</span>. Under what conditions does equality hold?</p>
 </div>
 <div class="proof">
 <p><span id="unlabeled-div-42" class="proof"><em>Proof</em>. </span><em>(Proof of <span class="math inline">\(\overline{(a, b)} \subseteq [a, b]\)</span>)</em></p>
@@ -449,7 +473,7 @@ has an immediate predecessor.</p>
 <li>For example, in the order topology on <span class="math inline">\(\mathbb{Z}\)</span>, <span class="math display">\[\overline{(1, 4)} = [2, 3] \subsetneq [1, 4].\]</span></li>
 </ul>
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-138" class="exercise"><strong>Exercise 4.22  (Mun 2.17.6) </strong></span>Let <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, and <span class="math inline">\(A_{\alpha}\)</span> denote subsets of a space <span class="math inline">\(X\)</span>. Prove the following:</p>
+<p><span id="exr:unnamed-chunk-142" class="exercise"><strong>Exercise 4.23  (Mun 2.17.6) </strong></span>Let <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, and <span class="math inline">\(A_{\alpha}\)</span> denote subsets of a space <span class="math inline">\(X\)</span>. Prove the following:</p>
 <ol style="list-style-type: lower-alpha">
 <li>If <span class="math inline">\(A \subset B\)</span>, then <span class="math inline">\(\overline{A} \subset \overline{B}\)</span>.</li>
 <li><span class="math inline">\(\overline{A \cup B} = \overline{\overline{A}} \cup \overline{\overline{B}}\)</span>.</li>
@@ -483,13 +507,13 @@ Consider <span class="math inline">\(\mathbb{R}\)</span> with the standard topol
 </ul>
 </div>
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-140" class="exercise"><strong>Exercise 4.23  (Mun 2.17.7) </strong></span>Criticize the following “proof” that <span class="math inline">\(\overline{\cup A_\alpha} \subset \cup \overline{A_\alpha}\)</span>:<br />
+<p><span id="exr:unnamed-chunk-144" class="exercise"><strong>Exercise 4.24  (Mun 2.17.7) </strong></span>Criticize the following “proof” that <span class="math inline">\(\overline{\cup A_\alpha} \subset \cup \overline{A_\alpha}\)</span>:<br />
 if <span class="math inline">\(\{A_\alpha\}\)</span> is a collection of sets in <span class="math inline">\(X\)</span> and if <span class="math inline">\(x \in \overline{\cup A_\alpha}\)</span>, then every neighborhood <span class="math inline">\(U\)</span> of <span class="math inline">\(x\)</span> intersects <span class="math inline">\(\cup A_\alpha\)</span>.Thus <span class="math inline">\(U\)</span> must intersect some <span class="math inline">\(A_\alpha\)</span>, so that <span class="math inline">\(x\)</span> must belong to the closure of some <span class="math inline">\(A_\alpha\)</span>. Therefore, <span class="math inline">\(x \in \cup \overline{A_\alpha}\)</span>.</p>
 </div>
 <p><strong>Solution</strong>:
 If <span class="math inline">\(\{A_\alpha\}\)</span> is a collection of sets in <span class="math inline">\(X\)</span> and if <span class="math inline">\(x \in \overline{\cup A_\alpha}\)</span>, then every neighborhood <span class="math inline">\(U\)</span> of <span class="math inline">\(x\)</span> intersects <span class="math inline">\(\cup A_\alpha\)</span>.Thus <span class="math inline">\(U\)</span> must intersect some <span class="math inline">\(A_\alpha\)</span>. But this <span class="math inline">\(A_{\alpha}\)</span> may be distinct for different neighbourhoods, so not necessarily every neighbourhood <span class="math inline">\(U\)</span> of <span class="math inline">\(A_{\alpha}\)</span> intersects the same <span class="math inline">\(A_{\alpha}\)</span>. Hence we cannot conclude that <span class="math inline">\(x\)</span> must belong to the closure of some fixed <span class="math inline">\(A_{\alpha}\)</span>.</p>
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-141" class="exercise"><strong>Exercise 4.24  (Mun2.17.8) </strong></span>Let <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, and <span class="math inline">\(A_{\alpha}\)</span> denote subsets of a space <span class="math inline">\(X\)</span>. Determine whether the following equations hold; if an equality fails, determine whether one of the inclusions <span class="math inline">\(\supset\)</span> or <span class="math inline">\(\subset\)</span> holds.
+<p><span id="exr:unnamed-chunk-145" class="exercise"><strong>Exercise 4.25  (Mun2.17.8) </strong></span>Let <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, and <span class="math inline">\(A_{\alpha}\)</span> denote subsets of a space <span class="math inline">\(X\)</span>. Determine whether the following equations hold; if an equality fails, determine whether one of the inclusions <span class="math inline">\(\supset\)</span> or <span class="math inline">\(\subset\)</span> holds.
 (a) <span class="math inline">\(A \cap B = \overline{A} \cap \overline{B}\)</span>.
 (b) <span class="math inline">\(\bigcup A_{\alpha} = \bigcup \overline{A_{\alpha}}\)</span>.
 (c) <span class="math inline">\(A - B = \overline{A} - B\)</span>.</p>
@@ -503,37 +527,37 @@ If <span class="math inline">\(\{A_\alpha\}\)</span> is a collection of sets in 
 <img src="figures/Exercises/Ex%202.17/ex-8-3.png" /><!-- -->
 <img src="figures/Exercises/Ex%202.17/ex-8-4.png" /><!-- --></p>
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-146" class="exercise"><strong>Exercise 4.25  (Mun 2.17.9) </strong></span>Let <span class="math inline">\(A \subset X\)</span> and <span class="math inline">\(B \subset Y\)</span>. Show that in the space <span class="math inline">\(X \times Y\)</span>,
+<p><span id="exr:unnamed-chunk-150" class="exercise"><strong>Exercise 4.26  (Mun 2.17.9) </strong></span>Let <span class="math inline">\(A \subset X\)</span> and <span class="math inline">\(B \subset Y\)</span>. Show that in the space <span class="math inline">\(X \times Y\)</span>,
 <span class="math display">\[\overline{A \times B} = \overline{A} \times \overline{B}\]</span>.</p>
 </div>
 <p><img src="figures/Exercises/Ex%202.17/ex-9.png" /><!-- --></p>
 <div class="exercise">
-<p><span id="exr:Hausdorff1" class="exercise"><strong>Exercise 4.26  (Mun 2.17.10) </strong></span>Show that every order topology is Hausdorff.</p>
+<p><span id="exr:Hausdorff1" class="exercise"><strong>Exercise 4.27  (Mun 2.17.10) </strong></span>Show that every order topology is Hausdorff.</p>
 </div>
 <p><img src="figures/Exercises/Ex%202.17/ex-10.png" /><!-- --></p>
 <div class="exercise">
-<p><span id="exr:Hausdorff2" class="exercise"><strong>Exercise 4.27  (Mun 2.17.11) </strong></span>Show that the product of two Hausdorff spaces is Hausdorff.</p>
+<p><span id="exr:Hausdorff2" class="exercise"><strong>Exercise 4.28  (Mun 2.17.11) </strong></span>Show that the product of two Hausdorff spaces is Hausdorff.</p>
 </div>
 <p><img src="figures/Exercises/Ex%202.17/ex-11.png" /><!-- --></p>
 <div class="exercise">
-<p><span id="exr:Hausdorff3" class="exercise"><strong>Exercise 4.28  (Mun 2.17.12) </strong></span>Show that a subspace of a Hausdorff space is Hausdorff.</p>
+<p><span id="exr:Hausdorff3" class="exercise"><strong>Exercise 4.29  (Mun 2.17.12) </strong></span>Show that a subspace of a Hausdorff space is Hausdorff.</p>
 </div>
 <p><img src="figures/Exercises/Ex%202.17/ex-12.png" /><!-- --></p>
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-151" class="exercise"><strong>Exercise 4.29  (Mun 2.17.13) </strong></span>Show that <span class="math inline">\(X\)</span> is Hausdorff if and only if the diagonal <span class="math inline">\(\Delta = \{x\times x | x \in X\}\)</span> is closed in <span class="math inline">\(X \times X\)</span>.</p>
+<p><span id="exr:unnamed-chunk-155" class="exercise"><strong>Exercise 4.30  (Mun 2.17.13) </strong></span>Show that <span class="math inline">\(X\)</span> is Hausdorff if and only if the diagonal <span class="math inline">\(\Delta = \{x\times x | x \in X\}\)</span> is closed in <span class="math inline">\(X \times X\)</span>.</p>
 </div>
 <p><img src="figures/Exercises/Ex%202.17/ex-13.png" /><!-- --></p>
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-153" class="exercise"><strong>Exercise 4.30  (Mun 2.17.14) </strong></span>In the finite complement topology on <span class="math inline">\(\mathbb{R}\)</span>, to what point or points does the sequence <span class="math inline">\(x_n = \frac{1}{n}\)</span> converge?</p>
+<p><span id="exr:unnamed-chunk-157" class="exercise"><strong>Exercise 4.31  (Mun 2.17.14) </strong></span>In the finite complement topology on <span class="math inline">\(\mathbb{R}\)</span>, to what point or points does the sequence <span class="math inline">\(x_n = \frac{1}{n}\)</span> converge?</p>
 </div>
 <p><img src="figures/Exercises/Ex%202.17/ex-14.png" /><!-- --></p>
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-155" class="exercise"><strong>Exercise 4.31  (Mun 2.17.15) </strong></span>Show the <span class="math inline">\(T_1\)</span> axiom is equivalent to the condition that for each pair of points of <span class="math inline">\(X\)</span>, each has a neighborhood not containing the other.</p>
+<p><span id="exr:unnamed-chunk-159" class="exercise"><strong>Exercise 4.32  (Mun 2.17.15) </strong></span>Show the <span class="math inline">\(T_1\)</span> axiom is equivalent to the condition that for each pair of points of <span class="math inline">\(X\)</span>, each has a neighborhood not containing the other.</p>
 </div>
 <p><img src="figures/Exercises/Ex%202.17/ex-15-1.png" /><!-- --></p>
 <p><img src="figures/Exercises/Ex%202.17/ex-15-2.png" /><!-- --></p>
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-158" class="exercise"><strong>Exercise 4.32  </strong></span>Consider the following five topologies on <span class="math inline">\(\mathbb{R}\)</span> given</p>
+<p><span id="exr:unnamed-chunk-162" class="exercise"><strong>Exercise 4.33  </strong></span>Consider the following five topologies on <span class="math inline">\(\mathbb{R}\)</span> given</p>
 <p><span class="math display">\[\begin{eqnarray}
 \mathcal{T_1} &amp;:=&amp; \text{the standard topology},\\
 \mathcal{T_2} &amp;:=&amp; \text{the topology of  } \mathbb{R}_K ,\\
@@ -604,11 +628,11 @@ If <span class="math inline">\(\{A_\alpha\}\)</span> is a collection of sets in 
 </tbody>
 </table>
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-160" class="exercise"><strong>Exercise 4.33  (Mun 2.17.17) </strong></span>Consider the lower limit topology on <span class="math inline">\(\mathbb{R}\)</span> and the topology given by the basis <span class="math inline">\(C\)</span> of Exercise 8 of §13. Determine the closures of the intervals <span class="math inline">\(A = (0, \sqrt{2})\)</span> and <span class="math inline">\(B = (\sqrt{2}, 3)\)</span> in these two topologies.</p>
+<p><span id="exr:unnamed-chunk-164" class="exercise"><strong>Exercise 4.34  (Mun 2.17.17) </strong></span>Consider the lower limit topology on <span class="math inline">\(\mathbb{R}\)</span> and the topology given by the basis <span class="math inline">\(C\)</span> of Exercise 8 of §13. Determine the closures of the intervals <span class="math inline">\(A = (0, \sqrt{2})\)</span> and <span class="math inline">\(B = (\sqrt{2}, 3)\)</span> in these two topologies.</p>
 </div>
 <p><img src="figures/Exercises/Ex%202.17/Notsure.png" /><!-- --></p>
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-162" class="exercise"><strong>Exercise 4.34  (Mun 2.17.18) </strong></span>Determine the closures of the following subsets of the ordered square:
+<p><span id="exr:unnamed-chunk-166" class="exercise"><strong>Exercise 4.35  (Mun 2.17.18) </strong></span>Determine the closures of the following subsets of the ordered square:
 <span class="math display">\[\begin{align}
 A &amp;:= \left\{\frac{1}{n} \times 0 \mid n \in \mathbb{Z}^{+}\right\}, \\
 B &amp;:= \left\{\left(1 - \frac{1}{n}\right) \times \frac{1}{2} \mid n \in \mathbb{Z}^{+}\right\}, \\
@@ -626,7 +650,7 @@ E &amp;:= \left\{\frac{1}{2} \times y \mid 0 &lt; y &lt; 1\right\}.
 <p><img src="figures/Exercises/Ex%202.17/ex-18-7.png" /><!-- --></p>
 <p><img src="figures/Exercises/Ex%202.17/ex-18-8.png" /><!-- --></p>
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-171" class="exercise"><strong>Exercise 4.35  (Mun 2.17.19) </strong></span>If <span class="math inline">\(A \subset X\)</span>, we define the boundary of <span class="math inline">\(A\)</span> by the equation
+<p><span id="exr:unnamed-chunk-175" class="exercise"><strong>Exercise 4.36  (Mun 2.17.19) </strong></span>If <span class="math inline">\(A \subset X\)</span>, we define the boundary of <span class="math inline">\(A\)</span> by the equation
 <span class="math display">\[\text{Bd} \, A = \overline{A} \cap \overline{(X \setminus A)}.\]</span></p>
 <ol style="list-style-type: lower-alpha">
 <li>Show that <span class="math inline">\(\text{Int} \, A\)</span> and <span class="math inline">\(\text{Bd} \, A\)</span> are disjoint, and <span class="math inline">\(\overline{A} = \text{Int} \, A \cup \text{Bd} \, A\)</span>.</li>
@@ -653,7 +677,7 @@ E &amp;:= \left\{\frac{1}{2} \times y \mid 0 &lt; y &lt; 1\right\}.
 <p>d)(d) If <span class="math inline">\(U\)</span> is open, is it true that <span class="math inline">\(U = \text{Int}(\overline{U})\)</span>? Justify your answer.</p>
 <p><img src="figures/Exercises/Ex%202.17/ex-19-6.png" /><!-- --></p>
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-178" class="exercise"><strong>Exercise 4.36  (Mun 2.17.20) </strong></span>Find the boundary and the interior of each of the following subsets of <span class="math inline">\(\mathbb{R}^2\)</span>:</p>
+<p><span id="exr:unnamed-chunk-182" class="exercise"><strong>Exercise 4.37  (Mun 2.17.20) </strong></span>Find the boundary and the interior of each of the following subsets of <span class="math inline">\(\mathbb{R}^2\)</span>:</p>
 <ol style="list-style-type: lower-alpha">
 <li><span class="math inline">\(A = \{(x, y) | y = 0\}\)</span></li>
 <li><span class="math inline">\(B = \{(x, y) | x &gt; 0 \text{ and } y \neq 0\}\)</span></li>
@@ -678,6 +702,45 @@ E &amp;:= \left\{\frac{1}{2} \times y \mid 0 &lt; y &lt; 1\right\}.
 <li><span class="math inline">\(E = \{(x, y) | 0 &lt; x^2 - y^2 \leq 1\}\)</span></li>
 <li><span class="math inline">\(F = \{(x, y) | x \neq 0 \text{ and } y \leq \frac{1}{x}\}\)</span></li>
 </ol>
+</div>
+<div id="section-18-in-munkress-book" class="section level2 hasAnchor" number="4.4">
+<h2><span class="header-section-number">4.4</span> Section 18 in Munkress Book<a href="exercises.html#section-18-in-munkress-book" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-185" class="exercise"><strong>Exercise 4.38  (Mun 2.18.1) </strong></span>Proove that the function <span class="math inline">\(f:\mathbb{R}\to\mathbb{R}\)</span>, the <span class="math inline">\(\epsilon-\delta\)</span> defintion of continuty implies the open set definition.</p>
+</div>
+<p><img src="figures/Exercises/Ex%202.18/ex-1.png" /><!-- --></p>
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-187" class="exercise"><strong>Exercise 4.39  (Mun 2.18.2) </strong></span>Suppose that <span class="math inline">\(f:X\to Y\)</span> is continous. If <span class="math inline">\(x\)</span> is a limit point of sub set of <span class="math inline">\(A\)</span> of <span class="math inline">\(X\)</span>, is it necessary true that <span class="math inline">\(f(x)\)</span> is a limit point of <span class="math inline">\(f(A)\)</span>?</p>
+</div>
+<p><img src="figures/Exercises/Ex%202.18/ex-2.png" /><!-- --></p>
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-189" class="exercise"><strong>Exercise 4.40  (Mun 2.18.3) </strong></span></p>
+Let <span class="math inline">\(X\)</span> and <span class="math inline">\(X&#39;\)</span> denote a single set in the two topologies <span class="math inline">\(\mathcal{T}\)</span> and <span class="math inline">\(\mathcal{T}&#39;\)</span>, respectively.
+Let <span class="math inline">\(i : X&#39; \rightarrow X\)</span> be the identity function.
+</div>
+<p><img src="figures/Exercises/Ex%202.18/ex-3-1.png" /><!-- -->
+<img src="figures/Exercises/Ex%202.18/ex-3-2.png" /><!-- --></p>
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-192" class="exercise"><strong>Exercise 4.41  (Mun 2.18.4) </strong></span>Given <span class="math inline">\(x_0 \in X\)</span> and <span class="math inline">\(y_0 \in Y\)</span>, show that the maps <span class="math inline">\(f : X \rightarrow X \times Y\)</span> and <span class="math inline">\(g : Y \rightarrow X \times Y\)</span> defined by
+<span class="math inline">\(f(x) = x \times y_0\)</span> and <span class="math inline">\(g(y) = x_0 \times y\)</span>
+are imbeddings.</p>
+</div>
+<p><img src="figures/Exercises/Ex%202.18/ex-4-1.png" /><!-- -->
+<img src="figures/Exercises/Ex%202.18/ex-4-2.png" /><!-- -->
+<img src="figures/Exercises/Ex%202.18/ex-4-3.png" /><!-- --></p>
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-196" class="exercise"><strong>Exercise 4.42  (Mun 2.18.5) </strong></span>Show that the subspace <span class="math inline">\((a, b)\)</span> of <span class="math inline">\(\mathbb{R}\)</span> is homeomorphic with <span class="math inline">\((0, 1)\)</span> and the subspace <span class="math inline">\([a, b]\)</span> of <span class="math inline">\(\mathbb{R}\)</span> is homeomorphic with <span class="math inline">\([0, 1]\)</span>.</p>
+</div>
+<p><img src="figures/Exercises/Ex%202.18/ex-5-1.png" /><!-- -->
+<img src="figures/Exercises/Ex%202.18/ex-5-2.png" /><!-- -->
+<img src="figures/Exercises/Ex%202.18/ex-5-3.png" /><!-- -->
+<img src="figures/Exercises/Ex%202.18/ex-5-4.png" /><!-- --></p>
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-201" class="exercise"><strong>Exercise 4.43  (Mun 2.18.6) </strong></span>Find a function <span class="math inline">\(f : \mathbb{R} \to \mathbb{R}\)</span> that is continuous at precisely one point.</p>
+</div>
+<p><img src="figures/Exercises/Ex%202.18/ex-6-1.png" /><!-- -->
+<img src="figures/Exercises/Ex%202.18/ex-6-2.png" /><!-- -->
+<img src="figures/Exercises/Ex%202.18/ex-6-3.png" /><!-- --></p>
 
 </div>
 </div>

@@ -154,9 +154,14 @@ $$
 \mathcal{B}:=\{[a, b):=\{x \in \mathbb{R} \mid a \leq x<b\} \mid a, b \in \mathbb{R}\}
 $$
 This is a basis for a topology on $\mathbb{R}$. This topology is called the lower limit topology.
-```
 
-The following two lemma are useful to determine whehter a collection $\mathcal{B}$ of open sets in $\mathcal{T}$ is a basis for $\mathcal{T}$ or not.
+- ($K$-topology on $\mathbb{R}$) Finally let $K$ denote the set of all numbers of the form $\frac{1}{n}$, for $n \in \mathbb{Z}^+$. In other words,
+\[K:=\left\{\frac{1}{n}:n\in \mathbb{Z}^+\right\}\]
+Let $\mathcal{B}''$ be the collection of all open intervals $(a, b)$, along with all sets of the form $(a, b) \setminus K$.
+\[\mathcal{B}'':=\{(a, b):a,b\in\mathbb{R},a<b\}\cup \{(a, b) \setminus K:a,b\in\mathbb{R},a<b\}\]
+The topology generated
+by $\mathcal{B}''$ will be called the $K$-topology on $\mathbb{R}$. When $\mathbb{R}$ is given this topology, we denote it by $\mathbb{R}_K$ .
+```
 
 ```{remark}
 Let $\mathcal{T}$ be a topology on $X$. If $\mathcal{B} \subset \mathcal{T}$ and $\mathcal{B}$ satisfies (B1) and (B2), it is easy to see that $\mathcal{T}_{\mathcal{B}} \subset \mathcal{T}$. This is just because of (G1). If $U \in \mathcal{T}_{\mathcal{B}}$, (G1) is satisfied for $U$ so that $\forall x \in U, \exists B_{x} \in \mathcal{B}$ such that $x \in B_{x} \subset U$. Therefore $U=\cup_{x \in U} B_{x}$. By (T2), $U \in \mathcal{T}$.
