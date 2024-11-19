@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Topology</title>
   <meta name="description" content="This my attempt to do the topolgy." />
-  <meta name="generator" content="bookdown 0.38 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Topology" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Ashan Jayamal" />
 
 
-<meta name="date" content="2024-03-30" />
+<meta name="date" content="2024-11-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -132,7 +132,7 @@
 <div id="header">
 <h1 class="title">Topology</h1>
 <p class="author"><em>Ashan Jayamal</em></p>
-<p class="date"><em>2024-03-30</em></p>
+<p class="date"><em>2024-11-19</em></p>
 </div>
 <div id="topology" class="section level1 hasAnchor" number="1">
 <h1><span class="header-section-number">Chapter 1</span> Topology<a href="index.html#topology" class="anchor-section" aria-label="Anchor link to header"></a></h1>
@@ -153,7 +153,7 @@
 <p><span id="exm:unnamed-chunk-2" class="example"><strong>Example 1.2  </strong></span>Let <span class="math inline">\(X\)</span> be a three-element set, <span class="math inline">\(X = \{a, b, c\}\)</span> as pervoius. There are many possible topologies on <span class="math inline">\(X\)</span>, some of which are indicated schematically in figure <a href="index.html#fig:gi">1.1</a>. Furthur, we can see that even a three-element set has many different topologies.</p>
 </div>
 <div class="figure"><span style="display:block;" id="fig:gi"></span>
-<img src="figures/figure%2001.png" alt="$~$"  />
+<img src="figures/figure%2001.png" alt="$~$" width="354" />
 <p class="caption">
 Figure 1.1: <span class="math inline">\(~\)</span>
 </p>
@@ -164,7 +164,7 @@ Figure 1.1: <span class="math inline">\(~\)</span>
 <p>Now consider the right hand coner figure. <span class="math inline">\(\{a,b\}\)</span> and <span class="math inline">\(\{b,c\}\)</span> in collection, but <span class="math inline">\(\{a,b\}\cap\{b,c\}=\{b\}\)</span> is not in the collection.</p>
 </div>
 <div class="figure"><span style="display:block;" id="fig:fig2"></span>
-<img src="figures/figure%2002.png" alt="$~$"  />
+<img src="figures/figure%2002.png" alt="$~$" width="298" />
 <p class="caption">
 Figure 1.2: <span class="math inline">\(~\)</span>
 </p>
@@ -180,7 +180,7 @@ Figure 1.2: <span class="math inline">\(~\)</span>
 <span class="math display">\[\mathcal{T}_f:=\left\{U\subseteq X : \text{Either is finite or is all of } X\right\}\]</span>
 Let’s check is <span class="math inline">\(\mathcal{T}_f\)</span> a topology. First obseve that both <span class="math inline">\(X\)</span> and <span class="math inline">\(\emptyset\)</span> are in <span class="math inline">\(\mathcal{T}_f\)</span> , because <span class="math inline">\(X\setminus X=\emptyset\)</span> is finite and $X$ is all of <span class="math inline">\(X\)</span>.So <span class="math inline">\(\mathcal{T}_f\)</span> statified the T1 condition. Now let’s check the T2 condition. Let <span class="math inline">\(\{U_{\alpha}:\alpha\in I, I \text{ is index set}\}\)</span>.Now we need to show that <span class="math inline">\(\cup{\alpha\in I} U_\alpha\in \mathcal{T}_f\)</span>. So consider,
 <span class="math display">\[X\setminus \bigcup_{\alpha\in I} U_\alpha =\bigcap_{\alpha\in I} (X\setminus  U_\alpha).\]</span>
-Now obsevere that <span class="math inline">\(\cap_{\alpha\in I} (X\setminus U_\alpha)\)</span> is finite, because each set <span class="math inline">\((X\setminus U_\alpha)\)</span> is finite and arbitary intersection of finite sets is finite. So, <span class="math inline">\(\mathcal{T}_f\)</span> stattified the T2 condition also.
+Now obsevere that <span class="math inline">\(\cap_{\alpha\in I} (X\setminus  U_\alpha)\)</span> is finite, because each set <span class="math inline">\((X\setminus  U_\alpha)\)</span> is finite and arbitary intersection of finite sets is finite. So, <span class="math inline">\(\mathcal{T}_f\)</span> stattified the T2 condition also.
 Finaly check the last condition, T3 condition. Let <span class="math inline">\(U_1,...,U_n\)</span> are nonempty elements of <span class="math inline">\(\mathcal{T}_f\)</span> , to show that <span class="math inline">\(\bigcup_i U_i \in \mathcal{T}_f\)</span> , we compute
 <span class="math display">\[X\setminus \bigcap_{i=1}^n U_i = \bigcup_{i=1}^n(X \setminus U_i).\]</span>
 Note that the set <span class="math inline">\(\bigcup_{i=1}^n(X \setminus U_i)\)</span> is a finite union of finite sets and, therefore, finite. So it statisfiy the T3 condition also. Thefore <span class="math inline">\(\mathcal{T}_f\)</span> is a topology. Furthur <span class="math inline">\(\mathcal{T}_f\)</span> is called the finite <em>complement topology</em>.</p>
@@ -832,7 +832,8 @@ basis element containing <span class="math inline">\(x\)</span> intersects <span
 <p>There is yet another way of describing the closure of a set, a way that involves the important concept of limit point, which we consider now.</p>
 <div class="definition">
 <p><span id="def:unnamed-chunk-70" class="definition"><strong>Definition 1.15  (Limit Point) </strong></span>If <span class="math inline">\(A\)</span> is a subset of the topological space <span class="math inline">\(X\)</span> and if <span class="math inline">\(x\)</span> is a point of <span class="math inline">\(X\)</span>, we say that <span class="math inline">\(x\)</span> is a limit point (or “cluster point,” or “point of accumulation”) of <span class="math inline">\(A\)</span> if every neighborhood of <span class="math inline">\(x\)</span> intersects <span class="math inline">\(A\)</span> in some point other than <span class="math inline">\(x\)</span> itself.</p>
-<p>Said differently, <span class="math inline">\(x\)</span> is a limit point of <span class="math inline">\(A\)</span> if it belongs to the closure of <span class="math inline">\(A \setminus \{x\}\)</span>. The point <span class="math inline">\(x\)</span> may lie in <span class="math inline">\(A\)</span> or not; for this definition it does not matter.</p>
+<p>Said differently, <span class="math inline">\(x\)</span> is a limit point of <span class="math inline">\(A\)</span> if it belongs to the closure of <span class="math inline">\(A \setminus
+\{x\}\)</span>. The point <span class="math inline">\(x\)</span> may lie in <span class="math inline">\(A\)</span> or not; for this definition it does not matter.</p>
 </div>
 <p><strong>Notation</strong>: let <span class="math inline">\(A^\prime\)</span> be the set of all limit points of <span class="math inline">\(A\)</span>.</p>
 <div class="example">
@@ -858,7 +859,7 @@ set and the limit points of a set. That relationship is given in the following t
 Supoose that <span class="math inline">\(x\in A^{\prime}\)</span>. Every neighborhood of <span class="math inline">\(x\)</span> intersects <span class="math inline">\(A\)</span> (in a point different from <span class="math inline">\(x\)</span>). Therefore, by propostion <a href="index.html#prp:prop1">1.1</a>, <span class="math inline">\(x\)</span> belongs to <span class="math inline">\(\overline{A}\)</span>. Hence <span class="math inline">\(A^{\prime} \subseteq \overline{A}\)</span>.</p></li>
 <li><p><strong>Claim 2</strong>: <span class="math inline">\(A \cup A^{\prime} \subseteq \overline{A}\)</span>.<br />
 Since by definition <span class="math inline">\(A \subseteq \overline{A}\)</span>, it follows that <span class="math inline">\(A \cup A^{\prime} \subseteq \overline{A}\)</span>.</p></li>
-<li><p><strong>Claim 3</strong>:<span class="math inline">\(A \cup A^{\prime}\supseteq \overline{A}\)</span>.<br />
+<li><p><strong>Claim 3</strong>:<span class="math inline">\(A \cup A^{\prime}\supseteq  \overline{A}\)</span>.<br />
 Let <span class="math inline">\(x\in \overline{A}\)</span>.</p>
 <ul>
 <li>Case I: If <span class="math inline">\(x\in A\)</span> then noting to proove.</li>
@@ -895,7 +896,7 @@ Figure 1.18: <span class="math inline">\(~\)</span>
 </div>
 <p>We called Hausdorff condition as <span class="math inline">\(T_2\)</span> axiom. So Let’s see another definition</p>
 <div class="figure"><span style="display:block;" id="fig:fig02"></span>
-<img src="figures/figure%2002.png" alt="$~$"  />
+<img src="figures/figure%2002.png" alt="$~$" width="298" />
 <p class="caption">
 Figure 1.19: <span class="math inline">\(~\)</span>
 </p>
@@ -942,7 +943,7 @@ Since <span class="math inline">\(U\)</span> does not intersect <span class="mat
 As a result, the closure of the set <span class="math inline">\(\{x_0\}\)</span> is <span class="math inline">\(\{x_0\}\)</span> itself, so that it is closed.</p>
 </div>
 <div class="definition">
-<p><span id="def:unnamed-chunk-83" class="definition"><strong>Definition 1.19  </strong></span>Let <span class="math inline">\(X\)</span> be topological sapce. A sequence <span class="math inline">\(x_1,x_2,x_3,...\)</span> in <span class="math inline">\(X\)</span> <strong>converges</strong> to <span class="math inline">\(x\in X\)</span> if for every neighborhood <span class="math inline">\(U\)</span> of <span class="math inline">\(x\)</span> there exists <span class="math inline">\(N\in \mathbb{N}\)</span> such that <span class="math inline">\(x_n \in U\)</span> for all <span class="math inline">\(n\geq N\)</span></p>
+<p><span id="def:unnamed-chunk-83" class="definition"><strong>Definition 1.19  </strong></span>Let <span class="math inline">\(X\)</span> be topological sapce. A sequence <span class="math inline">\(x_1,x_2,x_3,...\)</span> in <span class="math inline">\(X\)</span> <strong>converges</strong> to <span class="math inline">\(x\in X\)</span> if for every neighborhood <span class="math inline">\(U\)</span> of <span class="math inline">\(x\)</span> there exists <span class="math inline">\(N\in \mathbb{N}\)</span> such that <span class="math inline">\(x_n \in U\)</span> for all <span class="math inline">\(n\geq  N\)</span></p>
 <p>Notataion: <span class="math inline">\(x_n \to x\)</span></p>
 </div>
 <div class="figure"><span style="display:block;" id="fig:fig18"></span>
@@ -958,8 +959,8 @@ In other words: The limit of a convergent sequence in a Hausdorff space is uniqu
 <div class="proof">
 <p><span id="unlabeled-div-30" class="proof"><em>Proof</em>. </span>We are going to indirect proof. Assume that <span class="math inline">\(x_n \to x\)</span> and <span class="math inline">\(x_n \to y\)</span> and <span class="math inline">\(x\neq y\)</span>. Since <span class="math inline">\(X\)</span> is a Hausdorff space, there are disjoint open sets <span class="math inline">\(U\)</span> and <span class="math inline">\(V\)</span> of <span class="math inline">\(X\)</span> such that <span class="math inline">\(x\in U\)</span> and $ yV$.</p>
 <ul>
-<li>Since <span class="math inline">\(x_n \to x\)</span>, <span class="math inline">\(U\)</span> is an open neighbourhood of <span class="math inline">\(x\)</span>, there is a <span class="math inline">\(N_0\in \mathbb{N}\)</span> , such that <span class="math inline">\(x_n \in U\)</span> for all <span class="math inline">\(n\geq N_0\)</span></li>
-<li>Since <span class="math inline">\(x_n \to y\)</span>, <span class="math inline">\(V\)</span> is an open neighbourhood of <span class="math inline">\(y\)</span>, there is a <span class="math inline">\(N_1\in \mathbb{N}\)</span> , such that <span class="math inline">\(x_n \in V\)</span> for all <span class="math inline">\(n\geq N_1\)</span></li>
+<li>Since <span class="math inline">\(x_n \to x\)</span>, <span class="math inline">\(U\)</span> is an open neighbourhood of <span class="math inline">\(x\)</span>, there is a <span class="math inline">\(N_0\in \mathbb{N}\)</span> , such that <span class="math inline">\(x_n \in U\)</span> for all <span class="math inline">\(n\geq  N_0\)</span></li>
+<li>Since <span class="math inline">\(x_n \to y\)</span>, <span class="math inline">\(V\)</span> is an open neighbourhood of <span class="math inline">\(y\)</span>, there is a <span class="math inline">\(N_1\in \mathbb{N}\)</span> , such that <span class="math inline">\(x_n \in V\)</span> for all <span class="math inline">\(n\geq  N_1\)</span></li>
 </ul>
 <p>Let <span class="math inline">\(N=max\{N_0,N_1\}\)</span>.
 Since <span class="math inline">\(N&gt;N_0\)</span>, then <span class="math inline">\(x_N\in U\)</span>.
